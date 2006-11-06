@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Entering Isotopes</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="isotopes"></a><img src="../images/MwtWinIcon.gif" border=0> Entering Isotopes</h2>
+<p>
+ See also <a href="EnteringFormulas.htm">Entering Formulas</a>.</p>
+<p>
+Isotopes may be entered in the form <sup>^x</sup>Y where x is the isotopic mass of the isotope and Y is the name of the element.  For example, <sup>^13</sup>C is carbon-13 and <sup>^59</sup>Fe is iron-59.  The program will check to make sure that the isotopic mass entered is a reasonable value for the particular element that it is associated with (see the <a href="BehindScenesIsotopes.htm">isotope math section</a>).  The caret symbol (^) may be entered before any element in a formula, not just at the beginning.  For example, C6H5<sup>^18</sup>OH is oxygen-18 labeled phenol.  It has molecular weight 96.114 instead of 94.113  You can also enter decimal number for isotopes.  For example <sup>^78.918</sup>Br is Bromine 79 with a specific isotopic mass</p>
+<p>
+The isotopic mass entered is also used when figuring the percent composition of a compound.  Thus, C<sub>6</sub>H<sub>6</sub> is 92.258% carbon and 7.7421% hydrogen while <sup>^13</sup>C<sub>6</sub>H<sub>6</sub> is 92.8045% carbon and 7.1955% hydrogen.  Isotopic masses may not be entered for abbreviations.  For example, <sup>^166</sup>Bpy is invalid.  I considered allowing this, so that 166 would be used for the weight of Bpy (rather than 156.187), but I decided that the percent composition calculations would then be invalid since the program would not know which elements in the abbreviation were contributing to the extra (or less) weight of the abbreviation.  Therefore, for carbon-13 labeled Bpy, for example, simply type <sup>^13</sup>C<sub>10</sub>H<sub>8</sub>N<sub>2</sub> instead of <sup>^166</sup>Bpy.</p>
+<p>
+NOTE: It is suggested that D be used for deuterium rather than <sup>^2</sup>H since most deuterium used in the laboratory is of weight 2.0159 rather than exactly 2, which is the weight <sup>^2</sup>H would calculate as.</p>
+<p>
+NOTE:  For Radioactive elements, the most stable isotope is NOT used; Instead, an average Molecular Weight is used, just like with other elements. Data originally obtained from the Perma-Chart Science Series Chemical Periodic Table, 1993; ISBN 1-55080-063-9, then updated using the 1997 IUPAC standard atomic weights and uncertainties found in Pure Appl. Chem., 68, 2339-2359 (1996); 69, 2471-2473 (1997).</p>
+</BODY>
+</HTML>

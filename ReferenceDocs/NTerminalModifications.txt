@@ -1,0 +1,25 @@
+N-Terminal Modifications
+
+Hydrogen                          H                                                 H                                                        1.0079         1.0078  
+Pyroglutamic Acid                 Pyr                                               C5H6NO2                                                  112.1082       112.0399
+N-formylation                     HCO                                               HCO                                                      29.0183        29.0027  
+N-myristoylation                  N-myr                                             C14H27O                                                  211.3678       211.2062  
+N-acetylation                     CH3CO                                             C2H3O                                                    43.0452        43.0184  
+Amidation                         NH2                                               NH2                                                      16.0226        16.0187  
+None                              None                                              None                                                     0.0000         0.0000  
+t-Butyl                           But                                               C4H9                                                     57.1155        57.0704  
+Acetamidomethyl                   Acm                                               C3H6ON                                                   72.0868        72.0449  
+t-Butoxymethyl                    Bum                                               C5H1O                                                    87.1417        87.0810  
+Benzyl                            Bzl                                               C7H7                                                     91.1326        91.0548  
+tert-Butyloxycarbonyl             tBOC                                              C5H9O2                                                   101.1253       101.0603  
+4-Methylbenzyl                    MeBzl                                             C8H9                                                     105.1595       105.0704
+4-Methoxybenzyl                   MBzl                                              C8H9O                                                    121.1589       121.0653  
+Benzyloxycarbonyl                 Cbz                                               C8H7O2                                                   135.1424       135.0446  
+o-Nitrophenylsulphenyl            Nps                                               C6H4NO2S                                                 154.1693       153.9963  
+tosyl                             Tos                                               C7H7O2S                                                  155.1974       155.0167
+2,6 Dichlorobenzyl                Cl2Bz                                             C7H5Cl2                                                  160.0221       158.9768
+2,4 Dinitrophenyl                 Dnp                                               C6H3O4N2                                                 167.1009       167.0093  
+2,4,6 Trimethoxybenzyl            Tmob                                              C10H12O3                                                 180.2035       180.0786  
+Fmoc                              Fmoc                                              C15H1O2                                                  223.2511       223.0759  
+Trityl                            Trt                                               C19H15                                                   243.3281       243.1174
+2,2,5,7,8-Pentamethylchromane     Pmc                                               C14H19O3S                                                267.3691       267.1055

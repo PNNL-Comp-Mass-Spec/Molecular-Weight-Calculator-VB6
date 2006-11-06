@@ -1,0 +1,26 @@
+; Isotopic Weight Mode Enabled
+; Standard deviations will not be displayed
+; Source formula will be displayed with proper capitalization
+; Display of source formula is now Off
+; Will not add a space every 10 amino acids
+
+; One letter Amino Acid weight mode: input formulas are assumed to be peptides in one-letter notation
+75.032027
+89.0476762
+105.0425912
+115.0633254
+117.0789746
+119.0582404
+121.0197482
+131.0946238
+132.0534898
+133.0375062
+146.069139
+146.1055224
+147.0531554
+149.0510466
+155.0694734
+165.0789746
+174.1116704
+181.0738896
+204.0898732

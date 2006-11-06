@@ -1,0 +1,2 @@
+11/5/2006 10:02:05 PM -- Error in MwtWinDll|ComputeIsotopicAbundances: Subscript out of range (#9)
+

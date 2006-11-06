@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Editing Elemental Values</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="editing_elements"></a><img src="../images/MwtWinIcon.gif" border=0> Editing Elemental Values</h2>
+<p>Location: <a href="MenuFile.htm">File Menu</a></p>
+
+<p>
+The file MWT_ELEM.DAT contains a listing of all the elements and their uncertainties (errors in their weights).  This file may be edited via a text editor or by selecting Edit Elements Table under the File menu.  Only elemental weights and uncertainties may be changed, not element names.  To edit a value, use the arrow keys to move around, then press Enter or click on the value to change it.  After changing the value, press OK to accept it or Cancel to cancel changes.  Clicking on Reset will reset the value to the default value built into the program code.  New elements can only be added by entering them as abbreviations.  See the <a href="EditingAbbreviations.htm">abbreviations section</a> for a description of how to edit abbreviations.  Select Reset to Defaults in the Editing Elements window to reset the elements to their default average atomic weight values.</p>
+<p>
+By default, the elemental weights are based on the elements’ average atomic weights in nature.  By clicking on the Isotopic Weights button, you can set the elements’ weights to the isotopic weight of the most common isotope of each element, typically used in analysis of  high resolution mass spectrometry results.  This change will also affect the percent composition results to reflect the elements’ isotopic weights appropriately.  Typically, you will want to use the elements’ average weights, which can be set by either clicking Use Average Weights or Reset To Defaults.</p>
+<p>
+The third option for elemental weights is to use the nominal integer weight of the most common isotope, chosen via the Nominal Integer Weight button.  This is useful for analyzing low resolution mass spectrometry results.  For example, a fragment peak is seen at 40 Daltons, and possible matches are desired.  First choose to use Nominal Integer Weights in the edit elements window, then go to the <a href="FormulaFinder.htm">Formula Finder</a>, type in 40 for the target weight, 0 for the tolerance, and select potential elements the fragment might contain, for example C, H, N, O, S, and Cl.  Click on calculate and the program will come up with 4 matches:  CN<sub>2</sub>, C<sub>2</sub>H<sub>2</sub>N, C<sub>2</sub>O, and C<sub>3</sub>H<sub>4</sub>.</p>
+</BODY>
+</HTML>

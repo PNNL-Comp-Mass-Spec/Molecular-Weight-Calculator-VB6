@@ -1,0 +1,64 @@
+;                        Abbreviations File for MWTWIN program (v6.19)
+;
+; Comments may be added by preceding with a semicolon
+; Two group headings must exist: [AMINO ACIDS] and [ABBREVIATIONS]
+; Abbreviations may be added; simply type the abbreviation and molecular
+;   formula under the appropriate column in either section
+; Note:  Only the first letter of an abbreviation is allowed to be capitalized
+;
+; The abbreviations in the Amino Acid section are treated as extended level
+;   abbreviations:  they are only recognized when extended abbreviations are on
+; If this file becomes corrupted, the MWTWIN program will inform the user
+;    and ignore incorrect lines
+; If this file becomes deleted, the MWTWIN program will create a new file
+;    with the default abbreviations
+;
+; Default Amino Acids are in their ionic form
+; Amino Acid abbreviation names may be up to 6 characters long
+[AMINO ACIDS]
+Ala     C3H5NO               0         A         ; Alanine
+Arg     C6H12N4O             0         R         ; Arginine, (unprotonated NH2)
+Asn     C4H6N2O2             0         N         ; Asparagine
+Asp     C4H5NO3              0         D         ; Aspartic acid (undissociated COOH)
+Cys     C3H5NOS              0         C         ; Cysteine (no disulfide link)
+Gla     C6H7NO5              0         U         ; gamma-Carboxyglutamate
+Gln     C5H8N2O2             0         Q         ; Glutamine
+Glu     C5H7NO3              0         E         ; Glutamic acid (undissociated COOH)
+Gly     C2H3NO               0         G         ; Glycine
+His     C6H7N3O              0         H         ; Histidine (unprotonated NH)
+Hse     C4H7NO2              0                   ; Homoserine
+Hyl     C6H12N2O2            0                   ; Hydroxylysine
+Hyp     C5H7NO2              0                   ; Hydroxyproline
+Ile     C6H11NO              0         I         ; Isoleucine (same as Leucine)
+Leu     C6H11NO              0         L         ; Leucine (same as Isoleucine)
+Lys     C6H12N2O             0         K         ; Lysine (unprotonated NH2)
+Met     C5H9NOS              0         M         ; Methionine
+Orn     C5H10N2O             0         O         ; Ornithine
+Phe     C9H9NO               0         F         ; Phenylalanine
+Pro     C5H7NO               0         P         ; Proline
+Pyr     C5H5NO2              0                   ; Pyroglutamic acid
+Sar     C3H5NO               0                   ; Sarcosine
+Ser     C3H5NO2              0         S         ; Serine
+Thr     C4H7NO2              0         T         ; Threonine
+Trp     C11H10N2O            0         W         ; Tryptophan
+Tyr     C9H9NO2              0         Y         ; Tyrosine
+Val     C5H9NO               0         V         ; Valine
+
+; Normal abbreviation names may be up to 6 characters long
+[ABBREVIATIONS]
+Bpy     C10H8N2              0                   ; Bipyridine
+Bu      C4H9                 1                   ; Butyl
+D       ^2.014H              1                   ; Deuterium
+En      C2H8N2               0                   ; Ethylenediamine
+Et      CH3CH2               1                   ; Ethyl
+Me      CH3                  1                   ; Methyl
+Ms      CH3SOO               -1                  ; Mesyl
+Oac     C2H3O2               -1                  ; Acetate
+Otf     OSO2CF3              -1                  ; Triflate
+Ox      C2O4                 -2                  ; Oxalate
+Ph      C6H5                 1                   ; Phenyl
+Phen    C12H8N2              0                   ; Phenanthroline
+Py      C5H5N                0                   ; Pyridine
+Tpp     (C4H2N(C6H5C)C4H2N(C6H5C))2   0          ; Tetraphenylporphyrin, mw 612.733
+Ts      CH3C6H4SOO           -1                  ; Tosyl
+Urea    H2NCONH2             0                   ; Urea

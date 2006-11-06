@@ -1,0 +1,167 @@
+Your Username is:  [alchemi.yahoo.co]
+Your Password is:  [c21hay.iml]
+
+Thank you for contributing to the Simtel.Net Archive.
+
+The Simtel.Net collections are periodically published on CD-ROM.  
+If you do not wish to have your package distributed on CD-ROM 
+please do not upload it.
+
+You can review our Upload Policy at 
+   http://www.simtel.net/uppolicy.html
+
+Please review this policy and keep all your uploads within the scope of the Simtel.Net collection.  There are changes from the old Simtel.Net 
+policies.  ("same name" replacements are now permissible.  You may 
+include VB runtimes.  And more.)
+
+Now that you have this upload account with Simtel.Net, you do not need 
+to send any more upload requests for future uploads.  Just upload 
+directly to us.
+
+
+UPLOADING:
+
+You can upload your files to 
+   ftp://uploads.simtel.net.
+   
+Some browsers expect you to add your username as part of the access:
+  ftp://user.name@uploads.simtel.net
+and then prompt you for your password once there.
+
+Some (like Netscape) require you to add the path to our incoming
+area:
+  ftp://user.name@uploads.simtel.net/submissions/incoming
+
+Most FTP programs, including WSFTP will require you to enter the host as uploads.simtel.net
+
+If you have difficulties, go to the Uploaders Forum for answers and help. (See the end of this message.)
+
+Once you have logged in (using the above username and password), you 
+will be automatically moved to the /submissions/incoming directory.  
+Upload BOTH your file and its accompanying PAD .xml (see below) file 
+there.  Do not create any other folders, do not upload anything else. You can see everyone else's uploads, but you cannot "affect" them in 
+any way, only your own.  And please, lowercase short filenames only. Anything else WILL delay processing.
+
+This is NOT your web page, NOT your directory.  This is a shared area: 
+please treat it with respect.
+
+We do NOT accept emailed files under ANY conditions.
+
+
+PADGEN AND THE PAD .xml FILE:
+
+We require ALL SUBMISSIONS to use PADGEN.  You can get this program for 
+free from http://www.asp-shareware.org/pad/  You will also find details 
+on its use.  You do not have to join the ASP to get or use the PADGEN 
+program.
+
+You will also need to get the Simtel PAD extension, which can be found at this link:
+
+  http://www.simtel.net/simtelxml.zip
+
+Unzip the simtel.htm file and put it in the Padgen directory.  This 
+file will create a "simtel" tab in the Padgen program that will allow you 
+to enter specific information for Simtel file categories.  Read the instructions.  Then select the lowest platform (MS-DOS, Win3, WinXX) in 
+which your program will function, and the most appropriate file category 
+for that platform.  Complete ONE platform and category only.
+
+Details on using extensions (and other extensions that are available for other shareware sites) can be found at
+
+  http://www.asp-shareware.org/pad/padextensions.asp
+
+When preparing your PAD .xml file, be sure to fill the Author name and Author email fields.  Insure your "official" email address, the one you used to submit your submission application to us, the email 
+address we're sending this very message to, is in at least ONE of the available PAD .xml email fields.  Insure you fill in the short description and at least one long description.  Insure you put the SAME filename you're uploading into one of the Filename_* fields. Yes, case matters.  Yes, the file extension matters.
+
+Not every field in the entire PAD .xml file need be completed.  See our Uploaders Forum for detailed requirements.
+
+Be sure to use the Filename_Previous field if you're replacing one of your files already at Simtel.Net.  That will insure file links are reused, old files are removed, and download counts are carried forward.
+
+If you are an Agent and plan to upload for other publishers who do not have upload accounts at Simtel.Net, contact us for special instructions on procedures, correct use of the PAD .xml file, etc.
+
+
+FILENAMES:
+
+Simtel.Net accepts short 8.3 "filename.typ" filenames only.  We accept only ".zip" or ".exe" file extensions (and of course the companion ".xml" file type).  Anything else will be automatically rejected.  No .jar, .htm, .arj, .gz, .sqz, .uue.
+
+Insure at least ONE of the PAD .xml Filename_* fields contains the exact 
+filename that you will be uploading to us.  Use lowercase only for all 
+filenames:  any uppercase in filenames will delay your upload's processing.  Filenames in the PAD .xml file must include the file 
+extension.  "wombat" is NOT the filename of the "wombat.zip" file you 
+uploaded.  "wombat.exe" is NOT the same as "wombat.zip".  (This happens 
+ALL the time.)
+
+You will need to upload BOTH your .exe/.zip and the companion PAD .xml 
+file to our incoming directory.  Both files must have the same name 
+(i.e. filename.zip [.exe] and filename.xml).  We do prefer .zip files, and suggest you include the PAD .xml inside the .zip file so the end user and other distribution sites can get your PAD .xml file.  (No, we will NOT go into your .zip to take out the .xml file for our use. Upload it separately.)  (No, we will NOT "go out and get" the file to which your uploaded orphan .xml file points.  Upload it.)
+
+Understand that the accompanying .xml file is MANDATORY.  Our system can not process your file, add it to the file system, and catalog it without the information in that .xml file.  You MUST download and include the Simtel.Net PAD extension provided by the simtel.htm file.
+
+You MUST include your upload account's email address in one of the .xml form's email fields or we cannot accept your upload.  That email address 
+will become part of the file description, will go out in our New Upload Digests, etc.  We regret this may make you vulnerable to spammers, but we simply MUST have that email address.  We will remove the files and user account of any uploader who fails to maintain that email address. Contact us if your email address changes, and we will direct you on how 
+to create a new upload account.
+
+
+UPLOAD PROCESSING:
+
+If you see your files disappear from our incoming area, that means they're being processed (that's good).  If you see them renamed (with something like ".BAD" or ".NO" or ".SIM" or ".CAT" or ".PUB"), that's not good.  Please go to our Uploaders Forum for details (see 
+the end of this message).  If you see this problem, you may upload 
+a corrected .xml (and/or program file) with the problem(s) fixed.  
+Otherwise you'll eventually get an email message describing the 
+problem .. and directing you to re-upload everything since we've 
+removed all the problem files.
+
+It will take up to 3 days for your file to be processed, and up to another 36 hours for the file to become "visible" on our web site (and available for downloads from the mirror sites).  If there is a delay, do NOT email us.  It will not make anything work faster.  
+Simtel.Net now has an eXpress subscription service, to provide 
+priority posting and distribution (at a cost).  If interested, email webmaster@simtel.net for details.  Or watch our web page for details.
+
+
+FILE LINKS:
+
+When your upload is processed, our system will send you email with two links to your program.  The first link will be the "Product Description" 
+page which includes the description of your submitted program.  The second link will be the "Download" page for your submitted file which 
+lists all of the download locations ("mirror sites") for your file.
+
+NOTE:  Simtel.Net does NOT allow the linking directly to files in the archive system, to include all of the mirror sites.  You and any other 
+web site are ONLY authorized to link to one of the URLs provided after 
+your file has been processed.  Violation of this policy can result in 
+all of your files being removed from the system and your upload account 
+being permanently disabled.
+
+We may rename your files for more effective system operation or to avoid filename conflicts.  Do NOT depend on filenames remaining the same as 
+when you uploaded them.
+
+If you link to the HTML page, you can be assured that the download link 
+will always work and allow your user to choose the download location 
+from around the world that is best for them.
+
+Let us know if you have any questions or comments.  Please send it to  
+webmaster@simtel.net  with the subject of Upload Procedure.  And by all means use our web page's Users or Uploaders Forum for any comments or 
+discussion.
+
+
+THE SIMTEL.NET FORUM AREA:
+
+We strongly urge you to monitor the Forum area at our home page at 
+
+  http://www.simtel.net/wwwthreads/wwwthreads.pl  
+
+There is even a special Uploaders Discussion and Info area (the "Uploaders Forum") just for uploaders.  There you'll find much 
+background information on how the entire system works, common problem 
+and error conditions (and their solutions), and more.
+
+As an additional note:
+
+Looking for Web Hosting or eCommerce solutions, or software promotion opportunities?  Be sure to check out our Partners page at
+
+  http://www.simtel.net/partners.html 
+
+to find out who we use and recommend.
+
+
+Thanks.
+
+Simtel.Net Management
+--
+
+
+This email was sent to: alchemistmatt@yahoo.com

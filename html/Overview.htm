@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Overview of Features</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="overview"></a><img src="../images/MwtWinIcon.gif" border=0> Overview of Features</h2>
+<p>
+    Click the contents button to see a list of available help topics.<br>
+    (may need to click the Show button at the upper left)
+</p>
+
+<H3>Tools</H3>
+<p>
+<a href="MoleMass.htm">Mole/Mass/Dilution Converter</a> for easily interconverting moles and mass, for computing molarity or concentration given an amount and volume, and for performing dilution calculations.</p>
+<p>
+<a href="FormulaFinder.htm">Formula Finder</a> for finding potential empirical formulas for a given molecular weight or for a given set of percent composition data.  Includes a Smart Hydrogen feature to limit the number of hydrogen atoms in found compounds to a reasonable number.</p>
+<p>
+<a href="AminoAcidConverter.htm">Amino Acid Notation Converter</a> to convert between 3 letter and 1 letter abbreviations for amino acids (converts both ways).</p>
+<p>
+<a href="PeptideFragModelling.htm">Peptide Sequence Fragmentation Modelling</a> module to predict the ion masses expected from fragmentation of a peptide in the collision cell of a mass spectrometer.  Actual experimental data may also be matched to a theoretical peptide sequence.<p>
+<p>
+<a href="CapillaryCalculations.htm">Capillary Calculations</a> module for performing typical flow, mass-rate, and band broadening calculations in open and packed capillary columns, commonly used in capillary liquid chromatography</p>
+<p>
+<a href="IsotopicDistribution.htm">Isotopic Distribution</a> module for predicting the masses and abundances of the isotopes for a given formula, useful for comparison to observed mass spectrometry results</p>
+
+<p>Built-in mathematical <a href="Calculator.htm">calculator</a> that follows mathematical precedence rules.</p>
+
+
+<H3>Features</H3>
+<p>
+<a href="MultiViewMode.htm">Multi Line Display</a> Display of up to 20 formulas with their molecular weights simultaneously (dependent upon <a href="MaximumFormulasToDisplay.htm">screen resolution</a>).</p>
+<p>
+<a href="SingleViewMode.htm">Percent Composition</a> Elemental percent composition of each of the entered formulas.</p>
+
+<dl>
+<dt>
+<a href="Parentheses.htm">Parentheses</a> are allowed</dt>
+<dd>
+For example, CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH<sub>3</sub> is equivalent to CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub>
+</dt>
+</dl>
+
+<dl>
+<dt>
+Can also handle decimal numbers following parentheses.</dt>
+<dd>
+For example, (Fe<sub>2</sub>O<sub>3</sub>)<sub>.5</sub> is equivalent to FeO<sub>1.5</sub></dd>
+</dl>
+
+<dl>
+<dt>
+<a href="Dashes.htm">Hydrates</a> or other appended compounds are allowed.</dt>
+<dd>
+For example, FeCl<sub>3</sub>-6H<sub>2</sub>O or FeCl<sub>3</sub>-2.5H<sub>2</sub>O<br>
+</dd>
+</dl>
+
+<dl>
+<dt>
+Can also begin a formula with a number.</dt>
+<dd>
+For example, 4FeCl<sub>3</sub>-6H<sub>2</sub>O is equivalent to (FeCl<sub>3</sub>)<sub>4</sub>-6H<sub>2</sub>O
+</dd>
+</dl>
+
+<dl>
+<dt>
+User-definable <a href="Abbreviations.htm">abbreviations</a> Default abbreviations are included for common parts of compounds, including amino acids.  See full list.</dt>
+<dd>
+For example, PhCl = C<sub>6</sub>H<sub>5</sub>Cl and <br>
+HOAc = CH<sub>3</sub>COOH.</p>
+</dd>
+</dl>
+
+<p>
+<a href="CaseRecognition.htm">Smart Case Conversion</a> The program will automatically convert lowercase letters to uppercase where appropriate for ease of entering a formula.  Exact case matching and non-conversion are also available.</p>
+
+<dl>
+<dt>
+<a href="Isotopes.htm">Isotopes</a> are recognized using the following notation:</dt>
+<dd>
+<sup>^13</sup>C is Carbon-13<br>
+C<sub>6</sub>H<sub>5</sub><sup>^18</sup>OH is heavy-oxygen (Oxygen-18) labeled phenol<br>
+<sup>^78.918</sup>Br is Bromine 79 with a specific isotopic mass<br>
+</dd>
+</dl>
+
+<dL>
+<dt>
+Convert a formula to its <a href="EmpiricalFormula.htm">empirical formula</a></dt>
+<dd>
+For example, HOC<sub>6</sub>H<sub>4</sub>Cl would become C<sub>6</sub>H<sub>5</sub>ClO
+</dd>
+</dl>
+
+<dl>
+<dt>
+Feature of <a href="Brackets.htm">weighting</a> parts of a compound relative to the other parts. For example:</dt>
+<dd>
+[.2Na]Cl would have a weight of 0.2*22.989768+35.4527=40.0507<p>
+NaCl-.5H<sub>2</sub>O would have a weight of 22.989768+35.4527+0.5*(2*1.00794+15.9994)=67.4501</p>
+</dd>
+</dl>
+
+<dl>
+<dt>
+Feature of <a href="ElementSubtraction.htm">Element Subtraction</a> to return the mass of a formula, minus one or more elements.  For example:</dt>
+<dd>
+C<sub>6</sub>H<sub>5</sub>Cl>HCl means C<sub>6</sub>H<sub>5</sub>Cl minus HCl, having a mass of 76.0959 Da (average mass), equivalent to C<sub>6</sub>H<sub>4</sub></p>
+</dd>
+</dl>
+
+<p>
+The overall <a href="ComputeCharge.htm">Charge</a> on a compound can be estimated.  The program sums up the default charges for each element and for each abbreviation to give the total charge for a formula.  Hydrogens are treated as +1 when preceded by a halogen and -1 when preceded by other elements (including carbon and all metals).</p>
+<p>
+<a href="PctSolverMode.htm">Percent Solver</a> mode for finding the value of &quot;x&quot; in a compound that satisfies user-specified percent composition requirements.</p>
+
+<p>
+<a href="InternationalSupport.htm">International</a> (foreign language) text phrases may be loaded for all labels and messages in the program.  Current languages included are Spanish, German, Portuguese, and Russian.  You can make your own language-specific caption file by simply editing a text file.</p>
+
+<p>
+<a href="EditingAbbreviations.htm">Edit and save abbreviations</a> while program is running.</p>
+
+<p>
+<a href="EditingElements.htm">Edit and save elemental values</a> while program is running.  Further, default elemental weights can be set for the elements' average atomic weights, isotopic weight of the most common isotope, or nominal integer weight of the most common isotope.</p>
+<p>
+<a href="StdDevModes.htm">Accuracy</a> of the final digit of the molecular wt. and percent composition.</p>
+<p>
+Capability of <a href="SaveOptions.htm">saving options as defaults</a> and automatic loading of the saved options upon program start.</p>
+<p>
+Capability of <a href="SaveRestoreValues.htm">saving values and formulas as defaults</a> and automatic loading of the saved values upon program start.</p>
+<p>
+Ability to <a href="AutosaveOptionsEtc.htm">autosave values, formulas, and options</a> on program exit.</p>
+<p>
+Easily <a href="CutCopyPasteDel.htm">Cut, Copy, and Paste</a> information between the Molecular Weight Calculator and other Windows applications.</p>
+<p>
+Ability to <a href="ExpandAbbreviations.htm">expand abbreviations</a> into their elemental compositions.</p>
+<p>
+Ability to convert a formula to its <a href="EmpiricalFormula.htm">empirical formula</a>.</p>
+<p>
+Ability to process and compute molecular weights for compounds listed in an input text file.  Can also run the <a href="FormulaFinder.htm">Formula Finder</a> in <a href="CalcWeightsFromFile.htm">batch mode</a> using a text file.  Specify the file by choosing <a href="CalcWeightsFromFile.htm">calculate weights</a> from file menu or using the /F:filename switch at <a href="CommandLineSwitches.htm">command line</a>.</p>
+<p>
+Capability of <a href="Printing.htm">printing</a> results.</p>
+<p>
+Extensive Help (including context sensitive <a href="MenuHelp.htm">tool tips</a>) and <a href="ErrorMessages.htm">Error Checking</a></p>
+
+</BODY>
+</HTML>

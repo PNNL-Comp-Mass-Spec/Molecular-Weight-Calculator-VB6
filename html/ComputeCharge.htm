@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Compute charge</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="charge"></a><img src="../images/MwtWinIcon.gif" border=0> Compute Charge</h2>
+<p>Location: <a href="ProgramOptions.htm">Program Preferences Window</a></p>
+
+<p>
+The program now includes a charge computation algorithm.  This has been added predominantly for use in the Formula Finder, but I've included one for use with regular formulas too.  The charges for each element can be edited in the <a href="EditingElements.htm">Edit elements</a> window while the charges for the abbreviations can be edited in the <a href="EditingAbbreviations.htm">Edit Abbreviations</a> window.</p>
+<p>
+The method in which charge is computed is different for formulas in the Main Window and the Formula Finder window.  This is because formulas in the Formula Finder are simply empirical formulas while those in the Main Window are assumed to be typed as their structure would look.  For example, when parentheses are used in the Main Window, a charge correction is employed.  Also, hydrogen must be treated specially.  In the Main Window the charge of hydrogen is assumed to be +1.  This is done so that H2O will have a charge of 2 times 1 minus 2 = 0.  However, if the element preceding a hydrogen atom is not a halide (for example, it is carbon, silicon, or any metal), then the charge on hydrogen will be assumed to be -1.  Thus, CH<sub>3</sub> has an overall charge of 4 minus 3 = 1 and CH<sub>4</sub> has a charge of 0.</p>
+<p>
+In the Formula Finder, the charge must be determined simply given an empirical formula.  For this reason, a number of assumptions are made.  First, all carbon atoms are assumed to be linked by single bonds.  If you know you'll have aromatic compounds, then make an abbreviation for C6 and give it a charge of +6.  Note that Ph is already the abbreviation for C6H5 (the phenyl group) and it has been given a charge of +1.  The second assumption is that Hydrogen is +1.  However, if carbon is present, all hydrogens are assumed to be -1.  Lastly, if nitrogen is present, the charge is adjusted to assume that each nitrogen takes the place of one hydrogen on a carbon, then any hydrogens that remain must belong to nitrogen, and thus must be positive.  With this in mind, the overall charge is further corrected.</p>
+<p>
+Some examples:</p>
+<table width="100%">
+<tr valign=top>
+<td>
+Structural Formula</td>
+<td>
+Charge in Main Window</td>
+<td>
+Empirical Formula</td>
+<td>
+Charge in Formula Finder</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>Cl</td>
+<td>
+0</td>
+<td>
+C<sub>4</sub>H<sub>9</sub>Cl</td>
+<td>
+0</td>
+</tr>
+<tr valign=top>
+<td>
+ClCH<sub>2</sub>C(CH<sub>3</sub>)<sub>2</sub>CH<sub>2</sub></td>
+<td>
+1+</td>
+<td>
+C<sub>5</sub>H<sub>10</sub>Cl</td>
+<td>
+1+</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CH<sub>2</sub>NH<sub>2</sub></td>
+<td>
+0</td>
+<td>
+C<sub>4H</sub>12</sub>N<sub>2</sub></td>
+<td>
+0</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>C(ClNH<sub>3</sub>)CH<sub>3</sub></td>
+<td>
+1+</td>
+<td>
+C4H11ClN</td>
+<td>
+1-</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NH<sub>2</sub>Cl</td>
+<td>
+1-</td>
+<td>
+C<sub>4</sub>H<sub>11</sub>ClN</td>
+<td>
+1-</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>COOH</td>
+<td>
+0</td>
+<td>
+C3H6O2</td>
+<td>
+2-</td>
+</tr>
+<tr valign=top>
+<td>
+CH<sub>3</sub>CH<sub>2</sub>CHOO</td>
+<td>
+2-</td>
+<td>
+C<sub>3</sub>H<sub>6</sub>O<sub>2</sub></td>
+<td>
+2-</td>
+</tr>
+<tr valign=top>
+<td>
+C<sub>6</sub>H<sub>5</sub>Cl</td>
+<td>
+8+</td>
+<td>
+C<sub>6</sub>H<sub>5</sub>Cl</td>
+<td>
+8+</td>
+</tr>
+<tr valign=top>
+<td>
+PhCl</td>
+<td>
+0</td>
+<td>
+PhCl</td>
+<td>
+0</td>
+</tr>
+</table><br>
+<p>
+Note:  Entering an empirical formula with Nitrogen into the main window will give an erroneous charge since all of the hydrogens will be assumed to belong to carbon and thus be -1 charge.  The C<sub>4</sub>H<sub>11</sub>ClN empirical formula gives different charges in the Main Window depending on the structural order, while it always gives 1- for the empirical formula.  Similarly, C<sub>3</sub>H<sub>6</sub>O<sub>2</sub> always gives 2- for the overall charge, while the charge can vary in the Main Window.  You can enter Ph in the Formula Finder using one of the custom element checkboxes.</p>
+</BODY>
+</HTML>

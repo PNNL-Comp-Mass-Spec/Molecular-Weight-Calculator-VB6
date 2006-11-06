@@ -1,0 +1,128 @@
+;       Elements File for MWTWIN program (v6.41)
+;
+; Comments may be added by preceding with a semicolon
+; The heading [ELEMENTWEIGHTTYPE] 1 signifies that Average Elemental Weights are
+;   being used while [ELEMENTWEIGHTTYPE] 2 signifies the use of Isotopic Weights
+;   and [ELEMENTWEIGHTTYPE] 3 signifies the use of Integer Weights
+; The group heading [ELEMENTS] must exist to signify the start of the elements
+; Elemental values may be changed, but new elements may not be added
+; If you wish to add new elements, simply add them as abbreviations
+; If this file becomes deleted, the MWTWIN program will create a new file
+;   with the default values
+; Uncertainties from CRC Handbook of Chemistry and Physics
+;   For Radioactive elements, the most stable isotope is NOT used;
+;   instead, an average Mol. Weight is used, just like with other elements.
+;   Data obtained from the Perma-Chart Science Series periodic table, 1993.
+;   Uncertainties from CRC Handoobk of Chemistry and Physics, except for
+;   Radioactive elements, where uncertainty was estimated to be .n5 where
+;   n represents the number digits after the decimal point but before the last
+;   number of the molecular weight.
+;   For example, for No, MW = 259.1009 (±0.0005)
+;
+[ELEMENTWEIGHTTYPE] 1
+; The values signify:
+;       Weight           Uncertainty        Charge
+[ELEMENTS]
+H       1.00794          0.00007             1 
+He      4.002602         0.000002            0 
+Li      6.941            0.002               1 
+Be      9.012182         0.000003            2 
+B       10.811           0.007               3 
+C       12.0107          0.0008              4 
+N       14.00674         0.00007            -3 
+O       15.9994          0.0003             -2 
+F       18.9984032       0.0000005          -1 
+Ne      20.1797          0.0006              0 
+Na      22.98977         0.000002            1 
+Mg      24.305           0.0006              2 
+Al      26.981538        0.000002            3 
+Si      28.0855          0.0003              4 
+P       30.973761        0.000002           -3 
+S       32.066           0.006              -2 
+Cl      35.4527          0.0009             -1 
+Ar      39.948           0.001               0 
+K       39.0983          0.0001              1 
+Ca      40.078           0.004               2 
+Sc      44.95591         0.000008            3 
+Ti      47.867           0.001               4 
+V       50.9415          0.0001              5 
+Cr      51.9961          0.0006              3 
+Mn      54.938049        0.000009            2 
+Fe      55.845           0.002               3 
+Co      58.9332          0.000009            2 
+Ni      58.6934          0.0002              2 
+Cu      63.546           0.003               2 
+Zn      65.39            0.02                2 
+Ga      69.723           0.001               3 
+Ge      72.61            0.02                4 
+As      74.9216          0.00002            -3 
+Se      78.96            0.03               -2 
+Br      79.904           0.001              -1 
+Kr      83.8             0.01                0 
+Rb      85.4678          0.0003              1 
+Sr      87.62            0.01                2 
+Y       88.90585         0.00002             3 
+Zr      91.224           0.002               4 
+Nb      92.90638         0.00002             5 
+Mo      95.94            0.01                6 
+Tc      97.9072          0.0005              7 
+Ru      101.07           0.02                4 
+Rh      102.9055         0.00002             3 
+Pd      106.42           0.01                2 
+Ag      107.8682         0.0002              1 
+Cd      112.411          0.008               2 
+In      114.818          0.003               3 
+Sn      118.71           0.007               4 
+Sb      121.76           0.001              -3 
+Te      127.6            0.03               -2 
+I       126.90447        0.00003            -1 
+Xe      131.29           0.02                0 
+Cs      132.90545        0.00002             1 
+Ba      137.327          0.007               2 
+La      138.9055         0.0002              3 
+Ce      140.116          0.001               3 
+Pr      140.90765        0.00002             4 
+Nd      144.24           0.03                3 
+Pm      144.9127         0.0005              3 
+Sm      150.36           0.03                3 
+Eu      151.964          0.001               3 
+Gd      157.25           0.03                3 
+Tb      158.92534        0.00002             3 
+Dy      162.5            0.03                3 
+Ho      164.93032        0.00002             3 
+Er      167.26           0.03                3 
+Tm      168.93421        0.00002             3 
+Yb      173.04           0.03                3 
+Lu      174.967          0.001               3 
+Hf      178.49           0.02                4 
+Ta      180.9479         0.0001              5 
+W       183.84           0.01                6 
+Re      186.207          0.001               7 
+Os      190.23           0.03                4 
+Ir      192.217          0.03                4 
+Pt      195.078          0.002               4 
+Au      196.96655        0.00002             3 
+Hg      200.59           0.02                2 
+Tl      204.3833         0.0002              1 
+Pb      207.2            0.1                 2 
+Bi      208.98038        0.00002             3 
+Po      208.9824         0.0005              4 
+At      209.9871         0.0005             -1 
+Rn      222.0176         0.0005              0 
+Fr      223.0197         0.0005              1 
+Ra      226.0254         0.0001              2 
+Ac      227.0278         0.00001             3 
+Th      232.0381         0.0001              4 
+Pa      231.03588        0.00002             5 
+U       238.0289         0.0001              6 
+Np      237.0482         0.0005              5 
+Pu      244.0642         0.0005              4 
+Am      243.0614         0.0005              3 
+Cm      247.0703         0.0005              3 
+Bk      247.0703         0.0005              3 
+Cf      251.0796         0.0005              3 
+Es      252.083          0.005               3 
+Fm      257.0951         0.0005              3 
+Md      258.1            0.05                3 
+No      259.1009         0.0005              3 
+Lr      262.11           0.05                3 

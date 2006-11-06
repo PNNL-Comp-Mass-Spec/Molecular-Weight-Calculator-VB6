@@ -1,0 +1,8 @@
+; Enable Isotopic Distribution Mode
+ISOTOPICDISTRIBUTION=ON
+; Simply enter a formula to obtain the isotopic distribution
+CH2(CH2)7CH2Br
+
+; Change the charge state with the following command
+ISOTOPICDISTRIBUTIONCHARGE=2
+CH2(CH2)7CH2Br

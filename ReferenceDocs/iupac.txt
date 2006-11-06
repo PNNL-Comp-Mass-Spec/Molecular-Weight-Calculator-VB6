@@ -1,0 +1,111 @@
+ 1   H    Hydrogen       1.00794(7)     1, 2, 3
+ 2   He   Helium         4.002602(2)    1, 2
+ 3   Li   Lithium        6.941(2)       1, 2, 3, 4
+ 4   Be   Beryllium      9.012182(3)
+ 5   B    Boron          10.811(7)      1, 2, 3
+ 6   C    Carbon         12.0107(8)     1, 2
+ 7   N    Nitrogen       14.00674(7)    1, 2
+ 8   O    Oxygen         15.9994(3)     1, 2
+ 9   F    Fluorine       18.9984032(5)
+ 10  Ne   Neon           20.1797(6)     1, 3
+ 11  Na   Sodium         22.989770(2)
+ 12  Mg   Magnesium      24.3050(6)
+ 13  Al   Aluminium      26.981538(2)
+ 14  Si   Silicon        28.0855(3)     2
+ 15  P    Phosphorus     30.973761(2)
+ 16  S    Sulfur         32.066(6)      1, 2
+ 17  Cl   Chlorine       35.4527(9)     3
+ 18  Ar   Argon          39.948(1)      1, 2
+ 19  K    Potassium      39.0983(1)     1
+ 20  Ca   Calcium        40.078(4)      1
+ 21  Sc   Scandium       44.955910(8)
+ 22  Ti   Titanium       47.867(1)
+ 23  V    Vanadium       50.9415(1)
+ 24  Cr   Chromium       51.9961(6)
+ 25  Mn   Manganese      54.938049(9)
+ 26  Fe   Iron           55.845(2)
+ 27  Co   Cobalt         58.933200(9)
+ 28  Ni   Nickel         58.6934(2)
+ 29  Cu   Copper         63.546(3)      2
+ 30  Zn   Zinc           65.39(2)
+ 31  Ga   Gallium        69.723(1)
+ 32  Ge   Germanium      72.61(2)
+ 33  As   Arsenic        74.92160(2)
+ 34  Se   Selenium       78.96(3)
+ 35  Br   Bromine        79.904(1)
+ 36  Kr   Krypton        83.80(1)       1, 3
+ 37  Rb   Rubidium       85.4678(3)     1
+ 38  Sr   Strontium      87.62(1)       1, 2
+ 39  Y    Yttrium        88.90585(2)
+ 40  Zr   Zirconium      91.224(2)      1
+ 41  Nb   Niobium        92.90638(2)
+ 42  Mo   Molybdenum     95.94(1)       1
+ 43  Tc   Technetium     [98]           5
+ 44  Ru   Ruthenium      101.07(2)      1
+ 45  Rh   Rhodium        102.90550(2)
+ 46  Pd   Palladium      106.42(1)      1
+ 47  Ag   Silver         107.8682(2)    1
+ 48  Cd   Cadmium        112.411(8)     1
+ 49  In   Indium         114.818(3)
+ 50  Sn   Tin            118.710(7)     1
+ 51  Sb   Antimony       121.760(1)     1
+ 52  Te   Tellurium      127.60(3)      1
+ 53  I    Iodine         126.90447(3)
+ 54  Xe   Xenon          131.29(2)      1, 3
+ 55  Cs   Caesium        132.90545(2)
+ 56  Ba   Barium         137.327(7)
+ 57  La   Lanthanum      138.9055(2)    1
+ 58  Ce   Cerium         140.116(1)     1
+ 59  Pr   Praseodymium   140.90765(2)
+ 60  Nd   Neodymium      144.24(3)      1
+ 61  Pm   Promethium     [145]          5
+ 62  Sm   Samarium       150.36(3)      1
+ 63  Eu   Europium       151.964(1)     1
+ 64  Gd   Gadolinium     157.25(3)      1
+ 65  Tb   Terbium        158.92534(2)
+ 66  Dy   Dysprosium     162.50(3)      1
+ 67  Ho   Holmium        164.93032(2)
+ 68  Er   Erbium         167.26(3)      1
+ 69  Tm   Thulium        168.93421(2)
+ 70  Yb   Ytterbium      173.04(3)      1
+ 71  Lu   Lutetium       174.967(1)     1
+ 72  Hf   Hafnium        178.49(2)
+ 73  Ta   Tantalum       180.9479(1)
+ 74  W    Tungsten       183.84(1)
+ 75  Re   Rhenium        186.207(1)
+ 76  Os   Osmium         190.23(3)      1
+ 77  Ir   Iridium        192.217(3)
+ 78  Pt   Platinum       195.078(2)
+ 79  Au   Gold           196.96655(2)
+ 80  Hg   Mercury        200.59(2)
+ 81  Tl   Thallium       204.3833(2)
+ 82  Pb   Lead           207.2(1)       1, 2
+ 83  Bi   Bismuth        208.98038(2)
+ 84  Po   Polonium       [209]          5
+ 85  At   Astatine       [210]          5
+ 86  Rn   Radon          [222]          5
+ 87  Fr   Francium       [223]          5
+ 88  Ra   Radium         [226]          5
+ 89  Ac   Actinium       [227]          5
+ 90  Th   Thorium        232.0381(1)    1, 5
+ 91  Pa   Protactinium   231.03588(2)   5
+ 92  U    Uranium        238.0289(1)    1, 3, 5
+ 93  Np   Neptunium      [237]          5
+ 94  Pu   Plutonium      [244]          5
+ 95  Am   Americium      [243]          5
+ 96  Cm   Curium         [247]          5
+ 97  Bk   Berkelium      [247]          5
+ 98  Cf   Californium    [251]          5
+ 99  Es   Einsteinium    [252]          5
+ 100 Fm   Fermium        [257]          5
+ 101 Md   Mendelevium    [258]          5
+ 102 No   Nobelium       [259]          5
+ 103 Lr   Lawrencium     [262]          5
+ 104 Rf   Rutherfordium  [261]          5, 6
+ 105 Db   Dubnium        [262]          5, 6
+ 106 Sg   Seaborgium     [263]          5, 6
+ 107 Bh   Bohrium        [262]          5, 6
+ 108 Hs   Hassium        [265]          5, 6
+ 109 Mt   Meitnerium     [266]          5, 6
+ 110 Uun  Ununnilium     [269]          5, 6
+ 111 Uuu  Unununium      [272]          5, 6

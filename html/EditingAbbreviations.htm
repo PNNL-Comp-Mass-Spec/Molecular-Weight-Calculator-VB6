@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Editing Abbreviations</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="editing_abbreviations"></a><img src="../images/MwtWinIcon.gif" border=0> Editing Abbreviations</h2>
+<p>Location: <a href="MenuFile.htm">File Menu</a></p>
+
+<p>
+ See also <a href="Abbreviations.htm">using abbreviations</a>.</p>
+<p>
+<b>Conventions for Abbreviations</b></p>
+<p>
+1) Abbreviation names may contain up to six characters.  Only letters are allowed in abbreviation names, though the final character may now be a plus sign (+) or underscore (_) if desired; for example, Na+ and Cl_ are now allowable (this allows cations and anions to be defined as abbreviations).</p>
+<p>
+2) Only the first letter of an abbreviation is allowed to be capitalized.</p>
+<p>
+3) The definition for an abbreviation may contain any combination of elements, parentheses, and isotopes.
+<p>
+4) Abbreviations can now contain other abbreviations.  If a circular loop is found wherein Abbreviation A references Abbreviation B, which references Abbreviation A, then an error message will be displayed.</p>
+<p>
+5) Up to 100 normal abbreviations and 50 extended abbreviations are allowed.</p>
+<h3>Editing Abbreviations Using the Built-in Editor</h3>
+<p>
+The easiest way to edit the abbreviations is to select Edit Abbreviations under the File Menu.  The above conventions apply to any new or modified abbreviations.  While editing the abbreviations, use the arrow keys to move around, then press Enter or click on the value to change it.  After changing the value, press OK to accept it or Cancel to cancel changes.  Clicking on Remove or Erasing the value in the Change Value window and pressing OK will erase the abbreviation or value.  Any lines containing one or more blank columns will be erased from the MWT_ABBR.DAT file.  Pressing Cancel in the Editing Abbreviations window will cancel the most recent changes by simply reloading the MWT_ABBR.DAT file.  Select Reset to Defaults in the Editing Abbreviations screen to reset the abbreviations to their default names and formulas.</p>
+<p>
+If the MWT_ABBR.DAT file becomes corrupted, the MWT program will inform the user and ignore incorrect lines.  If the file becomes deleted, the MWT program will create a new file with the default abbreviations.  Thus, you can erase the .DAT files or select Restore to Defaults to restore the default abbreviations.</p>
+<p>
+<b>Editing Abbreviations Using a Text Editor</b></p>
+<p>
+You can also edit the abbreviations directly in the MWT_ABBR file via a text editor.  The following conventions must be followed:</p>
+<p>
+1) Comments may be added by preceding the comment with an apostrophe.</p>
+<p>
+2) Two group headings must exist: [AMINO ACIDS] and [ABBREVIATIONS]</p>
+<p>
+3) Abbreviations consist of the abbreviation and molecular formula under the appropriate column in either section.</p>
+<p>
+4) Only the first letter of an abbreviation is allowed to be capitalized.</p>
+<p>
+5) The abbreviations in the Amino Acid section are treated as extended level abbreviations -- they are only recognized when extended abbreviations are on.</p>
+
+<h3>Abbreviation Matching Order and Selectivity</h3>
+<p>
+One quirky aspect of abbreviation recognition is that the first abbreviation of a user entered formula that is matched to the available abbreviations (during program operation) is the abbreviation that will be used -- furthermore, extended abbreviations are matched first if they are turned on.</p>
+<p>
+For example, say the user types in the formula phen<sub>2</sub>-meph.  If only normal abbreviations are turned on, the program will match phen to Phen and not to Ph and En since Phen appears first in the MWT_ABBR.DAT file.  To force the Ph and En abbreviations, type PhEn<sub>2</sub>-MePh.  However, if extended abbreviations have been activated (by pressing F3), the formula phen<sub>2</sub>-meph will be translated to PheN<sub>2</sub>-MePh and nothing else, since the program will match Phe to the amino acid phenylalanine, leaving the n to be interpreted as nitrogen.  Numerous methods exist to avoid this specific problem:</p>
+<p>
+1) Properly capitalize formulas while typing them in</p>
+<p>
+2) Don't use extended abbreviations</p>
+<p>
+3) Erase the Phe amino acid</p>
+<p>
+4) Place the Phen abbreviation in the amino acid section ABOVE the Phe abbreviation, so that the program tries to match Phen before Phe.</p>
+<p>
+This example should serve as a model for how to handle possible future abbreviation conflicts.  This example should also illustrate that if the Phen abbreviation is placed anywhere below the Ph or En abbreviations in the MWT_ABBR.DAT file, it will be IMPOSSIBLE for the program to recognize it, since it will match Ph or En or both before even encountering Phen.</p>
+</BODY>
+</HTML>

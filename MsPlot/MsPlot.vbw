@@ -1,0 +1,6 @@
+frmMsPlot = 110, 110, 782, 568, , 66, 66, 738, 524, C
+MsPlotRoutines = 22, 22, 694, 480, 
+SharedVBRoutines = 44, 44, 716, 502, 
+frmProgress = 22, 22, 680, 392, , 22, 22, 507, 384, C
+frmMyMsgBox = 0, 0, 0, 0, C, 0, 0, 485, 362, C
+frmSetValue = 44, 44, 529, 406, , 95, 86, 803, 448, C

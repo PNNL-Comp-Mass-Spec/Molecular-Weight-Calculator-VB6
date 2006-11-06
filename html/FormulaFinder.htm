@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Formula Finder</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="formula_finder"></a><img src="../images/MwtWinIcon.gif" border=0> Formula Finder</h2>
+<p>Location: <a href="MenuTools.htm">Tools Menu</a></p>
+
+<p>
+The Formula Finder can be used to find empirical formulas of compounds that have a specific molecular weight or specific percent composition data.  This is useful for finding possible compounds based on data, simply the reverse of what the main program does.</p>
+<h3>Matching Molecular Weights</h3>
+<p>
+  For finding compounds based on molecular weight:
+<ul>
+<li>
+Select the Match Molecular Weight radio button<br><br></li>
+<li>
+Check desired elements<br><br></li>
+<li>
+Type a weight in the Molecular Weight of Target Compound box.<br><br></li>
+<li>
+Set the weight tolerance to an acceptable value.<br><br></li>
+<li>
+Select calculate.</li>
+</ul>
+<h3>Setting Parameters</h3>
+<p>
+The tolerance defines what range of compounds to match.  For example, typing 78 in the weight box and .1 in the tolerance box will find compounds whose weights lie between 77.9 and 78.1.  The tolerance can also be specified in Parts per Million (Ppm) by checking the Ppm Mode option.  Setting a tolerance in parts per million will change the difference in mass results (dm=) to also be shown in parts per million.  </p>
+<p>
+You specify which elements a compound contains by clicking the boxes next to the element names.  If <a href="#SearchMode">Bounded Searching</a> is on (see below), the Min and Max boxes appear once an element is selected.  These boxes specify the minimum and maximum number of times the element may appear in the empirical formula of the compounds.  For <a href="#SearchMode">Thorough Searching</a> the minimum and maximum are automatically determined based on the target weight and the weight of the elements.</p>
+<p>The Custom1_, Custom2_, etc. boxes are used to enter custom elements or abbreviations besides the ones listed.  Clicking one of the Custom boxes brings up the typical Min and Max boxes, plus a box where you may type a weight for the custom element, an elemental symbol for one of the valid elements (eg. Fe, Pb, Na), or a valid abbreviation (eg. Me, Ph, Bpy).</p>
+<h3>Calculating and Displaying Results</h3>
+<p>
+Selecting calculate will instruct the program to find all of the compounds that match the specifications.  If you used a custom element and typed a weight for it, it will be notated in the results list by C1_, C2_, C3_, etc.  This is so that C2_<sub>5</sub> can represent five custom 2 atoms, while C<sub>2</sub> represents two carbon atoms.  If an elemental symbol such as Fe or Na was entered for a custom element, the program will use that symbol in the results list.</p>
+<p>
+The results list shows the found compounds, their molecular weights, and their difference in mass from the target value, denoted &quot;dm&quot;.  The format of the dm number is dependent on the <a href="StdDevModes.htm">Standard Deviation Mode</a> selected under the options menu: standard notation for Short and Decimal modes, exponential notation for Scientific mode, while dm= is not displayed if Standard Deviations are turned off.</p>
+<h3>Other Options</h3>
+<p>
+You can limit the maximum number of compounds found by changing the number in the Max Hits box.  Double clicking or pressing Enter on any of the lines in the results box will show the entire line.  This is useful if the formula is too long to display in the box.  You can stop the Formula Finder during calculations by pressing a key or clicking the mouse.</p>
+<p>
+Additional Formula Finder options can be selected by choosing the Formula Finder Options button.  The Find Charge option tells the program to calculate the charge of the compounds that match the search parameters.  You can then limit the displayed compounds to those within a desired charge range if desired.</p>
+<p>
+In addition, the mass to charge (m/z) ratio of compounds can be computed.  When selected, this allows you to enter a target m/z value rather than a target molecular weight to search for.</p>
+<p>
+The Smart Hydrogen feature is useful for limiting the number of found compounds.  This feature causes compounds with an unreasonably high number of hydrogens to not be shown.  For example, CH<sub>5</sub> is acceptable, while CH<sub>6</sub> is not.  Also, NH<sub>4</sub> is acceptable, but NH<sub>5</sub> is not.</p>
+<p>
+The Sort Results option is on by default.  This will sort the resultant compound list in a chemically logical order, placing CH<sub>6</sub> before C<sub>2</sub>H<sub>6</sub> and C<sub>2</sub>H<sub>6</sub> before C<sub>10</sub>H<sub>6</sub>.  Although useful, this process may take some time for lists of over 200 compounds, so be patient or turn off the feature.  The process can be stopped by pressing any key or clicking the mouse. </p>
+
+<p><a name="SearchMode">Thorough Searching</a> is the default (and usually faster) algorithm for the Formula Finder.  It involves recursively finding all of the combinations of the selected elements and checking the mass of each combination to see if it matches the target molecular weight.  When trying to match a very large molecular weight (e.g. 5000 Da or more), then thorough searching may actually take too long.  In this case, you can choose Bounded Searching and use the Min and Max boxes to set a reasonable range of occurrences of each element to check for.
+</p>
+
+<p>
+You can minimize the Formula Finder window (by clicking on the underscore just left of the X button in the upper right of the window) while it performs its calculations and it will continue to calculate in the background.  This is useful in case you have a very large calculation to perform and you want to use other windows applications or other parts of the Molecular Weight Calculator program while the calculations are performed. </p>
+
+<h3>Matching Percent Compositions</h3>
+<p>
+For finding compounds based on percent compositions, select the Match Percent Compositions radio button.  Now, selecting specific elements will show a Percent box, along with the Min and Max boxes.  In this box you should type the percent of the compound that is the element.  Type the percentages as numbers between 0 and 100 and do not type a percent sign (the program won't let you).  If you use an abbreviation in a custom element box while Matching Percent Compositions, realize that the percentage you type in for the abbreviation will be for the percent of the compound that is that abbreviation.</p>
+<p>
+Similar to the molecular weight tolerance, the percent tolerance specifies the percent range that the element may have, so that setting carbon's percent to 56 with a tolerance of 2 will match compounds that are between 54% and 58%.  Again, to see the entire line of results that don't fit in the list box, just double click on the line or press Enter.</p>
+
+<h3>Copying Results</h3>
+<p>
+Click the Copy button to copy the results of the Formula Finder search in plain text format.  The formulas, computed weights, and computed differences are separated by tabs allowing the results to be pasted into Excel and correctly fill the cells.  The Copy as RTF button allows you to copy the results, preserving the subscripts in the formulas.  This allows you to paste the results in an RTF aware program like Microsoft Word, and the subscripts will show up correctly.  Lastly, you can select some or all of the lines in the results box and drag and drop the data (hold down the control key to copy it; simply dragging actually removes the highlighted text from the results box).</p>
+
+<h3>Isotopic Distribution</h3>
+<p>
+<p>The <a href="IsotopicDistribution.htm">Isotopic Distribution</a> of any of the formulas in the results list can be computed by placing your cursor on the desired results line and choosing the Display Iso Abundance button (or by pressing Ctrl+D).  The plot of the abundances will appear and the cursor will be placed back on the original line in the results box, allowing for easy comparison of several compounds.  Although the Isotopic Distribution window is not shown, the distribution results are present in the window.  Simply open the window by choosing Tools | Isotopic Distribution Modelling from the main program window.
+</BODY>
+</HTML>

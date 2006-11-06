@@ -1,0 +1,31 @@
+; Enable formula finder mode using FF=, specifying the elements to use in searching
+; Can also specify weight mode, maximum number of hits, and tolerance
+FF=C,H,N,O,Cl,Bpy,Asdfd
+WEIGHTMODE=ISOTOPIC
+MAXHITS=5
+TOLERANCE=0.05
+403.84
+300.58
+
+; The tolerance can be changed
+TOLERANCE=0.02
+403.885
+
+; The maximum number of hits can be changed
+MAXHITS=10
+632.43
+
+; The search elements can be changed
+FF=N,Br,H,Li
+MAXHITS=2
+389.32
+
+; Re-enable molecular weight searching using MW=
+; Subsequently, compounds to calculate a molecular weight for can be listed
+MW=
+NH2
+C6H5Cl
+^13C6H5Cl
+WEIGHTMODE=AVERAGE
+FeCl3-6H2O
+

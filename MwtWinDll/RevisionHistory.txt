@@ -1,0 +1,8 @@
+MwtWin.Dll Change Log
+
+Version 2.36, Build 67; November 5, 2006
+	- Updated ComputeIsotopicAbundancesInternal to properly interpret Charge state
+		- If intChargeState=0, then returns neutral masses
+		- If intChargeState=1, then returns M+H masses
+		- If intChargeState>1, then returns convoluted m/z masses
+	- Updated ConvoluteMassInternal to convert from neutral mass to M+H and to return 0 if the current charge or desired charge is 0

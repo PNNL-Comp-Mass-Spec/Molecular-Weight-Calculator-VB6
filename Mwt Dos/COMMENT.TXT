@@ -1,0 +1,11 @@
+
+                                                             
+ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+บ                                                                      บ
+บ This is a self extracting zip file.  You can erase it after          บ
+บ it has created the MWT.EXE, MWT.HLP, and MWT.ICO files               บ
+บ Type MWT to start the program.  Type MWT /? for program information. บ
+บ Be sure to read the MWT.HLP file.                                    บ
+บ                                                                      บ
+ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ 
+                                                                        

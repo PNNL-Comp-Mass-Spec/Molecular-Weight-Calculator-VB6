@@ -1,0 +1,149 @@
+August 19, 2002 updates:
+1) Visited Download.cnet.com (http://download.com.com/3000-2054-10012449.html) version listed was 6.12 (April 1, 2002).  Logged into upload.cnet.com (http://upload.cnet.com/uploads/devcorner/0-5904195.html) using alchemistmatt@yahoo.com and the usual password.
+   
+Updated program to version 6.19, providing links to (Note that old link was still www.unc.edu even though inputted jjorg.chem.unc.edu on March 9, 2002):
+http://jjorg.chem.unc.edu/personal/monroe/download/mwt6_19s.zip
+http://www.geocities.com/alchemistmatt/download/mwt6_19s.zip
+
+2) Visited Simtel.net (http://www.simtel.net/pub/pd/58238.html) version listed was 6.12
+Updated the PAD .xml file (specifying previous filename as mwt6_12s.zip and the new one as mwt6_19s.zip), renamed pad_file.xml to mwt6_19s.xml, and added to the mwt6_19s.zip (as requested by Simtel).  Ftp'd to ftp://uploads.simtel.net (login using alchemi.yahoo.co with password c21hay.iml) and uploaded the mwt6_19s.zip and mwt6_19s.xml files.
+
+NEED TO DO
+3) Visit Nonags.com at http://www.nonags.com/sub/index1.html or at http://www.nonags.com/softwform/submit.html
+Matthew Monroe
+matt@alchemistmatt.com
+Molecular Weight Calculator
+Home page url: http://www.alchemistmatt.com/
+File url: http://www.alchemistmatt.com/download/mwt6_19s.zip
+Size: 2.13 Mb
+Version: 6.19
+Category: Calculators - Freeware
+Runs on: All Windows
+
+4) Visited Winsite.com (http://uploads.winsite.com/auth/)  Login using alchemistmatt@yahoo.com and usual password.  Chose REPLACE existing program to update, specifying version 6.19 and Win 9x/NT/2000/XP, plus language support for German, Spanish, Portuguese, and Russian.  Also specified program information URL as http://jjorg.chem.unc.edu/personal/monroe/mwtwin.html
+Note: InfoCard URL is http://www.winsite.com/bin/Info?500000022559
+
+
+March 11, 2002 updates:
+Replaced version 6.11 at www.alchemistmatt.com (jjorg.chem.unc.edu), www.unc.edu, and www.geocities.com with the contents of version 6.12, so only necessary to resubmit to Simtel; however, also updated at Winsite.com since very easy.
+
+Logged into Simtel using directions below -- ftp'd mwt6_12s.zip and mwt6_12s.xml
+
+Logged into Winsite.com using directions below -- changed version to 6.12 and uploaded file using web address http://jjorg.chem.unc.edu/personal/monroe/download/mwt6_12s.zip
+
+
+March 9, 2002 updates:
+
+1) Visited Download.cnet.com (http://download.cnet.com/downloads/0-1635596-100-7505754.html) version listed was 6.04 (October 12, 2001).  Logged into upload.cnet.com (http://upload.cnet.com/uploads/devcorner/0-5904195.html) using alchemistmatt@yahoo.com and the usual password.
+   
+Updated program to version 6.11, providing links to http://jjorg.chem.unc.edu/personal/monroe/download/mwt6_11s.zip and http://www.geocities.com/tandm_wy/download/mwt6_11s.zip, and changing program home page to http://www.alchemistmatt.com/mwtwin.html
+  Will take 6 to 8 weeks for listing to be updated
+
+1.2) ZDNet upload submissions also point to Download.Cnet.Com
+
+2) Visited Simtel.net (http://www.simtel.net/pub/pd/56419.shtml) version listed was 6.04
+Updated the PAD .xml file (specifying previous filename as mwt6_04s.zip and the new one as mwt6_11s.zip), renamed pad_file.xml to mwt6_11s.xml, and added to the mwt6_11s.zip (as requested by Simtel).  Ftp'd to ftp://uploads.simtel.net (login using alchemi.yahoo.co with password c21hay.iml) and uploaded the mwt6_11s.zip and mwt6_11s.xml files.
+
+3) Visit Nonags.com at http://www.nonags.com/sub/index1.html
+Home page url: http://www.alchemistmatt.com/
+File url: http://www.alchemistmatt.com/download/mwt6_11s.zip
+Size: 2.06 Mb
+Version: 6.11
+Category: Calculators - Freeware
+Runs on: All Windows
+
+4) Visited Winsite.com (http://uploads.winsite.com/auth/)  Login using alchemistmatt@yahoo.com and usual password.  Chose REPLACE existing program to update, specifying version 6.11 and Win 9x/NT/2000/XP, plus language support for German, Spanish, Portuguese, and Russian.  Also specified program information URL as http://jjorg.chem.unc.edu/personal/monroe/mwtwin.html
+
+5) Visited Tucows at http://author.tucows.com/ (login using alchemistmatt)
+  Listed version 6.02 as being rejected.  Chose add new program (not update v6.02).  
+  Used software url: http://jjorg.chem.unc.edu/personal/monroe/download/mwt6_11s.zip 
+
+
+October 2001 updates:
+File link: http://www.alchemistmatt.com/download/mwt6_02s.zip
+
+1) Visited Download.cnet.com (was Download.com, Softseek.com, Winfiles.com) and registered (alchemistmatt@yahoo.com & www.alchemistmatt.com).  Submission information instructed to log in at:
+  http://upload.cnet.com/uploads/devcorner/0-5904195.html 
+Category: Home and Education: Science
+
+Note: 11/2/01: I used the form at http://upload.cnet.com/uploads/submissions/0-5904195.html?tag=txt to submit an update for my software.  May or may not work since I then registered soon after.
+
+
+1.2) ZDNet upload submissions also point to Download.Cnet.Com
+
+
+2) Visited Simtel.net at http://www.simtel.net/upload.php to request upload instructions.  Received instructions on 10/4/2001 specifying the following
+    Ftp to ftp://uploads.simtel.net
+ 	Login using alchemi.yahoo.co
+	Pssword is c21hay.iml
+Upload the program file and a PAD .xml program (generated using PadGen)
+
+3) Visit Nonags.com at http://www.nonags.com/sub/index1.html
+File link: http://www.alchemistmatt.com/download/mwt6_02s.zip
+Category: Calculators - Freeware
+
+4) Visited Winsite.com and created an account for alchemistmatt@yahoo.com
+Submitted update information using http://uploads.winsite.com/auth/ (choosing REPLACE existing program)
+
+
+5) Visited Tucows at http://author.tucows.com/ and created an account (alchemistmatt)
+   Submitted application for review.  Rejected a few days later.  Need to resubmit a future version.
+
+6) Send an annoucement to my Yahoo! Groups mailing list (http://groups.yahoo.com/group/mwtwin)
+
+===========================
+Old Updates:
+
+Submit program to:
+
+ftp://ftp.osc.edu/pub/chemistry/software/MS-WINDOWS95/
+	Upload mwt4_4.exe to the /incoming directory with
+	the accompanying mwt4_4.txt file.
+	Then e-mail ftphelp@osc.edu telling them to post file in
+	correct directory.
+6/18/98: v4.4 submitted
+7/20/98: v4.5 submitted
+
+Submit program to www.simtel.net by uploading to incoming.simtel.net
+	then e-mailing archive@Simtel.Net
+	with a short description of the files you wish to submit and 
+	the method you wish to use for uploading (see direc.txt)
+6/18/98: v4.4 submitted
+
+Go to Download.com and submit UNC address and simtel address
+6/15/98: v4.4 information submitted and updated
+
+Go to Upload.com to update the ZD Net information by submitting mwt4_4.zip
+Username: Matthew Monroe, password merlin
+6/18/98: v4.4 submitted
+
+Submit mwt4_4s.exe program to www.winsite.com by using Netscape with the page
+	(submit as filename mwt4_4.exe		replaces file mwt4_31.exe):
+	http://uploads.winsite.com/wus/uploadservice.pcgi
+6/18/98: Can't Connect to site
+
+Submit mw4_4s.exe program to softseek.com
+	http://softseek.com/Education_and_Science/Science_and_Engineering/Review_13402_index.html
+		Choose submit update button at bottom, left corner.
+6/15/98: v4.4 submitted and updated
+
+Submit to new place shown in e-mail
+
+
+Download required VB 5 files from:
+
+http://www.simtel.net/simtel.net/win95/dll.html
+	under vb5run.zip
+	(http://www.simtel.net/pub/simtelnet/win95/dll/vb5run.zip)
+
+http://www.sharepaper.com/apps/reviews/q_ufad.html
+	under Visual Basic 5 Runtimes
+	(http://www.sharepaper.com/cgi-local/d.cgi?http://filez.com/cgi/filez.cgi?query=vb5run.zip&doit=Search)
+
+http://www.softseek.com/Utilities/VBRUN_Files/
+	under VB5 Runtime Files
+	(http://www.softseek.com/Utilities/VBRUN_Files/Review_11110_index.html)
+
+http://www.apexsc.com/vb/davem/vbttdl.html
+	under VB 5 Runtime Files
+	(http://www.apexsc.com/vb/ftp/vbtt/vb5run.exe)

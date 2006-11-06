@@ -1,0 +1,322 @@
+From:	IN%"chris@SimTel.Coast.NET" 27-FEB-1996 16:11:00.84
+To:	IN%"MONROEM@uwyo.edu"
+CC:	
+Subj:	RE: Wish to upload a Chemistry Program
+
+Return-path: <chris@SimTel.Coast.NET>
+Received: from roper.uwyo.edu (SYSTEM@roper.uwyo.edu)
+ by PLAINS.UWYO.EDU (PMDF V5.0-4 #14244)
+ id <01I1PPMTR2R4002BZ0@PLAINS.UWYO.EDU> for MONROEM@PLAINS.UWYO.EDU; Tue,
+ 27 Feb 1996 16:10:55 -0700 (MST)
+Received: from DIRECTORY-DAEMON by ROPER.UWYO.EDU (PMDF V5.0-4 #14244)
+ id <01I1PPMMO1IO0014JD@ROPER.UWYO.EDU> for MONROEM@plains.uwyo.edu; Tue,
+ 27 Feb 1996 16:10:41 -0700 (MST)
+Received: from jupiter.tacom.army.mil (jupiter.tacom.army.mil)
+ by ROPER.UWYO.EDU (PMDF V5.0-4 #14244) id <01I1PPML3MWW001I7P@ROPER.UWYO.EDU>
+ for MONROEM@uwyo.edu; Tue, 27 Feb 1996 16:10:40 -0700 (MST)
+Received: from simtel.coast.net by jupiter.tacom.army.mil (8.7.1/8.7.1-kbp)
+ with ESMTP id RAA03803; Tue, 27 Feb 1996 17:42:49 -0500 (EST)
+Received: by simtel.coast.net (8.7.1/8.7.1-kbp) id SAA00542; Tue,
+ 26 Dec 1995 18:12:42 -0500 (EST)
+Date: Tue, 26 Dec 1995 18:12:27 -0500 (EST)
+From: chris@SimTel.Coast.NET (Chris Gavula)
+Subject: Re: Wish to upload a Chemistry Program
+In-reply-to: Message of Wed, 06 Dec 1995 11:10:43 -0700 (MST)
+To: MONROEM@uwyo.edu (Alchemist Matt)
+Message-id: <951226181227.chris@SimTel.Coast.NET>
+Content-transfer-encoding: 7BIT
+
+MONROEM@UWYO.EDU (Alchemist Matt) wrote:
+> Hello,
+> 
+>         I would like to be granted access to upload a Chemistry Molecular Weight
+> Calculator program for MS-DOS.  I would prefer to use the FTP method to
+> send you this initial version and subsequent versions.
+>         The Molecular Weight Calculator has the unique feature of being able
+> to display up to seven formulas and their molecular weights simultaneously,
+> besides finding percent composition.  The program includes many advanced
+> features like recognition of abbreviations for chemical groups and standard
+> deviations of results.
+> 
+>                         Thank you for your time,
+>                           Matt
+> 
+> ==============================================================================
+>                                  What are the following?
+> 
+> Matthew Monroe               Black Angus            :      Black Angus
+> Chemistry Major              Black Angus            :      Texas Longhorn
+> University of Wyoming        Black Angus            :      Brown Swiss
+>                              -------------------------------------------------
+> monroem@uwyo.edu             Homogeneous Catalyst   :   Heterogeneous Catalyst
+> 
+>      This tagline is umop apisdn.
+> ==============================================================================
+
+Thank you for inquiring about how to include your software
+program in SimTel, the Coast to Coast Software Repository (tm).
+
+As you may know, the Repository is maintained by Coast to Coast
+Telecommunications, Inc. (CCT) on its host computer on the Internet
+located at "SimTel.Coast.NET" which is not accessible without our
+express permission.
+
+Our Repository exists to help software authors gain a wider audience for
+their programs than they can individually give them.  Thus we allow many
+so called "mirror sites", currently about 65, on the worldwide Internet,
+to copy our host Repository (at irregular intervals of their choosing),
+as long as the mirror sites are accessible FREE OF CHARGE to Internet
+users for browsing and downloading any program.  We insure this free
+access by asserting our compilation copyright on the Repository, and
+on report of abuse by a mirror site, denying access to our host.
+
+One mirror site is FTP.Coast.NET.  Please read our copyright notice on
+that host.  We understand that the author maintains his or her authorship
+copyright which is how the author may expect to gain compensation from
+the actual end user of the program(s) and that the author can also
+control all other aspects of distribution of these works not related
+to us.
+
+To support our efforts, we offer (800) access to the host Repository and
+make CD-ROM disks of the entire Repository for sale.  If we accept your
+program, it most likely will be included in future editions of OUR
+CD-ROMs.  To enlarge exposure of programs to the potential universe
+of end users, we occasionally license other CD-ROM vendors to offer
+abridged and unabridged versions of the Repository on CD-ROMs made by
+them.  Our licenses have the option whether or not to include your
+program(s) on their offerings.
+
+Please do NOT upload your program(s) if you object to such activities
+without compensation from CCT and its licensees.  By uploading your
+program(s) you agree to look to the individual end user(s) for your
+sole source of compensation for the use of your work, and *not* CCT,
+its distributors, licensees or their distributors, or any Internet
+mirror sites.
+
+You also understand and agree that we can not call your program back
+from such distribution.  If we accept a program, we try to update our
+host as soon as possible, and once it appears there we will not stop
+further distribution... so please if you have any concern about our
+distribution system, do NOT upload, because once you do, it's too late.
+
+NOTE: By the act of uploading you affirm that you are the author or the
+author's authorized agent and that the author has read and agreed with
+the terms of our compilation copyright and distribution policies.
+
+[Note: This is private information.  Do not forward or quote from it.]
+
+The upload account used for submissions of files to the SimTel
+Software Repository is:
+
+     Site: SimTel.Coast.NET (205.149.128.6)  (this is *not* ftp.coast.net)
+ Username: incoming
+ Password: bqvsp2xr
+
+This account and password information is for your eyes only.
+
+ZIP v2.x is the preferred format for uploads.  ZIP v1.10 files are also
+accepted but will be repacked in ZIP v2.x format.  We cannot handle other
+archive formats at this time.
+
+SimTel policy does not allow self-extracting files (except for archivers,
+where a chicken-and-the-egg situation exists) because a few downloaders
+have destroyed their file systems by improperly transferring binary files
+in text mode.  This problem does not exist on BBSs, but it's a very real
+one for Internet users.  If the program you are submitting is an archiver
+it must be uploaded inside a ZIP file for error checking purposes.
+
+You can convert a self-extracting archive file to its native format with
+Vernon Buerg's "FV" program.
+
+SimTel/msdos/arcutil/
+fv145.zip       View dirs of ARC/DWC/LBR/LZH/PAK/ZIP/ZOO/SFXs
+
+It preserves any -AVs the ZIP may have because it simply trims the SFX
+executable off the front of the input file and makes a new file.
+
+Please try to limit the size of each file to 700K or less so that
+downloaders can put them on a diskette.  This is a guideline, not a
+requirement.  Experience has shown that larger files get less downloads
+due to downloader's disk space or modem time limitations.
+
+Please do not upload a large number of files at one time.  SimTel
+receives about 360 uploads per month.  If one person uploads a large
+number of files at one time they are usually put aside so they will not
+disrupt processing of other uploads.  It may take as long as two months
+to get around to screening and cataloging them.
+
+Please remember to use the "binary" or "tenex" mode when uploading binary
+files with FTP.  Please check the filesize in SimTel's incoming directory
+with the dir command after uploading to make sure that it's the same as
+the original file.
+
+SimTel policy does not allow replacing an existing file by another with
+the same name because we cannot guarantee that every mirror site or ANY
+of the TRICKLE sites will replace the old file with the new file.  Most
+mirror sites will get it because it has a different datestamp and size,
+but most TRICKLE sites will NOT re-fetch files they have already gotten
+in response to user requests.
+
+Please choose a name with the version number in it in order to help
+users spot updates.
+
+Please note: Files or programs submitted without upload announcements
+will not be accepted.  To assure authenticity, SimTel requires that
+upload announcements (in English) be sent to me by e-mail and the real
+name of the uploader must be included in the announcement.  Upload
+announcements in the form of text files uploaded to the incoming
+directory are deleted by script that removes all non-zip files from the
+incoming directory before the uploaded files are moved to the reviewing
+area.
+
+Send your announcement to me by e-mail with a one line description
+for each file you have uploaded.  A longer description of 10-20 lines
+should also be included in the same message, which will be used for my
+announcement of the file to the net.  Please include a suggestion of
+the SimTel directory that would be the best place to put your file.
+
+The one-line description should use the format shown in this sample
+template. 
+
+SimTel/msdos/io_util/
+whtprt40.zip    Displays system serial ports & IRQ assignments
+12345678.123____123456789.123456789.123456789.123456789.123456
+^^^^^^^^^^^^    ^--46 characters maximum in the description--^
+     ^          ^--description starts at column 17
+     ^--filename all lower case, left-justified with no blanks
+
+The longer description should begin at the left margin (column 1) and
+not exceed 76 characters per line.
+
+Experience has shown that potential downloaders of new files are "turned
+off" by announcements which are worded more like press releases than
+informative postings.  Please avoid the use of superlatives.  Here are
+some guidelines to help you avoid the appearance of "hype" in your
+announcement.
+
+  - A good announcement informs.
+  - A bad announcement persuades.
+
+You can most easily tell persuasion from information by the modifiers.
+Adjectives and adverbs that make judgments are almost always persuaders
+("great") as are those that would appeal to the user based on irrelevant
+criteria ("new").  Claims that are not backed up by easily available
+facts, including subjective claims ("best", "greatest"), are persuaders,
+not information.  A claim of benefit to the user, other than those
+implied by the product itself, is likely a persuader.
+
+One example: "This will do your taxes", in the description of a tax
+preparation program, is a claim of benefit to the user, implied by the
+program; that's information.  "This will do your taxes better than any
+other program" is not.  It has a judgment ("better") modifier, which is
+a big clue.
+
+Please make the description tell the purpose/use of the file, not things
+like "Newest version of WOW.ZIP" or "Newest version of Chuck Forsberg's
+DSZ".  In either of those examples I am left to answer questions from the
+users about what the program does.
+
+If there are special requirements such as EGA/VGA/SVGA, 286/386/486,
+Pentium, EMS/XMS, etc., please include that information.
+
+If you are the author of the program please include that information
+in the announcement.  A simple "Uploaded by the author." is sufficient.
+
+If you wish to include optional Usenet "Newsgroups:" and "Followup-To:"
+information either in the header or as the first two lines of the
+upload announcement that is mailed to me, they will be used for the
+posting but inappropriate newsgroup(s) will be deleted.  If you don't
+know what this information means, do not include these lines.
+
+If the program is for Windows and you wish to have your announcement
+posted to comp.os.ms-windows.announce you will have to do that yourself
+by sending it by e-mail to  comp-os-ms-windows-announce@mail.uu.net
+because the moderator of that newsgroup will not allow SimTel to post
+your announcement to his newsgroup.
+
+Each file should be announced in a separate message unless it is related
+to one or more of the other files, such as a multi-part package.  The
+message should be in the format described above.
+
+Here is a sample upload announcement.  Each line has been offset by "> "
+for this example to make it clear where the example begins and ends.  Do
+not include the "> " in your announcement.  Begin your announcement with
+the line "I have uploaded:" as shown below.  Do not include the header,
+which is shown here only for clarity.
+
+> From: bgu@cu.nih.gov (Bruce Guthrie)
+> To: w8sdz@SimTel.Coast.NET (Keith Petersen)
+> Subject: dirto312.zip - Directory lister and totaller
+> Newsgroups: comp.archives.msdos.announce
+> Followup-To: comp.archives.msdos.d
+> 
+> I have uploaded:
+> 
+> SimTel/msdos/dirutil/
+> dirto312.zip    Directory lister and totaller
+> 
+> DIRTO v3.12 prepares a report showing files in subdirectory or drive.
+> It allows some restriction requests (show only files with date greater
+> than a certain value).  It is similar to Norton's FF and Ray Van Tassle's
+> WIZ command (which is a great program but it doesn't work on network or
+> CD-ROM discs) in some ways but presents a more formal report.  It also
+> allows you to look for duplicate file names and search by attributes or
+> dates.
+>
+> Special requirements: None
+>
+> Changes: A number of bug fixes were made.  Now runs on Novell drives.
+> A number of enhancements were made to the /DUPS option.
+> 
+> dirto312.zip has replaced dirto311.zip.
+>
+> ShareWare.  Uploaded by the author.
+> 
+> Bruce Guthrie
+> bgu@cu.nih.gov
+
+All uploads must run on or be related to MS-DOS, MS-Windows or Windows
+95.  If your program uses Visual Basic's VBRUNxxx.DLL it is recommended
+that it not be included because it is already available from the SimTel
+collection as vbrun100.zip, vbrun200.zip, or vbrun300.zip.
+
+Windows-NT uploads should be coordinated with winnt@SimTel.Coast.NET.
+OS2 uploads should be coordinated with os2@SimTel.Coast.NET.  Please do
+not upload NT or OS2 programs to the incoming directory listed above.
+
+All files or programs must include documentation in the English language
+(other languages are allowed but English must also be included).  There
+must be a file included in the uploaded zip file that the user can read,
+without running a program, which tells:
+
+  1. What the program does, and how to use it.
+  2. The program's status (Public Domain, FreeWare, ShareWare).
+  3. The program's distribution status (it must be freely distributable).
+  4. How to contact the author in case of questions or problems (mailing
+     address, phone number and/or e-mail address).
+
+If the user has to run a program to get this information there is a
+chicken-and-the-egg problem if that program does not run because of an
+incompatibility or a corrupted download.
+
+Programs that stop working after a fixed date will not be accepted.
+
+Because SimTel's collections are available all over the world, SimTel
+cannot accept programs that are or might be subject to U.S. technology
+export restrictions.  Encryption and decryption programs will not be
+accepted, no matter what method is used.
+
+Programs that crack copy protection or passwords will not be accepted.
+
+Games are not accepted unless they are strictly educational.  There
+are several sites on the Internet which specialize in other types of
+games.
+
+Thanks!
+
+--Chris
+
+Chris Gavula
+Windows Archivist for SimTel, the Coast to Coast Software Repository (tm)
+Internet: chris@SimTel.Coast.NET              ftp://ftp.coast.net/SimTel/
+Uucp: uunet!simtel.coast.net!chris           http://www.coast.net/SimTel/

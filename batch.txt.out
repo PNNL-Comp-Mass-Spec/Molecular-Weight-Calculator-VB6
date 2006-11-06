@@ -1,0 +1,113 @@
+; Average Weight Mode Enabled
+; Standard deviations will not be displayed
+; Source formula will be displayed with proper capitalization
+FeCl3-6H2O	270.29478
+
+; Abbreviation expansion now On
+EtOac	CH3CH2C2H3O2	88.10512
+; Display of source formula is now Off
+CH3CH2C2H3O2	88.10512
+; Will not display the molecular weight (mass) of each formula
+CH3CH2C2H3O2
+
+; Converting formulas to empirical formulas now On
+H12Cl3FeO6
+C4H8O2
+; Display of source formula is now On
+UreaC4(NH2)4Ca	C5H12CaN6O
+
+; 3 letter to 1 letter amino acid symbol conversion now On
+GluGlaPheLeu	EUFL
+Val-Ile-Arg	VIR
+; Will add a space every 10 amino acids
+; Will only show the converted sequence, not the sequence being converted
+EUFLVIRFYM CVEUEUFLVI RFYMCVEU
+
+; 1 letter to 3 letter amino acid symbol conversion now On
+PheLeuGluGluLeuTyrArg
+MetLeuThrSerCysAspGluGluPhe
+; Will show sequence being converted, in addition to the converted sequence
+; Will separate residues with a dash
+FLEELYR	Phe-Leu-Glu-Glu-Leu-Tyr-Arg
+
+; Normal Molecular Weight Mode Enabled (other modes turned Off)
+C4N8OH2	178.112
+
+; One letter Amino Acid weight mode: input formulas are assumed to be peptides in one-letter notation
+H-PheLeuGluGluLeuTyrArg-OH	969.09172
+H-MetLeuThrSerCysAspGluGluPhe-OH	1074.18464
+; Display of source formula is now Off
+1074.18464
+
+; Formula Finder Mode Enabled.  Search elements/abbreviations: C, H, N, O, Cl, Bpy
+; Isotopic Weight Mode Enabled
+; FF Maximum Hits set to 5
+; FF Tolerance set to 0.05
+; FF Searching: 403.84
+Compounds found:  0
+
+; FF Searching: 300.58
+Compounds found:  0
+
+; FF Tolerance set to 0.02
+; FF Searching: 403.885
+Compounds found:  0
+
+; FF Maximum Hits set to 10
+; FF Searching: 632.43
+Compounds found:  0
+
+
+; Formula Finder Mode Enabled.  Search elements/abbreviations: H, N, Br, Li
+; FF Maximum Hits set to 2
+; FF Searching: 389.32
+Compounds found:  0
+
+; Switching back (this comment is in the source file)
+
+NH2	16.0187232
+C6H5Cl	112.007976
+^13C6H5Cl	118.007976
+
+FeCl3-6H2O	270.29478
+
+
+
+; So is this one, along with the 3 blank lines above
+16.02262
+112.5566
+118.4924
+270.29478
+
+; Verbose mode is now on
+; Delimeter now a Space
+; Source formula will be displayed with proper capitalization
+C6H5Cl 112.5566
+
+; Delimeter now ,
+C6H5Cl,112.5566
+
+; Comments found in the source file will not be written to the output file
+
+; Isotopic Distribution calculations now On
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   205.05919	0.4588825	 100.00
+   206.05919	0.0459075	  10.00
+   207.05919	0.4484460	  97.73
+   208.05919	0.0447120	   9.74
+   209.05919	0.0020020	   0.44
+   210.05919	0.0000528	   0.01
+   211.05919	0.0000017	   0.00
+
+; Isotopic Distribution charge set to 2
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   103.03329	0.4588825	 100.00
+   103.53329	0.0459075	  10.00
+   104.03329	0.4484460	  97.73
+   104.53329	0.0447120	   9.74
+   105.03329	0.0020020	   0.44
+   105.53329	0.0000528	   0.01
+   106.03329	0.0000017	   0.00
+

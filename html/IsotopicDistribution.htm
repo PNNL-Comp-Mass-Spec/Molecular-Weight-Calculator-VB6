@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Isotopic Distribution</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="isotopic_distribution"></a><img src="../images/MwtWinIcon.gif" border=0> Isotopic Distribution</h2>
+<p>Location: <a href="MenuTools.htm">Tools Menu</a></p>
+
+<H3>Introduction</H3>
+<p>The Isotopic Distribution module allows you to predict the masses and abundances of the isotopes for a given formula.  This information is useful for comparison to observed mass spectrometry data in helping to predict the number of atoms of a given element in the formula.  The abundances are calculated by knowing the observed natural abundance of each element in the formula, and convoluting these natural abundances to predict the isotopic abundances.  When you start the module by choosing Isotopic Distribution from the Tools menu, the currently selected formula is copied to the Isotopic Distribution form.  You can also type or paste a new formula in the formula box.  Whenever computing isotopic distributions the weight mode will be automatically changed to Isotopic weights; this cannot be changed.</p>
+
+<p>As an example, the molecule C<sub>6</sub>H<sub>5</sub>Cl weighs 112.00797 Da.  Its isotopic distribution is:</p>
+<table border=1>
+<tr><td width=100><B>Mass</B></td><td width=100><B>Fraction</B></td><td width=80><B>Intensity</B></td><td colspan=3><B>Potential Combinations of Atoms</B></td></tr>
+<tr><td>112.00797</td><td>0.7098995</td><td>100.00</td><td width=125><sup>12</sup>C<sub>6</sub> <sup>1</sup>H<sub>5</sub> <sup>35</sup>Cl </td><td>&nbsp;</td></tr>
+<tr><td>113.00797</td><td>0.0466010</td><td>6.56</td><td width=125>  <sup>12</sup>C<sub>5</sub> <sup>13</sup>C <sup>1</sup>H<sub>5</sub> <sup>35</sup>Cl       <td width=125><sup>12</sup>C<sub>6</sub> <sup>1</sup>H<sub>4</sub> <sup>2</sup>H <sup>35</sup>Cl </td> </tr>  
+<tr><td>114.00797</td><td>0.2281708</td><td>32.14</td><td width=125> <sup>12</sup>C<sub>4</sub> <sup>13</sup>C<sub>2</sub> <sup>1</sup>H<sub>5</sub>           <td width=125><sup>12</sup>C<sub>6</sub> <sup>1</sup>H<sub>3</sub> <sup>2</sup>H<sub>2</sub> <sup>35</sup>Cl  <td width=125><sup>12</sup>C<sub>6</sub> <sup>1</sup>H<sub>5</sub> <sup>37</sup>Cl</td></tr>
+<tr><td>115.00797</td><td>0.0149130</td><td>2.10</td><td align="Center">  ... </td></tr>
+<tr><td>116.00797</td><td>0.0004092</td><td>0.06</td><td align="Center">  ... </td></tr>
+<tr><td>117.00797</td><td>0.0000060</td><td>0.00</td><td align="Center">  ... </td></tr>
+</table>
+
+<p>This means that 70.98995% = 71% of the compound will contain six <sup>12</sup>C atoms, five <sup>1</sup>H atoms, and one <sup>35</sup>Cl atom.  However, it is also possible that one of the six carbon atoms could be Carbon-13, which would increase the weight of the compound by one Da.  It is equally possible that one of the five Hydrogen atoms could be Hydrogen-2, also increasing the weight by 1 Da.  The probability of either of these happening is 4.66%, as shown by the above table.  I have also shown the three possible compounds that would result in a 114.00797 Da compound.  The program does not list all of the possible combinations of atoms; I have added those to the above table to illustrate the concept.</p>
+
+<p>By checking the Plot Results box, the distribution will be plotted.  The plot will update faster if you use Options | Plot Type | Sticks to Zero (left plot below).  However, you can see the effect of the mass spectrometer's resolution on the ability to see the isotopes by changing the Plot Type to Gaussian Peaks in the Isotopic Distribution window.  The plot will change depending on the effective resolution and corresponding m/z you have defined (see below for details).  See the <a href="IonPlot.htm">Plotting Help</a> for more information on configuring the plot, zooming and out, and panning the plot view.</p>
+
+<p>You can copy the results to the clipboard by clicking the Copy button or by selecting the results box, pressing Ctrl+A to select all, and Ctrl+C to copy.  Since the values are separated by tabs, you can paste the data directly into Microsoft Excel and it will be properly placed into adjacent cells.</p>
+
+<table>
+<tr><td><img src="../images/MwtIsoAbundance2.gif" Width=462 Height=410></td><td><img src="../images/MwtIsoAbundance3.gif" Width=462 Height=410></td></tr>
+</table>
+
+<H3>Resolution for Gaussian Peak plotting</H3>
+<p>The width of the Gaussian peaks can be modified by specifying the effective resolution and effective resolution m/z.  The higher the resolution, the sharper the Gaussian peak.  Typically, Quadrupole instruments have resolutions between 500 and 5000.  Time of Flight (including Q-Tof) instruments have resolutions of 5000 to 30,000.  Fourier Transform ICR (FT-ICR) instruments have resolutions ranging from 50,000 to 1,000,000.</p>
+
+<p>Resolution in mass spectrometry is technically only valid at a single given mass, since it is computed by dividing the mass by the smallest spacing between two masses that can be discerned (m &divide; &Delta;M).  For this reason, you must also specify an m/z at which the resolution applies.  At lower resolutions, the Gaussian representation of adjacent peaks may begin to blend together, a phenomenon commonly seen on lower resolution instruments.  The following four pictures illustrate the plot produced for the same four masses at four different resolutions.</p>
+
+<table>
+  <tr>
+	<td><img src="../images/ResolutionComparison5000.gif" width=382 height=330>
+	</td>
+	<td><img src="../images/ResolutionComparison1000.gif" width=382 height=330>
+	</td>
+  </tr>
+  <tr>
+	<td><img src="../images/ResolutionComparison750.gif" width=382 height=330>
+	</td>
+	<td><img src="../images/ResolutionComparison500.gif" width=382 height=330>
+	</td>
+  <tr>
+</table>
+
+<H3>Ion Comparison List</H3>
+
+<p>You can compare the predicted isotopic distribution to another spectrum by copying the spectrum to the clipboard, then clicking the Paste List of Ions to Plot button.  The format of the ion list should be a list of mass (m/z) and intensity pairs, separated by a space, tab, or comma, with each mass/intensity pair on a separate line.  If the data consists of discrete masses (centered data), then set the Plot Type to Sticks to Zero or Gaussian Peaks. In the case of Gaussian peaks, each of the masses will be converted to a gaussian peak, using the specified options.  If the data consists of high resolution, raw data (continuum data), then set the Plot Type to Lines Between Points.  If more than 1000 masses are pasted, and the Plot Type is changed to Gaussian Peaks, a warning message will be shown the first time the Gaussian Peaks mode is selected.  This is done to prevent you from accidentally choosing the Gaussian Peaks mode with continuum data.  The pasted list can optionally be normalized to 100.  Additionally, the plot color for the comparison list can be customized.
+</p>
+
+<table>
+<tr><td><img src="../images/MwtIsoAbundance4.gif" Width=522 Height=427></td></tr>
+</table>
+
+
+<H3>Additional Information</H3>
+
+<p>In addition to entering a formula on the Isotopic Distribution window, you can place your cursor on a formula line in the main Molecular Weight Calculator window and choose Tools | Show Isotopic Distribution for Current Formula (or press Ctrl+D).  This will compute the distribution and plot it, but not show the Isotopic Distribution window.  Finally, while using the <a href="FormulaFinder.htm">Formula Finder</a>, you can view the isotopic distribution of any of the formulas in the results list by placing your cursor on the results line and choosing the Display Iso Abundance button (or by pressing Ctrl+D).</p>
+
+<p>It is allowable to have explicitly defined <a href="Isotopes.htm">Isotopes</a> present in a formula (for example <sup>^13</sup>C<sub>6</sub>).  Since an explicitly defined isotope has just one mass, it has no "distribution".  Thus, the result is to simply increase the observed weight of the formula by the mass of the isotope.  For example, C<sub>6</sub>H<sub>6</sub> weighs 78.04695 Da and has 4 possible isotopes.  Adding one Carbon-13 to give C<sub>6</sub>H<sub>6</sub><sup>^13</sup>C simply shifts the mass up by 13 to 91.04695, still giving 4 possible isotopes.  However, <sup>^13</sup>C<sub>6</sub>H<sub>6</sub>, with all Carbon-13 atoms weighs 84.04695 (6 Da more than 78.04695) and only has 2 isotopes, those contributed by Hydrogen-1 and Hydrogen-2.</p>
+
+<p>Due to the above behavior for explicitly defined isotopes, the abbreviation D, for deuterium, must be replaced with its explicitly defined equivalent, <sup>^2.014</sup>H prior to computation.  This will be done automatically for you if you enter a formula containing deuterium.</p>
+
+
+<H3>Background</H3>
+<p>Two papers useful for learning about the computation of isotopic abundance distributions are:<BR>
+<UL>
+<LI>Hsu, C.S., "Diophantine Approach to Isotopic Abundance Calculations", Analytical Chemistry, <B>1984</B>, <I>56</I>, 1356-1361
+<LI>Yergey, J.A., International Journal of Mass Spectrometry and Ion Physics, <B>1983</B>, <I>52</I>, 337-349.
+</UL>
+</p>
+
+<H3>Other Available Software</H3>
+<P>IsoPro 3.0, written by Mike Senko, can also be used to compute isotopic distributions and abundances.  The software is faster than my implementation and can handle larger compounds (more atoms, more combined elements) than mine can.  Finally, it also shows very detailed molecular weights of each isotope.  If you need more precise isotopic distribution computations than provided with my software, I suggest downloading IsoPro and trying it out.  Download from <a href="http://members.aol.com/msmssoft">http://members.aol.com/msmssoft</a></p>
+<P>I will point out, in my defense, that my software is easier to use, the plotting window is easier to zoom in and out of, and the Molecular Weight Calculator is freeware.  Further, from the testing that I have performed, the abundances and masses computed with my software vs. IsoPro are very similar.
+</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Capillary Flow and Mass Rate Calculations</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="capillary_calculations"></a><img src="../images/MwtWinIcon.gif" border=0> Capillary Flow and Mass Rate Calculations</h2>
+<p>Location: <a href="MenuTools.htm">Tools Menu</a></p>
+
+<H3><a name="VolumetricFlowRate">Volumetric Flow Rate Calculations</a></H3>
+
+<p>This window can be used to predict the flow rate of liquid in both open tubular and packed capillaries (aka columns).  Capillaries are small tubes used in liquid chromatography, capillary electrophoresis, and other analytical chemistry fields.  It is useful to be able to compute the expected linear velocity and volumetric flow rate of liquid through capillaries.  The flow rate will change based on the applied pressure, the length of the capillary, the inner diameter of the capillary, and the solvent viscosity (typically 0.0089 poise).  Each of these values may be changed on the page, using various units, and the correct flow rate will be computed.  Choose the "View Explanatory Equations" tab to see the equations used.</p>
+
+<p>When a capillary is filled with small particles, it is termed a "packed capillary".  The addition of the particles results in a decreasing of the flow rate.  To see the equations used under these conditions, change to Packed Capillary mode (the upper left dropdown box) and choose "View Explanatory Equations".  When dealing with packing particles, you need to enter the particle diameter, and the interparticle porosity (epsilon), a "fudge factor" that accounts for the percentage of the capillary that becomes filled by the particles, thus impeding flow.  A typical value for epsilon is 0.4</p>
+
+<p>In addition to predicting volumetric flow rate, you can also determine what pressure, column length, or column inner diameter will be needed to give a desired volumetric flow rate.  Lastly, you can enter an observed dead time (the time for solvent to travel the entire length of the column) and the program will determine what volumetric flow rate and back pressure will result in the given dead time.  Use the second dropdown box on the upper left to change the computation mode.</p>
+
+<p>The following table illustrates which values are used to calculate which result in the various modes.  U means a User-entered value, and Calc means a calculated value.  In the program (and below), text boxes highlighted in yellow are the values that the program will be computing for you, and thus, cannot be manually changed.
+</p>
+
+<table border="1">
+  <tr align="center"> 
+    <td>Mode</td>
+    <td>Back Pressure</td>
+    <td>Column Length</td>
+    <td>Column Inner Diameter</td>
+    <td>Solvent Viscosity</td>
+    <td>Particle Diameter</td>
+    <td>Volumetric Flow Rate</td>
+    <td>Column Dead Time</td>
+  </tr>
+  <tr align="center"> 
+    <td>Find Back Pressure</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+  </tr>
+  <tr align="center"> 
+    <td>Find Column Length</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+  </tr>
+  <tr align="center"> 
+    <td>Find Inner Diameter</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+  </tr>
+  <tr align="center"> 
+    <td>Find Volumetric Flow Rate</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td bgcolor="FFFF00">Calc</td>
+  </tr>
+  <tr align="center"> 
+    <td>Find Flow Rate using Dead Time</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td>U</td>
+    <td bgcolor="FFFF00">Calc</td>
+    <td>U</td>
+  </tr>
+</table>
+
+<H3><a name="MassFlowRate">Mass Flow Rate Calculations</a></H3>
+
+<p>The Capillary Flow Calculator can assist in determining the Mass Flow Rate of a compound in the column and the moles of a compound injected onto a column.  The Mass Flow Rate is simply the number of moles of a compound that pass by a given point on the column in one second.  When injecting a "plug" of sample onto a column using a pressure-based injection, the total moles of compound injected can be computed by entering the sample concentration, flow rate, and injection time.</p>
+
+<p>The concentration can be entered as a Molarity, or as a mg/mL type concentration.  When using mg/mL, the program needs to know the molecular of the compound.  You can either use the molecular weight of the currently selected formula in the main program window, or enter a custom numerical mass.
+</p>
+
+<H3><a name="BandBroadening">Band Broadening Calculations</a></H3>
+
+<p>By pressing the "Show/Hide Peak Broadening" button, you can toggle between seeing the Mass Flow Rate calculations and the Extra Column Broadening Calculations controls.  In chromatography, injected compounds migrate or travel through a column with a given peak width, meaning they occupy a certain portion of the column.  As they travel, the peak width tends to get wider or broaden.  The Extra Column Broadening Calculations can be used to compute how much the peak width will change as the compound flows through an open tube.</p>
+
+<p>To use, enter a Liner Velocity, or "Link" to the linear velocity computed above.  A typical diffusion coefficient is 1E-6, or 0.000001  Enter the tube length, inner diameter (I.D.) and the initial peak width.  The temporal variance (variance in time) is then computed and the resulting peak width determined.  The percent increase of the peak width is also shown.</p>
+
+<p>If the compound travels through multiple open tubes of varying inner diameters, the overall peak broadening can still be computed because temporal variances are additive.  Thus, for two tubes, you can enter the values for the first tube to find the temporal variance.  Now enter the computed variance in the Additional Variance textbox and enter the values for the second tube.  The variance in the Additional Variance box will be added to that in the Temporal Variance box and the overall resulting peak width determined.  Click the View Equations button to see the supporting equations.</p>
+
+</BODY>
+</HTML>

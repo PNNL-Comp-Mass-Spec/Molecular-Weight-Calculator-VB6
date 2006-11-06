@@ -1,0 +1,501 @@
+Revision 1 - DOS version Completed August 6, 1995 (QuickBasic for DOS)
+    Contains the following basic features:
+	- formula weight calculation
+	- percent composition calculation
+	- can handle parentheses, up to 2 sets of embedding
+	- can handle hydrates and other additional compounds
+	- can handle numbers up to 2 digits long
+	- two types of case conversion
+	- help screen
+
+Revision 2.0 - August 8, 1995
+	- Can now handle numbers up to 6 digits long
+	- Can now handle up to 4 sets of embedded parentheses
+	- Now includes ability to handle brackets and partial weights
+	- Now has three types of case conversion
+	- Added expanded help screens
+
+Revision 2.1 - August 9, 1995
+	- Can now show display of current time
+
+Revision 2.2 - August 10, 1995
+	- Added a simple math calculator
+
+Revision 2.21 - August 17, 1995
+	- Contains minor bug fixes.
+
+Revision 2.3 - September 2, 1995
+	- added command line switches to control internal settings
+	- Added standard deviation option
+	- Added recognition Bu for butyl group
+
+Revision 2.4 - December 1, 1995
+	- Added a Percent solver routine.
+	- Combined F11 and F12 std. deviation options into just F12
+	- Contains Screen update bug fixes.
+
+Revision 2.5 - December 7, 1995
+	- Improved speed of the % solver algorithm.
+	- Added recognition of Urea, Ox, Py, En, Tpp, Otf.
+
+Revision 2.55 - December 17, 1995
+	- Added error trapping routines.
+	- Improved handling of exponentially large and small numbers.
+	- Added warning statements for possibly ambiguous abbreviations such as Bpy and Py.
+
+Revision 2.6 - January 16, 1996
+	- Recognizes Amino Acid abbreviations.
+	- Recognizes Deuterium, D abbreviation.
+	- Percent Solver values can now be set for all elements of a formula.
+	- Displays differences between actual and theoretical values at the conclusion of the percent solver routine.
+	- Added CTRL-P option to print results.
+	- Added more error messages/explanations for incorrect user entries.
+
+
+Revision 2.7 - March 1, 1996
+	- Now able to handle isotopes; use the caret (^) symbol.
+	- Now able to calculate powers of numbers in the calculator.
+	- Added more error messages/explanations for incorrect entries.
+	- Included a moderately accurate error handler to check the validity of entered isotopic masses.
+	- Added numerous &quot;caution&quot; statements for possibly erroneous entries: eg. Co vs. CO and Sc vs. SC
+        (This feature may be toggled on and off with CTRL-C)
+	- Improved speed of the % solver algorithm; watch it blaze!
+	- Removed CTRL-P option -- use PRINT-SCREEN or SHIFT-PRINT-SCREEN
+	- Changed the order and layout of the in-program help screens.
+	- Fixed typos in help screens and added two more help screens.
+
+
+Revision 2.8 - May 1, 1996
+	- Now able to handle user-defined abbreviations listed in the MWT_ABBR.DAT file.
+	- Added error checking to prevent duplicate abbreviations or abbreviations duplicating elements.
+	- Added automatic re-creation of the abbreviation file if it is deleted/missing.
+	- Added ability to run without abbreviations if program is run on a write-protected drive.
+	- Added command-line switch (/X) to stop any attempts of reading or creating an abbreviation file (useful on a write-protected drive, like a network drive).
+
+
+Revision 2.85 - September 1, 1996
+	- Now recognizes the MWTPATH environment variable which specifies the location of the MWT_ABBR.DAT file
+
+Revision 2.87 - January 1, 1997
+	- Updated the help file to reflect the latest Windows version of the program.
+
+Revision 3.0 - Windows 3.x version Completed June 10, 1996 (Visual Basic 3.0)
+	- New Windows interface.
+	- Now able to modify elemental values stored in the MWT_ELEM.DAT file.
+	- Added editing and saving of Abbreviations and Elemental values during program operation.
+	- Added ability to save current options as defaults.
+	- Added ability to Copy and Paste information to/from other Windows programs.
+	- Formula length is now unlimited -- formulas can even contain all 103 elements.
+	- Added ability to print results.
+
+
+Revision 3.1 - June 28, 1996
+	- Added ability to change the font used to display formulas and calculated results.
+	- Added Mole/Mass Converter
+	- Added Formula Finder
+	- Added full hypertext help
+
+
+Revision 3.2 - January 1, 1997
+	- Now allows use of abbreviations as custom elements in formula finder.
+	- For Percent Solver, added display of differences between target percentages and obtained percentages.
+    - Changed comment delimiter to be a semicolon in the MWTWIN.INI file and the .DAT files.
+	- Added detection of a mouse click to stop the percent solver and formula finder.
+	- Updated help file with MWT Dos version information.
+	- Corrected bug in display of standard deviation values to display the correct number of decimal places.
+	- Improved editing of abbreviations and elemental values.
+	- Improved formula finder interface.
+
+
+Revision 4.0 - Windows 95 version Completed August 25, 1997 (Visual Basic 5.0)
+	- 32 bit Windows 95 code
+	- Now allows user to turn off confirmation of exiting the program.
+	- Added possibility of using exact isotopic weights, in addition to average elemental weights.  Useful for mass spectrometry.
+	- Added context sensitive tool tips to many of the program’s controls and added a setting in the help menu to turn them on or off (the settings can be saved in the MWTWIN.INI file)
+   	- Redesigned program help to Windows 95 standards.
+	- Improved dialog box displayed when changing items in grids to include OK, Cancel, and Reset buttons.
+	- Fixed bug that had smart case mode and exact case mode switched around in the Calculate function.
+	- Changed all forms and controls to the standard VB 5.0 3-D style.
+	- Changed program icon and made the edges transparent.
+	- Updated help file with MWT Dos version information.
+	- Updated my E-mail and WWW addresses to UNC.
+
+
+Revision 4.1 - September 2, 1997
+	- Added feature to expand abbreviations to their elemental equivalents.
+	- Fixed bug that wrongly calculated weights and uncertainties for weighting of compounds when abbreviations were involved (i.e. use of brackets, eg. [.1Bpy]).
+	- Fixed bug that did not take abbreviations or isotopes into account when hydrates (dashes) were used (eg. Fe-3Bpy or Fe-6<sup>^13</sup>CH<sub>3</sub>)
+	- Enabled error handlers to catch overflow values in various procedures.
+
+
+Revision 4.2 - September 7, 1997
+	- Added feature to convert formulas into their empirical formulas, displaying C first, then H, then the remaining elements alphabetically.
+	- Made the Expand Abbreviations and Convert to Empirical Formula commands instantaneous if exit program confirmation is turned off in Exit Program Options under the Options menu.
+
+
+Revision 4.3 - March 10, 1998
+	- Added feature to allow isotopes to contain decimal values, for example: ^13.02C
+	- Added an indicator of the percent of calculations completed in the formula finder.
+	- Added back in the mathematical expression calculator that was previously present in the MWT for Dos version (see above).
+	- Fixed bug that would not allow single letter elements to be entered in the custom elements boxes of the formula finder routine.
+	- Modified error messages in the formula finder routine to be more clear.
+
+
+Revision 4.31 - March 22, 1998
+	- Fixed error with re-creation of the mwt_elem.dat file if it was deleted from the current directory.
+	- Made minor updates to average and isotopic mass values for elements in accordance with the 1993 IUPAC standards.
+	- Minor changes to help file.
+
+
+
+Revision 4.4 - June 15, 1998
+	- Added parts per million (ppm) mode to formula finder weight tolerance box.
+	- Added tooltip for the copy button in the formula finder.
+	- Added Smart Hydrogen atom feature to the formula finder, limiting the number of hydrogens in found compounds to a realistic number (allows CH5 but not CH6 or CH25, allows NH4 but not NH5, allows H3O but not H4O).
+	- Added option to convert found formulas in formula finder to empirical formulas and chemically alphabetize the results, giving a more logical ordering of found formulas (but slowing find process); sort can be stopped by any keypress or mouse click.
+	- Added option to save current values and formulas so they are automatically loaded the next time the program is started.  The values can also be autosaved on exit of the program.
+	- Made format of the difference in mass result (dm=) in formula finder dependent on the standard deviation mode:  if &quot;Short&quot; or &quot;Decimal&quot; then dm is displayed in standard notation (0.00314); if &quot;Scientific&quot; then dm is displayed in scientific notation; if &quot;Off&quot; then dm is not displayed.
+	- Modified the tab order of objects in the various windows to be more logical.
+	- Fixed copy commands to insert a new line character properly and to insert tabs instead of spaces between columns.
+	- Fixed a major bug with the /X command line feature that did not load elemental information (symbols and weights) upon startup, thus making the program useless.  Amazingly no one reported this to me, so I can only assume no one uses this feature.
+	- Removed all command line switches except /X and /? since the AutoSave and AutoLoad features of the options, formulas, and values eliminates their usefulness.
+	- Updated the MWT_ELEM.DAT and program elements defaults to include the average atomic weights and uncertainties specified by the 1997 IUPAC standards.
+	- Changed the &quot;Possibly Incorrect Uncertainty&quot; caution message (for elemental uncertainties) to display only if uncertainties are different from those built into the program code by 10 times instead of by just 20%
+	- Changed the &quot;Possibly Incorrect Elemental Weight&quot; caution message to display only if different from those built into the program code by 20% instead of just 10%.
+	- Fixed status line from displaying a yellow colored &quot;Ready&quot; after editing elements or abbreviations when a caution statement about an abbreviation in one of the formulas was displayed and replaced.
+	- Numerous updates to Mwtwin.Hlp file
+	- Fixed Edit Elements table and program internal code to handle molecular weights with 16 digit precision rather than just 8.
+	- Made all displayed value formats follow the Standard Deviation Mode in that they are displayed in standard notation, unless Scientific mode is chosen, in which case they are shown in exponential notation.  This applies to dm results in the Formula Finder, values in the Mole/Mass Converter, results in the Calculator, and percent solver results. 
+
+
+
+Revision 4.5 - July 19, 1998
+	- Added ability of abbreviations to contain isotope references.  For example, <sup>^2.014</sup>H is used to add Deuterium to the abbreviations list, signifying Hydrogen weighing exactly 2.014 Daltons.  Note:  the uncertainties for isotopes used in abbreviations will be equivalent to those of the elements used in the abbreviation; for example .00007 for Hydrogen, even if <sup>^2.014</sup>H is given as the abbreviation.
+	- Added caution statement for TI being tritium-iodine versus Ti being titanium (although tritium is not included in the abbreviations list, users may add it as <sup>^3.01605</sup>H).
+	- Added creation of backup files for MWT_ABBR.DAT and MWT_ELEM.DAT each time the files are changed, saving the old version as MWT_ABBR.BAK and MWT_ELEM.DAT 
+	- Added display of percent completed information when sorting results in the Formula Finder.
+	- Changed default deuterium abbreviation to be ^2.014H (rather than simply H2).
+	- Improved speed of sorting algorithm in Formula Finder (now using a Shell sort rather than a recursive QuickSort, which generates too much overhead for large data sets due to the recursion).
+	- Changed code in the Standard Deviation Display subroutine to better handle very large numbers without giving an overflow error.
+	- Added Geocities.Com web address and e-mail address throughout help file and program.
+
+
+Revision 4.6 - January 23, 1999
+	- Added option of entering decimal elemental amounts as X1.5 in addition to [1.5X].  For example, Fe1.5O2.25 instead of [1.5Fe][2.25O]
+	- Added option of entering decimal numbers after dashes.  For example C6H6-.5H2O instead of C6H6-[.5H2O]
+	- Added functionality to parse a text file containing formulas and create an output file with the molecular weight of each formula.
+	- Added /F:filename switch that can be used when starting MWTWIN to specify a file to parse automatically, calculating molecular weights for each formula, and writing to filename.out
+	- Fixed bug in &quot;expand to empirical formula&quot; feature that skipped elements with an occurrence of less than 1 in a formula (for example, [.7CH3] would expand to simply H2.1 rather than C.7H2.1
+	- Fixed bug in formula parser that wasn't warning user of decimal numbers with leading zeroes after carets for isotopes, i.e. ^0.5H is not allowed while ^.5H is (though it is unrealistic and the program warns of this). --- This change no longer matters since I've removed the requirement that decimal numbers cannot start with a 0 as in 0.5
+	- Fixed bug in loading saved formulas on program startup that caused a program error if blank formulas were present before the final formula.
+	- Further improved speed of sorting algorithm in formula finder by converting each line to easily sorted code, sorting the code, and arranging the original lines based on how the coded lines sorted.
+	- Removed requirement that decimal numbers be in the format .5 instead of 0.5  Thus, decimal numbers can now be entered as 0.5 or .5
+	- Removed requirement that numbers following parentheses be integers and not decimal numbers.  Thus, (CH3)2.5 is now allowed.
+
+
+Revision 4.61 - February 1, 1999
+	- Added new code to correctly recognize the element dysprosium (Dy) when deuterium (D) is defined as an abbreviation.  Previously, the program would match D as deuterium and Y as yttrium, with the only possible fix being to delete the deuterium abbreviation.  A special-case work around has been added.
+	- Added a caution statement concerning Dy versus DY (dysprosium vs. deuterium-yttrium).
+
+
+Revision 4.62 - February 8, 1999
+	- Added a warning dialog that appears when the Formula Finder is started, but the element weight mode is using average weights.  The user can stay in average weight mode or switch to isotopic weight mode.  A checkbox is also included to avoid seeing the warning dialog in the future.
+	- Added the option of using Nominal Integer Weights for elements, useful for looking for matches to low resolution mass spectrometry data via the formula finder.
+	- Fixed bug that incorrectly loaded the saved formulas on program start when the view mode was single view.
+	- Completely reworked how the program parses formulas, looking for elements and abbreviations.  Now, discrepancies like the Dy vs. DY problem corrected in revision 4.61 will not occur, even if the user creates a new, potentially ambiguous abbreviation.  For example, if the user assigns CH3 to the abbreviation A, then types ac in a formula, the program will parse this as Ac, the element actinium.  On the other hand, if they type AC, it will correctly parse this as CH3C, while previous versions would not have.
+	- Reworked a large majority of the code to remove nondescriptive variable names like temp, temp$, etc.  Also consolidated some of the repetitive sections into single functions, thereby reducing the overall program size.
+
+
+Revision 4.65 - February 16, 1999
+	- Added ability to sort the elements by atomic weight, elemental symbol, or weight uncertainty when editing elements.
+	- Abbreviations can now contain parentheses, for example CH(CH3)3
+	- Abbreviations can also now contain anything a regular formula might contain, except for other abbreviations.  Thus, decimal numbers can now be used, plus parentheses, dashes, brackets, etc.  Furthermore, abbreviation formulas can be entered lowercase when editing abbreviations, and the program will properly capitalize the abbreviations.
+	- Added a more robust and faster Formula Finder routine, called &quot;Thorough Search&quot;.  This routine is recursion based, and no longer requires the user to enter maximum and minimum values for the number of each element present. It is faster than the older, &quot;Bounded Search&quot; routine for finding all matches to a given target weight and tolerance.  However, I've left the Bounded Search method available in case the user wishes to search for a high molecular weight compound (over approx. 1000 Da) with many possible elements (over approximately four), in which case the user can enter a large minimum element occurrence number to speed up the search.
+	- When the bounded search method is activated, changing the Target Molecular Weight changes the upper bounds on the checked elements.  For example, if a target of 100 is entered, the upper bound on carbon will become 100/12=9.  Further, if Smart Hydrogen checking is on, the upper bound on H's is only 53 rather than 103 (granted, 53 is still quite large, but is much more reasonable than 103).
+	- When matching Percent Compositions in the Formula Finder routine using the Thorough Search mode, the user no longer must enter maximum and minimum values for the number of each element present, but they now do have to enter a maximum molecular weight of found compounds.
+	- Reworked more of the code, consolidating more functions and adding a recursive aspect to the formula parsing routine so it can now handle an infinite number of levels of embedded parentheses (within available memory, of course).
+
+Revision 5.0 - May 1, 1999
+	- Code recompiled using Visual Basic 6.0 for Windows 95/98/NT.
+	- Formulas are now displayed using RichText Boxes, allowing subscripts, superscripts, and colors to be displayed.  I tried doing this with VB 5, but the program crashed continually.  Thankfully, the RichTx32.dll that comes with VB 6 is stable.
+	- Drag and drop of both formulas and results in the Formula Finder is now possible, thanks to the built-in functionality of the Rich Text Boxes.  Simply highlight text to copy, then drag and drop it to the desired location (either in MwtWin or in another application, like Microsoft Word).
+	- Added Copy Formula as RTF to allow a formula to be copied as its rich text format code.  This allows the formula to be pasted into an RTF aware program (like Microsoft Word) and contain the appropriate super and subscripts.  This can also be accomplished by dragging the formula from VB and dropping into Word.
+	- When entering abbreviations in the Edit Abbreviations dialog, they are formatted with super and subscripts as the formula is typed.
+	- When loading the Change Formula Font dialog, the progress of loading fonts is now displayed in the status bar.
+
+Revision 5.01 - May 10, 1999
+	- At a user's request, I have added the ability to enter a charge for each element and abbreviation, allowing the overall charge of a formula to be found.  This is not useful for compounds with double bonds or rings, since bond order cannot be determined from the empirical formula.  However, it is useful in situations where one knows the exact charge of each constituent of a compound, for example in inorganic clusters
+    - Compute Charge has been added to the options menu to display the overall charge of formulas.  Hydrogen is assumed to be +1, unless preceded by a non-halogen such as carbon or a metal.
+	- More Formula Finder changes:  1) the charge can now be computed and displayed; 2) this also allows the mass to charge (m/z) ratio to be computed and displayed; 3) the results of a formula finder search can now be sorted by 1 of 4 criteria: formula, charge, molecular weight, and m/z ratio.  Furthermore, the width of the Formula Finder window can now be widened to better display the results.
+	- The font size of the formulas can now be changed using the Change Formula Font dialog.  This font size also affects the results shown the in the formula finder.
+	- When editing elemental values, uncertainties, and charges, clicking one of the buttons no longer automatically closes the edit box, allowing one to immediately see the new values that appear if any of the buttons are pushed.
+
+Revision 5.02 - May 12, 1999
+	- Includes improvements to the Charge computation algorithm
+
+Revision 5.03 - May 17, 1999
+	- Updated the Calculator feature to use a rich text box, thus allowing powers like 2^2 to be displayed as superscripts.
+	- Added more Charge and mass/charge ratio options in the formula finder, grouping the checkboxes together in an options dialog. The displayed compounds can now be limited to a specific charge range.  Users can also search for compounds with a specific m/z (and thus a range of weights and charges).
+	- Fixed program bug that prevented program from calculating formula weights at program start if in Single View mode.
+	- Fixed program bug that incorrectly displayed the current formula at program start if in Single View mode.
+	- Consolidated more code by combining redundant sections into shared subroutines.
+
+Revision 5.04 - May 18, 1999
+	- Improved the speed of m/z searching in the formula finder when using the bounded search mode.
+
+Revision 5.05 - June 6, 1999
+	- Added the option of not automatically adjusting the Min and Max values for elements in the Formula Finder when performing a bounded search (in the Formula Finder options box).
+	- Corrected a major bug that rendered the bounded search in the Formula Finder inoperable if not calculating charges and m/z ratios of formulas. 
+
+Revision 5.06 - July 10, 1999
+	- Upgraded components to Service Pack 3 for Visual Basic 6.0
+	- Moved the Sort Mode and Search Mode combo boxes from the formula finder main form to the formula finder options form.
+	- Added option to quickly change the element mode on the program’s main form, called Quick Switch.  These changes do not write the new elemental values to disk until exiting the program.  When using the quick elemental mode switch, any user defined elemental values are lost.
+	- Fixed bug that failed to color the status line yellow if a caution statement was displayed at program start.
+
+Revision 5.07 - July 14, 1999
+	- Fixed bug that failed to update the Quick Switch Element mode when the Formula Finder finder weight mode warning window changed the weight mode for the user.
+	- Fixed bug in Formula Finder that caused the number and underscore of custom elements to be inadvertently subscripted when displayed in the results box.
+	- Fixed bug that failed to fill in element or abbreviation information the first time Edit Abbreviations or Edit Elements was chosen on the File menu (they filled in the second time).
+	- Changed the Chlorine and Sulfur check boxes in the formula finder to custom element boxes to allow users the possibility of six custom elements or abbreviations.
+	- Moved many of the program options from the Options menu to a preferences dialog box, making it easier to set multiple options at once.  Added an option to make the Formula Finder warning mode screen reappear if user had earlier checked the box to make it never appear again.
+	- Added a number of new keyboard shortcuts for menu items; all shortcuts are displayed in the menus.
+	- Added current build of program to the intro screen and about box.  This allows me to differentiate between different builds of a current version.  Starting at build 35 was an arbitrary choice, made by counting 34 released versions before the current one.  There have surely been several 100 builds of the program on my own computer, however.
+
+Revision 5.07b - July 18, 1999
+	- Rolled back to Service Pack 2 (SP2) of Visual Basic for compiling the program due to errors arising when users tried to install the program on Windows 95 computers (specifically, received error with Comdlg32.ocx).  It seems that VB6 SP3 is not compatible with the earlier (original?) version of Windows 95, while it works fine on computers with Windows 95b (plus Win 98/NT).
+
+Revision 5.08 - September 16, 1999
+	- Re-updated program to Service Pack 3 (SP3) since the Comdlg32.ocx error did not appear to be widespread.
+	- Updated web addresses to http://www.geocities.com/CapeCanaveral/Lab/9548/  from http://www.geocities.com/CapeCanaveral/Lab/9317/  due to a snafu at Geocities that erased my web pages, forcing me to create a new account (entirely their fault).
+	- Also updated e-mail addresses to AlchemistMatt@Yahoo.com from AlchemistMatt@Geocities.com due to the merger of Geocities with Yahoo.
+	- Made permissible the use of the plus sign (+) in abbreviations (at the request of a user).  For example, an abbreviation called H+ or Na+ can now be entered, both in the main window and in the formula finder.
+
+Revision 5.09 - October 10, 1999
+	- By user request, made the curly brackets, { and }, behave as parentheses in formulas.  In addition, added the option of allowing regular brackets, [ and ], to also act as parentheses.  When regular brackets are treated as parentheses, all Percent Solver options are disabled.  Toggle the bracket mode in the Program Preferences Window.
+	- Made regular and curly brackets available in the calculator.  There, they behave as parentheses regardless of the bracket mode setting in the Program Preferences Window.
+	- Fixed bug in calculator that superscripted the plus sign and subscripted numbers following the plus sign
+	- Fixed bug that failed to set the standard deviation of a formula to zero when an error is found in the formula.
+	- Since the plus sign was made an allowable part of an abbreviation in version 5.08, I added the underscore (_) to also be allowable, so users can add anions to the abbreviations list.
+	- Fixed bug that failed to correctly set the &quot;Never Show the Formula Finder Weight Mode Warning Dialog&quot; value correctly when the user requested to &quot;Stop Showing the Warning Dialog&quot; option.
+	- Since I was finding it annoying, I made the behavior in the Formula Finder of selecting an entire text field when clicking on it be turned off by default; it may be turned on in the Formula Finder options window.
+	- Added code to correctly identify invalid Ctrl key combinations (like Ctrl+B, Ctrl+D, etc.) and notify the user if pressed.
+
+Revision 5.10 - December 19, 1999
+	- Fixed bug that failed to recognize the last abbreviation (alphabetically) in the extended abbreviations list; Val is the default final extended abbreviation, thus it wasn’t being correctly identified.
+	- Fixed bug that failed to update the Quick Switch Element Mode value on program load when the element mode was not Average weights.
+	- Changed the behavior of the Copy Current Molecular weight command to just copy the weight value when standard deviation mode is set to off
+	- Assigned Ctrl+W to be the shortcut for Copying the current molecular weight.
+
+Revision 5.11 - March 5, 2000
+	- Added a window for performing calculations for open tubular and packed fused silica capillaries used in capillary liquid chromatography.
+	- Also added the ability to perform Mass Rate Calculations, useful for determining amount of sample eluting from an electrospray needle in ESI-MS.
+	- Fixed minor bugs in the Mole/Mass Converter, including failure to display numbers below 1E-6 when short Standard Deviation mode was on.
+	- In addition to informing the user when the program’s .INI or .DAT files are being re-written due to corruption, I now list the name that the corrupted file has been renamed to.
+	- Just for fun, added an &quot;Always on Top&quot; feature to the program, allowing the user to choose to have the main program windows stay on top of other windows.
+	- Converted the help file to HTML help, since this allows me to display sub and superscripts, along with conforming to Microsoft's new help file standards.
+
+Revision 5.12 - June 27, 2000
+	- At a user's request, added the option of Automatically Copying the current formula's molecular weight to the clipboard after each calculation.
+	- In the Capillary Chromatography Calculations window, added the option to determine theoretically the extent to which band broadening will occur under various capillary conditions and dimensions.
+
+Revision 5.2 - September 28, 2000
+	- To tell the truth, I can't recall what changes I made to warrant changing from 5.12 to 5.2  Most likely, I made some minor changes to the Capillary Chromatography Calculation window, including changing the name to Capillary Flow and Mass Rate Calculations.
+
+Revision 5.21 - April 3, 2001
+	- Changed the constant used to compute Volumetric Flow Rate and Linear Velocity in the Capillary Flow and Mass Rate Calculations window to more accurately predict those values.  Specifically, changed the constant form 180 to 270 in the following equation:
+    Vol Flow Rate = [Pressure * (diameter of packing)<sup>2</sup> * (epsilon)<sup>2</sup> * (capillary radius)<sup>2</sup> * Pi] / [270 * viscosity * (column length) * (1 - epsilon)<sup>2</sup>] where epsilon is the interparticle porosity, typically 0.4
+	- In addition, changed the name of the interparticle porosity to epsilon rather than eta, which I had erroneously labeled it as previously.
+
+Revision 5.22 - April 9, 2001
+	- Changed a constant used to compute Volumetric Flow Rate and Linear Velocity in the Capillary Flow and Mass Rate Calculations window back to 180.
+	- Added ability to view the equations used to compute the flow values.
+
+Revision 5.23 - June 18, 2001
+	- Fixed a bug introduced in version 5.22 that caused the linear velocity value for open capillaries to be incorrect.
+
+Revision 6.02 - October 2, 2001
+	- Added a 3 letter to 1 letter amino acid abbreviation conversion utility.  The program still requires that peptide sequences be entered using three letter codes for molecular weight determination, but this converter makes it easier to copy and paste values from other peptide handling programs or the web.  In addition to the standard 20 amino acids, the converter also recognizes U for Gla (gamma-Carboxyglutamtate).
+	- Added numerous new Amino Acid abbreviations (Gla, Hse, Hyl, Hyp, Orn, and Sar).  Only Gla has a corresponding one letter abbreviation, U, since I could not find any literature-wide agreement for one letter abbreviations for the other new amino acids.
+	- Added ability to display more than 7 formulas simultaneously.  The maximum is dependent upon your screen resolution.  For example, the maximum for 1024x768 is 12 formulas.  The total number to show can be set to a value lower than the maximum in the preferences window.
+	- Added support for other (international) languages.  The program can now be customized to support any Roman or Cyrillic character based language (German, French, Spanish, Italian, Russian) by creating a Lang_NewLanguage.ini file and loading the file by choosing Language under the Options menu.  All text based phrases in the program can be customized, including ToolTip text and error messages.
+	- Related to international language support, changed program to recognize if commas are set to represent decimal points on the user's computer (Regional Options under the Windows Control Panel).  If so, replaces all period (.) decimal points with comma (,) decimal points.
+	- Improved usability of the mole/mass converter by adding option to simply enter the mass of the compound.  Additionally, provided option for mg/mL type concentrations rather than simply molarities.
+	- Added numerous new units to the Mole/Mass converter, including micromoles, nmol, pmol, fmol, amol, & micrograms.
+	- Added a new option to the Capillary Flow calculator to use a given Dead Time to compute the Volumetric Flow Rate that would give that dead time, modifying the Back Pressure appropriately to give the computed Volumetric Flow Rate.
+	- Modified program to be dual-monitor aware.  The program will now properly center itself on the primary monitor.
+	- Fixed behavior of the Percent Solver to properly display the results rather than the target values when completing a computation.  The target values are redisplayed when the user re-enters the set table.
+	- Fixed the math calculator to properly handle parentheses (there were some weird bugs going on).  Now using a recursive computation algorithm that allows an infinite level of embedded parentheses.  Also, removed requirement that the multiplication operator (*) be included between numbers and parentheses, eg. 3(4+2)/(3+2)+(2/3)6 = 7.6  Finally, can now properly raise value of parentheses to a power, eg. 3*(4+2)^2 = 108
+	- Shuffled around a few of the menus, including moving the Formula Finder, the converters, and the calculators to a new menu, the Tools menu.
+	- Code Changes: Removed redundant code in the Capillary Flow Calculator.  Changed application load and unload behavior to avoid the use of the End statement.  Added code to prevent any sub forms from being unloaded from memory until program is exited completely.
+	- Extensively edited the help file to bring up-to-date with the latest features and new locations of numerous program items.
+	- Bumped up the version number to 6.0 owing to all of the new improvements.  Also, using a version of 6.x, the program version now matches the version of Visual Basic used.
+Revision 6.03 - October 3, 2001
+	- Added ability to cut, copy, or paste values from any of the program textboxes.  I perform error checking to prevent invalid characters, and was inadvertently blocking Ctrl+X, Ctrl+C, and Ctrl+V
+	- Added units of Bar and Torr (mm Hg) in pressure box of the Capillary Flow Calculator
+	- Fixed bug in Capillary Flow Calculator that prevented Find Back Pressure and Find Inner Diameter from working
+	- Fixed bug in Capillary Flow Calculator that delayed updating all results after clearing an input value to 0 then typing a valid number again.
+
+Revision 6.04 - October 11, 2001
+	- Expanded the functionality of the Mole/Mass converter window to include a Dilution Calculator to handle volume-volume dilution calculations.  Note that by setting the final concentration larger than the initial concentration this can also be used to perform calculations involving concentrating a solute by evaporation or sublimation.
+	- Now coloring textboxes of computed quantities yellow to indicate they are a computed result and cannot be changed.
+	- Fixed bug in cut/copy/paste from textboxes that prevented copying computed results in the capillary flow calculator.
+	- Added keyboard shortcut of Ctrl+A to select all of the text (or numbers) in a text box.  Does not apply to formulas in the main window since Ctrl+A means to expand abbreviations.
+	- Added a simple undo feature to restore the currently selected formula or text box to the value it had when first entered.  Once you have moved to a new control, the value of the old control cannot be restored.  I will probably expand the undo system in the future.
+
+Revision 6.05 - October 23, 2001
+	- Fixed Major bug in Formula Finder that prevented users from changing the Target Percent values for Percent Composition Searching.  In addition, the Min and Max search values for bounded searches were also broken.  I added a new textbox validation routine in version 6.04 and failed to correctly update the functions for the Formula Finder form.
+	- Moved around a few of the controls on the Mole/Mass/Dilution form.
+	- Updated the Lang_Portuguese.Ini and Lang_Spanish.Ini files.
+
+Revision 6.06 - November 11, 2001
+	- Fixed bug with Mole/Mass/Dilution calculator that generated a program error if the window was minimized then restored (unminimized).
+	- Restored behavior of the Mole/Mass/Dilution calculator window to be a fixed size.
+
+Revision 6.10 - January 25, 2002
+	- Added Peptide Sequence Fragmentation Modelling tool, including ability to plot the theoretical mass spectrum of the fragmentation pattern for a given peptide sequence.
+	- The new Fragmentation Modelling Tool also includes ability to paste actual mass spectral data (mass/intensity pairs) so that the predicted ions can be matched to the raw data.  The raw data may also be plotted with the predicted fragment ions.
+	- Added option to enter column diameters in inches in the Capillary Flow and Mass Rate Calculations Window.
+	- Modified Formula Finder results list to grow/shrink vertically in addition to horizontally when the window is resized.
+	- Modified Amino Acid Notation Converter to properly handle H at the beginning and OH at the end in the three-letter based sequence input box.  In addition, modified to properly reposition and resize controls when window resized.
+	- Changed Ctrl+A to select entire formula since this is the expected behavior for Ctrl+A in Windows applications and Abbreviation Expansion is most likely rarely used.
+	- Fixed bug in main window involving the order of tabbing between controls.
+	- Fixed bug that failed to sum up standard deviation values for all portions of a formula when using parentheses or abbreviations.
+	- Fixed bug that failed to re-calculate the molecular weight or percent composition of formulas in Single View when the formula is modified using Cut/Copy/Paste via Ctrl+X/Ctrl+C/Ctrl+V.
+	- Fixed bug that caused the Percent Solver to give an answer slightly off (less than 0.001%) from the correct answer when the standard deviation mode was turned on.
+	- Major update to the Lang_Spanish.Ini file with corrections contributed by Perez de la Hoz.
+
+Revision 6.11 - March 9, 2002
+	- Fixed bug that failed to save new amino acid abbreviations if the charge state was not specified
+	- Updated Lang_Russian.Ini file (contributed by Michael I. Yahkind)
+
+Revision 6.12 - March 10, 2002
+	- Removed restriction preventing a formula from starting with a number.  Now, starting a formula with a number will multiply the following elements (up to the first dash) by the number.  Thus, the following are all equivalent ways of entering a formula with 10 fluorine atoms: F10, (F)10, [10F], and 10F
+
+Revision 6.13 - May 7, 2002
+	- Added ability to edit the one letter abbreviations of amino acids
+	- Fixed bug in 3 to 1 letter amino acid notation converter that failed to mark amino acid abbreviations with no equivalent code with an X when the amino acid existed but no 1 letter abbreviation was defined.
+	- Added ability to resize the abbreviation editing window, accompanied by automatic column width expansion.
+	- Changed help ID numbers to show the correct help screen when pressing F1 in the amino acid notation converter window.
+	- Updated Lang_Portuguese.Ini file (contributed by Alexandre R Soares)
+
+Revision 6.14 - May 9, 2002
+	- Fixed bug in abbreviation editor that failed to properly sort the 1 letter abbreviations when adding or removing amino acid abbreviations.
+
+Revision 6.16 - June 8, 2002
+	- Added option to run the Formula Finder in batch analysis mode, reading search values from a file and writing the results to an output file.  See the Batch Analysis help page for more information.
+	- Fixed bug in formula finder that re-initialized all of the custom elements to the phrase "# or element or abbrev" after leaving and returning to the form.
+
+Revision 6.17 - July 1, 2002
+	- Added ability to predict the Isotopic Distribution for a given formula, predicting the masses and relative abundances of all possible isotopes.  Includes ability to handle explicitly specified elements as part of the formula, in addition to graphing the results.
+
+Revision 6.18 - July 2, 2002
+	- Turned on the error checking in the Isotopic Distribution module that I had forgotten to turn back on.
+	- Updated the help files to discuss Isotopic Distribution.
+	- Now displaying the formula with subscripts and superscripts on the Isotopic Distribution window.
+	- Updated the Isotopic Distribution results display to be more cleanly formatted.
+
+Revision 6.19 - August 12, 2002
+	- Added ability to use custom amino acids in the Peptide Sequence Fragmentation Modeller.
+	- Added the ability to save and load capillary flow settings to/from text files.
+	- Added the option to automatically show one of the program modules at program start (instead of the default program window).  Clicking the X on the module window exits the entire program.  Choosing Close (from a menu or a button) returns to the main program screen.
+	- Changed default diffusion coefficient in the Capillary Flow and Mass Rate Calculations module to be 5E-6.  Also, changed tooltip to state that typical coefficient for small organics is 1E-5 rather than 1E-6.
+	- Fixed bug in amino acid notation convertor that caused the program to crash if the 3 letter sequence was copied to the list of formulas, but the main window was hidden since Hide Inactive Program windows was turned on.
+	- Re-worked the algorithms used to parse and store the user-defined abbreviations and amino acids.  If an invalid (or duplicate) abbreviation is present, the user will now be able to see it using Edit | Abbreviations and correct or remove the abbreviation.
+
+Revision 6.20 - October 15, 2002
+	- Modified form layouts to behave properly using the default Windows XP theme (which uses wider borders than previous themes)
+	- Minor updates to the help files, including updating contact information.
+
+Revision 6.21 - November 17, 2002
+	- Added custom language captions for the results box in the Isotopic Distribution window.
+	- Added a new language: Catalan (aka Català)
+
+Revision 6.22 - November 29, 2002
+	- Modified the Set X Range and Set Y Range functions on the Plot window to allow users to set the view range to more than 110% of the current data range.  The new allowable limit is up to 1000 times the data range.
+
+Revision 6.25 - Beta 12 completed June 16, 2003
+ 	- Although the program interface looks very similar, all of the primary computation routines have been moved to an ActiveX DLL file.  Doing this allowed me to greatly clean up a lot of the legacy code present in the software.
+	- Additional units have been added to many of the parameters in the Capillary Flow Calculations window.
+	- Additional units have been added to some of the parametesr in the Mole/Mass Converter window.
+	- Abbreviations may now contain other abbreviations.  For example, if Ph = C6H5 then you could define Cb = PhCl.  This also allows D to be used inside other abbreviations.
+	- The ability to right-click and see the Cut/Copy/Paste etc. options has been added to numerous text boxes throughout the program.
+	- The Peptide Sequence and Fragmentation module has been greatly expanded:
+		- You can now define modification symbols to allow for modified amino acids.
+		- You can now choose the functional group present at the N and C terminus.
+		- Phosphorylation is now an allowable neutral loss.
+		- The fragmentation mass listing now excludes those ions that could not possibly form, based on location in the peptide and whether or not a specific residue can lose water, ammonia, or the phosphate group.
+		- The mass of the peptide, including any modifications, is now displayed on the form, along with the equivalent mass of the M+H mass.
+		- You can convert between M+H and [M+nH]n+ where n is between 1 and 10.
+		- The graphing component has been updated to a professional component.  The graph is now much faster and much more powerful, allowing for custom annotations and numerous other features, including the ability to save and load graphs (including all colors, styles, and annotations).
+		- The theoretical fragmentation spectrum can be included on the graph, and any matches with the real data can be included as annotations on the graph.
+		- The peptide sequence and fragmentation module (and the accompanying graph) can correctly read .Dta files (common text-based MS/MS file format).
+	- The Batch Analysis feature has been greatly expanded.  Numerous new commands are now present, including the ability to change the standard deviation mode, convert compounds to empirical formulas, and convert amino acid sequences to/from 1 and 3 letter notation.
+	- You can now subtract out elements from a formula using the > symbol:
+		- This feature was added to allow one to quickly find the mass or empirical formula of a compound that has lost one or more elements due to a reaction or a neutral loss in mass spectrometry.
+		- For example: C<sub>6</sub>H<sub>5</sub>Cl>HCl means C<sub>6</sub>H<sub>5</sub>Cl minus HCl, having a mass equivalent to C<sub>6</sub>H<sub>4</sub>
+		- The elements to the right of the > symbol must all be present in the elements to the left of the > symbol (see Element Subtraction for more information).
+	- Changed the /X command line switch to mean "do not write any settings (abbreviations, elements, values) to disk"
+	- Added a new command line switch, /Z, meaning "do not read or write any settings to/from disk"
+
+Revision 6.26 - August 3, 2003
+	- Updated the Isotopic Distribution module to use the new graphing component described above for the Peptide Sequence Fragmentation module
+	- Added the ability to paste a list of ions to compare with the predicted isotopic distribution.
+ 	- Added error handling routines to the Formula Finder code to reduce the possibility of abrupt program crashes.
+
+Revision 6.27 - October 10, 2003
+	- Fixed bug on the Peptide Sequence and Fragmentation Module that used 1.00000 for the mass of hydrogen rather than 1.00782 when converting between M+H and [M+nH]n+
+
+Revision 6.28 - October 30, 2003
+	- Added option to the graph component to define custom tick starting values and intervals.  Use Edit->Zoom Range.
+
+Revision 6.29 - November 23, 2003
+	- Fixed bug involving call to Peptide.SetModificationSymbol in MwtWinDll.Dll that caused the program to crash if the user had the Windows decimal point set to a comma rather than a period, as is common in many countries outside the United States and the UK.
+
+Revision 6.30 - December 3, 2003
+	- Modified the graph control to allow changing the border color and border style (3D or plain)
+
+Revision 6.31 - January 12, 2004
+	- Added new window that allows one to compute solvent viscosity for a mixture of water and acetonitrile (MeCN) given the temperature and percent organic composition.  The routine uses the Chen-Horvath equation (see Thompson, JD; Carr, P, Analytical Chemistry, 2002, 74, 4150-4159 or Chen, H; Horvath, CJ, Chromatography A, 1995, 705, 3)
+	- Can also graph the viscosity as a function of percent organic composition for the given temperature.
+
+Revision 6.32 - February 29, 2004
+	- Fixed bug in Capillary Flow Calculator that gave erroneous results if one were to set the particle diameter to 0, then back to a non-zero value when finding column back pressure for packed capillaries.
+	- Now displaying the references to the Chen-Horvath viscosity equation in the program, just below the equation.
+
+Revision 6.33 - March 27, 2004
+	- Updated the MwtWinDll.Dll file to include Xxx as a default amino acid abbreviation, equivalent to C6H12NO (Lysine)
+
+Revision 6.34 - August 14, 2004
+	- Fixed bug in the Peptide Sequence and Fragmentation module that used the monoisotopic mass of hydrogen as the charge carrier rather than using the mass of a proton (which is 0.0005 Da less than the mass of hydrogen).  This involved updating MwtWinDll.Dll.
+	- On the Isotopic Distribution module, added the ability to display the masses as m/z values, with charge values greater than 1.
+
+Revision 6.35 - September 12, 2004
+	- Fixed bug in the Mole/Mass/Dilution Calculator that involved the dilution concentrations not updating when the custom mass was changed.
+
+Revision 6.36 - November 16, 2004
+	- Updated the MwtWinDll.Dll file with a few bug fixes involving the peptide parsing class
+
+Revision 6.37 - December 26, 2004
+	- Extended the Batch Calculation engine to support Isotopic Distribution commands.  Enable using IsotopicDistribution=On ; Set the charge state using IsotopicDistributionCharge=1
+
+Revision 6.38 - February 18, 2006
+	- Added error handlers to the copy and paste routines
+	- Updated the mass of the most abundant isotope for each element to match the default monoisotopic mass for each element
+		- The elemental masses come from two different sources and the monoisotopic mass was sometimes slightly different than the most abundant isotope's mass; this has been corrected
+		- As part of this update, switched the variables used to store mass values from single to double precision
+
+Revision 6.39 - March 8, 2006
+	- Added option Show Delta Mass on the Formula Finder form
+	- Added new sort option to the Formula Finder: Sort by Abs(Delta Mass)
+	- Fixed bug in the Peptide Sequence and Fragmentation module that caused an array initialization error when no valid residues were defined in the peptide sequence
+	- Fixed control placement bug on the Formula Finder form
+
+Revision 6.40 - May 25, 2006
+	- Fixed bug that caused the program to crash if you maximized the Formula Finder screen
+
+Revision 6.41 - September 21, 2006
+	- Fixed several data synchronization bugs in the capillary flow calculator that caused displayed values to get out of sync with values cached in the DLL.  Bug was commonly seen if various input values on the form were set to 0 then set back to a non-zero value.
+
+Revision 6.42 - November 5, 2006
+	 - New version of MwtWinDll.dll that fixes charge state interpretation when computing m/z values in the Isotopic Distribution module

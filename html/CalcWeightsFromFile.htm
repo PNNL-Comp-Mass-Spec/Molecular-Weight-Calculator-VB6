@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Batch Molecular Weight Calculation</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="calculate_weights"></a><img src="../images/MwtWinIcon.gif" border=0> Calculate weights from text file (Batch Automation)</h2>
+<p>Location: <a href="MenuFile.htm">File Menu</a></p>
+
+<p>
+Molecular weights of compounds (formulas) listed in a text file can be computed and written to an output file.  The Formula Finder can be also be run in batch analysis mode using appropriate Batch Analysis Commands (see below).  In addition, amino acid sequences can be converted from 1 to 3 letter notation (or from 3 to 1 letter notation).</p>
+
+<p>Initiate batch analysis mode by either choosing &quot;Calculate weights&quot; from under the File menu and selecting the file, or by using the /F:filename switch at the <a href="CommandLineSwitches.htm">command line</a>.  The input file must be a text file with each line containing a single molecular formula, an amino acid sequence, a numeric mass to use for the formula finder, a batch analysis command (see below), or a comment (beginning with a ; or ').<P>
+
+<p><b>Batch Molecular Weight Computation</b></p>
+
+<p>The default mode for batch analysis is molecular weight computation.  To use this mode, the text file need only contain a single, valid molecular formula on each line.  Each formula's molecular weight will be computed, and the results written to the output file (see below for filename).  The output file will contain the original formula, plus its molecular weight, separated by a Tab (configurable using DELIMETER=).  By default, the standard deviation is included, formatted depending on the current setting for the <a href="StdDevModes.htm">standard deviation mode</a>.  Whether or not to include the standard deviation, in addition to its format, can be customized using STDDEVMODE=. If there is an error in the formula, the error will be listed in the output file.  If a FF= Batch Command was issued earlier in the file, a MW= command can be used to switch back to Molecular Weight Computation mode (see the <a href="#example">example</a> input file below).</p>
+
+<p>The Batch Analysis Command WEIGHTMODE={AVERAGE|ISOTOPIC|INTEGER} can be used to set the weight mode for computations.  For example, to switch to isotopic mode use WEIGHTMODE=ISOTOPIC and to switch back to average mode use WEIGHTMODE=AVERAGE.  You can suppress the display of the source formula using MWSHOWSOURCEFORMULA=OFF.  You can suppress the display of the formula's mass using SHOWMASS=OFF.  This is useful if you simply wish to convert formulas to their empirical formula (using EMPIRICAL=ON).</p>
+
+<p> If you need to compute the mass of peptides listed in 1-letter notation, you can use ONELETTERPEPTIDEWEIGHTMODE=ON.  The default prefix and suffix groups for the peptides are H and OH, though this can be changed with PEPTIDEWEIGHTMODEPEPTIDEPREFIX and PEPTIDEWEIGHTMODEPEPTIDESUFFIX.  To compute the mass of peptides listed in 3-letter notation, simply use the default MW= molecular weight computation mode.  However, note that 3-letter abbreviation peptide formulas must explicitly include the H and OH in the formula to obtain the correct mass.  For example, GlyLeuTyr will return a mass of 333.38234, while HGLyLeuTyrOH (or H-GlyLeuTyr-OH) will return the correct mass of 351.39762 (in average mass mode).
+</p>
+
+<p><b>Batch Formula Finder Mode</b></p>
+<p>In order to enter formula finder mode you must place the command FF= on a line in the input text file.  You may also optionally specify which elements to use for the formula finder searching by listing them on the same line as the FF= command, separated by commas (if not specified, the previously enabled elements will be used).  The Batch Analysis commands MAXHITS=num and TOLERANCE=num can be used to specify the maximum number of hits or the search tolerance.  If either of these commands is omitted, the values currently set in the Molecular Weight Calculator Formula Finder window will be used.</p>
+
+<p>Once formula finder mode has been enabled (using FF=), a list of numeric values to match elemental combinations to can be given, with each value listed on its own line.  For each value, a list of matching empirical formulas will be determined, and the results written to the output file.  The MAXHITS= or TOLERANCE= command can be given at any time in the list in order to change one of the values.  Additionally, the FF= command can be re-issued with a new list of search elements to use.  Finally, the MW= command can be used to switch back to Molecular Weight Computation Mode.
+
+
+<p><b>Batch Amino Acid Notation Conversion Mode</b></p>
+<p>The third mode for batch analysis is amino acid sequence notation conversion.  Use AACONVERT3TO1=ON for 3 letter to 1 letter conversion, or AACONVERT1TO3=ON for the reverse.  After this, each line will be treated as a sequence and converted as desired.  By default the source sequence is outputted, followed by the converted sequence.  To prevent output of the source sequence, use the command AASHOWSEQUENCEBEINGCONVERTED=OFF</p>
+
+
+<p><b>Isotopic Distribution Mode</b></p>
+<p>The fourth mode for batch analysis is computation of isotopic distributions for a given formula.  Enable using ISOTOPICDISTRIBUTION=ON.  After this, each line containing a valid formula will have its isotopic distribution computed and written to the output file.  Optionally, set the charge state to use for m/z calculations using ISOTOPICDISTRIBUTIONCHARGE=num, where num is an integer greater than 0.</p>
+
+
+<p><b>Output File and Automation</b></p>
+
+<p>The output filename will be the input filename, plus the extension &quot;.out&quot;.  For example, if the input file is &quot;formulas.txt&quot;, the output file will be &quot;formulas.txt.out&quot;.  If the /F:filename switch is used on the <a href="CommandLineSwitches.htm">command line</a>, the Molecular Calculator program will exit upon completion of processing the input file.  Additionally, you can specify an alternate output filename using the /O:outfile switch.  Use the /Y switch to suppress the &quot;Are you sure you want to replace?&quot; dialog box from appearing when an existing output file is found.</p>
+<dl>
+<dt>
+To process a number of files at once, simply create a batch file (.BAT) containing lines to call the Molecular Weight calculator program and process each file.  For example, you could create GO.BAT containing the lines:</dt>
+<PRE>
+    MWTWIN /F:File1.Txt<br>
+    MWTWIN /F:File2.Dat<br>
+    MWTWIN /F:File3.Txt /O:File3_Results.txt
+</PRE>
+</dl>
+<p>
+Then, run GO.BAT and the files will be processed.</p>
+
+<p><b>Batch Analysis Command Summary</b></p>
+<p>Values in brackets [] are optional (do not use the brackets).  Words in curly brackes {} are a list of potential words; choose just one of the words and do not use the curly brackes or comma.  num is a valid number
+<table border=1 width=100%>
+<tr><th>Command and options</th><th>Explanation</th><th width=20%>Default</th></tr>
+<tr><td><PRE>MW=</PRE></td><td>Enable Normal Molecular Weight Computation mode</td></tr>
+
+<tr><td><PRE>WEIGHTMODE={AVERAGE|ISOTOPIC|INTEGER}</PRE></td><td>Weight mode to use.</td><td>The weight mode in effect the last time the program was run (or the current weight mode if the program is running).</td></tr>
+
+<tr><td><PRE>STDDEVMODE={SHORT|SCIENTIFIC|DECIMAL|OFF}</PRE></td><td>The standard deviation mode, defining how to format the standard deviation of each element's weight</td><td>The standard deviation mode in effect the last time the program was run (or the current standard deviation mode if the program is running).</td></tr>
+
+<tr><td><PRE>MWSHOWSOURCEFORMULA={ON|OFF}</PRE></td><td>When ON, will output the source formula, followed by either the molecular weight, the empirical formula, or the formula with expanded abbreviations, separating the two with the currently defined delimeter.</td><td><PRE>ON</PRE></td></tr>
+
+<tr><td><PRE>CAPITALIZED={ON|OFF}</PRE></td><td>If ON, will output the source formula properly capitalized.  For example, c6h6 would be outputted as C6H6. Default is OFF.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>EMPIRICAL={ON|OFF}</PRE></td><td>If ON, will convert the source formula to its empirical formula and output the result. If MWSHOWSOURCEFORMULA=ON, will show the source formula before the empirical formula, separating with the currently defined delimeter.  Unless SHOWMASS=OFF, the molecular weight will also be outputted.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>EXPANDABBREVIATIONS={ON|OFF}</PRE></td><td>If ON, will expand the abbreviations in the source formula to their elemental equivalent, and output the result.  If MWSHOWSOURCEFORMULA=ON, will show the source formula before the resultant formula, separating with the currently defined delimeter.  Unless SHOWMASS=OFF, the molecular weight will also be outputted.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>SHOWMASS={ON|OFF}</PRE></td><td>When ON, will output the mass of each formula encountered in normal weight computation mode.</td><td><PRE>ON</PRE></td></tr>
+
+<tr><td><PRE>ONELETTERPEPTIDEWEIGHTMODE={ON|OFF}</PRE></td><td>When ON, will treat the input formulas as peptides in 1-letter notation.  The default peptide prefix is H and default peptide suffix is OH.  Use PEPTIDEWEIGHTMODEPEPTIDEPREFIX and PEPTIDEWEIGHTMODEPEPTIDESUFFIX to change the default prefix and suffix.  Note that this mode is not appropriate for computing masses of peptides in 3-letter notation.  Those peptide masses can be computed using the Normal Molecular Weight Computation (MW=) mode.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>PEPTIDEWEIGHTMODEPEPTIDEPREFIX={custom formula}</PRE></td><td>Use this to set a custom prefix formula for peptide masses computed when ONELETTERPEPTIDEWEIGHTMODE=ON.</td><td><PRE>H</PRE></td></tr>
+
+<tr><td><PRE>PEPTIDEWEIGHTMODEPEPTIDESUFFIX={custom formula}</PRE></td><td>Use this to set a custom suffix formula for peptide masses.</td><td><PRE>OH</PRE></td></tr>
+
+<tr><td><PRE>
+DELIMETER={&lt;TAB&gt;|&lt;SPACE&gt;|
+           &lt;ENTER&gt;|&lt;CRLF&gt;|custom symbol}</PRE></td><td>The delimeter to use to separate the source formula and the computed mass, or the source sequence and the converted sequence. Use one of the standard &lt;&gt; commands (for example DELIMETER=&lt;TAB&gt;) or provide a custom symbol (for example DELIMETER=, to set the delimeter to a comma)</td><td><PRE>&lt;TAB&gt;</PRE></td></tr>
+
+<tr><td><PRE>AACONVERT3TO1={ON|OFF}</PRE></td><td>When ON, will treat each line as a set of 3 letter amino acid abbreviations, and will output the equivalent 1 letter sequence.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>AACONVERT1TO3={ON|OFF}</PRE></td><td>When ON, will treat each line as a set of 1 letter amino acid abbreviations, and will output the equivalent 3 letter sequence.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>AASPACEEVERY10={ON|OFF}</PRE></td><td>When ON, will add a space every 10 residues in the output sequence.</td><td><PRE>OFF</PRE></td></tr>
+<tr><td><PRE>AA1TO3USEDASH={ON|OFF}</PRE></td><td>When ON, will separate each residue with a dash (only applicable for 1 to 3 letter conversion).</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>AASHOWSEQUENCEBEINGCONVERTED={ON|OFF}</PRE></td><td>When ON, will output the source sequence, followed by the converted sequence, separated the currently defined delimeter. It is useful to set this option to OFF if you are converting long sequences.</td><td><PRE>ON</PRE></td></tr>
+
+<tr><td><PRE>FF=[Element1[,Element2][,...]]</PRE></td><td>Enable Formula Finder mode.  Optionally provide a comma-separated list of elements or abbreviations to search for.</td><td>If no list of elements is supplied after the equals sign, then the options last used for the formula finder will be used.</td></tr>
+
+<tr><td><PRE>MAXHITS=num</PRE></td><td>Define the maximum number of formula finder hits</td></tr>
+
+<tr><td><PRE>TOLERANCE=num</PRE></td><td>Set the formula finder search tolerance</td></tr>
+
+<tr><td><PRE>ISOTOPICDISTRIBUTION={ON|OFF}</PRE></td><td>When ON, will write out the isotopic distribution for any line containing a valid formula.</td></tr>
+
+<tr><td><PRE>ISOTOPICDISTRIBUTIONCHARGE=num</PRE></td><td>Define the charge state to use for computing m/z values in Isotopic Distribution mode.</td></tr>
+
+<tr><td><PRE>; Comment</PRE></td><td>Insert a comment by starting a line with a semicolon or an apostrophe.  You <b>cannot</b> add a comment on the same line as a Batch Analysis Command or any other text to be used for computation.</td></tr>
+
+<tr><td><PRE>ECHOCOMMENTS={ON|OFF}</PRE></td><td>When ON, will write any blank lines and comment lines found in the source file to the output file.</td><td><PRE>OFF</PRE></td></tr>
+
+<tr><td><PRE>VERBOSEMODE={ON|OFF}</PRE></td><td>When ON, will write a comment to the output file each time a command is found in the source file.  Error messages will be written to the output file regardless of the VERBOSEMODE setting.</td><td><PRE>ON</PRE></td></tr>
+
+</table>
+
+<p><b><a name="example">Example</a> Input File</b></p>
+<PRE>
+; Set weight mode
+WEIGHTMODE=AVERAGE
+
+; Set Standard Deviation mode
+STDDEVMODE=OFF
+
+; Return capitalized (formatted) formulas
+CAPITALIZED=ON
+
+fecl3-6h2o
+
+; Expand abbreviations
+EXPANDABBREVIATIONS=ON
+
+etoac
+
+; Don't display the source formula
+MWSHOWSOURCEFORMULA=OFF
+etoac
+
+; Don't display the weight
+SHOWWEIGHT=OFF
+etoac
+
+; Convert to empirical formula
+; Note: no need to use EXPANDABBREVIATIONS=OFF
+EMPIRICAL=ON
+
+fecl3-6h2o
+etoac
+
+; Re-enable display of the source formula
+MWSHOWSOURCEFORMULA=ON
+UreaC4(NH2)4Ca
+
+; Convert amino acid sequence from 1 letter to 3 letter sequence
+AACONVERT3TO1=ON
+
+GluGlaPheLeu
+Val-Ile-Arg
+
+AASPACEEVERY10=ON
+; For really long sequences, can disable display of the source sequence
+AASHOWSEQUENCEBEINGCONVERTED=OFF
+GluGlaPheLeuVAlIleArgPheTyrMetCysValGluGlaGluGlaPheLeuVAlIleArgPheTyrMetCysValGluGla
+
+AACONVERT1TO3=ON
+FLEELYR
+MLTSCDEEF
+
+AASHOWSEQUENCEBEINGCONVERTED=ON
+AA1TO3USEDASH=ON
+FLEELYR
+
+; To re-enable plain molecular weight computation, use MW=
+; Note: this will also disable EMPIRICAL= and EXPANDABBREVIATIONS=
+;       Further, it will automatically re-enable SHOWWEIGHT
+MW=
+
+C4N8OH2
+
+; Compute the mass of peptides given in 1-letter notation
+ONELETTERPEPTIDEWEIGHTMODE=ON
+
+FLEELYR
+MLTSCDEEF
+
+; Don't show the source formula when computing the peptide's mass
+MWSHOWSOURCEFORMULA=OFF
+
+MLTSCDEEF
+
+; Enable formula finder mode using FF=, specifying the elements to use in searching
+; Can also specify weight mode, maximum number of hits, and tolerance
+FF=C,H,N,O,Cl,Bpy
+WEIGHTMODE=ISOTOPIC
+MAXHITS=5
+TOLERANCE=0.05
+403.84
+300.58
+
+; The tolerance can be changed
+TOLERANCE=0.02
+403.885
+
+; The maximum number of hits can be changed
+MAXHITS=10
+632.43
+
+; The search elements can be changed
+FF=N,Br,H,Li
+MAXHITS=2
+389.32
+
+; Can disable verbose output
+VERBOSEMODE=OFF
+; Additionally, could enable echo of comments
+ECHOCOMMENTS=ON
+; Switching back (this comment is in the source file)
+
+MW=
+MWSHOWSOURCEFORMULA=ON
+NH2
+C6H5Cl
+^13C6H5Cl
+
+WEIGHTMODE=AVERAGE
+FeCl3-6H2O
+
+
+
+; So is this one, along with the 3 blank lines above
+MWSHOWSOURCEFORMULA=OFF
+NH2
+C6H5Cl
+^13C6H5Cl
+FeCl3-6H2O
+
+VERBOSEMODE=ON
+DELIMETER=&lt;SPACE&gt;
+CAPITALIZED=on
+c6h5cl
+
+DELIMETER=,
+c6h5cl
+
+ECHOCOMMENTS=OFF
+
+; Enable Isotopic Distribution Mode
+ISOTOPICDISTRIBUTION=ON
+; Simply enter a formula to obtain the isotopic distribution
+CH2(CH2)7CH2Br
+
+; Change the charge state with the following command
+ISOTOPICDISTRIBUTIONCHARGE=2
+CH2(CH2)7CH2Br
+
+</PRE>
+
+<p><b>Resultant Output File</b></p>
+<PRE>
+; Average Weight Mode Enabled
+; Standard deviations will not be displayed
+; Source formula will be displayed with proper capitalization
+FeCl3-6H2O	270.29478
+
+; Abbreviation expansion now On
+EtOac	CH3CH2C2H3O2	88.10512
+; Display of source formula is now Off
+CH3CH2C2H3O2	88.10512
+; Will not display the molecular weight (mass) of each formula
+CH3CH2C2H3O2
+
+; Converting formulas to empirical formulas now On
+H12Cl3FeO6
+C4H8O2
+; Display of source formula is now On
+UreaC4(NH2)4Ca	C5H12CaN6O
+
+; 3 letter to 1 letter amino acid symbol conversion now On
+GluGlaPheLeu	EUFL
+Val-Ile-Arg	VIR
+; Will add a space every 10 amino acids
+; Will only show the converted sequence, not the sequence being converted
+EUFLVIRFYM CVEUEUFLVI RFYMCVEU
+
+; 1 letter to 3 letter amino acid symbol conversion now On
+PheLeuGluGluLeuTyrArg
+MetLeuThrSerCysAspGluGluPhe
+; Will show sequence being converted, in addition to the converted sequence
+; Will separate residues with a dash
+FLEELYR	Phe-Leu-Glu-Glu-Leu-Tyr-Arg
+
+; Normal Molecular Weight Mode Enabled (other modes turned Off)
+C4N8OH2	178.112
+
+; One letter Amino Acid weight mode: input formulas are assumed to be peptides in one-letter notation
+H-PheLeuGluGluLeuTyrArg-OH	969.09172
+H-MetLeuThrSerCysAspGluGluPhe-OH	1074.18464
+; Display of source formula is now Off
+1074.18464
+
+; Formula Finder Mode Enabled.  Search elements/abbreviations: C, H, N, O, Cl, Bpy
+; Isotopic Weight Mode Enabled
+; FF Maximum Hits set to 5
+; FF Tolerance set to 0.05
+; FF Searching: 403.84
+Compounds found:  5
+C2BpyCl6N	MW=403.8849368	dm=0.0449368
+C5H6Cl8N3O	MW=403.8019086	dm=-0.0380914
+C6H6Cl8NO2	MW=403.7906756	dm=-0.0493244
+C6H8Cl8N2O	MW=403.8144838	dm=-0.0255162
+C7H8Cl8O2	MW=403.8032508	dm=-0.0367492
+
+; FF Searching: 300.58
+Compounds found:  0
+
+; FF Tolerance set to 0.02
+; FF Searching: 403.885
+Compounds found:  5
+CH7Cl7N10	MW=403.8674832	dm=-0.0175168
+C2BpyCl6N	MW=403.8849368	dm=-0.0000632
+C2H9Cl7N9	MW=403.8800584	dm=-0.0049416
+C3H2BpyCl6	MW=403.897512	dm=0.012512
+C3H9Cl7N7O	MW=403.8688254	dm=-0.0161746
+
+; FF Maximum Hits set to 10
+; FF Searching: 632.43
+Compounds found:  10
+CH24Bpy3N8O	MW=632.413531800001	dm=-0.0164682
+C2H26Bpy3N7O	MW=632.426107000001	dm=-0.003893
+C3H26Bpy3N5O2	MW=632.414874000001	dm=-0.015126
+C4H28Bpy3N4O2	MW=632.427449200001	dm=-0.0025508
+C5H28Bpy3N2O3	MW=632.416216200001	dm=-0.0137838
+C5H30Bpy3N3O2	MW=632.440024400001	dm=0.0100244
+C6H30Bpy3NO3	MW=632.428791400001	dm=-0.0012086
+C7H31Bpy3ClN	MW=632.420724000002	dm=-0.009276
+C7H32Bpy3O3	MW=632.441366600002	dm=0.0113666
+C8H33Bpy3Cl	MW=632.433299200002	dm=0.0032992
+
+
+; Formula Finder Mode Enabled.  Search elements/abbreviations: H, N, Br, Li
+; FF Maximum Hits set to 2
+; FF Searching: 389.32
+Compounds found:  2
+H47Br3Li11N2	MW=389.3049672	dm=-0.0150328
+H47Br3Li13N	MW=389.3339032	dm=0.0139032
+
+; Switching back (this comment is in the source file)
+
+NH2	16.0187232
+C6H5Cl	112.007976
+^13C6H5Cl	118.007976
+
+FeCl3-6H2O	270.29478
+
+
+
+; So is this one, along with the 3 blank lines above
+16.02262
+112.5566
+118.4924
+270.29478
+
+; Verbose mode is now on
+; Delimeter now a Space
+; Source formula will be displayed with proper capitalization
+C6H5Cl 112.5566
+
+; Delimeter now ,
+C6H5Cl,112.5566
+
+; Comments found in the source file will not be written to the output file
+
+; Isotopic Distribution calculations now On
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   205.05919	0.4588825	 100.00
+   206.05919	0.0459075	  10.00
+   207.05919	0.4484460	  97.73
+   208.05919	0.0447120	   9.74
+   209.05919	0.0020020	   0.44
+   210.05919	0.0000528	   0.01
+   211.05919	0.0000017	   0.00
+
+; Isotopic Distribution charge set to 2
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   103.03329	0.4588825	 100.00
+   103.53329	0.0459075	  10.00
+   104.03329	0.4484460	  97.73
+   104.53329	0.0447120	   9.74
+   105.03329	0.0020020	   0.44
+   105.53329	0.0000528	   0.01
+   106.03329	0.0000017	   0.00
+</PRE>
+
+</BODY>
+</HTML>

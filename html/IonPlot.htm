@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Ion Plot</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="ion_plot"></a><img src="../images/MwtWinIcon.gif" border=0>Ion Plot</h2>
+<p>Location: View Menu on the <a href="PeptideFragModelling.htm">Peptide Sequence Fragmentation Modelling</a> window</p>
+
+<H3>Introduction</H3>
+<p>The ion plot window can be used to visualize the expected mass spectrum for the predicted fragmentation ions.  In addition, the location of actual ions loaded for matching can be compared to the predicted ion locations.  The data on the plot can be exported in either graphical or text form (File and Edit menus).  This same plotting window is used to display Isotopic Distribution plots.  The plot is highly configurable and is much faster than the original plotting routine provided with the Molecular Weight Calculator.</p>
+
+<H3>Zooming, Panning, Scaling, and moving the Cursor</H3>
+<p>To zoom in, simply drag the mouse on the plot.  The Mouse Action mode defines the type of zoom that will occur.  In Zoom X mode, the plot expands the X axis, but autoscales the Y axis.  The reverse behavior can be achieved using Zoom Y mode.  Zoom Box mode allows one to draw a box on the graph and expand the given region. To show the entire plot, choose Options | Zoom Out to show All, or press Ctrl+A.</p>
+
+<p>To slide the graph left/right or up/down (also known as panning), change to the Pan Graph or Pan Along X mode.  To view the entire plot, click Zoom out, or press Ctrl+A.  You can specify an X or Y range to view by choosing Edit->Set Zoom Range.  The Y axis can also be automatically scaled as you zoom in or out by clicking Options and making sure Autoscale Visible Y is checked.  Additionally, you can enable Fix Minimum Y at Zero so that the Y axis ranges from 0 to the maximum of any peaks in the current view.  Both autoscaling and fixing the minimum Y at zero are useful for simplifying zooming into regions of the plot without requiring you to highlight an entire peak vertically prior to zooming.  When either mode is enabled, it is best to set the Mouse Action to Zoom X.
+</p>
+
+<p>The Mouse Action mode can be temporarily changed by pressing and holding the A, C, P, or Z key: A enables Move Annotation mode, C enables Move Cursor mode, P enables Pan mode, and Z enables Zoom mode.  To view the cursor, click the Options button and make sure Show Cursor is checked.  If Snap to Data is checked, the cursor can only be positioned on top of a data point; otherwise, the cursor can be positioned anywhere.  To move the cursor, enable Cursor mode (by changing the Mouse Action mode or by pressing C), then drag the cursor to a new location.  The current coordinates of the cursor, in addition to the current coordinates of the mouse, are displayed at the bottom of the plot.  The digits of precision in the coordinates can be adjusted by clicking the Options button.
+</p>
+
+<H3>Plot Options and Annotations</H3>
+<p>Various formatting options can be modified using Edit->Edit Plot Styles and Colors.  Various captions can be set.  X and Y Axis gridlines may be displayed on the plot.  The plot mode can be changed.  The point and line colors and styles can be changed.  Finally, the annotation font, size, and color can be customized.</p>
+
+<p>Annotations are automatically added to the plot by the Peptide Sequence Fragmentation Module.  In addition, you can add a custom annotation by double-clicking on the plot.  The Snap Mode determines whether the annotation is bound to a specific series and/or specific data point, or is freely floating.  Annotations can contain custom text, or can display the X and/or Y value of the nearest point.  An arrow can be displayed showing which point the annotation is bound to.  Finally, if Hide in Crowded Regions is enabled for the annotation, and if Auto Hide Captions is enabled (click Options, check Auto Hide Captions), then captions will be hidden in areas of the plot where numerous captions are present.  The caption bound to the point with the highest intensity is give the highest preference for displaying.  The Annotation Density Options can be used to define which annotations to show and/or hide.
+</p>
+
+</BODY>
+</HTML>

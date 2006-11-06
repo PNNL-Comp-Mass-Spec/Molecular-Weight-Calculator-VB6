@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Mole/Mass Converter</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="mm_convert"></a><img src="../images/MwtWinIcon.gif" border=0> Mole/Mass Converter and Dilution Calculator</h2>
+<p>Location: <a href="MenuTools.htm">Tools menu</a></p>
+
+<p>
+The <a href="#MoleMass"> Mole/Mass Converter</a> is useful for performing common chemical calculations concerning the interconversion of mass, moles, and molarity.  You have the option of using the mass of the compound in the current formula or entering a custom numerical mass.</p>
+
+<p>The <a href="#Dilution">Dilution Calculator</a> helps determine concentrations and volumes to perform the specified dilution or achieve a desired concentration (via evaporation or sublimation, for example).
+</p>
+
+<!-- Mole/Mass Calculations -->
+
+<h2><a name="MoleMass">Mole/Mass/Volume Conversions</a></h2>
+<p>
+In the converter window, the first two lines are used for simple conversion between mass and moles or one unit of mass and other units of mass.
+<ul>
+<li>
+Select Convert Amounts from the dropdown combo box<br><br></li>
+<li>
+Type the starting number<br><br></li>
+<li>
+Select the correct units for the starting and computed numbers<br><br></li>
+<li>
+The program will perform the conversion for you.</li>
+</ul>
+<p>
+When volume units are selected, a density box will appear so that the program can correctly convert mL of a liquid to moles of the liquid (for example).  Note that pounds and ounces conversions are based on the avoirdupois system, commonly used in the U.S. (1&nbsp;pound = 16&nbsp;ounces = 0.454&nbsp;kg).</p>
+<p>
+When Find Concentration is chosen in the dropdown combo box, two other boxes appear which can be used to perform three common molarity-related operations:
+<ul>
+<li>
+By typing a weight or volume in the top box and entering a volume in the second box, you can select the Find Concentration button to calculate the resultant concentration of a solution of the corresponding volume containing the specific amount of the compound.<br><br></li>
+<li>
+Conversely, after entering a concentration and a volume, you can select the Find Amount button to find the amount of substance required to make a solution of the corresponding volume and concentration.<br><br></li>
+<li>
+Finally, after entering an amount and a concentration, you can find the volume of solvent required to satisfy the amount and concentration requirements by selecting the Find Volume button.</li>
+</ul>
+
+<p>In Find Concentration mode, the behavior of the units dropdown boxes has been improved to automatically recompute the corresponding value (amount/volume/concentration) when you change units.  However, if you enter a new value then immediately change the corresponding units, the value will not be automatically updated, since you most likely want to use that specific value/unit combination.
+</p>
+
+<p>
+Note:  I have chosen to only allow the g/mL unit for density; if anyone can suggest other common units I will implement them in a future version of the program.</p>
+
+<!-- Dilution Calculations -->
+
+<h2><a name="Dilution">Dilution and Concentration conversions</a></h2>
+
+<p>Diluting a stock solution (starting solution) involves adding solvent to a given volume (aliquot) of the stock solution to lower the concentration of the solute (the compound dissolved in the solution).  Conversely, concentrating a solution involves removing some of the solvent (by boiling, evaporating, or sublimation) resulting in an increase of the concentration of the solute.  The dilution calculator can assist you in determining what types of volume changes are required to accomplish the desired dilution or concentration.  Alternatively, it can assist in determining how the concentration of the solute will change for a given set of volumes.</p>
+
+<p>The standard equation for determing change in concentration between an initial and final solution is: <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M<sub>1</sub>V<sub>1</sub> = M<sub>2</sub>V<sub>2</sub><BR>
+where M<sub>1</sub> is the concentration of the solute in the initial (stock) solution, M<sub>2</sub> is the concentration of the solute in the final solution, V<sub>1</sub> is the volume (aliquot) of initial (stock) solution used to make the final solution, and V<sub>2</sub> is the total volume of the final solution.  In making a dilution, one must determine the volume of solvent (V<sub>s</sub>) to mix with the aliquot of stock solution (V<sub>1</sub>).  This can easily be computed using:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V<sub>s</sub> = V<sub>2</sub> - V<sub>1</sub><br>
+With these equations in mind, I have included four types of computational modes in the dilution calculator.  The text boxes highlighted in yellow are the values that the program will be computing for you, and thus, cannot be manually changed.
+</p>
+
+<ol>
+<li> Find Required Dilution Volumes<br>
+	In this mode you enter an Initial and Final solute concentration, in addition to a desired Total Solution Volume.<Br>
+	<ul>
+	<li>If the Final concentration is less than the Initial concentration, the program will compute the Volume of Stock solution and Volume of Diluting Solvent to mix to perform the specified dilution.
+	<li>If the Final concentration is larger than the Initial concentration then nothing can be logically computed, so the volume boxes are cleared.
+	</ul>
+	<br>
+
+<li> Find Required Total Volume<br>
+	In this mode you enter an Initial and Final solute concentration, in addition to the Volume of Stock solution to use.
+	<ul>
+	<li>If the Final concentration is less than the Initial concentration, the program will compute the Total Final Volume and Volume of Diluting Solvent necessary to perform the specified dilution.
+	<li>If the Final concentration is larger than the Initial concentration then the progrm will compute the Total Final Volume that the Volume of Stock solution must be reduced to in order to achieve the specified increase in concentration.
+	</ul>
+	<br>
+
+<li> Find Final Concentration<br>
+	In this mode you enter an Initial solute concentration, Volume of Stock solution (V<sub>1</sub>), and Total Final Volume (V<sub>2</sub>).  
+	<ul>
+	<li>If the Total Final Volume is greater than the Volume of Stock solution, then the Volume of Diluting Solvent is automatically computed by subtracting V<sub>2</sub> - V<sub>1</sub>, afterwhich the Final Concentration is computed.	
+	<li>However, you also have the option of entering a Total Final Volume less than the Volume of Stock solution.  In this case, you are performing a concentration and no Diluting Solvent is added; thus the box is cleared.  The Final Concentration is then computed using V<sub>2</sub> and V<sub>1</sub>.
+	</ul>
+	<br>
+
+<li> Find Initial Concentration<br>
+	This mode is identical to the Find Final Concentration mode, except that the Initial Concentration is now being computed.
+	<ul>
+	<li>As with the above mode, the Volume of Diluting Solvent is computed if the Total Final Volume is greater than the Volume of Stock solution, afterwhich the Initial Concentration is computed.
+	<li>Otherwise, the volume of Diluting Solvent is cleared and the Initial Concentration is computed using V<sub>2</sub> and V<sub>1</sub>.
+	</ul>
+</ol>
+
+<p>Two checkbox options appear when the Dilution Calculator is activated.  The first, Link Initial Dilution Concentration and Convert Amounts Concentration, will keep the values and units of these two concentrations the same if either one changes.  The second checkbox, Link Dilution Volume Units, simply keeps all of the units in the Dilution Calculator identical.  You will want to turn this off when you are diluting a solution by several orders of magnitude, thus requiring a very small Volume of Stock Solution and much larger volume of Diluting Solvnet.
+</p>
+
+</BODY>
+</HTML>

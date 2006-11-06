@@ -1,0 +1,23 @@
+
+; Isotopic Distribution calculations now On
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   205.05919	0.4588825	 100.00
+   206.05919	0.0459075	  10.00
+   207.05919	0.4484460	  97.73
+   208.05919	0.0447120	   9.74
+   209.05919	0.0020020	   0.44
+   210.05919	0.0000528	   0.01
+   211.05919	0.0000017	   0.00
+
+; Isotopic Distribution charge set to 2
+Isotopic Abundances for CH2(CH2)7CH2Br
+  Mass/Charge	Fraction 	Intensity
+   103.03323	0.4588825	 100.00
+   103.53323	0.0459075	  10.00
+   104.03323	0.4484460	  97.73
+   104.53323	0.0447120	   9.74
+   105.03323	0.0020020	   0.44
+   105.53323	0.0000528	   0.01
+   106.03323	0.0000017	   0.00
+

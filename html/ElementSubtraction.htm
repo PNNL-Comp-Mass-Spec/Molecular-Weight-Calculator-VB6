@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Element Subtraction Using the > Symbol</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="subtraction"></a><img src="../images/MwtWinIcon.gif" border=0> Element Subtraction Using the > Symbol</h2>
+<p>
+ See also <a href="EnteringFormulas.htm">Entering Formulas</a>.</p>
+<p>
+Element Subtraction was added to allow one to quickly find the mass or empirical formula of a compound that has lost one or more elements due to a reaction or a neutral loss in mass spectrometry.  For example:</p>
+<p> C<sub>6</sub>H<sub>5</sub>Cl>HCl means C<sub>6</sub>H<sub>5</sub>Cl minus HCl, having a mass of 76.0959 Da (average mass), equivalent to C<sub>6</sub>H<sub>4</sub></p>
+
+<p>The elements to the right of the > symbol must all be present in the elements to the left of the > symbol, otherwise an error will occur.  Furthermore, the number of atoms of a given element listed to the right of the > symbol cannot be greater than the number of atoms of the element to the left of the > symbol.  Thus, the following formulas will result in an error:</p>
+
+<table>
+<tr><td>C<sub>6</sub>H<sub>5</sub>Cl>HBr</td> <td>since Br is not present in C<sub>6</sub>H<sub>5</sub>Cl</td></tr>
+<tr><td>C<sub>6</sub>H<sub>5</sub>Cl>HCl<sub>2</sub></td> <td>since only one Cl atom is present in C<sub>6</sub>H<sub>5</sub>Cl</td></tr>
+</table>
+
+<p>If you include multiple > symbols in a formula, then the order of operation is right-to-left.  For example:</p>
+<p>C<sub>6</sub>H<sub>5</sub>Cl<sub>3</sub>>H<sub>3</sub>Cl<sub>2</sub>>HCl<BR>
+will first be converted to<Br>
+C<sub>6</sub>H<sub>5</sub>Cl<sub>3</sub>>H<sub>2</sub>Cl<BR>
+and then to<br>
+C<sub>6</sub>H<sub>3</sub>Cl<sub>2</sub>
+</p>
+<p>The mass of C<sub>6</sub>H<sub>3</sub>Cl<sub>2</sub> is 145.99342 Da (average mass), and consequently this is the mass returned for C<sub>6</sub>H<sub>5</sub>Cl<sub>3</sub>>H<sub>3</sub>Cl<sub>2</sub>>HCl<BR>If you choose <a href="EmpiricalFormula.htm">Convert To Empirical Formula</a>, then the empirical formula returned is C<sub>6</sub>H<sub>3</sub>Cl<sub>2</sub></p>
+
+<p>Abbreviations may contain formulas having > symbols in them.  Thus, if the abbreviation J is defined to be C<sub>6</sub>H<sub>5</sub>Cl>HCl (mass 76.0959 Da), then the formula H<sub>2</sub>J will have a mass of 78.11184 Da.  If you choose <a href="ExpandAbbreviations.htm">Expand Abbreviations</a> for the formula H<sub>2</sub>J, then the formula will be replaced with H<sub>2</sub>C<sub>6</sub>H<sub>5</sub>Cl>HCl.  However, if the original formula is J<sub>2</sub> and you choose Expand Abbreviations, then we cannot simply replace J<sub>2</sub> with (C<sub>6</sub>H<sub>5</sub>Cl>HCl)<sub>2</sub> since that is an invalid formula.  Consequently, J is first converted to its empirical formula, giving (C<sub>6</sub>H<sub>4</sub>)<sub>2</sub>  This same situation applies if J is in the middle of a formula.  For example, H<sub>2</sub>JO<sub>2</sub> will be converted to H<sub>2</sub>C<sub>6</sub>H<sub>4</sub>O<sub>2</sub> when choosing Expand Abbreviations, or to C<sub>6</sub>H<sub>6</sub>O<sub>2</sub> when choosing Convert to Empirical Formula.
+
+</BODY>
+</HTML>

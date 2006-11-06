@@ -1,0 +1,136 @@
+; Set weight mode
+WEIGHTMODE=AVERAGE
+
+; Set Standard Deviation mode
+STDDEVMODE=OFF
+
+; Return capitalized (formatted) formulas
+CAPITALIZED=ON
+
+fecl3-6h2o
+
+; Expand abbreviations
+EXPANDABBREVIATIONS=ON
+
+etoac
+
+; Don't display the source formula
+MWSHOWSOURCEFORMULA=OFF
+etoac
+
+; Don't display the weight
+SHOWWEIGHT=OFF
+etoac
+
+; Convert to empirical formula
+; Note: no need to use EXPANDABBREVIATIONS=OFF
+EMPIRICAL=ON
+
+fecl3-6h2o
+etoac
+
+; Re-enable display of the source formula
+MWSHOWSOURCEFORMULA=ON
+UreaC4(NH2)4Ca
+
+; Convert amino acid sequence from 1 letter to 3 letter sequence
+AACONVERT3TO1=ON
+
+GluGlaPheLeu
+Val-Ile-Arg
+
+AASPACEEVERY10=ON
+; For really long sequences, can disable display of the source sequence
+AASHOWSEQUENCEBEINGCONVERTED=OFF
+GluGlaPheLeuVAlIleArgPheTyrMetCysValGluGlaGluGlaPheLeuVAlIleArgPheTyrMetCysValGluGla
+
+AACONVERT1TO3=ON
+FLEELYR
+MLTSCDEEF
+
+AASHOWSEQUENCEBEINGCONVERTED=ON
+AA1TO3USEDASH=ON
+FLEELYR
+
+; To re-enable plain molecular weight computation, use MW=
+; Note: this will also disable EMPIRICAL= and EXPANDABBREVIATIONS=
+;       Further, it will automatically re-enable SHOWWEIGHT
+MW=
+
+C4N8OH2
+
+; Compute the mass of peptides given in 1-letter notation
+ONELETTERPEPTIDEWEIGHTMODE=ON
+
+FLEELYR
+MLTSCDEEF
+
+; Don't show the source formula when computing the peptide's mass
+MWSHOWSOURCEFORMULA=OFF
+
+MLTSCDEEF
+
+; Enable formula finder mode using FF=, specifying the elements to use in searching
+; Can also specify weight mode, maximum number of hits, and tolerance
+FF=C,H,N,O,Cl,Bpy
+WEIGHTMODE=ISOTOPIC
+MAXHITS=5
+TOLERANCE=0.05
+403.84
+300.58
+
+; The tolerance can be changed
+TOLERANCE=0.02
+403.885
+
+; The maximum number of hits can be changed
+MAXHITS=10
+632.43
+
+; The search elements can be changed
+FF=N,Br,H,Li
+MAXHITS=2
+389.32
+
+; Can disable verbose output
+VERBOSEMODE=OFF
+; Additionally, could enable echo of comments
+ECHOCOMMENTS=ON
+; Switching back (this comment is in the source file)
+
+MW=
+MWSHOWSOURCEFORMULA=ON
+NH2
+C6H5Cl
+^13C6H5Cl
+
+WEIGHTMODE=AVERAGE
+FeCl3-6H2O
+
+
+
+; So is this one, along with the 3 blank lines above
+MWSHOWSOURCEFORMULA=OFF
+NH2
+C6H5Cl
+^13C6H5Cl
+FeCl3-6H2O
+
+VERBOSEMODE=ON
+DELIMETER=<SPACE>
+CAPITALIZED=on
+c6h5cl
+
+DELIMETER=,
+c6h5cl
+
+ECHOCOMMENTS=OFF
+
+; Enable Isotopic Distribution Mode
+ISOTOPICDISTRIBUTION=ON
+; Simply enter a formula to obtain the isotopic distribution
+CH2(CH2)7CH2Br
+
+; Change the charge state with the following command
+ISOTOPICDISTRIBUTIONCHARGE=2
+CH2(CH2)7CH2Br

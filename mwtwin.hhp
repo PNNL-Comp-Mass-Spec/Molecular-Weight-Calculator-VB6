@@ -1,0 +1,203 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=mwtwin.chm
+Contents file=mwtwin.hhc
+Default topic=html\Overview.htm
+Display compile progress=No
+Index file=mwtwin.hhk
+Language=0x409 English (United States)
+Title=Molecular Weight Calculator
+
+
+[FILES]
+html\Abbreviations.htm
+html\AdvanceOnCalculate.htm
+html\AminoAcidConverter.htm
+html\AuthorInfo.htm
+html\AutoCopyCurrentMWT.htm
+html\AutosaveOptionsEtc.htm
+html\Availability.htm
+html\BehindScenesCalcs.htm
+html\BehindScenesIsotopes.htm
+html\BehindScenesPctComp_StdDevCalcs.htm
+html\BehindScenesPctSolver.htm
+html\Brackets.htm
+html\Calculator.htm
+html\CalcWeightsFromFile.htm
+html\CapillaryCalculations.htm
+html\CaseRecognition.htm
+html\CautionMode.htm
+html\CommandLineSwitches.htm
+html\ComputeCharge.htm
+html\CopyCurrent.htm
+html\CopyFormulaAsRTF.htm
+html\CutCopyPasteDel.htm
+html\Dashes.htm
+html\DefaultAbbreviations.htm
+html\DupCurrentFormula.htm
+html\EditingAbbreviations.htm
+html\EditingElements.htm
+html\ElementModeQuickSwitch.htm
+html\ElementSubtraction.htm
+html\EmpiricalFormula.htm
+html\EnteringFormulas.htm
+html\EraseAllFormulas.htm
+html\EraseCurrentFormula.htm
+html\ErrorMessages.htm
+html\ExamplesOfFormulas.htm
+html\ExitProgram.htm
+html\ExitProgramOptions.htm
+html\ExpandAbbreviations.htm
+html\FormulaFinder.htm
+html\FormulaFinderWarn.htm
+html\FormulaFont.htm
+html\HideInactiveWindows.htm
+html\HighlightTextFields.htm
+html\Installation.htm
+html\InternationalSupport.htm
+html\IonMatchListOptions.htm
+html\IonPlot.htm
+html\Isotopes.htm
+html\IsotopicDistribution.htm
+html\Keystrokes.htm
+html\MaximumFormulasToDisplay.htm
+html\MenuEdit.htm
+html\MenuFile.htm
+html\MenuHelp.htm
+html\MenuOptions.htm
+html\Menus.htm
+html\MenuView.htm
+html\MoleMass.htm
+html\MultipleProgramInstances.htm
+html\MultiViewMode.htm
+html\NewFormula.htm
+html\Overview.htm
+html\Parentheses.htm
+html\PctSolverMode.htm
+html\PeptideFragModelling.htm
+html\Printing.htm
+html\ProgramOptions.htm
+html\ProgramRevisions.htm
+html\SaveOptions.htm
+html\SaveRestoreValues.htm
+html\SingleViewMode.htm
+html\StartupModule.htm
+html\StayOnTop.htm
+html\StdDevModes.htm
+html\MenuTools.htm
+html\Undo.htm
+
+[ALIAS]
+IDH_Abbreviations = html\Abbreviations.htm
+IDH_AdvanceOnCalculate = html\AdvanceOnCalculate.htm
+IDH_AminoAcidConverter = html\AminoAcidConverter.htm
+IDH_AuthorInfo = html\AuthorInfo.htm
+IDH_AutoCopyCurrentMWT=html\AutoCopyCurrentMWT.htm
+IDH_AutosaveOptionsEtc = html\AutosaveOptionsEtc.htm
+IDH_Brackets = html\Brackets.htm
+IDH_Calculator = html\Calculator.htm
+IDH_CalcWeightsFromFile = html\CalcWeightsFromFile.htm
+IDH_CapillaryFlowCalculator = html\CapillaryCalculations.htm
+IDH_CaseRecognition = html\CaseRecognition.htm
+IDH_CautionMode = html\CautionMode.htm
+IDH_ChooseLanguage = html\InternationalSupport.htm
+IDH_ComputeCharge = html\ComputeCharge.htm
+IDH_CopyCurrent = html\CopyCurrent.htm
+IDH_CopyFormulaAsRTF = html\CopyFormulaAsRTF.htm
+IDH_CutCopyPasteDel = html\CutCopyPasteDel.htm
+IDH_DupCurrentFormula = html\DupCurrentFormula.htm
+IDH_EditingAbbreviations = html\EditingAbbreviations.htm
+IDH_EditingElements = html\EditingElements.htm
+IDH_ElementModeQuickSwitch = html\ElementModeQuickSwitch.htm
+IDH_ElementSubtraction = html\ElementSubtraction.htm
+IDH_EmpiricalFormula = html\EmpiricalFormula.htm
+IDH_EnteringFormulas = html\EnteringFormulas.htm
+IDH_EraseAllFormulas = html\EraseAllFormulas.htm
+IDH_EraseCurrentFormula = html\EraseCurrentFormula.htm
+IDH_ExitProgram = html\ExitProgram.htm
+IDH_ExitProgramOptions = html\ExitProgramOptions.htm
+IDH_ExpandAbbreviations = html\ExpandAbbreviations.htm
+IDH_FormulaFinder = html\FormulaFinder.htm
+IDH_FormulaFinderWarn = html\FormulaFinderWarn.htm
+IDH_FormulaFont = html\FormulaFont.htm
+IDH_IonMatchOptions = html\IonMatchListOptions.htm
+IDH_IonPlot = html\IonPlot.htm
+IDH_IsotopicDistribution=html\IsotopicDistribution.htm
+IDH_Keystrokes = html\Keystrokes.htm
+IDH_MenuEdit = html\MenuEdit.htm
+IDH_MenuFile = html\MenuFile.htm
+IDH_MenuHelp = html\MenuHelp.htm
+IDH_MenuOptions = html\MenuOptions.htm
+IDH_MenuTools = html\MenuTools.htm
+IDH_MenuView = html\MenuView.htm
+IDH_MoleMass = html\MoleMass.htm
+IDH_MultiViewMode = html\MultiViewMode.htm
+IDH_Overview = html\Overview.htm
+IDH_PctSolverMode = html\PctSolverMode.htm
+IDH_PeptideFragModelling = html\PeptideFragModelling.htm
+IDH_Printing = html\Printing.htm
+IDH_ProgramOptions = html\ProgramOptions.htm
+IDH_SaveOptions = html\SaveOptions.htm
+IDH_SaveRestoreValues = html\SaveRestoreValues.htm
+IDH_SingleViewMode = html\SingleViewMode.htm
+IDH_StayOnTop = html\StayOnTop.htm
+IDH_StdDevModes = html\StdDevModes.htm
+
+[MAP]
+#define IDH_Abbreviations 4010
+#define IDH_AdvanceOnCalculate 4040
+#define IDH_AminoAcidConverter 3055
+#define IDH_AuthorInfo 6000
+#define IDH_AutoCopyCurrentMWT 4095
+#define IDH_AutosaveOptionsEtc 4090
+#define IDH_Brackets 4092
+#define IDH_Calculator 3060
+#define IDH_CalcWeightsFromFile 1005
+#define IDH_CapillaryFlowCalculator 3070
+#define IDH_CaseRecognition 4020
+#define IDH_CautionMode 4030
+#define IDH_ComputeCharge 4052
+#define IDH_CopyCurrent 2040
+#define IDH_CopyFormulaAsRTF 2030
+#define IDH_CutCopyPasteDel 2010
+#define IDH_DupCurrentFormula 2050
+#define IDH_EditingAbbreviations 1020
+#define IDH_EditingElements 1010
+#define IDH_ElementModeQuickSwitch 4053
+#define IDH_ElementSubtraction 4094
+#define IDH_EmpiricalFormula 2090
+#define IDH_EnteringFormulas 600
+#define IDH_EraseAllFormulas 2060
+#define IDH_EraseCurrentFormula 2070
+#define IDH_ExitProgram 1040
+#define IDH_ExitProgramOptions 4055
+#define IDH_ExpandAbbreviations 2080
+#define IDH_FormulaFinder 3050
+#define IDH_FormulaFinderWarn 3045
+#define IDH_FormulaFont 4060
+#define IDH_IonMatchOptions 3085
+#define IDH_IonPlot 3090
+#define IDH_IsotopicDistribution 3100
+#define IDH_Keystrokes 5020
+#define IDH_MenuEdit 2000
+#define IDH_MenuFile 1000
+#define IDH_MenuHelp 5000
+#define IDH_MenuOptions 4000
+#define IDH_MenuTools 3035
+#define IDH_MenuView 3000
+#define IDH_MoleMass 3040
+#define IDH_MultiViewMode 3010
+#define IDH_Overview 500
+#define IDH_PctSolverMode 3030
+#define IDH_PeptideFragModelling 3080
+#define IDH_Printing 1030
+#define IDH_ProgramOptions 4006
+#define IDH_SaveOptions 4070
+#define IDH_SaveRestoreValues 4080
+#define IDH_SingleViewMode 3020
+#define IDH_StayOnTop 4065
+#define IDH_StdDevModes 4050
+#deinfe IDH_ChooseLanguage 4003
+
+[INFOTYPES]
+

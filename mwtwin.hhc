@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview of Features">
+		<param name="Local" value="html/Overview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using Formulas">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Entering Formulas">
+			<param name="Local" value="html/EnteringFormulas.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using Parentheses">
+			<param name="Local" value="html/Parentheses.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using Brackets (Weighting)">
+			<param name="Local" value="html/Brackets.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using Dashes (Hydrates)">
+			<param name="Local" value="html/Dashes.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Entering Isotopes">
+			<param name="Local" value="html/Isotopes.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Element Subtraction">
+			<param name="Local" value="html/ElementSubtraction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Formula Examples">
+			<param name="Local" value="html/ExamplesOfFormulas.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="New Formula Button">
+			<param name="Local" value="html/NewFormula.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Editing Elemental Values">
+			<param name="Local" value="html/EditingElements.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using Abbreviations">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Abbreviations Overview">
+			<param name="Local" value="html/Abbreviations.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Editing Abbreviations">
+			<param name="Local" value="html/EditingAbbreviations.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Default Abbreviations">
+			<param name="Local" value="html/DefaultAbbreviations.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="View Modes">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Multiple Formula View Mode">
+			<param name="Local" value="html/MultiViewMode.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Single View Mode (percent compositions)">
+			<param name="Local" value="html/SingleViewMode.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Percent Solver Mode">
+			<param name="Local" value="html/PctSolverMode.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Extended Features">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Mole/Mass Converter">
+			<param name="Local" value="html/MoleMass.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Formula Finder">
+			<param name="Local" value="html/FormulaFinder.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Amino Acid Notation Converter">
+			<param name="Local" value="html\AminoAcidConverter.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Mathematical Calculator">
+			<param name="Local" value="html/Calculator.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Peptide Fragmentation Modelling">
+			<param name="Local" value="Html\PeptideFragModelling.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Isotopic Distribution Modelling">
+			<param name="Local" value="html\IsotopicDistribution.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Ion Plotting">
+			<param name="Local" value="html\IonPlot.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Capillary Flow Calculator">
+			<param name="Local" value="html\CapillaryCalculations.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview of the Menus">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="File Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Edit Elements Table">
+				<param name="Local" value="html/EditingElements.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Edit Abbreviations">
+				<param name="Local" value="html/EditingAbbreviations.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Calculate weights from text file">
+				<param name="Local" value="html/CalcWeightsFromFile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Print Results">
+				<param name="Local" value="html/Printing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Exit the Program">
+				<param name="Local" value="html/ExitProgram.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Edit Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Cut, Copy, Paste, and Delete">
+				<param name="Local" value="html/CutCopyPasteDel.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Copy current formula as RTF">
+				<param name="Local" value="html/CopyFormulaAsRTF.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Copy current molecular weight">
+				<param name="Local" value="html/CopyCurrent.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Copy current percent composition">
+				<param name="Local" value="html/CopyCurrent.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Duplicate current formula">
+				<param name="Local" value="html/DupCurrentFormula.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Erase all formulas">
+				<param name="Local" value="html/EraseAllFormulas.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Erase Current Formula">
+				<param name="Local" value="html/EraseCurrentFormula.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Expand Abbreviations">
+				<param name="Local" value="html/ExpandAbbreviations.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Convert to Empirical Formula">
+				<param name="Local" value="html/EmpiricalFormula.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="View Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Multiple Formula View Mode">
+				<param name="Local" value="html/MultiViewMode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Single View Mode (percent compositions)">
+				<param name="Local" value="html/SingleViewMode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Percent Solver Mode">
+				<param name="Local" value="html/PctSolverMode.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Tools Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Mole/Mass Converter">
+				<param name="Local" value="html/MoleMass.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Formula Finder">
+				<param name="Local" value="html/FormulaFinder.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Amino Acid Notation Converter">
+				<param name="Local" value="html\AminoAcidConverter.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Peptide Fragmentation Modelling">
+				<param name="Local" value="Html\PeptideFragModelling.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Isotopic Distribution Modelling">
+				<param name="Local" value="html\IsotopicDistribution.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Show Isotopic Distribution for Current Formula">
+				<param name="Local" value="html\IsotopicDistribution.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Capillary Flow Calculator">
+				<param name="Local" value="html\CapillaryCalculations.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Mathematical Calculator">
+				<param name="Local" value="html/Calculator.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Options Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Choose Language">
+				<param name="Local" value="html\InternationalSupport.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Program Preferences">
+				<param name="Local" value="html/ProgramOptions.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Formula Font">
+				<param name="Local" value="html/FormulaFont.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Stay On Top">
+				<param name="Local" value="html\StayOnTop.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Save and Restore Default Values">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Saving Values and Formulas">
+					<param name="Local" value="html/SaveRestoreValues.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Restoring Default Values and Formulas">
+					<param name="Local" value="html/SaveRestoreValues.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Help Menu">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help Menu">
+				<param name="Local" value="html/MenuHelp.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Miscellaneous Topics">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Summary of Keystrokes">
+			<param name="Local" value="html/Keystrokes.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Error Messages and the status line">
+			<param name="Local" value="html/ErrorMessages.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Batch Automation">
+			<param name="Local" value="html/CalcWeightsFromFile.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Multiple Program Instances">
+			<param name="Local" value="html\MultipleProgramInstances.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Program Installation">
+			<param name="Local" value="html/Installation.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Command Line Switches">
+			<param name="Local" value="html/CommandLineSwitches.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Background and behind the scenes">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Calculations Overview">
+			<param name="Local" value="html/BehindScenesCalcs.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Percent Composition and Standard Deviation calculations">
+			<param name="Local" value="html/BehindScenesPctComp_StdDevCalcs.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Percent Solver Calculations">
+			<param name="Local" value="html/BehindScenesPctSolver.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Isotopic Calculations">
+			<param name="Local" value="html/BehindScenesIsotopes.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Program Availability and History">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Where to find updates">
+			<param name="Local" value="html/Availability.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Program Revisions">
+			<param name="Local" value="html/ProgramRevisions.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About the Author">
+			<param name="Local" value="html/AuthorInfo.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,776 @@
+                        MOLECULAR WEIGHT CALCULATOR
+                             by Matthew Monroe
+                      Revision 2.87      January 1997
+
+                 This program is Freeware; distribute freely.
+
+
+FEATURES
+-------------------------------------------------------------------------------
+    Full On-Line Help - Eleven help screens available during program operation.
+
+    Smart Case Conversion - The program will automatically convert lowercase
+                            letters to uppercase where appropriate for ease
+                            of entering a formula.  Exact case matching and
+                            non-conversion are available too.
+
+    Multi-Line Display    - Display of up to seven formulas with their
+                            molecular weights simultaneously.
+
+    Percent Composition   - Percent composition of up to seven formulas.
+
+    Parentheses Are Allowed:  (CH3)3CH2CH3
+                              Handles up to 4 layers of embedded parentheses.
+
+    Hydrates or other appended compounds are allowed:  FeCl3-6H2O
+
+    User-definable abbreviations.
+      Default abbreviations are included for common parts of compounds,
+        including amino acids.
+      See full list below.
+    For example:  PhCl = C6H5Cl
+                  HOac = CH3COOH
+
+    The MWTPATH environment variable may be set to avoid creation of
+      duplicate MWT_ABBR.DAT files on the hard drive.
+
+    Isotopes are now recognized using the following notation:
+        ^13C is Carbon-13
+        C6H5^18OH is heavy-oxygen (Oxygen-18) labeled phenol
+
+    Feature of weighting parts of a compound relative to the other parts.
+    For example:  [.2Na]Cl would have a weight of 0.2*22.989768+35.4527=40.0507
+      or NaCl-[.5H2O] would have a weight of:
+                    22.989768+35.4527+0.5*(2*1.00794+15.9994)=67.4501
+
+    Percent Solver mode for finding the value of "x" in a compound that
+    satisfies user-specified percent composition requirements.
+
+    Built in calculator that understands operator precedence:
+        4*5-2*3 = 14
+        (23.43-2.64*3)/6 = 2.585
+        2+2^4 = 18
+
+    Optional display of time during program operation.
+
+    Accuracy of the final digit of the molecular wt. and percent composition.
+
+    Capability to set optional features at the command line when starting
+    the program.
+
+
+AVAILABILITY
+-------------------------------------------------------------------------------
+   Dos Version (MWT v2.87)
+
+The program is available via the web at http://plains.uwyo.edu/~monroem/ or at
+http://www.coast.net/SimTel/msdos/chemstry.html and
+http://www.cdrom.com/simtel.net/msdos/chemstry.html and
+http://www.simtel.net/pub/simtelnet/msdos/chemstry/ in the mwt2_87.zip file
+
+The program is also available via Anonymous FTP at ftp.coast.net under the
+SimTel/msdos/chemstry/ directory in the mwt2_87.zip file, at ftp.simtel.net
+under pub/simtelnet/msdos/chemstry/ in the mwt2_87.zip file, and ftp.osc.edu
+under the pub/chemistry/software/MS-DOS/Molecular-Weight-Calculator/ directory 
+in the mwt2_87.exe file.
+
+
+    Windows Version (MWT Win v3.2)
+
+The program is available via the web at http://plains.uwyo.edu/~monroem/ or at
+http://www.coast.net/SimTel/win3/chem.html and
+http://www.cdrom.com/simtel.net/win3/chem.html and
+http://www.simtel.net/pub/simtelnet/win3/chem/ under the file mwt3_2.zip
+
+The program is also available via Anonymous FTP at ftp.coast.net under the
+SimTel/win3/chem/ directory in the mwt3_2.zip file, at ftp.simtel.net under
+pub/simtelnet/win3/chem/ in the mwt3_2.zip file, and ftp.osc.edu under the
+pub/chemistry/software/MS-WINDOWS/Molecular_Weight/ directory in the
+mwt3_2.exe or mwt3_2s.exe files.
+
+    As a final option, I can mail you a UUEncoded or MIME encoded version
+via e-mail; just drop me a line.
+
+
+INSTRUCTIONS
+-------------------------------------------------------------------------------
+Directions for Use:
+      Start the program by typing MWT at the command line.  Typing MWT /? shows
+    a list of options for setting internal program options before starting
+    the program.  All of the options may also be toggled while the program
+    is running.
+
+Formulas
+      Once the program starts, you may enter a molecule's formula on the
+    numbered line.  Use the LEFT and RIGHT arrow keys, HOME key, and END key
+    to navigate a line.  Press the INSERT key to toggle Insert/Overstrike
+    which affects how typed characters modify the current line.  Calculate
+    the weight of a formula by pressing the ENTER key.  In multi-formula mode,
+    this will create a new blank line for a new formula, with a maximum of
+    seven formulas.  This is useful for comparing molecular weights of
+    compounds.  Move among the lines using the UP and DOWN arrow keys or
+    the TAB and SHIFT-TAB keys.  Pressing ENTER on line 'n' when
+    line 'n+1' already has a formula will simply move the cursor to line n+1.
+      A formula can consist of elements, element subscripts, parentheses, and
+    dashes (-) followed by numbers to separate parts of a compound
+    (!!NOT!! subtract them).  For example FeCl3-6H2O means ferric chloride
+    with 6 water molecules attached.  As shown, an integer can follow the dash,
+    though it's not required.  In fact, the dash can be used many times to add
+    multiple hydrates onto a compound (if you have the desire).  Also, other
+    molecules besides hydrates can be added.  For example (fictional compound)
+    C6H6-H2O-2ZnHgMg-U would be benzene + water + 2*(zinc-mercury-magnesium) +
+    uranium for a total molecular weight of 1152.76
+
+    NOTE:  For Radioactive elements, the most stable isotope is NOT used;
+    Instead, an average Mol. Weight is used, just like with other elements.
+    See the Isotopes section for the method of indicating an exact isotopic
+    mass.  Data obtained from the Perma-Chart Science Series Chemical Periodic
+    Table, 1993; ISBN 1-55080-063-9.
+
+Brackets
+      One more feature a formula may contain is brackets to "weight" specific
+    parts of a compound relative to the other parts.  For example,
+    [.2Na]Cl would have a weight of 0.2*22.989768+35.4527=40.0507
+    and NaCl-[.5H2O] would have a weight of:
+                22.989768+35.4527+0.5*(2*1.00794+15.9994)=67.4501
+    A colleague of mine requested this feature for the purpose of trying to
+    figure out if a compound he had synthesized and sent off for elemental
+    analysis had a little bit of water in it (hadn't been completely
+    dried), as in C6H6-[.1H2O], to see if the theoretical percent composition
+    data would better match the actual lab results.  As you can see, decimal
+    numbers can be used after brackets whereas they cannot be used after
+    closing parentheses or after a dash.
+
+ NOTE: The percent solver feature will perform this operation
+       for you -- see the percent solver section below.
+
+Percent Composition
+      You can see the percent composition of the compounds by pressing the
+    F1 key.  Although only one formula is shown at a time, the other formulas
+    are kept in memory and can be cycled through using the UP and DOWN keys
+    or TAB and SHIFT-TAB keys without switching back to Multi-Mode.  In
+    Single-View Mode the formulas can still be completely modified.  Again,
+    the ENTER key will calculate a formula's molecular weight and percent
+    composition.  However, in Single-View Mode, pressing the ENTER key will
+    keep the same formula visible; only the UP and DOWN arrow keys will move
+    to a new formula in Single-View Mode.
+
+Abbreviations
+      Use the F3 key to cycle through the three abbreviation recognition
+    modes:  No recognition, Normal recognition, and Amino Acid (Extended)
+    recognition.  The MWT_ABBR.DAT file contains the default abbreviations
+    included with the program (listed below).  You can add your own
+    abbreviations, up to 100 normal and 50 extended abbreviations.  The
+    following conventions must be followed: 1) Comments may be added by
+    preceding the comment with an apostrophe; 2) Two group headings must exist:
+    [AMINO ACIDS] and [ABBREVIATIONS]; 3) Abbreviations consist of the
+    abbreviation and molecular formula under the appropriate column in
+    either section; 4) Only the first letter of an abbreviation is allowed
+    to be capitalized; 5) Elements MUST be properly capitalized; eg. na is
+    incorrect, use Na; 6) Parentheses and dashes are NOT allowed; eg. CH3(CH2)2
+    is incorrect, use C3H7 or CH3CH2CH2; 7) The abbreviations in the Amino Acid
+    section are treated as extended level abbreviations -- they are only
+    recognized when extended abbreviations are on; 8) The maximum length of
+    any abbreviation is 6 characters; 9) Abbreviation names may contain only
+    letters, while abbreviation formulas may contain letters and numbers only.
+      If the MWT_ABBR.DAT file becomes corrupted, the MWT program will inform
+    the user and ignore incorrect lines.  If the file becomes deleted, the
+    MWT program will create a new file with the default abbreviations,
+    but without the abbreviation descriptions.  The file MWT_ABBR.BKK is a
+    read-only file included in case the MWT_ABBR.DAT file is deleted and the
+    user wishes to manually restore it with all of the comments.  The .BKK
+    file is not needed for abbreviation file re-creation, it is simply
+    included as a courtesy.  Thus, if you were to copy just the MWT.EXE program
+    to a new computer/directory/etc., the program would recreate a fully
+    functional default MWT_ABBR.DAT file, even though the MWT_ABBR.BKK file
+    would not be present.
+      The MWTPATH environment variable may be set in your AUTOEXEC.BAT file
+    in order to ensure that multiple copies of the MWT_ABBR.DAT file are not
+    created on the hard drive.  If not for this feature, multiple copies
+    would be created if the MWT.EXE program were located in a directory in
+    the path and you typed MWT from a different directory, causing the
+    program to re-create the MWT_ABBR.DAT file in each directory MWT is typed.
+    Two options are now available for avoiding this:
+        1. Take the MWT.EXE program out of the path, put it in its own
+           directory, and write a batch file to run it, putting the batch
+           file in a directory in the path.  A sample batch file is:
+              @ECHO OFF
+              C:
+              CD \MWT
+              MWT.EXE
+              CD \
+        2. Place the following line in your AUTOEXEC.BAT file:
+              SET MWTPATH=C:\MWT
+           replacing C:\MWT with the directory where the program is located.
+           Now, when you type MWT from any directory, the program will run
+           (provided the C:\MWT directory is in the path), and it will look
+           in the C:\MWT directory for the MWT_ABBR.DAT file.  Be sure to
+           update the SET MWTPATH= command if you move the MWT.EXE program and
+           the MWT_ABBR.DAT file.  Also be sure to use the form MWTPATH= and
+           not MWTPATH = since the second one will not work.
+      One quirky aspect of abbreviation recognition is that the first
+    abbreviation of a user entered formula (during program operation) that is
+    matched to the available abbreviations is the abbreviation that will be
+    used -- furthermore, extended abbreviations are matched first if they
+    are turned on.  For example, say the user types in the formula phen2-meph.
+    If only normal abbreviations are turned on, the program will match phen
+    to Phen and not to Ph and En since Phen appears first in the MWT_ABBR.DAT
+    file.  To force the Ph and En abbreviations, type PhEn2-MePh.  However, if
+    extended abbreviations have been activated (by pressing F3), the formula
+    phen2-meph will be translated to PheN2-MePh and nothing else, since the
+    program will match Phe to the amino acid phenylalanine, leaving the n to
+    be interpreted as nitrogen.  Three methods exist to avoid this specific
+    problem:  1) Don't use extended abbreviations; 2) Erase the Phe amino acid;
+    3) Place the Phen abbreviation in the amino acid section ABOVE the Phe
+    abbreviation, so that the program tries to match Phen before Phe.  This
+    example should serve as a model for how to handle possible future
+    abbreviation conflicts.  This example should also illustrate that if the
+    Phen abbreviation is placed anywhere below the Ph or En abbreviations in
+    the MWT_ABBR.DAT file, it will be IMPOSSIBLE for the program to recognize
+    it, since it will match Ph or En or both before even encountering Phen.
+      The following is a list of the default abbreviations included with this
+    program.  Be aware that BPY is Boron-Phosphorus-Yttrium while Bpy is
+    bipyridine.
+
+                 Default Abbreviations for Normal Recognition
+      (quasi-alphabetically, same as the order in the MWT_ABBR.DAT file)
+     (it is strongly suggested that longer abbreviations be placed first)
+      Abbreviation      Group                   Formula         Mol. Wt.
+      -------------------------------------------------------------------
+      Phen              1,10-Phenanthroline     C12H8N2         180.209
+      Urea              Urea                    H2NCONH2         60.05564
+      Bpy               2,2'-Bipyridine         C10H8N2         156.187
+                          (See Note 1)
+      Oac               Acetate                 CH3COO           59.04462
+      Otf               Triflate                OSOOCF3         149.0704
+      Tpp               Tetraphenylporphyrin    (See Note 2)    612.7333
+      Bu                Butyl                   CH3CH2CH2        57.11546
+      En                Ethylenediamine         H2NCH2CH2NH2     60.099
+      Et                Ethyl                   CH3CH2           29.0617
+      Me                Methyl                  CH3              15.03482
+      Ms                Mesyl                   CH3SOO           79.09962
+      Ox                Oxalate                 C2O4             88.0196
+      Ph                Phenyl                  C6H5             77.1057
+      Py                Pyridine                C5H5N            79.10143
+      Ts                Tosyl                   CH3C6H4SOO      155.1974
+      D (See Note 3)    Deuterium               Heavy hydrogen    2.01588
+
+ Note 1: 2,2'-Bipyridine is also known as 2,2'-Dipyridyl
+ Note 2: Tpp is (C4H2N(C6H5C)C4H2N(C6H5C))2 and is assumed to be
+         bound to a metal.  Thus solid, pure Tpp would be notated
+         H2Tpp to add back the two hydrogens that leave upon complex formation.
+         Tpp is also known as 5,10,15,20-Tetraphenyl-21H,23H-porphine.
+ Note 3: It is suggested that D be used for deuterium rather than ^2H since
+         most deuterium used in the laboratory is of weight 2.0159 rather than
+         exactly 2, which is the weight ^2H would calculate as.
+
+                 Default Abbreviations for Amino Acids
+         (alphabetically, same as the order in the MWT_ABBR.DAT file)
+      Abbreviation      Amino Acid              Formula         Mol. Wt.
+      -------------------------------------------------------------------
+      Ala               Alanine                 C3H5NO           71.07884
+      Arg               Arginine                C6H12N4O        156.1876
+                                                  (unprotonated NH2)
+      Asn               Asparagine              C4H6N2O2        114.1039
+      Asp               Aspartic acid           C4H5NO3         115.0886
+                                                  (undissociated COOH)
+      Cys               Cysteine                C3H5NOS         103.1448
+                                                  (no disulfide link)
+      Gln               Glutamine               C5H8N2O2        128.1308
+      Glu               Glutamic acid           C5H7NO3         129.1155
+                                                  (undissociated COOH)
+      Gly               Glycine                 C2H3NO          57.05196
+      His               Histidine               C6H7N3O         137.1412
+                                                  (unprotonated NH)
+      Hyp               Hydroxyproline          C5H7NO2         113.1161
+      Ile or Leu        Isoleucine or Leucine   C6H11NO         113.1595
+      Lys               Lysine                  C6H12N2O        128.1742
+                                                  (unprotonated NH2)
+      Met               Methionine              C5H9NOS         131.1986
+      Phe               Phenylalanine           C9H9NO          147.1766
+      Pro               Proline                 C5H7NO           97.11671
+      Ser               Serine                  C3H5NO2          87.07824
+      Thr               Threonine               C4H7NO2         101.1051
+      Trp               Tryptophan              C11H10N2O       186.2133
+      Tyr               Tyrosine                C9H9NO2         163.176
+      Val               Valine                  C5H9NO           99.13259
+
+Isotopes
+      Isotopes may be entered in the form ^xY where x is the isotopic mass of
+    the isotope and Y is the name of the element.  For example, ^13C is
+    carbon-13 and ^59Fe is iron-59.  The program will check to make sure that
+    the isotopic mass entered is a reasonable value for the particular element
+    that it is associated with (see last section of Appendix B below).  The
+    caret symbol (^) may be entered before any element in a formula, not
+    just at the beginning.  For example, C6H5^18OH is oxygen-18 labeled
+    phenol.  It has molecular weight 96.114 instead of 94.113
+      The isotopic mass entered is also used when figuring the percent
+    composition of a compound.  Thus, C6H6 is 92.258% carbon and 7.7421%
+    hydrogen while ^13C6H6 is 92.8045% carbon and 7.1955% hydrogen.
+      Isotopic masses may not be entered for abbreviations.  For example,
+    ^166Bpy is invalid.  I considered allowing this, so that 166 would be
+    used for the weight of Bpy (rather than 156.187), but I decided that the
+    percent composition calculations would then be invalid since the program
+    would not know which elements in the abbreviation were contributing the
+    extra (or less) weight of the abbreviation.  Therefore, for carbon-13
+    labeled Bpy, for example, simply type ^13C10H8N2 instead of ^166Bpy.
+
+    NOTE: It is suggested that D be used for deuterium rather than ^2H since
+    most deuterium used in the laboratory is of weight 2.0159 rather than
+    exactly 2, which is the weight ^2H would calculate as.
+
+Case Recognition
+      Use the F4 key to toggle the case recognition mode for the analysis of
+    a formula.  In Exact Case Mode elements must be properly capitalized for
+    the program to recognize them.  Only the first letter of abbreviations are
+    capitalized.  In Smart Case Mode elements can be typed in lower case or
+    upper case and the program will make an educated guess as to what the
+    elements are.  For example, nacl would be interpreted as sodium chloride.
+    However, the line will be left displayed the way it was typed in.  In
+    Convert Case Up Mode the program will convert a line to proper notation
+    after it has analyzed the line.  In the above example, the program would
+    redisplay the formula as NaCl.  Another example, c6h6cl would become
+    C6H5Cl for chlorobenzene.
+
+Copying Formulas
+      Press the F2 key to copy a formula to a blank line (valid in both Multi
+    and Single-View modes).  The program will search for a blank line on
+    all seven lines, and put the copy on that line.  If no line is blank,
+    it will copy the formula to a new line, unless seven formulas already
+    exist.  Also note that the program will not copy a blank line to a new
+    blank line.
+
+Erasing Single Formulas
+      Press the F6 key to erase the current formula or the calculator line.
+    The program will prompt you for confirmation.  In Single-View mode this
+    will leave you with a blank line.  Again, the other formulas (if present)
+    can be viewed using the UP and DOWN arrow keys.
+
+Erasing All Formulas
+      Press the F10 key to erase all the formulas and the calculator line.
+    Again, the program will prompt for confirmation.  Pressing N (or any key
+    besides Y) will cause the screen to be re-written, but no formulas to be
+    erased.
+
+ NOTE: All Y,N prompts are not case sensitive; n is the same as N.
+
+Creating Blank Lines in Single-View Mode
+      The F5 key creates a new blank line in Single-View Mode and ONLY in that
+    mode.  This is because ENTER in Single-View Mode calculates the current
+    line and does not create a new line.  F5 is disabled in Multi-View mode
+    since there a new line is created whenever ENTER is pressed and the cursor
+    is on the lowest formula of the screen.
+
+Clock
+    The display of the time can be turned on or off with the F7 key.
+
+Help Screens
+      Use the F8 key to cycle through the nine help screens (disabled during
+    calculator mode).
+
+Standard Deviation
+    The F12 key cycles through the four standard deviation modes.
+    For H2O with molecular weight 18.01528 and std. dev. of ñ0.0003159114,
+      Mode 1 displays the result as 18.0153(ñ3)
+      Mode 2 displays it as 18.0153 (ñ3.159114E-04)  (scientific notation)
+      Mode 3 displays it as 18.01528 (ñ.0003)        (no rounding)
+      Off mode displays it as 18.01528, without standard deviation or rounding.
+
+Percent Solver Mode
+      The F11 key, or the PAGE UP and PAGE DOWN keys set the program in percent
+    solver mode.  Use the PAGE UP and PAGE DOWN keys to move among the percent
+    compositions shown, and type in the target values for the solver to aim
+    for.  Once you have typed in a value, a blue "L" will appear indicating
+    that the value is "Locked" to the user-specified value.  Use the ENTER key
+    while on a percent composition line to toggle whether the percent is
+    or is not locked to the user specified value.
+      Before the solver can work, you need to place an x in the formula,
+    directly after a bracket.  For example, "C6H6-[xH2O]" is useful for
+    calculating the amount of water in a benzene sample, provided elemental
+    analysis data is available.  The formula must be in bracketed form for the
+    solver to work.  If you have the formula "NaClx", where you wish to find
+    the number of chlorine atoms based on data, simply retype the formula in
+    the form "Na[xCl]" for the percent solver to be able to interpret the it.
+      When at least one percent is locked and an x is present after a bracket
+    in the formula, you may navigate the cursor to the formula line (via
+    PAGE UP and PAGE DOWN), then press ENTER to begin solving.  The computer
+    will show you the progress of its calculations.  Press any key during the
+    calculations to stop them before they are completed.  The computer should
+    stop calculating once it gets the same answer four times in a row, which
+    should be to approximately four or five decimal places.  Press the F11
+    key again to exit percent solver mode.
+
+ NOTE: If the program is not in Percent Solver mode, but an x is
+       present in the formula after a bracket, the program will calculate
+       the molecular weight based on x equaling one.
+
+The Calculator
+      The F9 key toggles display of the calculator.  The calculator handles
+    the four operators +,-,*, and / plus parentheses, where / is for division.
+    The calculator also recognizes the caret (^) symbol for raising a number
+    to a power.  For example, 2^3 is 8 and (5+3)^2 is 64.  The calculator
+    understands operator precedence and will multiply and divide before adding
+    and subtracting.  Furthermore, parentheses are obeyed.  Press ENTER to
+    calculate the result.  The result will stay visible even after F9 is
+    pressed again to return to the formulas, but will disappear when an error
+    occurs or when F9 is pressed AGAIN to return to the calculator.  The
+    calculator can handle any number of parentheses.
+
+Errors
+      The program will display errors in red above the help section when
+    an incorrect entry is inputted.  A red caret (^) symbol or red greater
+    than sign (>) will point to the location of the error in a formula.  The
+    error message will disappear when a key is pressed.  Any actual program
+    errors (errors with the code) should be trapped by an error trapping
+    routine, though I have tried to beta-test the program as much as possible
+    with every situation I can think of.  Please just print the screen and
+    send me a note if you encounter and unhandled error.
+      The program will also display numerous "caution" messages for possibly
+    erroneous entries.  This feature may be toggled on and off with CTRL-C.
+    It may also be set at the command line by typing
+
+Printing
+      The entire screen can be printed by pressing the PRINT-SCREEN key.
+    In Windows, use SHIFT-PRINT-SCREEN instead of just PRINT-SCREEN.
+
+Windows
+      This program will run perfectly well in a Dos window under Microsoft
+    Windows (or OS/2 for that matter).  Simple create a new shortcut (Win95)
+    or program item (Win 3.x) with MWT.EXE as the program file name.  I have
+    also included the file MWT.ICO, a simple icon file that can be referenced
+    via the "Change Icon" button while setting up the shortcut or program item.
+    I suggest running the program full screen, though, if you wish, it can
+    be run windowed so that you use the mouse to highlight any part of the
+    screen (select Edit-Mark under the top left box) and copy it to a Windows
+    based program.  Note that there is also a Windows version of this program
+    available (see the availability section above).
+
+Exiting the Program
+    Press the ESC key and then press y or Y key to exit the program.
+
+
+THE AUTHOR
+-------------------------------------------------------------------------------
+Contacting the Author
+      You can contact me by E-mail at Monroem@UWyo.Edu until
+    I graduate in May 1997.  After that, E-mail BPat@UWyo.Edu
+    for information on my whereabouts.
+
+About the Author
+      I am an undergraduate chemistry major at the University of Wyoming
+    in Laramie, Wyoming.  I plan to attend graduate school and aim to
+    obtain a doctorate in chemistry.  I taught myself to program in BASIC on
+    an Apple //c (with 128 Kb of Ram and no hard disk) in 1986 during
+    6th grade.  Since then, I have updated to GW-Basic, then QuickBasic v4.5,
+    QuickBasic v7.1 for DOS, and Visual Basic 3.0 for Windows.  I am familiar
+    with C, and, though I know it is much faster than Basic, I stick with the
+    various forms of Basic since I am much more comfortable with the language.
+    I have also been told that Visual Basic is easier to learn than Visual C,
+    and, in fact, I taught myself Visual basic in two days.
+
+
+APPENDIX A - Table of Key Strokes
+-------------------------------------------------------------------------------
+
+KEY     ACTION
+- - - - - - - -
+F1      Toggles between Multi View and Single View Modes
+F2      Copies a formula to a new line or to a currently blank line
+F3      Cycles through abbreviation recognition modes (like Ph for phenyl)
+F4      Cycles through case recognition modes:  Exact --> Smart --> Convert Up
+F5      Creates a new blank line, ONLY available in Single View Mode.
+F6      Erases the current formula.
+F7      Toggles display of the time.
+F8      Cycles through the on-line help screens.
+F9      Toggles display of the calculator.
+F10     Erases all formulas.
+F11     Toggles percent solver mode.
+F12     Cycles through standard deviation modes (see Std. Dev. section above)
+
+Up and Down arrows move between the formula lines.
+Left and Right arrows move along the current line.
+Enter key calculates the mol. wt. and % composition when on the formula line.
+Enter key toggles Locking of the % composition value when on a % comp line.
+Page Up and Page Down move among % composition lines during % Solver mode.
+Tab key and Shift-Tab key are equivalent to the up and down arrows.
+Insert key toggles insert/overstrike mode.
+Delete key deletes the character the cursor is on.
+CTRL-C toggles display of caution statements.
+
+
+APPENDIX B - Calculations
+-------------------------------------------------------------------------------
+Calculation Note:
+      For Radioactive elements, the most stable isotope is NOT used;
+    Instead, an average Mol. Weight is used, just like with other elements.
+    See the Isotopes section for the method of indicating an exact isotopic
+    mass.  Data obtained from the Perma-Chart Science Series Chemical Periodic
+    Table, 1993; ISBN 1-55080-063-9.
+      Uncertainties from CRC Handbook of Chemistry and Physics, except for
+    Radioactive elements, where uncertainty was estimated to be .n5 where
+    n represents the number of digits after the decimal point but before the
+    last number of the molecular weight.
+    For example, for Nobelium, MW = 259.1009 (ñ0.0005)
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ The Mathematics behind the Molecular Weight, Percent Composition, and ³
+³   Standard Deviation Calculations                                     ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+        (Concept from Molar Mass program by Christopher King at
+              Eastern Oregon State College).
+
+ NOTE: s_f means s subscript f and is one term; likewise s_mw means
+       s subscript mw and is also simply one term.
+
+For Addition:
+In general:  For f = x + y - z, the standard deviation of f, s_f, is
+             equal to û[(s_x)ı + (s_y)ı + (s_z)ı], which is in words,
+             the std. dev. of f is equal to the square root of the sum
+             of the squares of the std. deviations of each term in the
+             original sum.
+
+Applied to the Molecular Weight of a molecule:
+             MW = ax + by + cz + ..., where a is the number of atoms of
+             weight x, b is the number of atoms of weight y, etc.
+             The Std. Dev. of MW, s_mw = û[a(s_x)ı + b(s_y)ı + ...]
+
+Note, the reason the equation uses a(s_x)ı is that if the terms were added
+up consecutively 'a' times for the same element, we would have
+    (s_x)ı + (s_x)ı + (s_x)ı etc. up to 'a' times, which combines to be
+    a(s_x)ı
+
+For example, for chlorobenzene, C6H5Cl:
+             MW = 6*12.011 + 5*1.00794 + 35.4527 = 112.5584
+             s_mw = û[6*(.001)ı + 5*(.00007)ı + (.0009)ı] = .002614
+
+             Resulting MW is 112.558 (ñ0.003) = 112.558(ñ3)
+
+For Multiplication:
+In general:  For f = x*yöz, the standard deviation of f, s_f is equal to
+             y*û[(s_x ö x)ı + (s_y ö y)ı + (s_z ö z)ı], which in words,
+             the std. dev. of f is equal to f times the square root of the sum
+             of squares of the quotients of the std. deviations of each term
+             divided by each term itself.
+
+Applied to the Percent Composition of a molecule:
+        %Comp = (a*xöMW)*100, where a is the number of atoms of weight x
+        and MW is the total molecular weight of the molecule.
+        The Std. Dev. of %Comp, s_%c = %c*û[(s_aöa)ı + (s_xöx)ı + (s_mwömw)ı]
+        But, since a is a finite number, its s_a = 0, so the formula becomes:
+        s_%c = %c*û[(s_x ö x)ı + (s_mw ö mw)ı]
+
+For example, for chlorobenzene, C6H5Cl:
+        %Comp of Carbon = 6*12.011ö112.5584*100 = 64.02543%
+        s_%c = 64.02543*û[(.001ö12.011)ı + (.002614ö112.5584)ı] = .00553
+        Resulting %Comp of Carbon = 64.025% (ñ0.006) = 64.025(ñ6)%
+
+        %Comp of Hydrogen = 5*1.00794ö112.5584*100 = 4.47741%
+        s_%c = 4.47741*û[(.00007ö1.00794)ı + (.002614ö112.5584)ı] = .0003279
+        Resulting %Comp of Hydrogen = 4.4774% (ñ0.0003) = 4.4774(ñ3)%
+
+        %Comp of Chlorine = 35.4527ö112.5584*100 = 31.49716%
+        s_%c = 31.49716*û[(.0009ö35.4527)ı + (.002614ö112.5584)ı] = .0010837
+        Resulting %Comp of Hydrogen = 31.497% (ñ0.001) = 31.497(ñ1)%
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ The Mathematics behind the Percent Solver routine  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+    For determining the closest fit between multiple target values and
+actually calculated data, the value of the following formula is minimized:
+  diff = ä(actual_%value_i - target_%value_i)ı, which in words is the summation
+of the ith calculated percentage value minus the ith target value.  The
+minimum value of this formula should be obtained when all actual values are
+closest to their target values.
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ The Mathematics behind the Isotopic Extremes error handler ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+    When a user types in an isotopic mass (eg. ^13C for carbon-13), the
+program checks to see if the isotope is a reasonable value.  Obviously, ^5C
+(carbon-5) would be unreasonable because any compound with 6 protons (i.e.
+carbon) must have a minimum weight of 6.  However, upon examining the Table
+of Isotopes in the CRC Handbook of Chemistry and Physics, I found that very
+few compounds have zero neutrons (and thus an atomic weight equal to the
+number of protons in the element).  Therefore, I examined the table and used
+MS Excel 5.0 to create a graph of the highest and lowest isotopic masses for
+every element.  I then determined two fit-lines that encompassed all the data
+points -- one for the upper extreme and one for the lower extreme.
+    Since most isotopic masses occur somewhere around the value twice the
+atomic number (Z) of the element, I chose to work with the value:
+        x = isotope_value - Z*2
+where isotope_value is the value present after the caret (^) in the formula.
+
+    The curve that describes the upper limit of these x values is:
+            max_x = INTEGER(0.63*Z + 6)
+    where max_x is the maximum allowable x value before a warning is issued.
+
+    The curve that describes the lower limit of these x values is:
+            min_x = INTEGER(0.008*Zı - 0.4*Z - 6)
+    where min_x is the minimum allowable x value before a warning is issued.
+    The results were converted to integers to aid in program design.
+
+Finally, because the min_x value is too low for some of the lighter elements,
+I included a test to make sure that isotope_value was at least as large as Z,
+or else a warning was again issued to the user.  The method is an approximate
+test on the isotope value, and is designed to catch the outrageous isotopic
+masses.  It does not catch the borderline ones since that would have increased
+the program size and memory usage by too much.
+
+Examples:
+For Carbon:
+   ^13C has z = 6, x = 1, max_x = 9 and min_x = -9
+    Because x < 9 and x > -9 and x > 6, no warning is issued.
+    (The average atomic weight of carbon is 12.011)
+
+   ^25C has z = 6, x = 10, max_x = 9 and min_x = -9
+    Because x > 9, a warning that 25 is probably too large is given.
+    In reality, the heaviest known carbon isotope is carbon-16.
+
+   ^5C has z = 6, x = -7, max_x = 9 and min_x = -9
+   Although x < 9 and x > -9, x is less than 6 so a warning is again issued.
+   In reality, the lightest known carbon isotope is carbon-9.
+
+For Silver
+   ^100Ag has z = 47, x = 6, max_x = 35 and min_x = -8
+    Because x < 35 and x > -8 and x > 47, no warning is issued.
+    (The average atomic weight of silver is 107.87)
+
+   ^130Ag has z = 47, x = 36, max_x = 35 and min_x = -8
+    Because x > 35, a warning that 130 is probably too large is given.
+    In reality, the heaviest known silver isotope is silver-122.
+
+   ^85Ag has z = 47, x = -9, max_x = 35 and min_x = -8
+    Because x < -8 a warning that 85 is probably too small is given.
+    In reality, the lightest known silver isotope is carbon-96.
+
+The above calculations show, as mentioned above, that this method catches the
+outrageous isotopic masses but does not catch the borderline cases.
+Furthermore, it should also be evident that this method is more accurate for
+the heavier elements, a consequence of the unusual isotopic behavior of the
+lighter elements.
+
+
+APPENDIX C - REVISIONS
+-------------------------------------------------------------------------------
+Revision History for the Molecular Weight Calculator program by Matthew Monroe
+
+Revision 1      Completed August 6, 1995
+                Contains basic features including:
+                  formula weight calculation
+                  percent composition calculation
+                  can handle parentheses, up to 2 sets of embedding
+                  can handle hydrates and other additional compounds
+                  can handle numbers up to 2 digits long
+                  two types of case conversion
+                  help screen
+
+Revision 2.0    Completed August 8, 1995
+                Contains the following new features:
+                  can handle numbers up to 6 digits long
+                  can handle up to 4 sets of embedded parentheses
+                  ability to handle brackets and partial weights
+                  three types of case conversion
+                  expanded help screens
+
+Revision 2.1    Completed August 9, 1995
+                Contains the following new features:
+                  display of time
+
+Revision 2.2    Completed August 10, 1995
+                Contains the following new features:
+                  calculator
+
+Revision 2.21   Completed August 17, 1995
+                Contains minor bug fixes.
+
+Revision 2.3    Completed September 2, 1995
+                Contains the following new features:
+                  added command line switches to control internal settings
+                  added standard deviation option
+                  added recognition Bu for butyl group
+
+Revision 2.4    Completed December 1, 1995
+                Contains the following new features:
+                  Percent solver program.
+                  Combined F11 and F12 std. deviation options into just F12
+                Contains Screen update bug fixes.
+
+Revision 2.5    Completed December 7, 1995
+                Improved speed of the % solver algorithm.
+                Contains the following new features:
+                  added recognition of Urea, Ox, Py, En, Tpp, Otf.
+
+Revision 2.55   Completed December 17, 1995
+                Added error trapping routines.
+                Improved handling of exponentially large and small numbers.
+                Added warning statements for possibly ambiguous abbreviations
+                  such as Bpy and Py.
+
+Revision 2.6    Completed January 16, 1996
+                Contains the following new features:
+                  Recognizes Amino Acid abbreviations.
+                  Recognizes Deuterium, D abbreviation.
+                  Percent Solver values can now be set for all elements of
+                    a formula.
+                  Displays differences between actual and theoretical values
+                    at the conclusion of the percent solver routine.
+                  Added CTRL-P option to print results.
+                  Added more error messages/explanations for incorrect user
+                    entries.
+
+Revision 2.7   Completed March 1, 1996
+               Contains the following new features:
+                  Able to handle isotopes; use the caret (^) symbol.
+                  Able to calculate powers of numbers in the calculator.
+                  Added more error messages/explanations for incorrect entries.
+                  Included a moderately accurate error handler to check the
+                    validity of entered isotopic masses.
+                  Added numerous "caution" statements for possibly erroneous
+                    entries: eg. Co vs. CO and Sc vs. SC
+                    This feature may be toggled on and off with CTRL-C
+                Improved speed of the % solver algorithm; watch it blaze!
+                Removed CTRL-P option -- use PRINT-SCREEN or SHIFT-PRINT-SCREEN
+                Changed the order and layout of the on-line help screens.
+                Fixed typos in help screens and added two more help screens.
+
+Revision 2.8    Completed May 1, 1996
+                Contains the following new features:
+                   Able to handle user-defined abbreviations listed in the
+                     MWT_ABBR.DAT file.
+                   Error checking to prevent duplicate abbreviations or
+                     abbreviations duplicating elements.
+                   Automatic re-creation of the abbreviation file if it
+                     is deleted/missing.
+                   Ability to run without abbreviations if program is run on
+                     a write-protected drive.
+                   Command-line switch (/X) to stop any attempts of reading
+                     or creating an abbreviation file (useful on a
+                     write-protected drive).
+
+Revision 2.85   Completed September 1, 1996
+                Contains the following new feature:
+                   Recognition of the MWTPATH environment variable for
+                     specification of the location of the MWT_ABBR.DAT file.
+
+Revision 2.87   Complete January 1, 1997
+                Updated the help file to reflect the latest Windows version
+                  of the program.
+
+Version 3.2 of Molecular Weight Calculator for Windows is also available
+    (See the availability section above):
+
+      Features:  New Windows Interface
+                 Modify elemental values (element weight and uncertainty)
+                 Edit and save abbreviations and elemental values while
+                      program is running
+                 Save options as defaults
+                 Copy and paste information to/from other Windows programs
+                 Unlimited formula length
+                 Ability to print results
+                 Ability to change the font used to display formulas
+                 Mole/Mass Converter
+                 Formula Finder
+                 Full hypertext help
+

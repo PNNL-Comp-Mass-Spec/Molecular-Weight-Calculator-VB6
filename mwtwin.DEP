@@ -1,0 +1,26 @@
+[Version]
+Version=5.7.0.41
+
+[mwtwin.exe <0009>]
+Dest=$(AppPath)
+Date=9/16/99
+Time=22:23
+Version=5.7.0.41
+CABFilename=mwtwin.CAB
+CABINFFile=mwtwin.INF
+Uses1=MSVBVM60.DLL
+Uses2=OLEAUT32.DLL
+Uses3=olepro32.dll
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=MSFLXGRD.OCX
+Uses8=COMDLG32.OCX
+Uses9=RICHTX32.OCX
+Uses10=mwtwin.hlp
+Uses11=mwtwin.ini
+Uses12=MWT_ABBR.dat
+Uses13=mwt_elem.dat
+Uses14=mwt_valu.ini
+Uses15=mwtwin.cnt
+Uses16=readme.txt

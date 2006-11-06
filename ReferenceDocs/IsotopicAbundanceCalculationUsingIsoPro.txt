@@ -1,0 +1,25 @@
+******************************************************************************
+From: senko@magnet.fsu.edu (Mike Senko)
+Subject: Re: Isotope pattern software
+Date: 7 Jul 1995 00:36:22 GMT
+Organization: NHMFL
+
+	I wrote an isotope simulator in VB using Yergey's algorithm
+(IJMSIP, 52, 1983, 337-49) a couple of years back.  It does all the
+elements (isotope ratios can be modified) and has graphical output to the
+screen and printer. Since it's written in VB, it's not real fast (ie. a
+10 kDa protein takes 15 seconds to calculate the distribution and 20 to
+display on a 486/33), but I'm working on a new version in Delphi that
+should be 20x faster.  If you want a copy of the old version, send me a
+note.  I make no claims to the accuracy of the algorithm (you get what
+you pay for :), but Yergey was nice enough to give me his VAX Fortran
+code to translate, so it should be safe.  All I know is that it matches
+experimental distributions from ESI-FTMS instruments real well.
+	Note:  I've not used the WWW distribution calculator myself,
+but I've heard it's results are a little off.
+
+Mike Senko
+senko@magnet.fsu.edu
+
+703. Yergey, JA, A general approach to calculating isotopic distributions for mass spectrometry. International Journal of Mass Spectrometry and
+Ion Physics, 52 337-49 (1983).

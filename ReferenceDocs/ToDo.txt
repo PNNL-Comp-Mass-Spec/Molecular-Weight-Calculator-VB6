@@ -1,0 +1,3 @@
+ToDo:
+
+Allow user to edit N and C terminus functional groups

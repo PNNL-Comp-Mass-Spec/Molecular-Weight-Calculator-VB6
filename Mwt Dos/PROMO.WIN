@@ -1,0 +1,158 @@
+
+Version 3.2 of Molecular Weight Calculator for Windows now available.
+
+      New Features:  Allows use of abbreviations as custom elements in
+                       formula finder.
+                     For Percent Solver, added display of differences
+                       between target percentages and obtained percentages.
+                     Changed comment delimeter to be a semicolon in the
+                       MWTWIN.INI file and the .DAT files.
+                     Added detection of a mouse click to stop the percent
+                       solver and formula finder.
+
+    Why is it better than other programs available?  First of all it's
+free, yet fully functional.  I feel it is very powerful, more functional
+and more user friendly than other molecular weight programs I've found
+over the net.  I'm making it available for others so that they can use it
+in their research and studies.  Plus, the program is fully Windows 95
+compatible (beside Win 3.x).  The Dos version is also still available.
+
+
+AVAILABILITY
+------------------------------------------------------------------------------
+    Windows Version (MWTWin v3.2)
+
+The program is available via the web at http://plains.uwyo.edu/~monroem/ or
+at http://www.coast.net/SimTel/win3/chem.html and
+http://www.cdrom.com/simtel.net/win3/chem.html and
+http://www.simtel.net/pub/simtelnet/win3/chem/ in the mwt3_2.zip file.
+
+The program is also available via Anonymous FTP at ftp.coast.net under the 
+SimTel/win3/chem/ directory in the mwt3_2.zip file, at ftp.simtel.net under
+pub/simtelnet/win3/chem/ in the mwt3_2.zip file, and ftp.osc.edu under the 
+pub/chemistry/software/MS-WINDOWS/Molecular_Weight/ directory in the
+mwt3_2.exe or mwt3_2s.exe files.
+
+
+    Dos Version (MWT v2.87)
+
+The program is available via the web at http://plains.uwyo.edu/~monroem/ or
+at http://www.coast.net/SimTel/msdos/chemstry.html and 
+http://www.cdrom.com/simtel.net/msdos/chemstry.html and 
+http://www.simtel.net/pub/simtelnet/msdos/chemstry/ in the mwt2_87.zip file.
+
+The program is also available via Anonymous FTP at ftp.coast.net under the 
+SimTel/msdos/chemstry/ directory in the mwt2_87.zip file, at ftp.simtel.net
+under pub/simtelnet/msdos/chemstry/ in the mwt2_87.zip file, and ftp.osc.edu
+under the pub/chemistry/software/MS-DOS/Molecular-Weight-Calculator/
+directory in the mwt2_87.exe file.
+
+    As a final option, I can mail you a UUEncoded or MIME encoded version 
+via e-mail; just drop me a line.
+
+
+Please see my home page for the Dos version features.
+
+As for the Windows version, ...
+
+
+FEATURES
+-----------------------------------------------------------------------------
+Multi Line Display	Display of up to seven formulas with their molecular
+weights simultaneously.
+
+Percent Composition	Percent composition of up to seven formulas.
+
+Parentheses Are Allowed	Handles up to 4 layers of embedded parentheses.
+
+For example, (CH3)3CH2CH3 is equivalent to CH3CH3CH3CH2CH3.
+
+Hydrates or other appended compounds are allowed.
+
+For example, FeCl3-6H2O.
+
+User-definable abbreviations	Default abbreviations are included for common
+parts of compounds, including amino acids.  See full list.
+
+For example, PhCl = C6H5Cl and HOac = CH3COOH.
+
+Smart Case Conversion	The program will automatically convert lowercase
+letters to uppercase where appropriate for ease of entering a formula.  Exact
+case matching and non-conversion are also available.
+
+Edit and save abbreviations while program is running.
+
+Isotopes are recognized using the following notation:
+
+^13C is Carbon-13
+	C6H5^18OH is heavy-oxygen (Oxygen-18) labeled phenol
+
+Feature of weighting parts of a compound relative to the other parts.
+
+For example,
+
+[.2Na]Cl would have a weight of 0.2*22.989768+35.4527=40.0507
+NaCl-[.5H2O] would have a weight of
+22.989768+35.4527+0.5*(2*1.00794+15.9994)=67.4501
+
+Percent Solver mode for finding the value of "x" in a compound that satisfies
+user-specified percent composition requirements.
+
+Edit and save elemental values while program is running.
+
+Accuracy of the final digit of the molecular wt. and percent composition.
+
+Capability to set optional features at the command line when starting the
+program.
+
+Capability of saving options as defaults and automatic loading of the saved
+options upon program start.
+
+Easily Cut, Copy, and Paste information between the Molecular Weight Calculator
+and other Windows applications.
+
+Mole/Mass Converter for easily translating moles to mass (kg, g, mg, pounds,
+ounces) and back.
+
+Formula Finder for finding possible compound empirical formulas for a given
+molecular weight or for a given set of percent composition data.
+
+Capability of printing results.
+
+Extensive On-Line Help and Error Checking
+
+
+THE AUTHOR
+------------------------------------------------------------------------------
+Contacting the Author
+
+You can contact me by E-mail at Monroem@UWyo.Edu until I graduate in May 1997. 
+After that, E-mail BPat@UWyo.Edu for information on my whereabouts.
+
+About the Author
+
+I am an undergraduate chemistry major at the University of Wyoming in Laramie,
+Wyoming.  I plan to attend graduate school and aim to obtain a doctorate in
+chemistry.  I taught myself to program in BASIC on an Apple //c (with 128 Kb
+of Ram and no hard disk) in 1986 during 6th grade.  Since then, I have updated
+to GW-Basic, then QuickBasic v4.5, QuickBasic v7.1 for DOS, and now Visual
+Basic 3.0 for Windows.  I am familiar with C, and, though I know it is much
+faster than Basic, I stick with the various forms of Basic since I am much
+more comfortable with the language.  I have also been told that Visual Basic
+is easier to learn than Visual C, and, in fact, I taught myself Visual Basic
+in two days.
+
+
+/============================================================================\
+I was goin' Chopin', but I forgot my Lizst! Had to go Bach to get it.
+
+                                   What are the following?
+Matthew Monroe               Black Angus            :      Black Angus
+Chemistry Major              Black Angus            :      Texas Longhorn
+University of Wyoming        Black Angus            :      Brown Swiss
+                             -------------------------------------------------
+monroem@uwyo.edu             Homogeneous Catalyst   :   Heterogeneous Catalyst
+
+/----------------------------------\
+| http://plains.uwyo.edu/~monroem/ |           This tagline is umop apisdn.
+\============================================================================/

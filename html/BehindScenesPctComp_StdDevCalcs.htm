@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Main Calculations</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="main_calculations"></a><img src="../images/MwtWinIcon.gif" border=0> Percent Composition and Standard Deviation calculations</h2>
+<p>
+<b>The Mathematics behind the Molecular Weight, Percent</b></p>
+<p>
+<b>Composition and Standard Deviation Calculations</b></p>
+<p>
+(Concept from Molar Mass program by Christopher King at Eastern Oregon State College).</p>
+<p>
+For Addition:</p>
+<p>
+In general:  For f = x + y - z, the standard deviation of f, s<sub>f</sub>, is equal to Sqrt[(s<sub>x</sub>)<sup>2</sup> + (s<sub>y</sub>)<sup>2</sup> + (s<sub>z</sub>)<sup>2</sup>], which is in words, the std. dev. of f is equal to the square root of the sum of the squares of the std. deviations of each term in the original sum. </p>
+<p>
+Applied to the Molecular Weight of a molecule:</p>
+<p>
+MW = ax + by + cz + ..., where a is the number of atoms of weight x, b is the number of atoms of weight y, etc.  The Std. Dev. of MW, s<sub>mw</sub> = Sqrt[a(s<sub>x</sub>)<sup>2</sup> + b(s<sub>y</sub>)<sup>2</sup> + ...]</p>
+<p>
+NOTE: The reason the equation uses a(s<sub>x</sub>)<sup>2</sup> is that if the terms were added up consecutively 'a' times for the same element, we would have (s<sub>x</sub>)<sup>2</sup> + (s<sub>x</sub>)<sup>2</sup> + (s<sub>x</sub>)<sup>2</sup> etc. up to 'a' times, which combines to be a(s<sub>x</sub>)<sup>2</sup></p>
+<p>
+For example, for chlorobenzene, C6H5Cl:</p>
+<p>
+MW = 6*12.011 + 5*1.00794 + 35.4527 = 112.5584</p>
+<p>
+s<sub>mw</sub> = Sqrt[6*(.001)<sup>2</sup> + 5*(.00007)<sup>2</sup> + (.0009)<sup>2</sup>] = .002614</p>
+<p>
+Resulting MW is 112.558 (±0.003) = 112.558(±3)</p>
+<p>
+For Multiplication:</p>
+<p>
+In general:  For f = x*y/z, the standard deviation of f, s<sub>f</sub> is equal to f*Sqrt[(s<sub>x</sub> / x)<sup>2</sup> + (s<sub>y</sub> / y)<sup>2</sup> + (s<sub>z</sub> / z)<sup>2</sup>], which is in words, the std. dev. of f is equal to f times the square root of the sum of squares of the quotients of the std. deviations of each term divided by each term itself.</p>
+<p>
+Applied to the Percent Composition of a molecule:</p>
+<p>
+%Comp = (a*x/MW)*100, where a is the number of atoms of weight x and MW is the total molecular weight of the molecule.  The Std. Dev. of %Comp, s<sub>%c</sub> = %c*Sqrt[(s<sub>a</sub>/a)<sup>2</sup> + (s<sub>x</sub>/x)<sup>2</sup> + (s<sub>mw</sub>/mw)<sup>2</sup>].  But, since a is a finite number, its s<sub>a</sub> = 0, so the formula becomes:  s<sub>%c</sub> = %c*Sqrt[(s<sub>x</sub> / x)<sup>2</sup> + (s<sub>mw</sub> / mw)<sup>2</sup>].</p>
+<p>
+For example, for chlorobenzene, C6H5Cl:</p>
+<p>
+%Comp of Carbon = 6*12.011/112.5584*100 = 64.02543%</p>
+<p>
+s<sub>%c</sub> = 64.02543*Sqrt[(.001/12.011)<sup>2</sup> + (.002614/112.5584)<sup>2</sup>] = .00553</p>
+<p>
+Resulting %Comp of Carbon = 64.025% (±0.006) = 64.025(±6)%</p>
+<p>
+%Comp of Hydrogen = 5*1.00794/112.5584*100 = 4.47741%</p>
+<p>
+s<sub>%c</sub> = 4.47741*Sqrt[(.00007/1.00794)<sup>2</sup> + (.002614/112.5584)<sup>2</sup>] = .0003279</p>
+<p>
+Resulting %Comp of Hydrogen = 4.4774% (±0.0003) = 4.4774(±3)%</p>
+<p>
+%Comp of Chlorine = 35.4527/112.5584*100 = 31.49716%</p>
+<p>
+s<sub>%c</sub> = 31.49716*Sqrt[(.0009/35.4527)<sup>2</sup> + (.002614/112.5584)<sup>2</sup>] = .0010837</p>
+<p>
+Resulting %Comp of Hydrogen = 31.497% (±0.001) = 31.497(±1)%</p>
+</BODY>
+</HTML>

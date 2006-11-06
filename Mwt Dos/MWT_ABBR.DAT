@@ -1,0 +1,62 @@
+'                        Abbreviation File for MWT program
+'
+' Comments may be added by preceding with an apostrophe
+' Two group headings must exist: [AMINO ACIDS] and [ABBREVIATIONS]
+' Abbreviations may be added; simply type the abbreviation and molecular
+'   formula under the appropriate column in either section
+' Note:  Only the first letter of an abbreviation is allowed to be capitalized
+' Note:  Elements MUST be properly capitalized; eg. na is incorrect, use Na
+' Note:  Parentheses and dashes are NOT allowed; eg. CH3(CH2)2 is incorrect
+'                                                    use C3H7 or CH3CH2CH2
+' The abbreviations in the Amino Acid section are treated as extended level
+'   abbreviations:  they are only recognized when extended abbreviations are on
+' If this file becomes corrupted, the MWT program will inform the user and
+    ignore incorrect lines
+' If this file becomes deleted, the MWT program will create a new file with
+    the default abbreviations, but without the abbreviation descriptions
+'
+' Default Amino Acids are in their ionic form
+' Amino Acid abbreviations may be up to 6 characters long
+' It is strongly advised that longer abbreviations be placed first
+[AMINO ACIDS]
+Ala     C3H5NO        ' Alanine
+Arg     C6H12N4O      ' Arginine, (unprotonated NH2)
+Asn     C4H6N2O2      ' Asparagine
+Asp     C4H5NO3       ' Aspartic acid (undissociated COOH)
+Cys     C3H5NOS       ' Cysteine (no disulfide link)
+Gln     C5H8N2O2      ' Glutamine
+Glu     C5H7NO3       ' Glutamic acid (undissociated COOH)
+Gly     C2H3NO        ' Glycine
+His     C6H7N3O       ' Histidine (unprotonated NH)
+Hyp     C5H7NO2       ' Hydroxyproline
+Ile     C6H11NO       ' Isoleucine (same as Leucine)
+Leu     C6H11NO       ' Leucine (same as Isoleucine)
+Lys     C6H12N2O      ' Lysine (unprotonated NH2)
+Met     C5H9NOS       ' Methionine
+Phe     C9H9NO        ' Phenylalanine
+Pro     C5H7NO        ' Proline
+Ser     C3H5NO2       ' Serine
+Thr     C4H7NO2       ' Threonine
+Trp     C11H10N2O     ' Tryptophan
+Tyr     C9H9NO2       ' Tyrosine
+Val     C5H9NO        ' Valine
+
+' Normal abbreviations may be up to 6 characters long
+' It is strongly advised that longer abbreviations be placed first
+[ABBREVIATIONS]
+Phen    C12H8N2       ' Phenanthroline
+Urea    CON2H4        ' Urea, H2NCONH2
+Bpy     C10H8N2       ' Bipyridine
+Oac     C2H3O2        ' Acetate
+Otf     CO3SF3        ' Triflate, OSO2CF3
+Tpp     C44H28N4      ' Tetraphenylporphyrin, (C4H2N(C6H5C)C4H2N(C6H5C))2, mw 612.733
+Bu      C4H9          ' Butyl
+En      C2H8N2        ' Ethylenediamine, H2NCH2CH2NH2
+Et      C2H5          ' Ethyl, CH3CH2
+Me      CH3           ' Methyl
+Ms      CH3SO2        ' Mesyl, CH3SOO
+Ox      C2O4          ' Oxalate
+Ph      C6H5          ' Phenyl
+Py      C5H5N         ' Pyridine
+Ts      C7H7SO2       ' Tosyl, CH3C6H4SOO
+D       H2            ' Deuterium

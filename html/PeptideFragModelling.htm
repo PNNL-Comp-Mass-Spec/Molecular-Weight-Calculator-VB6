@@ -1,0 +1,562 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Peptide Sequence Fragmentation Modelling</title>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000>
+<h2><a name="peptide_frag_modelling"></a><img src="../images/MwtWinIcon.gif" border=0> Peptide Sequence Fragmentation Modelling</h2>
+<p>Location: <a href="MenuTools.htm">Tools Menu</a></p>
+
+<p>See Also: <a href="DefaultAbbreviations.htm">Supported amino acid abbreviations</a></p>
+
+<H3>Introduction</H3>
+<p>The fragmentation modelling tool can be used to predict the potential ions observed when a peptide is fragmented in the collision cell of a tandem mass spectrometer or quadrupole ion trap.  In a collision cell, adjustment of various instrumental voltages imparts additional kinetic energy onto ions entering the cell, resulting in fragmentation at certain bonds of the ion.</p>
+
+<H3>Background</H3>
+<p>Fragmentation of peptides (amino acid chains) typically occurs along the peptide backbone.  Each residue of the peptide chain successively fragments off, both in the N->C and C->N direction.  The location that the fragmentation occurs, and the nature of the ion remaining results in various ions, a, b, c and x, y, or z ions.  The most commonly observed ions are a, b, and y ions. The following diagram illustrates the formation of b and y ions during the fragmentation of a three residue peptide chain.
+</p>
+
+<p><img src="../images/IonFragmentation.gif" width=660 height=300>
+</p>
+
+<p>The Peptide Sequence Fragmentation Modelling tool can be used to tabulate all of the potential ion fragment masses that could be observed for a given peptide.  Optional modifications can be applied, including the loss of an ammonium or hydroxyl ion.</p>
+
+<H3>Importing Ions</H3>
+<p>Actual ion data can be imported into the program so that ion matching can be performed.  You can import a list of ions to match from a text file by choosing Load List of Ions to Match from the File menu.  Alternatively, you can copy the list of ions to the clipboard, then choose Paste List of Ions to Match from the Edit Menu.  If the ion list is already visible, you can click on the ion list and press Ctrl+V to paste a new ion list.  The format of the ion list should be a list of mass (m/z) and intensity pairs, separated by a space, tab, or comma, with each mass/intensity pair on a separate line.  If your software has the ability of deconvoluting the spectrum to transform 2+ and 3+ ions to their 1+ representation, it is advisable that you do this prior to importing the ion list into the Molecular Weight Calculator.</p>
+
+<H3>Binning</H3>
+<p>In order to decrease the total number of ions to be matched, the ions being imported can be binned (grouped together) when they are imported.  This process involves comparing adjacent ions to see if their m/z difference is below a threshold.  If it is, the two (or more) ions are combined to just one ion having an m/z value equal to the average of all the m/z values within tolerance of the given bin.  The largest intensity of the combined ions is used for the intensity of the binned ion.  The following table illustrates a small portion of an ion list before and after binning.  Note that if the average spacing between the m/z values of the ions in the list you import is less than 0.2 Da, then binning of the ions to 0.5 Da is automatically enabled.  You may manually enable binning, along with setting the binning parameters using the <a href="IonMatchListOptions.htm">Ion Match List Options</a> window.</p>
+
+<table width=100% border="1">
+  <tr>
+  	<th width=50% colspan=2>Original Data</th>
+
+  	<th width=50% colspan=2>After Binning (Window = 0.5&nbsp;Da)</th>
+  </tr>
+  <tr>
+  	<th width=25%>m/z </th>
+	<th width=25%>Intensity </th>
+
+  	<th width=25%>m/z </th>
+	<th width=25%>Intensity </th>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr>
+          <td align="center">585.9116</td>
+        </tr>
+        <tr>
+          <td align="center">586.0613</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr> 
+          <td align="center">3</td>
+        </tr>
+        <tr> 
+          <td align="center">5</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#00FFFF" width="25%">585.9865</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">5</td>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr>
+          <td align="center">586.3880</td>
+        </tr>
+        <tr>
+          <td align="center">586.5022</td>
+        </tr>
+        <tr>
+          <td align="center">586.5732</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr> 
+          <td align="center">11</td>
+        </tr>
+        <tr> 
+          <td align="center">1</td>
+        </tr>
+        <tr> 
+          <td align="center">2</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#FFFF99" width="25%">586.4878</td>
+    <td align="center" bgcolor="#FFFF99" width="25%">11</td>
+  </tr>
+  <tr> 
+    <td align="center" bgcolor="#00FFFF" width="25%">586.8460</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">12</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">586.8460</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">12</td>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr>
+          <td align="center">587.4271</td>
+        </tr>
+        <tr>
+          <td align="center">587.7023</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr> 
+          <td align="center">1387</td>
+        </tr>
+        <tr> 
+          <td align="center">8</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#FFFF99" width="25%">587.5647</td>
+    <td align="center" bgcolor="#FFFF99" width="25%">1387</td>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr>
+          <td align="center">587.7939</td>
+        </tr>
+        <tr>
+          <td align="center">587.8698</td>
+        </tr>
+        <tr>
+          <td align="center">588.0663</td>
+        </tr>
+        <tr>
+          <td align="center">588.2092</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr> 
+          <td align="center">6</td>
+        </tr>
+        <tr> 
+          <td align="center">6</td>
+        </tr>
+        <tr> 
+          <td align="center">5</td>
+        </tr>
+        <tr> 
+          <td align="center">8</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#00FFFF" width="25%">587.9848</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">8</td>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr>
+          <td align="center">588.4289</td>
+        </tr>
+        <tr>
+          <td align="center">588.6898</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#FFFF99" width="100%" border="0">
+        <tr> 
+          <td align="center">520</td>
+        </tr>
+        <tr> 
+          <td align="center">10</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#FFFF99" width="25%">588.5594</td>
+    <td align="center" bgcolor="#FFFF99" width="25%">520</td>
+  </tr>
+  <tr> 
+    <td align="center" width="25%"> 
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr>
+          <td align="center">588.7769</td>
+        </tr>
+        <tr>
+          <td align="center">588.9930</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" width="25%">
+      <table bgcolor="#00FFFF" width="100%" border="0">
+        <tr> 
+          <td align="center">6</td>
+        </tr>
+        <tr> 
+          <td align="center">12</td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" bgcolor="#00FFFF" width="25%">588.8850</td>
+    <td align="center" bgcolor="#00FFFF" width="25%">12</td>
+  </tr>
+</table>
+
+<H3>Precursor Removal and Normalization</H3>
+<p>Once the list of ions has been imported into the program, the precursor ion may optionally be removed (if present).  The mass of the precursor ion to search for and mass window (tolerance) to match it are specified in the Ion Match Options frame of the Peptide Sequence Fragmentation Modelling window.
+
+<p>The ion list is next normalized to keep only the most intense ions and to allow a match score to be computed when matching ions.  Normalization involves first sorting the list by decreasing intensity and only keeping the top-most ions (defined by Number of Ions to Use).  Next, the list of ions actually being used is subdivided into mass regions (typically 10 regions).  The ions in each mass region are normalized to the most intense ion in the given region, and all ions are normalized to a uniform maximum value, typically 100.   Normalization parameters can be modified using the <a href="IonMatchListOptions.htm">Ion Match List Options</a> window
+
+<p>The following table illustrates a raw ion list, the list after choosing just the top 10 ions, and the list after dividing into 3 regions and normalizing each region.  Note that unlike the example table above, this list was not binned.</p>
+
+<table width=100% border="1">
+  <tr> 
+    <th width=40% colspan=2>Original Data</th>
+    <th width=60% colspan=3> 
+      Top 10 ions<br>
+      Three Subdivisions
+      </th>
+  </tr>
+  <tr> 
+    <th width=20%>m/z </th>
+    <th width=20%>Intensity </th>
+    <th width=20%>m/z </th>
+    <th width=20%>Raw Intensity </th>
+    <th width=20%> 
+      <p>Normalized<br>
+        Intensity </p>
+    </th>
+  </tr>
+  <tr> 
+    <td width="20%">585.9116 </td>
+    <td width="20%">3 </td>
+    <td width="20%" bgcolor="#99FF33">586.388</td>
+    <td width="20%" bgcolor="#99FF33">11</td>
+    <td width="20%" bgcolor="#99ff33">0.8 </td>
+  </tr>
+  <tr> 
+    <td width="20%">586.0613</td>
+    <td width="20%">5</td>
+    <td width="20%" bgcolor="#99FF33">586.846</td>
+    <td width="20%" bgcolor="#99FF33">12</td>
+    <td width="20%" bgcolor="#99ff33">0.9</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">586.388</td>
+    <td width="20%" bgcolor="#00FFFF">11</td>
+    <td width="20%" bgcolor="#99FF33">587.4271</td>
+    <td width="20%" bgcolor="#99FF33">1387</td>
+    <td width="20%" bgcolor="#99ff33">100</td>
+  </tr>
+  <tr> 
+    <td width="20%">586.5022</td>
+    <td width="20%">1</td>
+    <td width="20%" bgcolor="#FFFF99">587.7023</td>
+    <td width="20%" bgcolor="#FFFF99">8</td>
+    <td width="20%" bgcolor="ffff99">100</td>
+  </tr>
+  <tr> 
+    <td width="20%">586.5732</td>
+    <td width="20%">2</td>
+    <td width="20%" bgcolor="#FFFF99">587.7939</td>
+    <td width="20%" bgcolor="#FFFF99">6</td>
+    <td width="20%" bgcolor="ffff99">75</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">586.846</td>
+    <td width="20%" bgcolor="#00FFFF">12</td>
+    <td width="20%" bgcolor="#FFFF99">587.8698</td>
+    <td width="20%" bgcolor="#FFFF99">6</td>
+    <td width="20%" bgcolor="ffff99">75</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">587.4271</td>
+    <td width="20%" bgcolor="#00FFFF">1387</td>
+    <td width="20%" bgcolor="#FFFF99">588.2092</td>
+    <td width="20%" bgcolor="#FFFF99">8</td>
+    <td width="20%" bgcolor="ffff99">100</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">587.7023</td>
+    <td width="20%" bgcolor="#00FFFF">8</td>
+    <td width="20%" bgcolor="#FF99FF">588.4289</td>
+    <td width="20%" bgcolor="#FF99FF">520</td>
+    <td width="20%" bgcolor="ff99ff">100</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">587.7939</td>
+    <td width="20%" bgcolor="#00FFFF">6</td>
+    <td width="20%" bgcolor="#FF99FF">588.6898</td>
+    <td width="20%" bgcolor="#FF99FF">10</td>
+    <td width="20%" bgcolor="ff99ff">1.9</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">587.8698</td>
+    <td width="20%" bgcolor="#00FFFF">6</td>
+    <td width="20%" bgcolor="#FF99FF">588.993</td>
+    <td width="20%" bgcolor="#FF99FF">12</td>
+    <td width="20%" bgcolor="ff99ff">2.3</td>
+  </tr>
+ <tr> 
+    <td width="20%">588.0663</td>
+    <td width="20%">5</td>
+    <td colspan="3" rowspan="6">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">588.2092</td>
+    <td width="20%" bgcolor="#00FFFF">8</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">588.4289</td>
+    <td width="20%" bgcolor="#00FFFF">520</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">588.6898</td>
+    <td width="20%" bgcolor="#00FFFF">10</td>
+  </tr>
+  <tr> 
+    <td width="20%">588.7769</td>
+    <td width="20%">6</td>
+  </tr>
+  <tr> 
+    <td width="20%" bgcolor="#00FFFF">588.993</td>
+    <td width="20%" bgcolor="#00FFFF">12</td>
+  </tr>
+</table>
+
+<H3>Ion Matching</H3>
+<p>When normalization is complete, the ion masses remaining in the ion list are compared to the masses predicted for the fragmentation products of the peptide chain.  If a match is found within the specified tolerance, then the ion is highlighted both in the peptide fragmentation table and in the ion matching list.  The following table explains the colors used for highlighting ions.</p>
+
+<table width=100% border="1">
+  <tr> 
+    <th width=20% align="center">Color</th>
+    <th width=80%>Explanation</th>
+  </tr>
+  <tr>
+	<td bgcolor=#00FFFF align="center">Cyan
+	</td>
+	<td>The ion is present (within tolerance) in both the ion match list and the predicted fragmentation ion table.
+	</td>
+  </tr>
+
+  <tr>
+	<td bgcolor=#FFFF80 align="center">Yellow
+	</td>
+	<td>The ion in the match list was matched to a <a href="#scoring">shoulder ion</a> in the predicted fragmentation ion table.
+	</td>
+  </tr>
+
+  <tr>
+	<td bgcolor=#FFC0C0 align="center">Light Red
+	</td>
+	<td>An ion was present at 110, 120, or 136 m/z in the match list with a normalized score of 40% of the max or greater, but histidine, phenylalanine, or tyrosine was not one of the residues in the peptide chain.  See the discussion on <a href="#scoring_equation">rho</a> (&rho;) in the scoring algorithm below.
+	</td>
+  </tr>
+
+</table>
+
+<p>Ion match statistics are provided, including the number of ions loaded, the number remaining after binning (if applicable), the number within tolerance, whether or not the precursor was found and removed, and the number of matching ions.</p>
+
+<H3><a name="#scoring">Scoring</H3>
+<p>A match score is also computed.  The higher the score, the better the match.  The matching score was modeled after the score used in the Sequest search algorithm developed by John Yates and Jimmy Eng (United States Patent 5,538,897; July 23, 1996).  The match score was developed to provide a means for comparing the quality of match of potential peptide sequences against a given mass spectrum.  The score is included in this program to allow you to compare the quality of a match for various spectra you might manually inspect using the fragmentation modelling routine.  This program is not meant as a replacement for Sequest and will not automatically search a database to find the best matching sequence for a given spectrum.  
+
+<p>In order to make the match score more meaningful, the predicted fragmentation ions are assigned arbitrary intensities based on the ion type.  The default values are 50 counts for the b and y ions, 10 counts for the a ions, and 10 counts for any neutral losses selected.  In addition, shoulder ions can be added for the b and y ions.  Shoulder ions are simply ions added at ±1 Da for each b or y ion, since actual data often contains shoulder ions around the b and y ion peaks.  An intensity of 25 counts is assigned to shoulder ions.  The default intensities can be modified using the <a href="IonMatchListOptions.htm">Ion Match List Options</a> window.</p>
+
+<p><a name="#scoring_equation">The equation for computing the match score, S<sub>p</sub>, is:</p>
+
+<P><Font size="+2">S<sub>p</sub> =(&Sigma; i<sub>m</sub>) &times; n<sub>i</sub> &times; (1+&beta;) &times; (1+&rho;) &divide; n<sub>&tau;</sub></font></p>
+
+<p>In the equation i<sub>m</sub> is the sum of the intensities of each of the matches and (n<sub>i</sub>) is the count of the matches.  1+&beta; is a correction factor to increase the score when successive y or b ions are found.  &beta; is initially zero, but is increased by 0.075 for each sequential y ion and each sequential b ion matched.  Similarly, &rho; is a correction factor to increase or decrease the score for the occurrence of certain immonium ions.  The immonium ions of histidine (110), phenylalanine (120), and tyrosine (136) are commonly observed in fragmentation spectra.  These ions are searched for in the normalized ion list, and if a match is found and its intensity is 40% or greater of the maximum intensity, then the given peptide chain is examined to look for the corresponding residue.</p>
+
+<p>For example, if an ion at 120 m/z has an intensity of 60 out of a maximum of 100, then the peptide sequence is examined.  If phenylalanine (Phe or F) is present, then rho is increased by 0.15  &nbsp;If Phe is not found, then rho is decreased by 0.15  &nbsp;If the 120 m/z ion was not found, rho is left unchanged.  Following this procedure, rho can range anywhere from -0.45 to 0.45  &nbsp;Note, that in the original patent the equation used (1-&rho;) rather than (1+&rho;).  I believe this to be an error since one would want a higher match score if the immonium ion is found and is present in the sequence of interest.  The following table illustrates how a sample sequence would be scored.</p>
+
+<table width="75%" border="0">
+  <tr> 
+    <td width="75%" height="143" valign="top"> 
+      <table width="100%" border="1">
+        <tr> 
+          <th>#</th>
+          <th>Immon.</th>
+          <th>a</th>
+          <th>b</th>
+          <th>b*</th>
+          <th>Seq.</th>
+          <th>y</th>
+          <th>y*</th>
+          <th>#</th>
+        </tr>
+        <tr> 
+          <td>1</td>
+          <td bgcolor="#00FFFF">136.08</td>
+          <td bgcolor="#00FFFF">136.08</td>
+          <td bgcolor="#FFFF99">164.07</td>
+          <td>147.07</td>
+          <td>Y</td>
+          <td>564.35</td>
+          <td>547.35</td>
+          <td>4</td>
+        </tr>
+        <tr> 
+          <td>2</td>
+          <td>86.1</td>
+          <td>249.16</td>
+          <td>277.16</td>
+          <td bgcolor="#00FFFF">260.15</td>
+          <td>L</td>
+          <td bgcolor="#00FFFF">401.29</td>
+          <td bgcolor="#00FFFF">384.28</td>
+          <td>3</td>
+        </tr>
+        <tr> 
+          <td>3</td>
+          <td>86.1</td>
+          <td>362.25</td>
+          <td bgcolor="#00FFFF">390.24</td>
+          <td>373.24</td>
+          <td>L</td>
+          <td bgcolor="#00FFFF">288.2</td>
+          <td bgcolor="#00FFFF">271.2</td>
+          <td>2</td>
+        </tr>
+        <tr> 
+          <td>4</td>
+          <td>129.12</td>
+          <td>518.35</td>
+          <td>546.34</td>
+          <td>529.34</td>
+          <td>R</td>
+          <td bgcolor="#00FFFF">175.12</td>
+          <td>158.12</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </td>
+    <td rowspan="2" width="75%" valign="top"> 
+      <table border="1" width="100%">
+        <tr> 
+          <th>Mass</th>
+          <th>Intensity</th>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">136.18</td>
+          <td bgcolor="#00FFFF">100.00</td>
+        </tr>
+        <tr> 
+          <td>139.11</td>
+          <td>28.81</td>
+        </tr>
+        <tr> 
+          <td>159.12</td>
+          <td>57.63</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFF99">164.82</td>
+          <td bgcolor="#FFFF99">32.43</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">175.13</td>
+          <td bgcolor="#00FFFF">62.71</td>
+        </tr>
+        <tr> 
+          <td>187.11</td>
+          <td>62.71</td>
+        </tr>
+        <tr> 
+          <td>227.10</td>
+          <td>13.42</td>
+        </tr>
+        <tr> 
+          <td>235.12</td>
+          <td>8.22</td>
+        </tr>
+        <tr> 
+          <td>246.65</td>
+          <td>29.44</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">260.65</td>
+          <td bgcolor="#00FFFF">64.50</td>
+        </tr>
+        <tr> 
+          <td>261.14</td>
+          <td>16.88</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">271.2</td>
+          <td bgcolor="#00FFFF">7.36</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">288.21</td>
+          <td bgcolor="#00FFFF">27.27</td>
+        </tr>
+        <tr> 
+          <td>289.21</td>
+          <td>7.36</td>
+        </tr>
+        <tr> 
+          <td>294.19</td>
+          <td>100.00</td>
+        </tr>
+        <tr> 
+          <td>379.21</td>
+          <td>5.66</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">384.28</td>
+          <td bgcolor="#00FFFF">5.66</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">390.19</td>
+          <td bgcolor="#00FFFF">14.02</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#00FFFF">401.31</td>
+          <td bgcolor="#00FFFF">100.00</td>
+        </tr>
+        <tr> 
+          <td>402.31</td>
+          <td>21.82</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td width="25%" valign="top">
+      <p>Computation of score, parsing left to right, top to bottom;
+	  a ions are 10 counts, b and y are 50 counts, b/y shoulders are 25,
+	  neutral loss ions are 10 counts</p>
+      <p>&Sigma; i<sub>m</sub> = a + b + b* + y + y* + b + y + y* + y<br>
+		 &Sigma; i<sub>m</sub> = 10+25+10+50+10+50+50+10+50<br>
+		 &Sigma; i<sub>m</sub> = 265</p>
+      <p>n<sub>i</sub> = 9</p>
+      <p>&beta; = 0.075 + 0.075 = 0.15<br>
+        (since three y ions in a row)</p>
+      <p>&rho; = 0.15<br>
+        (since 136.18 found and Y is in fact present)
+      <p>n<sub>&tau;</sub> = 20</p>
+      <p>S<sub>p</sub> = 265 &times; 9 &times; (1 + 0.15) &times; (1 + 0.15) &divide; 20 = 157.7</p>
+	  
+    </td>
+  </tr>
+</table>
+
+<H3>Plotting</H3>
+<p>The predicted masses from fragmentation of the peptide sequence may be plotted by choosing View | Predicted mass spectrum.  If a list of ions to match is present, those ions will also be plotted.  If "Update Spectrum on Change" is enabled (Tools menu) then any changes to the loaded ions or predicted fragmentation ions will cause the plot to be updated.  For more information, see the <a href="IonPlot.htm">Ion Plot Window</a>
+
+<H3>Aligning</H3>
+<p>The Alignment Offset value can be used to shift the m/z value of all of the ions in the match list to correct for a slightly miscalibrated instrument or to account for a post-translational modification that has changed the overall mass of the peptide whose ions are in the match list.  In addition to manually entering an offset value, you can have the program automatically search for the offset value that gives the best match score by choosing Tools | Automatically align Ions to Match.</p>
+
+<p>This process involves incrementing through all of the possible alignment values over a given range with a given increment value.  For example, if you enter a maximum offset of 20 and an offset increment of 0.1, the program will test 400 different offset values ranging from -20 to 20 to see which one gives the best <a href="#scoring_equation">match score</a>.  If one or more sequential offset values give the same match score, the average of the offset values is kept.  For example, if 0.6, 0.7, and 0.8 all give a match score of 423, then offset value displayed when completed is 0.7 &nbsp;A progress indicator is shown which displays the time elapsed and the estimated time to completion.  In addition, the current offset value being tested is displayed, along with the statistics for the best matching offset value (not shown until the process is completed, or aborted by pressing escape).
+</p>
+
+</BODY>
+</HTML>
