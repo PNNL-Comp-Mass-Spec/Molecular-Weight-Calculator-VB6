@@ -22,7 +22,6 @@ Private Const RESIDUE_DIM_CHUNK = 50
 Private Const MAX_MODIFICATIONS = 6             ' Maximum number of modifications for a single residue
 Private Const UNKNOWN_SYMBOL = "Xxx"
 Private Const UNKNOWN_SYMBOL_ONE_LETTER = "X"
-Private Const ION_TYPE_COUNT = 3
 
 Private Const TERMINII_SYMBOL = "-"
 Private Const TRYPTIC_RULE_RESIDUES = "KR"
@@ -46,6 +45,7 @@ Public Enum ntgNTerminusGroupConstants
     ntgNone = 6
 End Enum
 
+Private Const ION_TYPE_MAX As Integer = 2
 Public Enum itIonTypeConstants
     itAIon = 0
     itBIon = 1
@@ -63,7 +63,7 @@ Private Type udtResidueType
     Symbol As String                        ' 3 letter symbol
     Mass As Double                          ' The mass of the residue alone (excluding any modification)
     MassWithMods As Double                  ' The mass of the residue, including phosphorylation or any modification
-    IonMass(ION_TYPE_COUNT) As Double       ' 0-based array; the masses that the a, b, and y ions ending/starting with this residue will produce in the mass spectrum (includes H+)
+    IonMass(ION_TYPE_MAX) As Double       ' 0-based array; the masses that the a, b, and y ions ending/starting with this residue will produce in the mass spectrum (includes H+)
     Phosphorylated As Boolean               ' Technically, only Ser, Thr, or Tyr residues can be phosphorylated (H3PO4), but if the user phosphorylates other residues, we'll allow that
     ModificationIDCount As Integer
     ModificationIDs(MAX_MODIFICATIONS) As Long  ' 1-based array
@@ -77,7 +77,7 @@ Private Type udtTerminusType
 End Type
 
 Public Type udtFragmentionSpectrumIntensitiesType
-    IonType(ION_TYPE_COUNT) As Double       ' 0-based array
+    IonType(ION_TYPE_MAX) As Double       ' 0-based array
     BYIonShoulder As Double                 ' If > 0 then shoulder ions will be created by B and Y ions
     NeutralLoss As Double
 End Type
@@ -93,9 +93,11 @@ End Type
 
 Public Type udtFragmentationSpectrumOptionsType
     IntensityOptions As udtFragmentionSpectrumIntensitiesType
-    IonTypeOptions(ION_TYPE_COUNT) As udtIonTypeOptionsType
+    IonTypeOptions(ION_TYPE_MAX) As udtIonTypeOptionsType
     DoubleChargeIonsShow As Boolean
     DoubleChargeIonsThreshold As Single
+    TripleChargeIonsShow As Boolean
+    TripleChargeIonsThreshold As Single
 End Type
 
 Public Type udtFragmentationSpectrumDataType
@@ -267,12 +269,12 @@ Private Function ComputeMaxIonsPerResidue() As Integer
     
     intIonCount = 0
     With mFragSpectrumOptions
-        For eIonIndex = 0 To ION_TYPE_COUNT - 1
+        For eIonIndex = 0 To ION_TYPE_MAX
             If .IonTypeOptions(eIonIndex).ShowIon Then
                 intIonCount = intIonCount + 1
                 
                 If Abs(.IntensityOptions.BYIonShoulder) > 0 Then
-                    If eIonIndex = itBIon Or eIonIndex = itYIon Then
+                    If eIonIndex = itIonTypeConstants.itBIon Or eIonIndex = itIonTypeConstants.itYIon Then
                         intIonCount = intIonCount + 2
                     End If
                 End If
@@ -287,6 +289,11 @@ Private Function ComputeMaxIonsPerResidue() As Integer
         If .DoubleChargeIonsShow Then
             intIonCount = intIonCount * 2
         End If
+        
+        If .TripleChargeIonsShow Then
+            intIonCount = intIonCount * 2
+        End If
+        
     
     End With
     
@@ -334,14 +341,19 @@ End Function
 'Public Function GetFragmentationMasses(ByVal lngMaxIonCount As Long, ByRef sngIonMassesZeroBased() As Single, ByRef sngIonIntensitiesZeroBased() As Single, ByRef strIonSymbolsZeroBased() As String) As Long
 Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentationSpectrumDataType) As Long
     ' Returns the number of ions in FragSpectrumWork()
-    
+
+    Const MAX_CHARGE As Integer = 3
+
     Dim lngResidueIndex As Long, intChargeIndex As Integer, intShoulderIndex As Integer
     Dim eIonType As itIonTypeConstants
     Dim lngIndex As Long
     Dim lngPredictedIonCount As Long, lngIonCount As Long
-    Dim sngIonIntensities(ION_TYPE_COUNT) As Single
+    Dim sngIonIntensities(ION_TYPE_MAX) As Single
     Dim sngIonShoulderIntensity As Single, sngNeutralLossIntensity As Single
-    Dim blnShowDoublecharge As Boolean, sngDoubleChargeThreshold As Single
+    
+    Dim blnShowCharge() As Boolean
+    Dim sngChargeThreshold() As Single
+    
     Dim sngBaseMass As Single, sngConvolutedMass As Single, sngObservedMass As Single
     Dim strResidues As String
     Dim blnPhosphorylated As Boolean
@@ -356,16 +368,26 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
         Exit Function
     End If
 
+    ReDim blnShowCharge(MAX_CHARGE)
+    ReDim sngChargeThreshold(MAX_CHARGE)
+    
     ' Copy some of the values from mFragSpectrumOptions to local variables to make things easier to read
     With mFragSpectrumOptions
-        For eIonType = 0 To ION_TYPE_COUNT - 1
+        For eIonType = 0 To ION_TYPE_MAX
             sngIonIntensities(eIonType) = .IntensityOptions.IonType(eIonType)
         Next eIonType
         sngIonShoulderIntensity = .IntensityOptions.BYIonShoulder
         sngNeutralLossIntensity = .IntensityOptions.NeutralLoss
         
-        blnShowDoublecharge = .DoubleChargeIonsShow
-        sngDoubleChargeThreshold = .DoubleChargeIonsThreshold
+        If MAX_CHARGE >= 2 Then
+            blnShowCharge(2) = .DoubleChargeIonsShow
+            sngChargeThreshold(2) = .DoubleChargeIonsThreshold
+        End If
+        
+        If MAX_CHARGE >= 3 Then
+            blnShowCharge(3) = .TripleChargeIonsShow
+            sngChargeThreshold(3) = .TripleChargeIonsThreshold
+        End If
     End With
 
     ' Populate sngIonMassesZeroBased() and sngIonIntensitiesZeroBased()
@@ -382,9 +404,9 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
     For lngResidueIndex = 1 To ResidueCount
         With Residues(lngResidueIndex)
             
-            For eIonType = 0 To ION_TYPE_COUNT - 1
+            For eIonType = 0 To ION_TYPE_MAX
                 If mFragSpectrumOptions.IonTypeOptions(eIonType).ShowIon Then
-                    If (lngResidueIndex = 1 Or lngResidueIndex = ResidueCount) And (eIonType = itAIon Or eIonType = itBIon) Then
+                    If (lngResidueIndex = 1 Or lngResidueIndex = ResidueCount) And (eIonType = itIonTypeConstants.itAIon Or eIonType = itIonTypeConstants.itBIon) Then
                         ' Don't include a or b ions in the output masses
                     Else
                         
@@ -396,8 +418,8 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
                         ' Note that the residue symbols are separated by a space to avoid accidental matching by the InStr() functions below
                         strResidues = GetInternalResidues(lngResidueIndex, eIonType, blnPhosphorylated)
                         
-                        For intChargeIndex = 1 To 2
-                            If intChargeIndex = 1 Or (intChargeIndex = 2 And blnShowDoublecharge) Then
+                        For intChargeIndex = 1 To MAX_CHARGE
+                            If intChargeIndex = 1 Or (intChargeIndex > 1 And blnShowCharge(intChargeIndex)) Then
                                 If intChargeIndex = 1 Then
                                     sngConvolutedMass = sngBaseMass
                                 Else
@@ -405,7 +427,7 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
                                     sngConvolutedMass = ConvoluteMassInternal(sngBaseMass, 1, intChargeIndex, dblChargeCarrierMass)
                                 End If
                                 
-                                If intChargeIndex > 1 And sngBaseMass < sngDoubleChargeThreshold Then
+                                If intChargeIndex > 1 And sngBaseMass < sngChargeThreshold(intChargeIndex) Then
                                     ' BaseMass is below threshold, do not add to Predicted Spectrum
                                 Else
                                     ' Add ion to Predicted Spectrum
@@ -413,15 +435,15 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
                                     ' Y Ions are numbered in decreasing order: y5, y4, y3, y2, y1
                                     ' A and B ions are numbered in increasing order: a1, a2, etc.  or b1, b2, etc.
                                     strIonSymbolGeneric = LookupIonTypeString(eIonType)
-                                    If eIonType = itYIon Then
+                                    If eIonType = itIonTypeConstants.itYIon Then
                                         strIonSymbol = strIonSymbolGeneric & Trim(Str(ResidueCount - lngResidueIndex + 1))
                                     Else
                                         strIonSymbol = strIonSymbolGeneric & Trim(Str(lngResidueIndex))
                                     End If
                                     
-                                    If intChargeIndex = 2 Then
-                                        strIonSymbol = strIonSymbol & "++"
-                                        strIonSymbolGeneric = strIonSymbolGeneric & "++"
+                                    If intChargeIndex > 1 Then
+                                        strIonSymbol = strIonSymbol & String(intChargeIndex, "+")
+                                        strIonSymbolGeneric = strIonSymbolGeneric & String(intChargeIndex, "+")
                                     End If
                                     
                                     AppendDataToFragSpectrum lngIonCount, FragSpectrumWork(), sngConvolutedMass, sngIntensity, strIonSymbol, strIonSymbolGeneric, lngResidueIndex, .Symbol, intChargeIndex, eIonType, False
@@ -429,7 +451,7 @@ Public Function GetFragmentationMasses(ByRef udtFragSpectrum() As udtFragmentati
                                     ' Add shoulder ions to PredictedSpectrum()
                                     '   if a B or Y ion and the shoulder intensity is > 0
                                     ' Need to use Abs() here since user can define negative theoretical intensities (which allows for plotting a spectrum inverted)
-                                    If Abs(sngIonShoulderIntensity) > 0 And (eIonType = itBIon Or eIonType = itYIon) Then
+                                    If Abs(sngIonShoulderIntensity) > 0 And (eIonType = itIonTypeConstants.itBIon Or eIonType = itIonTypeConstants.itYIon) Then
                                         For intShoulderIndex = -1 To 1 Step 2
                                             sngObservedMass = sngConvolutedMass + intShoulderIndex * (1 / intChargeIndex)
                                             AppendDataToFragSpectrum lngIonCount, FragSpectrumWork(), sngObservedMass, sngIonShoulderIntensity, SHOULDER_ION_PREFIX & strIonSymbol, SHOULDER_ION_PREFIX & strIonSymbolGeneric, lngResidueIndex, .Symbol, intChargeIndex, eIonType, True
@@ -538,7 +560,7 @@ Private Function GetInternalResidues(lngCurrentResidueIndex As Long, eIonType As
     
     strInternalResidues = ""
     blnPhosphorylated = False
-    If eIonType = itYIon Then
+    If eIonType = itIonTypeConstants.itYIon Then
         For lngResidueIndex = lngCurrentResidueIndex To ResidueCount
             With Residues(lngResidueIndex)
                 strInternalResidues = strInternalResidues & .Symbol & " "
@@ -1295,9 +1317,9 @@ End Function
 Public Function LookupIonTypeString(eIonType As itIonTypeConstants) As String
 
     Select Case eIonType
-    Case itAIon: LookupIonTypeString = "a"
-    Case itBIon: LookupIonTypeString = "b"
-    Case itYIon: LookupIonTypeString = "y"
+    Case itIonTypeConstants.itAIon: LookupIonTypeString = "a"
+    Case itIonTypeConstants.itBIon: LookupIonTypeString = "b"
+    Case itIonTypeConstants.itYIon: LookupIonTypeString = "y"
     Case Else: LookupIonTypeString = ""
     End Select
     
@@ -1550,22 +1572,22 @@ On Error GoTo SetDefaultOptionsErrorHandler
 
     With mFragSpectrumOptions
         With .IntensityOptions
-            .IonType(itAIon) = 20
-            .IonType(itBIon) = 100
-            .IonType(itYIon) = 100
+            .IonType(itIonTypeConstants.itAIon) = 20
+            .IonType(itIonTypeConstants.itBIon) = 100
+            .IonType(itIonTypeConstants.itYIon) = 100
             .BYIonShoulder = 50
             .NeutralLoss = 20
         End With
         
         ' A ions can have ammonia and phosphate loss, but not water loss
-        With .IonTypeOptions(itAIon)
+        With .IonTypeOptions(itIonTypeConstants.itAIon)
             .ShowIon = True
             .NeutralLossAmmonia = True
             .NeutralLossPhosphate = True
             .NeutralLossWater = False
         End With
         
-        For intIonIndex = itBIon To itYIon
+        For intIonIndex = itIonTypeConstants.itBIon To itIonTypeConstants.itYIon
             With .IonTypeOptions(intIonIndex)
                 .ShowIon = True
                 .NeutralLossAmmonia = True
@@ -1576,6 +1598,9 @@ On Error GoTo SetDefaultOptionsErrorHandler
         
         .DoubleChargeIonsShow = True
         .DoubleChargeIonsThreshold = 800
+        
+        .TripleChargeIonsShow = False
+        .TripleChargeIonsThreshold = 900
     End With
     
     SetSymbolWaterLoss "-H2O"
@@ -2047,8 +2072,8 @@ Private Sub UpdateResidueMasses()
                 
                 dblRunningTotal = dblRunningTotal + .MassWithMods
                 
-                .IonMass(itAIon) = dblRunningTotal - dblImmoniumMassDifference - dblChargeCarrierMass
-                .IonMass(itBIon) = dblRunningTotal
+                .IonMass(itIonTypeConstants.itAIon) = dblRunningTotal - dblImmoniumMassDifference - dblChargeCarrierMass
+                .IonMass(itIonTypeConstants.itBIon) = dblRunningTotal
             Else
                 .Mass = 0
                 .MassWithMods = 0
@@ -2073,18 +2098,18 @@ Private Sub UpdateResidueMasses()
     
     For lngIndex = ResidueCount To 1 Step -1
         With Residues(lngIndex)
-            If .IonMass(itAIon) > 0 Then
+            If .IonMass(itIonTypeConstants.itAIon) > 0 Then
                 dblRunningTotal = dblRunningTotal + .MassWithMods
-                .IonMass(itYIon) = dblRunningTotal + dblChargeCarrierMass
+                .IonMass(itIonTypeConstants.itYIon) = dblRunningTotal + dblChargeCarrierMass
                 If lngIndex = 1 Then
                     ' Add the N-terminus mass to highest y ion
-                    .IonMass(itYIon) = .IonMass(itYIon) + mNTerminus.Mass - dblChargeCarrierMass
+                    .IonMass(itIonTypeConstants.itYIon) = .IonMass(itIonTypeConstants.itYIon) + mNTerminus.Mass - dblChargeCarrierMass
                     If blnProtonatedNTerminus Then
                         ' ntgHydrogenPlusProton; since we add back in the proton below when computing the fragment masses,
                         '  we need to subtract it out here
                         ' However, we need to subtract out dblHydrogenMass, and not dblChargeCarrierMass since the current
                         '  formula's mass was computed using two hydrogens, and not one hydrogen and one charge carrier
-                        .IonMass(itYIon) = .IonMass(itYIon) - dblHydrogenMass
+                        .IonMass(itIonTypeConstants.itYIon) = .IonMass(itIonTypeConstants.itYIon) - dblHydrogenMass
                     End If
                 End If
             End If

@@ -29,8 +29,8 @@ Option Explicit
 '   version 6.35
 
 ' *** Be sure to update version in Project | Properties also ***
-Public Const PROGRAM_VERSION = "6.42"
-Public Const PROGRAM_DATE = "November 5, 2006"
+Public Const PROGRAM_VERSION = "6.43"
+Public Const PROGRAM_DATE = "February 23, 2007"
 ' ***
 
 '
@@ -2841,7 +2841,9 @@ On Error GoTo SetDefaultValuesAndFormulasErrorHandler
         SetCheckBox .chkAmmoniaLoss, False
         SetCheckBox .chkPhosphateLoss, False
         SetCheckBox .chkDoubleCharge, False
+        SetCheckBox .chkTripleCharge, False
         .cboDoubleCharge.ListIndex = 8
+        .cboTripleCharge.ListIndex = 9
         SetCheckBox .chkRemovePrecursorIon, True
         .txtPrecursorIonMass = "300"
         .txtPrecursorMassWindow = "2"

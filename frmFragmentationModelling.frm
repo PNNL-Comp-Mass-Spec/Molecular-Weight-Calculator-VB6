@@ -2,16 +2,16 @@ VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form frmFragmentationModelling 
    Caption         =   "Peptide Sequence Fragmentation Modelling"
-   ClientHeight    =   9525
+   ClientHeight    =   8640
    ClientLeft      =   165
-   ClientTop       =   840
-   ClientWidth     =   10110
+   ClientTop       =   855
+   ClientWidth     =   9225
    HelpContextID   =   3080
    Icon            =   "frmFragmentationModelling.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
-   ScaleHeight     =   9525
-   ScaleWidth      =   10110
+   ScaleHeight     =   8640
+   ScaleWidth      =   9225
    StartUpPosition =   3  'Windows Default
    Tag             =   "12000"
    Begin VB.CommandButton cmdMatchIons 
@@ -37,7 +37,7 @@ Begin VB.Form frmFragmentationModelling
          HelpContextID   =   4053
          Index           =   0
          Left            =   5640
-         TabIndex        =   53
+         TabIndex        =   55
          Tag             =   "12425"
          Top             =   360
          Value           =   -1  'True
@@ -49,7 +49,7 @@ Begin VB.Form frmFragmentationModelling
          HelpContextID   =   4053
          Index           =   1
          Left            =   5640
-         TabIndex        =   52
+         TabIndex        =   54
          Tag             =   "12430"
          Top             =   600
          Width           =   1395
@@ -61,7 +61,7 @@ Begin VB.Form frmFragmentationModelling
          Height          =   255
          Left            =   120
          Locked          =   -1  'True
-         TabIndex        =   51
+         TabIndex        =   53
          Text            =   "MW="
          Top             =   240
          Width           =   2175
@@ -94,7 +94,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "Element Mode"
          Height          =   225
          Left            =   5640
-         TabIndex        =   54
+         TabIndex        =   56
          Tag             =   "12420"
          Top             =   120
          Width           =   1455
@@ -128,8 +128,8 @@ Begin VB.Form frmFragmentationModelling
    End
    Begin MSFlexGridLib.MSFlexGrid grdIonList 
       Height          =   6375
-      Left            =   7080
-      TabIndex        =   44
+      Left            =   6960
+      TabIndex        =   46
       Top             =   1800
       Width           =   1935
       _ExtentX        =   3413
@@ -142,15 +142,15 @@ Begin VB.Form frmFragmentationModelling
       Caption         =   "Ion Statistics"
       Height          =   1935
       Left            =   3960
-      TabIndex        =   45
+      TabIndex        =   47
       Tag             =   "12360"
-      Top             =   6360
+      Top             =   6480
       Width           =   3015
       Begin VB.Label lblScore 
          BorderStyle     =   1  'Fixed Single
          Height          =   255
          Left            =   120
-         TabIndex        =   50
+         TabIndex        =   52
          Top             =   1640
          Width           =   2655
       End
@@ -158,7 +158,7 @@ Begin VB.Form frmFragmentationModelling
          BorderStyle     =   1  'Fixed Single
          Height          =   255
          Left            =   120
-         TabIndex        =   49
+         TabIndex        =   51
          Top             =   1400
          Width           =   2655
       End
@@ -166,7 +166,7 @@ Begin VB.Form frmFragmentationModelling
          BorderStyle     =   1  'Fixed Single
          Height          =   615
          Left            =   120
-         TabIndex        =   48
+         TabIndex        =   50
          Top             =   440
          Width           =   2655
       End
@@ -174,7 +174,7 @@ Begin VB.Form frmFragmentationModelling
          BorderStyle     =   1  'Fixed Single
          Height          =   375
          Left            =   120
-         TabIndex        =   47
+         TabIndex        =   49
          Top             =   1040
          Width           =   2655
       End
@@ -182,7 +182,7 @@ Begin VB.Form frmFragmentationModelling
          BorderStyle     =   1  'Fixed Single
          Height          =   255
          Left            =   120
-         TabIndex        =   46
+         TabIndex        =   48
          Top             =   200
          Width           =   2655
       End
@@ -191,14 +191,14 @@ Begin VB.Form frmFragmentationModelling
       Caption         =   "Ion Match Options"
       Height          =   1935
       Left            =   60
-      TabIndex        =   29
+      TabIndex        =   31
       Tag             =   "12300"
-      Top             =   6360
+      Top             =   6480
       Width           =   3735
       Begin VB.TextBox txtAlignment 
          Height          =   285
          Left            =   2280
-         TabIndex        =   41
+         TabIndex        =   43
          Tag             =   "12060"
          Text            =   "0"
          Top             =   1560
@@ -208,7 +208,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "&Remove Precursor Ion"
          Height          =   255
          Left            =   120
-         TabIndex        =   30
+         TabIndex        =   32
          Tag             =   "12310"
          Top             =   240
          Value           =   1  'Checked
@@ -217,7 +217,7 @@ Begin VB.Form frmFragmentationModelling
       Begin VB.TextBox txtPrecursorMassWindow 
          Height          =   285
          Left            =   2280
-         TabIndex        =   35
+         TabIndex        =   37
          Text            =   "2"
          Top             =   840
          Width           =   735
@@ -225,7 +225,7 @@ Begin VB.Form frmFragmentationModelling
       Begin VB.TextBox txtIonMatchingWindow 
          Height          =   285
          Left            =   2280
-         TabIndex        =   38
+         TabIndex        =   40
          Text            =   ".5"
          Top             =   1200
          Width           =   735
@@ -233,7 +233,7 @@ Begin VB.Form frmFragmentationModelling
       Begin VB.TextBox txtPrecursorIonMass 
          Height          =   285
          Left            =   2280
-         TabIndex        =   32
+         TabIndex        =   34
          Text            =   "500"
          Top             =   500
          Width           =   735
@@ -242,7 +242,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "Alignment &Offset"
          Height          =   255
          Left            =   120
-         TabIndex        =   40
+         TabIndex        =   42
          Tag             =   "12355"
          Top             =   1580
          Width           =   2175
@@ -252,7 +252,7 @@ Begin VB.Form frmFragmentationModelling
          Height          =   255
          Index           =   3
          Left            =   3120
-         TabIndex        =   42
+         TabIndex        =   44
          Tag             =   "12350"
          Top             =   1580
          Width           =   495
@@ -262,7 +262,7 @@ Begin VB.Form frmFragmentationModelling
          Height          =   255
          Index           =   2
          Left            =   3120
-         TabIndex        =   39
+         TabIndex        =   41
          Tag             =   "12350"
          Top             =   1220
          Width           =   495
@@ -272,7 +272,7 @@ Begin VB.Form frmFragmentationModelling
          Height          =   255
          Index           =   1
          Left            =   3120
-         TabIndex        =   36
+         TabIndex        =   38
          Tag             =   "12350"
          Top             =   860
          Width           =   495
@@ -281,7 +281,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "Mass Window"
          Height          =   255
          Left            =   480
-         TabIndex        =   34
+         TabIndex        =   36
          Tag             =   "12330"
          Top             =   860
          Width           =   1815
@@ -291,7 +291,7 @@ Begin VB.Form frmFragmentationModelling
          Height          =   255
          Index           =   0
          Left            =   3120
-         TabIndex        =   33
+         TabIndex        =   35
          Tag             =   "12350"
          Top             =   520
          Width           =   495
@@ -300,7 +300,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "&Ion Matching Window"
          Height          =   255
          Left            =   120
-         TabIndex        =   37
+         TabIndex        =   39
          Tag             =   "12340"
          Top             =   1220
          Width           =   2175
@@ -309,7 +309,7 @@ Begin VB.Form frmFragmentationModelling
          Caption         =   "Ion Mass"
          Height          =   255
          Left            =   480
-         TabIndex        =   31
+         TabIndex        =   33
          Tag             =   "12320"
          Top             =   520
          Width           =   1695
@@ -317,40 +317,57 @@ Begin VB.Form frmFragmentationModelling
    End
    Begin VB.Frame fraCharge 
       Caption         =   "Charge Options"
-      Height          =   975
+      Height          =   1095
       Left            =   60
       TabIndex        =   25
       Tag             =   "12260"
       Top             =   5280
       Width           =   2415
-      Begin VB.CheckBox chkDoubleCharge 
-         Caption         =   "&2+ charged ions"
-         Height          =   255
-         Left            =   135
-         TabIndex        =   26
-         Tag             =   "12270"
-         Top             =   240
-         Width           =   2055
+      Begin VB.ComboBox cboTripleCharge 
+         Height          =   315
+         Left            =   1080
+         Style           =   2  'Dropdown List
+         TabIndex        =   30
+         ToolTipText     =   "The 2+ m/z value will be computed for ions above this m/z"
+         Top             =   720
+         Width           =   1215
       End
       Begin VB.ComboBox cboDoubleCharge 
          Height          =   315
-         Left            =   1215
+         Left            =   1080
          Style           =   2  'Dropdown List
          TabIndex        =   28
          Tag             =   "12285"
          ToolTipText     =   "The 2+ m/z value will be computed for ions above this m/z"
-         Top             =   600
-         Width           =   1095
+         Top             =   360
+         Width           =   1215
       End
-      Begin VB.Label lblDoubleCharge 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Threshold"
+      Begin VB.CheckBox chkTripleCharge 
+         Caption         =   "&3+ ions"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   29
+         Tag             =   "12272"
+         Top             =   720
+         Width           =   950
+      End
+      Begin VB.CheckBox chkDoubleCharge 
+         Caption         =   "&2+ ions"
          Height          =   255
          Left            =   120
          TabIndex        =   27
+         Tag             =   "12270"
+         Top             =   360
+         Width           =   950
+      End
+      Begin VB.Label lblChargeThreshold 
+         Caption         =   "Threshold"
+         Height          =   255
+         Left            =   1200
+         TabIndex        =   26
          Tag             =   "12280"
-         Top             =   600
-         Width           =   1020
+         Top             =   120
+         Width           =   1100
       End
    End
    Begin VB.Frame fraTerminii 
@@ -413,7 +430,7 @@ Begin VB.Form frmFragmentationModelling
          TabIndex        =   24
          Tag             =   "12255"
          Top             =   680
-         Width           =   1695
+         Width           =   1700
       End
       Begin VB.ListBox lstIonsToModify 
          Height          =   645
@@ -434,7 +451,7 @@ Begin VB.Form frmFragmentationModelling
          TabIndex        =   23
          Tag             =   "12250"
          Top             =   440
-         Width           =   1695
+         Width           =   1700
       End
       Begin VB.CheckBox chkWaterLoss 
          Caption         =   "Loss of H2O"
@@ -444,7 +461,7 @@ Begin VB.Form frmFragmentationModelling
          Tag             =   "12240"
          Top             =   200
          Value           =   1  'Checked
-         Width           =   1695
+         Width           =   1700
       End
    End
    Begin VB.Frame fraIonTypes 
@@ -490,8 +507,8 @@ Begin VB.Form frmFragmentationModelling
    End
    Begin MSFlexGridLib.MSFlexGrid grdFragMasses 
       Height          =   4455
-      Left            =   2640
-      TabIndex        =   43
+      Left            =   2520
+      TabIndex        =   45
       Top             =   1800
       Width           =   4335
       _ExtentX        =   7646
@@ -657,7 +674,7 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Const TOTAL_POSSIBLE_ION_TYPES = 3
-Private Const MAX_CHARGE_STATE = 2
+Private Const MAX_CHARGE_STATE = 3
 Private Const MAX_MODIFICATIONS = 6             ' Maximum number of modifications for a single residue
 Private Const SHOULDER_ION_PREFIX = "Shoulder-"
 
@@ -1627,7 +1644,8 @@ Private Sub EnableDisableControls()
     Dim boolRemovePrecursorIon As Boolean
     
     cboDoubleCharge.Enabled = cChkBox(chkDoubleCharge)
-    lblDoubleCharge.Enabled = cboDoubleCharge.Enabled
+    cboTripleCharge.Enabled = cChkBox(chkTripleCharge)
+    lblChargeThreshold.Enabled = cboDoubleCharge.Enabled Or cboTripleCharge.Enabled
     
     boolRemovePrecursorIon = cChkBox(chkRemovePrecursorIon)
     lblPrecursorIonMass.Enabled = boolRemovePrecursorIon
@@ -2840,11 +2858,20 @@ Private Sub PopulateComboBoxes()
     
     PopulateComboBox cboNotation, True, "1 letter notation|3 letter notation", 1
     
+    cboDoubleCharge.Clear
     With cboDoubleCharge
         For intIndex = 1 To 16
             .AddItem CIntSafeDbl((intIndex - 1) * 100)
         Next intIndex
         .ListIndex = 8
+    End With
+    
+    cboTripleCharge.Clear
+    With cboTripleCharge
+        For intIndex = 1 To cboDoubleCharge.ListCount
+            .AddItem cboDoubleCharge.List(intIndex - 1)
+        Next intIndex
+        .ListIndex = 9
     End With
     
     PopulateComboBox cboNTerminus, True, "H (hydrogen)|HH+ (protonated)|C2OH3 (acetyl)|C5O2NH6 (pyroglu)|CONH2 (carbamyl)|C7H6NS (PTC)|(none)", 0
@@ -3243,8 +3270,14 @@ On Error GoTo UpdateFragmentationSpectrumOptionsHandler
     With udtNewFragmentationSpectrumOptions
         intLastGoodLineNumber = 2578
         .DoubleChargeIonsShow = cChkBox(chkDoubleCharge)
+        .TripleChargeIonsShow = cChkBox(chkTripleCharge)
+        
         If cboDoubleCharge.ListIndex >= 0 And cboDoubleCharge.ListCount > 0 Then
             .DoubleChargeIonsThreshold = cboDoubleCharge.List(cboDoubleCharge.ListIndex)
+        End If
+        
+        If cboTripleCharge.ListIndex >= 0 And cboTripleCharge.ListCount > 0 Then
+            .TripleChargeIonsThreshold = cboTripleCharge.List(cboTripleCharge.ListIndex)
         End If
         
         intLastGoodLineNumber = 2584
@@ -3259,7 +3292,7 @@ On Error GoTo UpdateFragmentationSpectrumOptionsHandler
             .IonTypeOptions(intIonIndex).NeutralLossWater = blnModifyIon And cChkBox(chkWaterLoss)
             .IonTypeOptions(intIonIndex).NeutralLossAmmonia = blnModifyIon And cChkBox(chkAmmoniaLoss)
             .IonTypeOptions(intIonIndex).NeutralLossPhosphate = blnModifyIon And cChkBox(chkPhosphateLoss)
-
+        
         Next intIonIndex
     
         ' Note: A ions can have ammonia and phosphate loss, but not water loss, so always set this to false
@@ -3445,6 +3478,10 @@ Private Sub cboNTerminus_Click()
     UpdatePredictedFragMasses
 End Sub
 
+Private Sub cboTripleCharge_Click()
+    UpdatePredictedFragMasses
+End Sub
+
 Private Sub chkAmmoniaLoss_Click()
     UpdateMassesGridAndSpectrumWrapper
 End Sub
@@ -3461,6 +3498,11 @@ End Sub
 Private Sub chkRemovePrecursorIon_Click()
     EnableDisableControls
     UpdateIonMatchListWrapper
+End Sub
+
+Private Sub chkTripleCharge_Click()
+    EnableDisableControls
+    UpdateMassesGridAndSpectrumWrapper
 End Sub
 
 Private Sub chkWaterLoss_Click()

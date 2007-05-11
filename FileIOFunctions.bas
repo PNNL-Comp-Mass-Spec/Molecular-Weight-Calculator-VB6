@@ -1613,6 +1613,8 @@ On Error GoTo ParseFragModelSettingErrorHandler
     Case "FRAGMODELPHOSPHATELOSS": frmFragmentationModelling.chkPhosphateLoss = lngSettingInFile
     Case "FRAGMODELDOUBLECHARGE": frmFragmentationModelling.chkDoubleCharge = lngSettingInFile
     Case "FRAGMODELDOUBLECHARGETHRESHOLD": frmFragmentationModelling.cboDoubleCharge.ListIndex = lngSettingInFile
+    Case "FRAGMODELTRIPLECHARGE": frmFragmentationModelling.chkTripleCharge = lngSettingInFile
+    Case "FRAGMODELTRIPLECHARGETHRESHOLD": frmFragmentationModelling.cboTripleCharge.ListIndex = lngSettingInFile
     Case "FRAGMODELPRECURSORIONREMOVE": frmFragmentationModelling.chkRemovePrecursorIon = lngSettingInFile
     Case "FRAGMODELPRECURSORIONMASS": frmFragmentationModelling.txtPrecursorIonMass = strSettingInFile
     Case "FRAGMODELPRECURSORIONMASSWINDOW": frmFragmentationModelling.txtPrecursorMassWindow = strSettingInFile
@@ -2148,6 +2150,8 @@ On Error GoTo SaveSequenceInfoErrorHandler
         Print #SeqFileNum, "FragModelPhosphateLoss=" & CheckBoxToIntegerString(.chkPhosphateLoss)
         Print #SeqFileNum, "FragModelDoubleCharge=" & CheckBoxToIntegerString(.chkDoubleCharge)
         Print #SeqFileNum, "FragModelDoubleChargeThreshold=" & .cboDoubleCharge.ListIndex
+        Print #SeqFileNum, "FragModelTripleCharge=" & CheckBoxToIntegerString(.chkTripleCharge)
+        Print #SeqFileNum, "FragModelTripleChargeThreshold=" & .cboTripleCharge.ListIndex
         Print #SeqFileNum, "FragModelPrecursorIonRemove=" & CheckBoxToIntegerString(.chkRemovePrecursorIon)
         Print #SeqFileNum, "FragModelPrecursorIonMass=" & .txtPrecursorIonMass
         Print #SeqFileNum, "FragModelPrecursorIonMassWindow=" & .txtPrecursorMassWindow

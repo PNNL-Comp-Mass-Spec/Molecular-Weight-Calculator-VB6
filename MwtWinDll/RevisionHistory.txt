@@ -1,5 +1,10 @@
 MwtWin.Dll Change Log
 
+Future: Changed blnShowCharge() from type Integer to type Boolean in the GetFragmentationMasses() function
+
+Version 2.36, Build 70; February 23, 2007
+	 - Added option to include 3+ fragmentation ions in the GetFragmentationMasses() function
+
 Version 2.36, Build 67; November 5, 2006
 	- Updated ComputeIsotopicAbundancesInternal to properly interpret Charge state
 		- If intChargeState=0, then returns neutral masses

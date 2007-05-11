@@ -1,1 +1,1 @@
-"C:\Program Files\Microsoft Visual Studio\Common\IDE\IDE98\DEVENV.EXE" "D:\My Documents\Projects\DataMining\MwtWinDll\MwtWinDll_MergeModule\MwtWinDll_MergeModule.sln"
+"C:\Program Files\Microsoft Visual Studio\Common\IDE\IDE98\DEVENV.EXE" "D:\My Documents\Projects\DataMining\MwtWin\MwtWinDll\MwtWinDll_MergeModule\MwtWinDll_MergeModule.sln"

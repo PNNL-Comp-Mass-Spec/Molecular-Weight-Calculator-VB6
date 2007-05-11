@@ -1,4 +1,4 @@
-;       Values File for MWTWIN Program (v6.41)
+;       Values File for MWTWIN Program (v6.43)
 ;
 ; File Automatically Created -- Select Save Values and Formulas under the Options Menu
 ;
@@ -220,6 +220,8 @@ FragModelAmmoniaLoss=0
 FragModelPhosphateLoss=0
 FragModelDoubleCharge=0
 FragModelDoubleChargeThreshold=8
+FragModelTripleCharge=1
+FragModelTripleChargeThreshold=9
 FragModelPrecursorIonRemove=1
 FragModelPrecursorIonMass=300
 FragModelPrecursorIonMassWindow=2
