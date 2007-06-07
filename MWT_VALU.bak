@@ -1,9 +1,9 @@
-;       Values File for MWTWIN Program (v6.43)
+;       Values File for MWTWIN Program (v6.44)
 ;
 ; File Automatically Created -- Select Save Values and Formulas under the Options Menu
 ;
 Formula0=BrCH2(CH2)7CH2Br
-Formula1=FeCl3-6H2O
+Formula1=FeCl3-5.6H2O
 Formula2=Co(Bpy)(CO)4
 Formula3=H5C7NO
 Formula4=D2C2O

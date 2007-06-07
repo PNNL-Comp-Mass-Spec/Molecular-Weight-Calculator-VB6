@@ -1,5 +1,5 @@
 frmMain = 77, 74, 885, 585, C, 0, 0, 778, 399, C
-MwtWinProcedures = 83, 45, 472, 524, 
+MwtWinProcedures = 83, 45, 472, 524, Z
 frmAboutBox = 22, 22, 273, 284, C, 50, 10, 818, 658, C
 frmChangeFont = -77, 22, 565, 368, C, 0, 0, 318, 262, C
 frmChangeValue = 44, 44, 686, 390, C, 66, 66, 384, 328, C
@@ -20,7 +20,7 @@ frmIntro = 0, 0, 658, 368, C, 154, 154, 758, 509, C
 frmMMConvert = 0, 0, 652, 348, C, 81, 54, 685, 409, C
 modSharedVBRoutines = 25, 25, 705, 372, C
 frmSetValue = 88, 88, 799, 416, C, 88, 88, 778, 407, C
-frmFragmentationModelling = 69, 69, 366, 422, Z, -165, 120, 416, 486, C
+frmFragmentationModelling = 69, 69, 366, 422, , -165, 120, 416, 486, C
 frmIonMatchOptions = 57, 37, 486, 405, C, 548, 10, 983, 391, C
 frmFinder = 44, 44, 717, 414, C, 22, 22, 695, 392, C
 frmIsotopicDistribution = 110, 110, 510, 480, , 88, 88, 713, 458, C

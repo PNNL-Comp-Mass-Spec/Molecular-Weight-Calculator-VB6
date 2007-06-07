@@ -257,6 +257,7 @@ Begin VB.Form frmIsotopicDistribution
       _ExtentX        =   5318
       _ExtentY        =   873
       _Version        =   393217
+      Enabled         =   -1  'True
       MultiLine       =   0   'False
       TextRTF         =   $"frmIsotopicAbundance.frx":08CA
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -735,6 +736,9 @@ On Error GoTo PlotIsotopicDistributionErrorHandler
         End If
         
         .SetSpectrumFormCurrentSeriesNumber 1
+        
+        .SetCustomTicksXAxis 0, 0, True
+        .SetCustomTicksYAxis 0, 0, True
         
         .ShowSpectrum
     End With
