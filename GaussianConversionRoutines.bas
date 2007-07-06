@@ -90,7 +90,13 @@ On Error GoTo ConvertStickDataToGaussianErrorHandler
     ReDim XYSummation(XYSummationCountDimmed)
     
     ' Determine the data range for dblXVals() and dblYVals()
-    dblXValRange = dblXVals(lngDataCount - 1) - dblXVals(0)
+    If lngDataCount > 1 Then
+        dblXValRange = dblXVals(lngDataCount - 1) - dblXVals(0)
+    Else
+        dblXValRange = 1
+    End If
+    
+    If dblXValRange < 1 Then dblXValRange = 1
     
     If lngResolution < 1 Then lngResolution = 1
     If intQualityFactor < 1 Or intQualityFactor > 75 Then intQualityFactor = 50
