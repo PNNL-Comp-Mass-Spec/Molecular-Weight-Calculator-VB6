@@ -1,4 +1,4 @@
-;       Abbreviations File for MWTWIN program (v6.41)
+;       Abbreviations File for MWTWIN program (v6.45)
 ;
 ; Comments may be added by preceding with a semicolon
 ; Two group headings must exist: [AMINO ACIDS] and [ABBREVIATIONS]
@@ -60,6 +60,6 @@ Ox      C2O4                 -2                  ; Oxalate
 Ph      C6H5                 1                   ; Phenyl
 Phen    C12H8N2              0                   ; Phenanthroline
 Py      C5H5N                0                   ; Pyridine
-Tpp     (C4H2N(C6H5C)C4H2N(C6H5C))2   0          ; Tetraphenylporphyrin, mw 612.733
+Tpp     (C4H2N(C6H5C)C4H2N(C6H5C))2   0          ; Tetraphenylporphyrin
 Ts      CH3C6H4SOO           -1                  ; Tosyl
 Urea    H2NCONH2             0                   ; Urea
