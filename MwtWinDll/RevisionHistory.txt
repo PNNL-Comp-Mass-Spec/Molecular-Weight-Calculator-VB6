@@ -1,6 +1,8 @@
 MwtWin.Dll Change Log
 
-Future: Changed blnShowCharge() from type Integer to type Boolean in the GetFragmentationMasses() function
+Version 2.37, Build 74
+	- Added support for c and z ions in function GetFragmentationMasses()
+	- Changed blnShowCharge() from type Integer to type Boolean in the GetFragmentationMasses() function
 
 Version 2.36, Build 70; February 23, 2007
 	 - Added option to include 3+ fragmentation ions in the GetFragmentationMasses() function

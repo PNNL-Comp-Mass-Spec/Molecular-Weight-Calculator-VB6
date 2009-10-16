@@ -23,7 +23,7 @@ Option Explicit
 '
 ' Project started: November 12, 2002
 
-Private Const PROGRAM_DATE = "February 23, 2007"
+Private Const PROGRAM_DATE = "October 16, 2009"
 Private Const PROGRAM_VERSION = "2.37"
 
 ' Duplicate of enum statements in ElementAndMassRoutines.bas
