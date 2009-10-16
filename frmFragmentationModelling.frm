@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFlxGrd.ocx"
 Begin VB.Form frmFragmentationModelling 
    Caption         =   "Peptide Sequence Fragmentation Modelling"
    ClientHeight    =   8640
@@ -426,42 +426,42 @@ Begin VB.Form frmFragmentationModelling
       Begin VB.CheckBox chkPhosphateLoss 
          Caption         =   "Loss of PO4"
          Height          =   255
-         Left            =   600
+         Left            =   840
          TabIndex        =   24
          Tag             =   "12255"
          Top             =   680
-         Width           =   1700
+         Width           =   1500
       End
       Begin VB.ListBox lstIonsToModify 
          Height          =   645
          ItemData        =   "frmFragmentationModelling.frx":08CA
          Left            =   120
-         List            =   "frmFragmentationModelling.frx":08D7
+         List            =   "frmFragmentationModelling.frx":08DD
          MultiSelect     =   1  'Simple
          TabIndex        =   21
          Tag             =   "12235"
          ToolTipText     =   "Choose ions to which losses will be applied"
          Top             =   240
-         Width           =   375
+         Width           =   550
       End
       Begin VB.CheckBox chkAmmoniaLoss 
          Caption         =   "Loss of NH3"
          Height          =   255
-         Left            =   600
+         Left            =   840
          TabIndex        =   23
          Tag             =   "12250"
          Top             =   440
-         Width           =   1700
+         Width           =   1500
       End
       Begin VB.CheckBox chkWaterLoss 
          Caption         =   "Loss of H2O"
          Height          =   255
-         Left            =   600
+         Left            =   840
          TabIndex        =   22
          Tag             =   "12240"
          Top             =   200
          Value           =   1  'Checked
-         Width           =   1700
+         Width           =   1500
       End
    End
    Begin VB.Frame fraIonTypes 
@@ -473,6 +473,26 @@ Begin VB.Form frmFragmentationModelling
       Top             =   3000
       Width           =   2415
       Begin VB.CheckBox chkIonType 
+         Caption         =   "C Ions"
+         Height          =   255
+         Index           =   3
+         Left            =   1200
+         TabIndex        =   58
+         Tag             =   "12215"
+         Top             =   480
+         Width           =   1000
+      End
+      Begin VB.CheckBox chkIonType 
+         Caption         =   "Z Ions"
+         Height          =   255
+         Index           =   4
+         Left            =   1200
+         TabIndex        =   57
+         Tag             =   "12220"
+         Top             =   720
+         Width           =   1000
+      End
+      Begin VB.CheckBox chkIonType 
          Caption         =   "&Y Ions"
          Height          =   255
          Index           =   2
@@ -481,7 +501,7 @@ Begin VB.Form frmFragmentationModelling
          Tag             =   "12220"
          Top             =   720
          Value           =   1  'Checked
-         Width           =   2130
+         Width           =   1000
       End
       Begin VB.CheckBox chkIonType 
          Caption         =   "&B Ions"
@@ -492,7 +512,7 @@ Begin VB.Form frmFragmentationModelling
          Tag             =   "12215"
          Top             =   480
          Value           =   1  'Checked
-         Width           =   2175
+         Width           =   1000
       End
       Begin VB.CheckBox chkIonType 
          Caption         =   "&A Ions"
@@ -502,7 +522,7 @@ Begin VB.Form frmFragmentationModelling
          TabIndex        =   17
          Tag             =   "12210"
          Top             =   240
-         Width           =   2175
+         Width           =   1000
       End
    End
    Begin MSFlexGridLib.MSFlexGrid grdFragMasses 
@@ -673,7 +693,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Private Const TOTAL_POSSIBLE_ION_TYPES = 3
+Private Const TOTAL_POSSIBLE_ION_TYPES = 5
 Private Const MAX_CHARGE_STATE = 3
 Private Const MAX_MODIFICATIONS = 6             ' Maximum number of modifications for a single residue
 Private Const SHOULDER_ION_PREFIX = "Shoulder-"
@@ -685,6 +705,8 @@ Private Const MAX_SERIES_COUNT = 32
 'Const itAIon = 0
 'Const itBIon = 1
 'Const itYIon = 2
+'Const itCIon = 3
+'Const itZIon = 4
 
 Private Const MAX_BIN_COUNT = 50000
 Private Const ION_SEPARATION_TOLERANCE_TO_AUTO_ENABLE_BINNING = 0.2
@@ -1781,6 +1803,9 @@ Private Function InitializeFragMassGrid(strColumnHeaders() As String, lngColCoun
     Dim blnMatched As Boolean, blnSeqColumnAdded As Boolean
         
     Dim strYIonSymbol As String
+    Dim strZIonSymbol As String
+    Dim strFirstChar As String
+    
     Dim strColumnHeadersToAdd() As String
     Dim lngColHeadersToAddCount As Long
     Dim lngColHeadersToAddDimCount As Long
@@ -1830,16 +1855,18 @@ On Error GoTo InitializeFragMassGridErrorHandler
     lngColumnWidths(1) = 700
     
     strYIonSymbol = objMwtWin.Peptide.LookupIonTypeString(itYIon)
+    strZIonSymbol = objMwtWin.Peptide.LookupIonTypeString(itZIon)
     
     If lngColHeadersToAddCount > 0 Then
-        ' Sort strColumnHeadersToAdd() alphabetically (a, b, then y)
+        ' Sort strColumnHeadersToAdd() alphabetically (a, b, y, c, or z)
         ShellSortString strColumnHeadersToAdd(), 0, lngColHeadersToAddCount - 1
     
         ' Append the items in strColumnHeadersToAdd() to strColumnHeaders
         For lngColIndex = 0 To lngColHeadersToAddCount - 1
             If lngColIndex < lngColHeadersToAddCount And Not blnSeqColumnAdded Then
-                ' Check if this column is the first y-ion column
-                If Left(strColumnHeadersToAdd(lngColIndex), 1) = strYIonSymbol Then
+                ' Check if this column is the first y-ion or z-ion column
+                strFirstChar = Left(strColumnHeadersToAdd(lngColIndex), 1)
+                If strFirstChar = strYIonSymbol Or strFirstChar = strZIonSymbol Then
                     strColumnHeaders(lngColCount) = LookupLanguageCaption(12520, "Seq.")
                     lngSeqColIndex = lngColCount
                     lngColCount = lngColCount + 1
@@ -2364,8 +2391,8 @@ Private Sub MatchIons()
     Next lngIonIndex
             
     ' Now examine udtResidueMatched() to determine dblBeta
-    ' Beta is incremented by 0.075 for each successive b, b++, y, or y++ ion
-    For eIonType = itBIon To itYIon
+    ' Beta is incremented by 0.075 for each successive b, b++, y, y++, c, c++, z, or z++ ion
+    For eIonType = itBIon To itZIon
         For intChargeIndex = 1 To 2
             For lngResidueIndex = 0 To lngResidueCount - 2
                 If udtResidueMatched(lngResidueIndex).IonHit(eIonType, intChargeIndex) Then
@@ -2883,6 +2910,8 @@ Private Sub PopulateComboBoxes()
         .AddItem UCase(LookupLanguageCaption(12600, "a"))
         .AddItem UCase(LookupLanguageCaption(12610, "b"))
         .AddItem UCase(LookupLanguageCaption(12620, "y"))
+        .AddItem UCase(LookupLanguageCaption(12630, "c"))
+        .AddItem UCase(LookupLanguageCaption(12640, "z"))
         .Selected(0) = False
         .Selected(1) = True
         .Selected(2) = True
@@ -3327,6 +3356,7 @@ On Error GoTo UpdateFragmentationSpectrumOptionsHandler
     Exit Sub
     
 UpdateFragmentationSpectrumOptionsHandler:
+Resume
     GeneralErrorHandler "frmFragmentationModelling|UpdateFragmentationSpectrumOptions", Err.Number, "Last good line number = " & Trim(intLastGoodLineNumber) & vbCrLf & Err.Description
     
 End Sub
@@ -3540,6 +3570,7 @@ Private Sub Form_Activate()
     
     If lclFragMatchSettingsChanged And IonMatchListCount > 0 Then
         ' Does this code ever get reached?
+        ' Yes, if no ion types are selected, then this code could be encountered
         Debug.Assert False
         UpdateIonMatchListWrapper
     End If
@@ -3554,17 +3585,25 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub Form_Load()
-
+    Dim strCurrentTask As String
+    
 On Error GoTo FormLoadErrorHandler
 
+    strCurrentTask = "Loading frmFragmentationModelling"
+    
     If objSpectrum Is Nothing Then
+        strCurrentTask = "Instantiating CWSpectrumDLL.Spectrum on frmFragmentationModelling"
         Set objSpectrum = New CWSpectrumDLL.Spectrum
     End If
+    
+    strCurrentTask = "Initializing objSpectrum on frmFragmentationModelling"
     With objSpectrum
         .SetSeriesCount 2
         .SetSeriesPlotMode 1, pmStickToZero, True
     End With
     mNeedToZoomOutFull = True
+    
+    strCurrentTask = "Initializing frmFragmentationModelling"
     
     SetDtaTxtFileBrowserMenuVisibility False
     SetIonMatchListVisibility False
@@ -3587,7 +3626,7 @@ On Error GoTo FormLoadErrorHandler
     Exit Sub
 
 FormLoadErrorHandler:
-    GeneralErrorHandler "frmFragmentationModelling|Form_Load", Err.Number, Err.Description
+    GeneralErrorHandler "frmFragmentationModelling|Form_Load", Err.Number, "Error " & strCurrentTask & ": " & Err.Description
     
 End Sub
 

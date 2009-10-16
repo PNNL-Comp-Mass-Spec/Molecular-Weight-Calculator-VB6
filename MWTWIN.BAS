@@ -29,8 +29,8 @@ Option Explicit
 '   version 6.35
 
 ' *** Be sure to update version in Project | Properties also ***
-Public Const PROGRAM_VERSION = "6.45"
-Public Const PROGRAM_DATE = "July 6, 2007"
+Public Const PROGRAM_VERSION = "6.46"
+Public Const PROGRAM_DATE = "October 17, 2009"
 ' ***
 
 '
@@ -2834,9 +2834,13 @@ On Error GoTo SetDefaultValuesAndFormulasErrorHandler
         SetCheckBox .chkIonType(0), False
         SetCheckBox .chkIonType(1), True
         SetCheckBox .chkIonType(2), True
+        SetCheckBox .chkIonType(3), False
+        SetCheckBox .chkIonType(4), False
         .lstIonsToModify.Selected(0) = False
         .lstIonsToModify.Selected(1) = True
         .lstIonsToModify.Selected(2) = True
+        .lstIonsToModify.Selected(3) = False
+        .lstIonsToModify.Selected(4) = False
         SetCheckBox .chkWaterLoss, True
         SetCheckBox .chkAmmoniaLoss, False
         SetCheckBox .chkPhosphateLoss, False

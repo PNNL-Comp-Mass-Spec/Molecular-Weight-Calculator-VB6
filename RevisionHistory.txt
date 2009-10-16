@@ -508,3 +508,6 @@ Revision 6.44 - June 1, 2007
 
 Revision 6.45 - July 6, 2007
 	- Fixed bug in the Isotopic Distribution Modeler that caused the program to lock up (due to an infinite loop) when plotting the distribution for elements with only one known isotope (e.g. Co or P)
+
+Revision 6.46 - October 16, 2009
+	- Added support for c and z ions on Peptide Sequence Fragmentation Modelling window

@@ -1605,6 +1605,8 @@ On Error GoTo ParseFragModelSettingErrorHandler
     Case "FRAGMODELIONTYPE0":  frmFragmentationModelling.chkIonType(0) = lngSettingInFile
     Case "FRAGMODELIONTYPE1": frmFragmentationModelling.chkIonType(1) = lngSettingInFile
     Case "FRAGMODELIONTYPE2": frmFragmentationModelling.chkIonType(2) = lngSettingInFile
+    Case "FRAGMODELIONTYPE3": frmFragmentationModelling.chkIonType(3) = lngSettingInFile
+    Case "FRAGMODELIONTYPE4": frmFragmentationModelling.chkIonType(4) = lngSettingInFile
     Case "FRAGMODELIONSTOMODIFY0": frmFragmentationModelling.lstIonsToModify.Selected(0) = lngSettingInFile
     Case "FRAGMODELIONSTOMODIFY1": frmFragmentationModelling.lstIonsToModify.Selected(1) = lngSettingInFile
     Case "FRAGMODELIONSTOMODIFY2": frmFragmentationModelling.lstIonsToModify.Selected(2) = lngSettingInFile
@@ -2142,6 +2144,8 @@ On Error GoTo SaveSequenceInfoErrorHandler
         Print #SeqFileNum, "FragModelIonType0=" & CheckBoxToIntegerString(.chkIonType(0))
         Print #SeqFileNum, "FragModelIonType1=" & CheckBoxToIntegerString(.chkIonType(1))
         Print #SeqFileNum, "FragModelIonType2=" & CheckBoxToIntegerString(.chkIonType(2))
+        Print #SeqFileNum, "FragModelIonType3=" & CheckBoxToIntegerString(.chkIonType(3))
+        Print #SeqFileNum, "FragModelIonType4=" & CheckBoxToIntegerString(.chkIonType(4))
         Print #SeqFileNum, "FragModelIonsToModify0=" & Abs(CIntSafe(.lstIonsToModify.Selected(0)))
         Print #SeqFileNum, "FragModelIonsToModify1=" & Abs(CIntSafe(.lstIonsToModify.Selected(1)))
         Print #SeqFileNum, "FragModelIonsToModify2=" & Abs(CIntSafe(.lstIonsToModify.Selected(2)))

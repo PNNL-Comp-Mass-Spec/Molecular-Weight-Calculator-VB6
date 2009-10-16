@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form frmIonMatchOptions 
    BorderStyle     =   3  'Fixed Dialog
    Caption         =   "Ion Matching Options"
-   ClientHeight    =   6960
+   ClientHeight    =   7155
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   8250
@@ -11,7 +11,7 @@ Begin VB.Form frmIonMatchOptions
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   6960
+   ScaleHeight     =   7155
    ScaleWidth      =   8250
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
@@ -100,7 +100,7 @@ Begin VB.Form frmIonMatchOptions
       Left            =   120
       TabIndex        =   22
       Tag             =   "14200"
-      Top             =   4920
+      Top             =   5280
       Width           =   3735
       Begin VB.CheckBox chkFragSpecEmphasizeProlineYIons 
          Caption         =   "Emphasize Proline y ions"
@@ -137,7 +137,7 @@ Begin VB.Form frmIonMatchOptions
       Left            =   480
       TabIndex        =   34
       Tag             =   "14010"
-      Top             =   6120
+      Top             =   6480
       Width           =   1275
    End
    Begin VB.CommandButton cmdOK 
@@ -147,7 +147,7 @@ Begin VB.Form frmIonMatchOptions
       Left            =   2160
       TabIndex        =   35
       Tag             =   "4000"
-      Top             =   6120
+      Top             =   6480
       Width           =   1155
    End
    Begin VB.Frame fraNormalization 
@@ -247,7 +247,7 @@ Begin VB.Form frmIonMatchOptions
    End
    Begin VB.Frame fraIonIntensities 
       Caption         =   "Ion Intensities of Predicted Ions"
-      Height          =   2295
+      Height          =   2655
       Left            =   120
       TabIndex        =   11
       Tag             =   "14150"
@@ -255,11 +255,29 @@ Begin VB.Form frmIonMatchOptions
       Width           =   3735
       Begin VB.TextBox txtIonIntensity 
          Height          =   285
+         Index           =   4
+         Left            =   2760
+         TabIndex        =   39
+         Text            =   "50"
+         Top             =   1600
+         Width           =   800
+      End
+      Begin VB.TextBox txtIonIntensity 
+         Height          =   285
+         Index           =   3
+         Left            =   2760
+         TabIndex        =   38
+         Text            =   "50"
+         Top             =   1275
+         Width           =   800
+      End
+      Begin VB.TextBox txtIonIntensity 
+         Height          =   285
          Index           =   0
          Left            =   2760
          TabIndex        =   13
          Text            =   "10"
-         Top             =   360
+         Top             =   300
          Width           =   800
       End
       Begin VB.TextBox txtNeutralLosses 
@@ -267,7 +285,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   2760
          TabIndex        =   21
          Text            =   "10"
-         Top             =   1800
+         Top             =   2250
          Width           =   800
       End
       Begin VB.TextBox txtBYIonShoulders 
@@ -275,7 +293,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   2760
          TabIndex        =   19
          Text            =   "25"
-         Top             =   1440
+         Top             =   1925
          Width           =   800
       End
       Begin VB.TextBox txtIonIntensity 
@@ -284,7 +302,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   2760
          TabIndex        =   17
          Text            =   "50"
-         Top             =   1080
+         Top             =   950
          Width           =   800
       End
       Begin VB.TextBox txtIonIntensity 
@@ -293,8 +311,28 @@ Begin VB.Form frmIonMatchOptions
          Left            =   2760
          TabIndex        =   15
          Text            =   "50"
-         Top             =   720
+         Top             =   625
          Width           =   800
+      End
+      Begin VB.Label lblIonIntensity 
+         Caption         =   "Z Ion Intensity"
+         Height          =   255
+         Index           =   4
+         Left            =   120
+         TabIndex        =   41
+         Tag             =   "14170"
+         Top             =   1600
+         Width           =   2655
+      End
+      Begin VB.Label lblIonIntensity 
+         Caption         =   "C Ion Intensity"
+         Height          =   255
+         Index           =   3
+         Left            =   120
+         TabIndex        =   40
+         Tag             =   "14170"
+         Top             =   1275
+         Width           =   2655
       End
       Begin VB.Label lblIonIntensity 
          Caption         =   "A Ion Intensity"
@@ -303,7 +341,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   120
          TabIndex        =   12
          Tag             =   "14160"
-         Top             =   360
+         Top             =   300
          Width           =   2660
       End
       Begin VB.Label lblNeutralLosses 
@@ -312,8 +350,8 @@ Begin VB.Form frmIonMatchOptions
          Left            =   120
          TabIndex        =   20
          Tag             =   "14190"
-         Top             =   1800
-         Width           =   2660
+         Top             =   2250
+         Width           =   2655
       End
       Begin VB.Label lblBYIonShoulders 
          Caption         =   "B/Y Ion shoulders"
@@ -321,8 +359,8 @@ Begin VB.Form frmIonMatchOptions
          Left            =   120
          TabIndex        =   18
          Tag             =   "14180"
-         Top             =   1440
-         Width           =   2660
+         Top             =   1925
+         Width           =   2655
       End
       Begin VB.Label lblIonIntensity 
          Caption         =   "Y Ion Intensity"
@@ -331,7 +369,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   120
          TabIndex        =   16
          Tag             =   "14170"
-         Top             =   1080
+         Top             =   950
          Width           =   2660
       End
       Begin VB.Label lblIonIntensity 
@@ -341,7 +379,7 @@ Begin VB.Form frmIonMatchOptions
          Left            =   120
          TabIndex        =   14
          Tag             =   "14165"
-         Top             =   720
+         Top             =   625
          Width           =   2660
       End
    End
@@ -484,7 +522,7 @@ Private Sub Form_Load()
     
     On Error GoTo IonMatchOptionsErrorHandler
 
-    SizeAndCenterWindow Me, cWindowTopCenter, 8350, 7360
+    SizeAndCenterWindow Me, cWindowTopCenter, 8350, 7635
     
     EnableDisableControls
     
