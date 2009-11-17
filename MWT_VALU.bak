@@ -1,4 +1,4 @@
-;       Values File for MWTWIN Program (v6.46)
+;       Values File for MWTWIN Program (v6.47)
 ;
 ; File Automatically Created -- Select Save Values and Formulas under the Options Menu
 ;
@@ -21,16 +21,16 @@ Mole/MassDensity=1
 Mole/MassToUnits=8
 Mole/MassVolume=100
 Mole/MassVolumeUnits=2
-Mole/MassMolarity=1
+Mole/MassMolarity=10.0
 Mole/MassMolarityUnits=0
 Mole/MassDilutionMode=0
 Mole/MassMolarityInitial=10
 Mole/MassMolarityInitialUnits=0
-Mole/MassVolumeInitial=3
+Mole/MassVolumeInitial=3.0
 Mole/MassVolumeInitialUnits=2
 Mole/MassMolarityFinal=2
 Mole/MassMolarityFinalUnits=0
-Mole/MassVolumeSolvent=12
+Mole/MassVolumeSolvent=12.0
 Mole/MassVolumeSolventUnits=2
 Mole/MassVolumeTotal=15
 Mole/MassVolumeTotalUnits=2
@@ -205,8 +205,8 @@ FragModelModificationSymbol7=$,227.127,False,Cleavable ICAT [(^12C10)H17N3O3]
 FragModelModificationSymbol8=%,236.127,False,Cleavable ICAT [(^13C9)(^12C)H17N3O3]
 FragModelModificationSymbol9=~,442.225,False,ICAT D0 [C20H34N4O5S]
 FragModelModificationSymbol10=`,450.274,False,ICAT D8 [C20H26D8N4O5S]
-FragModelNotationMode=1
-FragModelSequence=Arg-His-Pro-Glu-Tyr-Ala-Val
+FragModelNotationMode=0
+FragModelSequence=TGMLTQKFARSLGMLAVDNQARV
 FragModelNTerminus=0
 FragModelCTerminus=0
 FragModelIonType0=0
@@ -367,72 +367,6 @@ FragModelIonMatchList=118
 FragModelIonMatchListEnd
 FragModelIonMatchListCaption=QC_Shew_08_04_pt5_: Scan 367-368
 FragModelIonAlignment=0
-[PlotOptions_Series1]
-SeriesPlotMode=1
-SeriesLineStyle=0
-SeriesLineWidth=1
-SeriesLineColor=255
-SeriesLineToBaseColor=255
-SeriesBarFillColor=255
-SeriesPointStyle=0
-SeriesPointColor=255
-AnnotationFontName=Arial
-AnnotationFontSize=10
-AnnotationFontColor=0
-[PlotOptions_Series2]
-SeriesPlotMode=1
-SeriesLineStyle=0
-SeriesLineWidth=1
-SeriesLineColor=40960
-SeriesLineToBaseColor=40960
-SeriesBarFillColor=40960
-SeriesPointStyle=0
-SeriesPointColor=40960
-AnnotationFontName=Arial
-AnnotationFontSize=10
-AnnotationFontColor=0
-[GlobalPlotOptions]
-Title=
-Subtitle=
-XAxis=
-YAxis=
-LabelFontName=Arial
-LabelFontSize=Arial
-LabelFontColor=0
-PlotBackgroundColor=16777215
-NormalizeOnLoadOrPaste=True
-NormalizationConstant=100
-GridLinesXColorMajor=0
-GridLinesXColorMinor=8421504
-GridLinesYColorMajor=0
-GridLinesYColorMinor=8421504
-GridLinesXVisibleMajor=False
-GridLinesXVisibleMinor=False
-GridLinesYVisibleMajor=False
-GridLinesYVisibleMinor=False
-AnnotationDensityAutoHideCaptions=True
-AnnotationDensityToleranceAutoAdjust=True
-AnnotationDensityToleranceX=0.562291337199086
-AnnotationDensityToleranceY=0.5420054200542
-AutoScaleVisibleY=False
-FixMinimumYAtZero=False
-AutoAdjustScalingToIncludeCaptions=True
-PrecisionX=2
-PrecisionY=1
-CursorVisible=True
-CursorSnapToData=False
-CursorColor=0
-CursorPositionX=0
-CursorPositionY=0
-AutoLabelPeaksDisplayXPosition=True
-AutoLabelPeaksDisplayYPosition=False
-AutoLabelPeaksIncludeArrow=False
-AutoLabelPeaksHideInDenseRegions=True
-AutoLabelPeaksCaptionAngle=0
-AutoLabelPeaksIntensityThresholdMinimum=10
-AutoLabelPeaksMinimumIntensityPercentageOfMaximum=0
-AutoLabelPeaksPeakWidthMinimumPoints=5
-AutoLabelPeaksLabelCountMaximum=100
 [PlotOptions_Series1]
 SeriesPlotMode=1
 SeriesLineStyle=0

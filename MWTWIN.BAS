@@ -29,8 +29,8 @@ Option Explicit
 '   version 6.35
 
 ' *** Be sure to update version in Project | Properties also ***
-Public Const PROGRAM_VERSION = "6.46"
-Public Const PROGRAM_DATE = "October 17, 2009"
+Public Const PROGRAM_VERSION = "6.47"
+Public Const PROGRAM_DATE = "October 26, 2009"
 ' ***
 
 '
@@ -1426,15 +1426,15 @@ Public Sub DisplayCurrentFormulaOnSubForm(frmThisForm As VB.Form)
     With frmThisForm
         .lblFormula.Caption = LookupLanguageCaption(7460, "Current formula is") & ":"
         .rtfCurrentFormula.TextRTF = frmMain.rtfFormula(frmMain.GetCurrentFormulaIndex).TextRTF
-        .lblMWTValue.Caption = frmMain.txtMWT(frmMain.GetCurrentFormulaIndex).Text
-        intEqualLoc = InStr(.lblMWTValue.Caption, "=")
+        .txtMWTValue.Text = frmMain.txtMWT(frmMain.GetCurrentFormulaIndex).Text
+        intEqualLoc = InStr(.txtMWTValue.Text, "=")
         If intEqualLoc > 0 Then
-            .lblMWTValue.Caption = Mid(.lblMWTValue.Caption, intEqualLoc + 1)
-            intEqualLoc = InStr(.lblMWTValue.Caption, "(")
+            .txtMWTValue.Text = Mid(.txtMWTValue.Text, intEqualLoc + 1)
+            intEqualLoc = InStr(.txtMWTValue.Text, "(")
             If intEqualLoc > 0 Then
-                .lblMWTValue.Caption = Left(.lblMWTValue.Caption, intEqualLoc - 1)
+                .txtMWTValue.Text = Left(.txtMWTValue.Text, intEqualLoc - 1)
             End If
-            .lblMWTValue.Caption = CStr(CDblSafe(.lblMWTValue.Caption))
+            .txtMWTValue.Text = CStr(CDblSafe(.txtMWTValue.Text))
         End If
         .lblMWT = LookupLanguageCaption(4040, "MW") & " = "
     End With
@@ -3019,7 +3019,7 @@ Public Sub ShowHideMassInputControlsGlobal(frmThisForm As VB.Form)
         .lblFormula.Visible = Not blnCustomVisible
         .rtfCurrentFormula.Visible = Not blnCustomVisible
         .lblMWT.Visible = Not blnCustomVisible
-        .lblMWTValue.Visible = Not blnCustomVisible
+        .txtMWTValue.Visible = Not blnCustomVisible
         
         .lblCustomMass.Visible = blnCustomVisible
         .txtCustomMass.Visible = blnCustomVisible

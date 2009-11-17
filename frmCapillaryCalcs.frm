@@ -74,7 +74,7 @@ Begin VB.Form frmCapillaryCalcs
          Index           =   18
          Left            =   9240
          Style           =   2  'Dropdown List
-         TabIndex        =   94
+         TabIndex        =   93
          Tag             =   "7070"
          Top             =   2040
          Width           =   1095
@@ -93,7 +93,7 @@ Begin VB.Form frmCapillaryCalcs
          Index           =   17
          Left            =   3720
          Style           =   2  'Dropdown List
-         TabIndex        =   93
+         TabIndex        =   92
          Tag             =   "7070"
          Top             =   2040
          Width           =   1095
@@ -221,6 +221,7 @@ Begin VB.Form frmCapillaryCalcs
          _Version        =   393217
          BackColor       =   -2147483633
          BorderStyle     =   0
+         Enabled         =   -1  'True
          Appearance      =   0
          TextRTF         =   $"frmCapillaryCalcs.frx":08CA
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -337,6 +338,7 @@ Begin VB.Form frmCapillaryCalcs
          _Version        =   393217
          BackColor       =   -2147483633
          BorderStyle     =   0
+         Enabled         =   -1  'True
          Appearance      =   0
          TextRTF         =   $"frmCapillaryCalcs.frx":093D
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -1393,6 +1395,26 @@ Begin VB.Form frmCapillaryCalcs
       TabIndex        =   83
       Top             =   5040
       Width           =   5655
+      Begin VB.TextBox txtMWTValue 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   720
+         Locked          =   -1  'True
+         TabIndex        =   94
+         Tag             =   "7600"
+         Text            =   "100"
+         ToolTipText     =   "Enter custom numerical mass for use in computations"
+         Top             =   1200
+         Width           =   1215
+      End
       Begin VB.OptionButton optWeightSource 
          Caption         =   "&Use mass of compound in current formula"
          BeginProperty Font 
@@ -1467,23 +1489,6 @@ Begin VB.Form frmCapillaryCalcs
          MultiLine       =   0   'False
          Appearance      =   0
          TextRTF         =   $"frmCapillaryCalcs.frx":0A26
-      End
-      Begin VB.Label lblMWTValue 
-         Caption         =   "1"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   960
-         TabIndex        =   92
-         Top             =   1200
-         Width           =   1455
       End
       Begin VB.Label lblCustomMassUnits 
          Caption         =   "g/mole"
@@ -2050,10 +2055,10 @@ Private Sub FindOptimumLinearVelocity()
     
 End Sub
 
-' Purpose: Get working mass from lblMwtValue or txtCustomMass
+' Purpose: Get working mass from txtMWTValue or txtCustomMass
 Private Function GetWorkingMass() As Double
     If eMassMode = 0 Then
-        GetWorkingMass = CDblSafe(lblMWTValue.Caption)
+        GetWorkingMass = CDblSafe(txtMWTValue.Text)
     Else
         GetWorkingMass = CDblSafe(txtCustomMass.Text)
     End If
@@ -2448,9 +2453,9 @@ Private Sub PositionFormControls()
         lblBdPercentVarianceIncrease.Top = lblBdPercentVarianceIncreaseLabel.Top
         lblBdPercentVarianceIncrease.Left = lblBdTemporalVariance.Left
         
-    fraWeightSource.Top = fraMassRate.Top + fraMassRate.Height + 100
-    fraWeightSource.Left = 600
-    PositionWeightSourceframeControls Me
+        fraWeightSource.Top = fraMassRate.Top + fraMassRate.Height + 100
+        fraWeightSource.Left = 600
+        PositionWeightSourceframeControls Me
 
 End Sub
 
@@ -2463,7 +2468,7 @@ Private Sub ResizeCapillaryCalcsForm(boolResizeToDefaultHeight As Boolean)
     Else
         If cboCapValue(cccMassRateConcentrationUnits).ListIndex >= cConcentrationUnitsFirstWeightIndex Then
             ' Weight-based mass rate units
-            lngHeightToSet = CAPILLARY_CALCS_FORM_INITIAL_HEIGHT + 1400
+            lngHeightToSet = CAPILLARY_CALCS_FORM_INITIAL_HEIGHT + 1600
         Else
             ' Mole-based mass rate units
             lngHeightToSet = CAPILLARY_CALCS_FORM_INITIAL_HEIGHT
@@ -2538,7 +2543,7 @@ Private Sub ShowHideBroadeningFrame()
 
 End Sub
 
-' Purpose: Displays fraWeightSource if the concentration units involve mass (e.g. g
+' Purpose: Displays fraWeightSource if the concentration units involve mass (for example, g)
 Private Sub ShowHideWeightSource()
     If cboCapValue(cccMassRateConcentrationUnits).ListIndex >= cConcentrationUnitsFirstWeightIndex And _
         fraBroadening.Visible = False Then

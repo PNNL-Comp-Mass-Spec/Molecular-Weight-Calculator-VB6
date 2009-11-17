@@ -2,23 +2,197 @@ VERSION 5.00
 Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "richtx32.ocx"
 Begin VB.Form frmMMConvert 
    Caption         =   "Mole/Mass Converter and Dilution Calculator"
-   ClientHeight    =   5145
+   ClientHeight    =   6660
    ClientLeft      =   540
    ClientTop       =   1395
-   ClientWidth     =   10470
+   ClientWidth     =   10515
    ForeColor       =   &H80000008&
    HelpContextID   =   3040
    Icon            =   "MMCONV.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   5145
-   ScaleWidth      =   10470
+   ScaleHeight     =   6660
+   ScaleWidth      =   10515
    Tag             =   "11000"
+   Begin VB.Frame fraMZConversion 
+      Height          =   1770
+      Left            =   120
+      TabIndex        =   13
+      Tag             =   "12410"
+      Top             =   4750
+      Width           =   6315
+      Begin VB.TextBox txtMZHighAlt 
+         Height          =   315
+         Left            =   5040
+         Locked          =   -1  'True
+         TabIndex        =   31
+         Tag             =   "11100"
+         Text            =   "100"
+         Top             =   1320
+         Width           =   1095
+      End
+      Begin VB.TextBox txtMZLowAlt 
+         Height          =   315
+         Left            =   3840
+         Locked          =   -1  'True
+         TabIndex        =   30
+         Tag             =   "11100"
+         Text            =   "100"
+         Top             =   1320
+         Width           =   1095
+      End
+      Begin VB.TextBox txtMZHigh 
+         Height          =   315
+         Left            =   5040
+         Locked          =   -1  'True
+         TabIndex        =   29
+         Tag             =   "11100"
+         Text            =   "100"
+         Top             =   960
+         Width           =   1095
+      End
+      Begin VB.TextBox txtMZLow 
+         Height          =   315
+         Left            =   3840
+         Locked          =   -1  'True
+         TabIndex        =   28
+         Tag             =   "11100"
+         Text            =   "100"
+         Top             =   960
+         Width           =   1095
+      End
+      Begin VB.ComboBox cboMassError 
+         Height          =   315
+         Left            =   5040
+         Style           =   2  'Dropdown List
+         TabIndex        =   25
+         Tag             =   "11020"
+         Top             =   240
+         Width           =   1125
+      End
+      Begin VB.TextBox txtMassError 
+         Height          =   315
+         Left            =   4200
+         TabIndex        =   24
+         Tag             =   "11100"
+         Text            =   "100"
+         Top             =   240
+         Width           =   735
+      End
+      Begin VB.ComboBox cboMH 
+         Height          =   315
+         Left            =   120
+         Style           =   2  'Dropdown List
+         TabIndex        =   17
+         Top             =   960
+         Width           =   1600
+      End
+      Begin VB.TextBox txtMH 
+         Height          =   315
+         Left            =   1920
+         TabIndex        =   18
+         Text            =   "1000"
+         Top             =   960
+         Width           =   1200
+      End
+      Begin VB.ComboBox cboMHAlternate 
+         Height          =   315
+         Left            =   120
+         Style           =   2  'Dropdown List
+         TabIndex        =   20
+         Top             =   1320
+         Width           =   1600
+      End
+      Begin VB.TextBox txtMHAlt 
+         Height          =   315
+         Left            =   1920
+         TabIndex        =   21
+         Text            =   "500.503695"
+         Top             =   1320
+         Width           =   1200
+      End
+      Begin VB.OptionButton optElementMode 
+         Caption         =   "Isotopic"
+         Height          =   255
+         HelpContextID   =   4053
+         Index           =   1
+         Left            =   1080
+         TabIndex        =   16
+         Tag             =   "12430"
+         Top             =   480
+         Width           =   1395
+      End
+      Begin VB.OptionButton optElementMode 
+         Caption         =   "Average"
+         Height          =   255
+         HelpContextID   =   4053
+         Index           =   0
+         Left            =   1080
+         TabIndex        =   15
+         Tag             =   "12425"
+         Top             =   240
+         Value           =   -1  'True
+         Width           =   1395
+      End
+      Begin VB.Label Label2 
+         Alignment       =   2  'Center
+         Caption         =   "m/z end"
+         Height          =   255
+         Left            =   5040
+         TabIndex        =   27
+         Top             =   720
+         Width           =   1095
+      End
+      Begin VB.Label Label1 
+         Alignment       =   2  'Center
+         Caption         =   "m/z start"
+         Height          =   255
+         Left            =   3840
+         TabIndex        =   26
+         Top             =   720
+         Width           =   1095
+      End
+      Begin VB.Label lblMassError 
+         Caption         =   "Mass Error"
+         Height          =   255
+         Left            =   3240
+         TabIndex        =   23
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.Label lblMHDa 
+         Caption         =   "m/z"
+         Height          =   255
+         Left            =   3200
+         TabIndex        =   19
+         Tag             =   "12350"
+         Top             =   985
+         Width           =   495
+      End
+      Begin VB.Label lblMHAltDa 
+         Caption         =   "m/z"
+         Height          =   255
+         Left            =   3200
+         TabIndex        =   22
+         Tag             =   "12350"
+         Top             =   1345
+         Width           =   495
+      End
+      Begin VB.Label lblElementMode 
+         Caption         =   "Element Mode"
+         Height          =   465
+         Left            =   120
+         TabIndex        =   14
+         Tag             =   "12420"
+         Top             =   240
+         Width           =   975
+      End
+   End
    Begin VB.TextBox txtDensity 
       Height          =   285
       Left            =   3240
-      TabIndex        =   43
+      TabIndex        =   61
       Tag             =   "11110"
       Text            =   "1"
       ToolTipText     =   "Density of compound"
@@ -30,7 +204,7 @@ Begin VB.Form frmMMConvert
       Height          =   405
       HelpContextID   =   4092
       Left            =   6240
-      TabIndex        =   14
+      TabIndex        =   33
       Tag             =   "11230"
       Top             =   1080
       Width           =   4095
@@ -40,13 +214,13 @@ Begin VB.Form frmMMConvert
       Height          =   405
       HelpContextID   =   4092
       Left            =   6240
-      TabIndex        =   13
+      TabIndex        =   32
       Tag             =   "11220"
       Top             =   600
       Width           =   3975
    End
    Begin VB.Frame fraConvertAmounts 
-      Height          =   2450
+      Height          =   2445
       Left            =   120
       TabIndex        =   1
       Top             =   2040
@@ -159,9 +333,9 @@ Begin VB.Form frmMMConvert
    End
    Begin VB.Frame fraDilutionCalcs 
       Caption         =   "Dilution Calculations"
-      Height          =   3375
+      Height          =   3135
       Left            =   5160
-      TabIndex        =   15
+      TabIndex        =   34
       Tag             =   "11200"
       Top             =   1560
       Width           =   5175
@@ -169,7 +343,7 @@ Begin VB.Form frmMMConvert
          Height          =   315
          Left            =   120
          Style           =   2  'Dropdown List
-         TabIndex        =   16
+         TabIndex        =   35
          Tag             =   "11210"
          ToolTipText     =   "Quantity to find for dilution calculations"
          Top             =   240
@@ -179,26 +353,26 @@ Begin VB.Form frmMMConvert
          Height          =   315
          Left            =   3360
          Style           =   2  'Dropdown List
-         TabIndex        =   28
+         TabIndex        =   47
          Tag             =   "11030"
-         Top             =   2280
+         Top             =   2160
          Width           =   1600
       End
       Begin VB.TextBox txtDilutingSolventVolume 
          Height          =   315
          Left            =   2160
-         TabIndex        =   27
+         TabIndex        =   46
          Tag             =   "11285"
          Text            =   "12"
          ToolTipText     =   "Volume of solvent the compound is dissolved in"
-         Top             =   2280
+         Top             =   2160
          Width           =   1015
       End
       Begin VB.ComboBox cboStockSolutionVolume 
          Height          =   315
          Left            =   3360
          Style           =   2  'Dropdown List
-         TabIndex        =   22
+         TabIndex        =   41
          Tag             =   "11030"
          Top             =   1200
          Width           =   1600
@@ -206,7 +380,7 @@ Begin VB.Form frmMMConvert
       Begin VB.TextBox txtStockSolutionVolume 
          Height          =   315
          Left            =   2160
-         TabIndex        =   21
+         TabIndex        =   40
          Tag             =   "11265"
          Text            =   "3"
          ToolTipText     =   "Volume of solvent the compound is dissolved in"
@@ -216,7 +390,7 @@ Begin VB.Form frmMMConvert
       Begin VB.TextBox txtDilutionConcentrationInitial 
          Height          =   315
          Left            =   2160
-         TabIndex        =   18
+         TabIndex        =   37
          Tag             =   "11255"
          Text            =   "10"
          ToolTipText     =   "Molarity of compound in the solvent"
@@ -227,7 +401,7 @@ Begin VB.Form frmMMConvert
          Height          =   315
          Left            =   3360
          Style           =   2  'Dropdown List
-         TabIndex        =   19
+         TabIndex        =   38
          Tag             =   "7090"
          Top             =   720
          Width           =   1600
@@ -236,72 +410,72 @@ Begin VB.Form frmMMConvert
          Height          =   315
          Left            =   3360
          Style           =   2  'Dropdown List
-         TabIndex        =   25
+         TabIndex        =   44
          Tag             =   "7090"
-         Top             =   1800
+         Top             =   1680
          Width           =   1600
       End
       Begin VB.TextBox txtTotalVolume 
          Height          =   315
          Left            =   2160
-         TabIndex        =   30
+         TabIndex        =   49
          Tag             =   "11295"
          Text            =   "15"
          ToolTipText     =   "Volume of solvent the compound is dissolved in"
-         Top             =   2880
+         Top             =   2640
          Width           =   1015
       End
       Begin VB.ComboBox cboTotalVolume 
          Height          =   315
          Left            =   3360
          Style           =   2  'Dropdown List
-         TabIndex        =   31
+         TabIndex        =   50
          Tag             =   "11030"
-         Top             =   2880
+         Top             =   2640
          Width           =   1600
       End
       Begin VB.TextBox txtDilutionConcentrationFinal 
          Height          =   315
          Left            =   2160
-         TabIndex        =   24
+         TabIndex        =   43
          Tag             =   "11275"
          Text            =   "2"
          ToolTipText     =   "Molarity of compound in the solvent"
-         Top             =   1800
+         Top             =   1680
          Width           =   1015
       End
       Begin VB.Label lblDilutingSolventVolume 
          Caption         =   "Volume of Solvent used for &Dilution"
          Height          =   405
          Left            =   120
-         TabIndex        =   26
+         TabIndex        =   45
          Tag             =   "11280"
-         Top             =   2265
+         Top             =   2120
          Width           =   1905
       End
       Begin VB.Label lblTotalVolume 
          Caption         =   "&Total Final Volume"
          Height          =   405
          Left            =   120
-         TabIndex        =   29
+         TabIndex        =   48
          Tag             =   "11290"
-         Top             =   2865
+         Top             =   2630
          Width           =   1905
       End
       Begin VB.Label lblDilutionConcentrationFinal 
          Caption         =   "&Final Concentration"
          Height          =   405
          Left            =   120
-         TabIndex        =   23
+         TabIndex        =   42
          Tag             =   "11270"
-         Top             =   1785
+         Top             =   1665
          Width           =   1905
       End
       Begin VB.Label lblStockSolutionVolume 
          Caption         =   "Volume of &Stock Solution"
          Height          =   405
          Left            =   120
-         TabIndex        =   20
+         TabIndex        =   39
          Tag             =   "11260"
          Top             =   1185
          Width           =   1905
@@ -310,7 +484,7 @@ Begin VB.Form frmMMConvert
          Caption         =   "&Initial Concentration"
          Height          =   405
          Left            =   120
-         TabIndex        =   17
+         TabIndex        =   36
          Tag             =   "11250"
          Top             =   705
          Width           =   1905
@@ -331,13 +505,24 @@ Begin VB.Form frmMMConvert
       Caption         =   "Weight Source"
       Height          =   1575
       Left            =   240
-      TabIndex        =   33
+      TabIndex        =   52
       Top             =   0
       Width           =   5655
+      Begin VB.TextBox txtMWTValue 
+         Height          =   285
+         Left            =   720
+         Locked          =   -1  'True
+         TabIndex        =   63
+         Tag             =   "7600"
+         Text            =   "100"
+         ToolTipText     =   "Enter custom numerical mass for use in computations"
+         Top             =   1200
+         Width           =   1215
+      End
       Begin VB.TextBox txtCustomMass 
          Height          =   285
          Left            =   3120
-         TabIndex        =   36
+         TabIndex        =   55
          Tag             =   "7600"
          Text            =   "100"
          ToolTipText     =   "Enter custom numerical mass for use in computations"
@@ -350,7 +535,7 @@ Begin VB.Form frmMMConvert
          HelpContextID   =   4010
          Index           =   1
          Left            =   0
-         TabIndex        =   35
+         TabIndex        =   54
          Tag             =   "7760"
          Top             =   240
          Width           =   5475
@@ -361,7 +546,7 @@ Begin VB.Form frmMMConvert
          HelpContextID   =   4010
          Index           =   0
          Left            =   0
-         TabIndex        =   34
+         TabIndex        =   53
          Tag             =   "7750"
          Top             =   0
          Value           =   -1  'True
@@ -370,7 +555,7 @@ Begin VB.Form frmMMConvert
       Begin RichTextLib.RichTextBox rtfCurrentFormula 
          Height          =   495
          Left            =   2040
-         TabIndex        =   37
+         TabIndex        =   56
          TabStop         =   0   'False
          Top             =   600
          Width           =   3615
@@ -386,24 +571,16 @@ Begin VB.Form frmMMConvert
          Caption         =   "Custom Mass:"
          Height          =   255
          Left            =   2040
-         TabIndex        =   38
+         TabIndex        =   57
          Tag             =   "7480"
-         Top             =   1200
+         Top             =   1230
          Width           =   2175
-      End
-      Begin VB.Label lblMWTValue 
-         Caption         =   "1"
-         Height          =   255
-         Left            =   960
-         TabIndex        =   39
-         Top             =   1200
-         Width           =   1455
       End
       Begin VB.Label lblFormula 
          Caption         =   "Current Formula is"
          Height          =   255
          Left            =   120
-         TabIndex        =   42
+         TabIndex        =   60
          Tag             =   "7460"
          Top             =   720
          Width           =   1815
@@ -412,16 +589,16 @@ Begin VB.Form frmMMConvert
          Caption         =   "MW ="
          Height          =   255
          Left            =   120
-         TabIndex        =   41
+         TabIndex        =   59
          Tag             =   "7470"
-         Top             =   1200
+         Top             =   1230
          Width           =   1335
       End
       Begin VB.Label lblCustomMassUnits 
          Caption         =   "g/mole"
          Height          =   255
          Left            =   4800
-         TabIndex        =   40
+         TabIndex        =   58
          Tag             =   "7570"
          Top             =   1200
          Width           =   1095
@@ -431,17 +608,17 @@ Begin VB.Form frmMMConvert
       Cancel          =   -1  'True
       Caption         =   "Cl&ose"
       Height          =   360
-      Left            =   1680
-      TabIndex        =   32
+      Left            =   6720
+      TabIndex        =   51
       Tag             =   "4000"
-      Top             =   4680
+      Top             =   5520
       Width           =   1035
    End
    Begin VB.Label lblDensity 
       Caption         =   "g/mL"
       Height          =   255
       Left            =   4365
-      TabIndex        =   44
+      TabIndex        =   62
       Tag             =   "11080"
       Top             =   1680
       Width           =   615
@@ -483,6 +660,12 @@ Private Enum mmtTextBoxIDConstants
     mmtDilutionTotalVolume = 10
 End Enum
 
+' Constants for cboMassError combo box
+Private Enum meMassErrorConstants
+    meMZ = 0
+    mePPM = 1
+End Enum
+
 ' Note: Other forms access this variable
 Public eMassMode As mmcMassModeConstants
 
@@ -499,6 +682,34 @@ Private mVolumeIndexEnd As Integer
 
 Private objMMConverter As New MWMoleMassDilutionClass
 
+Private Sub ComputeMassRanges()
+    
+    ComputeMassRangesWork txtMH, txtMZLow, txtMZHigh
+    
+    ComputeMassRangesWork txtMHAlt, txtMZLowAlt, txtMZHighAlt
+    
+End Sub
+
+Private Sub ComputeMassRangesWork(ByRef objMH As TextBox, ByRef objMZLow As TextBox, ByRef objMZHigh As TextBox)
+
+    Dim dblMassError As Double
+    Dim dblMassErrorMZ As Double
+    Dim dblCurrentMZ As Double
+
+    dblMassError = CDblSafe(txtMassError)
+    dblCurrentMZ = CDblSafe(objMH.Text)
+    
+    If cboMassError.ListIndex = meMassErrorConstants.mePPM Then
+        dblMassErrorMZ = PPMtoMass(dblMassError, dblCurrentMZ)
+    Else
+        dblMassErrorMZ = dblMassError
+    End If
+    
+    objMZLow.Text = Round(objMH - dblMassErrorMZ, 6)
+    objMZHigh.Text = Round(objMH + dblMassErrorMZ, 6)
+
+End Sub
+
 Private Sub ComputeTargetConcentration()
     Dim dblFromNum As Double
     Dim dblToNum As Double
@@ -512,6 +723,49 @@ Private Sub ComputeTargetConcentration()
         FormatLabel lblToNum, dblToNum
     End If
 
+End Sub
+
+Private Sub ConvertSequenceMH(blnFavorMH As Boolean)
+    ' When blnFavorMH = True then computes MHAlt using MH
+    ' Otherwise, computes MH using MHAlt
+    
+    Static blnWorking As Boolean
+    Dim dblMH As Double, dblMHAlt As Double
+    Dim intChargePrimary As Integer, intChargeAlt As Integer
+    
+    If mDelayUpdateAll Then Exit Sub
+
+    If blnWorking Then Exit Sub
+    blnWorking = True
+    
+    intChargePrimary = cboMH.ListIndex
+    If intChargePrimary < 0 Then intChargePrimary = 0
+    
+    intChargeAlt = cboMHAlternate.ListIndex
+    If intChargeAlt < 0 Then intChargeAlt = 0
+    
+    If blnFavorMH Then
+        dblMH = CDblSafe(txtMH)
+        If dblMH > 0 Then
+            dblMHAlt = objMwtWin.ConvoluteMass(dblMH, intChargePrimary, intChargeAlt)
+        Else
+            dblMHAlt = 0
+        End If
+        txtMHAlt = Round(dblMHAlt, 6)
+    Else
+        dblMHAlt = CDblSafe(txtMHAlt)
+        If dblMHAlt > 0 Then
+            dblMH = objMwtWin.ConvoluteMass(dblMHAlt, intChargeAlt, intChargePrimary)
+        Else
+            dblMH = 0
+        End If
+        txtMH = Round(dblMH, 6)
+    End If
+    
+    ComputeMassRanges
+    
+    blnWorking = False
+    
 End Sub
 
 Private Sub FindDilutionValues(Optional blnUpdateDilutingSolventVolume As Boolean = True)
@@ -598,7 +852,7 @@ End Sub
 
 Private Function GetWorkingMass() As Double
     If eMassMode = mmcComputedMass Then
-        GetWorkingMass = CDblSafe(lblMWTValue.Caption)
+        GetWorkingMass = CDblSafe(txtMWTValue.Text)
     Else
         GetWorkingMass = CDblSafe(txtCustomMass.Text)
     End If
@@ -698,6 +952,7 @@ End Sub
 
 Private Sub PopulateComboBoxes()
     Dim strAmountString As String, strVolumeString As String, strMolarString As String
+    Dim intIndex As Integer
     
     ' Load Amount types in the Combo Boxes
     
@@ -722,6 +977,34 @@ Private Sub PopulateComboBoxes()
     PopulateComboBox cboConcentration, True, strMolarString, ummcMolar
     PopulateComboBox cboDilutionConcentrationInitial, True, strMolarString, ummcMolar
     PopulateComboBox cboDilutionConcentrationFinal, True, strMolarString, ummcMolar
+    
+    With cboMassError
+        .Clear
+        .AddItem "m/z"
+        .AddItem "ppm"
+        .ListIndex = 1      ' ppm
+    End With
+    
+    With cboMH
+        .Clear
+        .AddItem "M (uncharged)"
+        .AddItem "[M+H]1+"
+        For intIndex = 2 To 9
+            .AddItem "[M+" & Trim(intIndex) & "H]" & Trim(intIndex) & "+"
+        Next intIndex
+        .ListIndex = 0    ' Uncharged
+    End With
+    
+    
+    With cboMHAlternate
+        .Clear
+        .AddItem "M (uncharged)"
+        .AddItem "[M+H]1+"
+        For intIndex = 2 To 9
+            .AddItem "[M+" & Trim(intIndex) & "H]" & Trim(intIndex) & "+"
+        Next intIndex
+        .ListIndex = 1    ' Charge of 1+
+    End With
     
     SetDelayUpdate False
 End Sub
@@ -785,21 +1068,21 @@ Private Sub PositionFormControls()
     cboStockSolutionVolume.Top = txtStockSolutionVolume.Top
     cboStockSolutionVolume.Left = cboDilutionConcentrationInitial.Left
    
-    txtDilutionConcentrationFinal.Top = 1800
+    txtDilutionConcentrationFinal.Top = 1680
     txtDilutionConcentrationFinal.Left = txtDilutionConcentrationInitial.Left
     lblDilutionConcentrationFinal.Top = txtDilutionConcentrationFinal.Top - 15
     lblDilutionConcentrationFinal.Left = lblDilutionConcentrationInitial.Left
     cboDilutionConcentrationFinal.Top = txtDilutionConcentrationFinal.Top
     cboDilutionConcentrationFinal.Left = cboDilutionConcentrationInitial.Left
    
-    txtDilutingSolventVolume.Top = 2280
+    txtDilutingSolventVolume.Top = 2160
     txtDilutingSolventVolume.Left = txtDilutionConcentrationInitial.Left
     lblDilutingSolventVolume.Top = txtDilutingSolventVolume.Top - 15
     lblDilutingSolventVolume.Left = lblDilutionConcentrationInitial.Left
     cboDilutingSolventVolume.Top = txtDilutingSolventVolume.Top
     cboDilutingSolventVolume.Left = cboDilutionConcentrationInitial.Left
    
-    txtTotalVolume.Top = 2880
+    txtTotalVolume.Top = 2640
     txtTotalVolume.Left = txtDilutionConcentrationInitial.Left
     lblTotalVolume.Top = txtTotalVolume.Top - 15
     lblTotalVolume.Left = lblDilutionConcentrationInitial.Left
@@ -809,6 +1092,16 @@ Private Sub PositionFormControls()
     ShowHideFormControls True
     
 End Sub
+
+Private Function PPMtoMass(ByVal dblPPMToConvert As Double, ByVal dblCurrentMZ As Double) As Double
+    ' Converts dblMassToConvert to ppm, based on the value of dblCurrentMZ
+    
+    If dblCurrentMZ > 0 Then
+        PPMtoMass = dblPPMToConvert * dblCurrentMZ / 1000000#
+    Else
+        PPMtoMass = 0
+    End If
+End Function
 
 Private Sub RemoveNegativeValue(txtThisTextBox As TextBox)
     If IsNumeric(txtThisTextBox.Text) Then
@@ -833,6 +1126,8 @@ Public Sub SetDelayUpdate(blnTurnOnDelay As Boolean)
         
         HighlightTargetBoxes
         FindDilutionValues
+        
+        ConvertSequenceMH True
     End If
     
 End Sub
@@ -905,23 +1200,39 @@ Private Sub ShowHideFormControls(Optional blnForceResize As Boolean = True)
     fraDilutionCalcs.Visible = blnDilutionFrameVisible
     chkLinkMolarities.Visible = blnDilutionFrameVisible
     chkLinkDilutionVolumeUnits.Visible = blnDilutionFrameVisible
+    
+    If blnDilutionFrameVisible Then
+        fraMZConversion.Top = fraDilutionCalcs.Top + fraDilutionCalcs.Height + 100
         
+        With fraMZConversion
+            cmdOK.Top = .Top + .Height / 2 - (cmdOK.Height / 2)
+            cmdOK.Left = .Left + .Width + 150
+        End With
+    Else
+        fraMZConversion.Top = fraConvertAmounts.Top + fraConvertAmounts.Height + 100
+    
+        cmdOK.Top = fraMZConversion.Top - cmdOK.Height - 100
+        cmdOK.Left = fraMZConversion.Left + fraMZConversion.Width - cmdOK.Width
+    End If
+    
+    
     If cChkBox(frmProgramPreferences.chkShowToolTips) Then SetDynamicToolTips
     
-    With fraConvertAmounts
-        cmdOK.Left = .Left + .Width / 2 - (cmdOK.Width / 2)
-    End With
-    
-    cmdOK.Top = fraConvertAmounts.Top + fraConvertAmounts.Height + 150
-    
     If Me.WindowState <> vbMinimized Then
-        lngPreferredHeight = cmdOK.Top + 950
-    
+        If blnVolAndMolarVisible Then
+            If blnDilutionFrameVisible Then
+                lngPreferredHeight = 7300
+            Else
+                lngPreferredHeight = 6750
+            End If
+        Else
+            lngPreferredHeight = 5900
+        End If
+            
         If blnDilutionFrameVisible Then
             lngPreferredWidth = 10550
-            lngPreferredHeight = 5510
         Else
-            lngPreferredWidth = 6150
+            lngPreferredWidth = 6700
         End If
     Else
         ' Cannot change form height or width when minimized
@@ -957,7 +1268,7 @@ Private Sub ShowHideMassInputControls()
     lblFormula.Visible = Not blnCustomVisible
     rtfCurrentFormula.Visible = Not blnCustomVisible
     lblMWT.Visible = Not blnCustomVisible
-    lblMWTValue.Visible = Not blnCustomVisible
+    txtMWTValue.Visible = Not blnCustomVisible
     
     lblCustomMass.Visible = blnCustomVisible
     txtCustomMass.Visible = blnCustomVisible
@@ -1141,6 +1452,18 @@ Private Sub cboDilutionConcentrationInitial_Click()
     SynchronizeLinkedMolarities True
 End Sub
 
+Private Sub cboMassError_Click()
+  ComputeMassRanges
+End Sub
+
+Private Sub cboMH_Click()
+    ConvertSequenceMH False
+End Sub
+
+Private Sub cboMHAlternate_Click()
+    ConvertSequenceMH True
+End Sub
+
 Private Sub cboTo_Click()
     
     ShowHideDensity
@@ -1214,7 +1537,7 @@ End Sub
 
 Private Sub Form_Activate()
     ' Put window in center of screen (upper fourth vertically)
-    SizeAndCenterWindow Me, cWindowExactCenter, 10500, 6000, True
+    SizeAndCenterWindow Me, cWindowExactCenter, 10700, 7300, True
     
     DisplayCurrentFormulaOnSubForm Me
     
@@ -1226,8 +1549,20 @@ Private Sub Form_Activate()
     ShowHideMassInputControls
     ShowHideFormControls False
     
+    Select Case objMwtWin.GetElementMode
+    Case emAverageMass
+        optElementMode(0).value = True
+    Case emIsotopicMass
+        optElementMode(1).value = True
+    Case Else
+        objMwtWin.SetElementMode emIsotopicMass
+        optElementMode(1).value = True
+    End Select
+    
     ComputeTargetConcentration
     mLastControlChanged = mmtNone
+    
+    'ConvertSequenceMH
 End Sub
 
 Private Sub Form_Load()
@@ -1273,6 +1608,20 @@ Private Sub lblCustomMass_DblClick()
         intDblClickCount = 1
     End If
     lngLastClickTime = Timer()
+End Sub
+
+Private Sub optElementMode_Click(Index As Integer)
+    ' Elementweightmode = 1 means average weights, 2 means isotopic, and 3 means integer
+    Dim eNewWeightMode As emElementModeConstants
+    
+    eNewWeightMode = Index + 1
+        
+    If eNewWeightMode <> objMwtWin.GetElementMode Then
+        SwitchWeightMode eNewWeightMode, True, False
+      
+        ConvertSequenceMH True
+    End If
+    
 End Sub
 
 Private Sub optWeightSource_Click(Index As Integer)
@@ -1412,6 +1761,48 @@ End Sub
 
 Private Sub txtDilutionConcentrationInitial_Validate(Cancel As Boolean)
     RemoveNegativeValue txtDilutionConcentrationInitial
+End Sub
+
+Private Sub txtMassError_Change()
+    ComputeMassRanges
+End Sub
+
+Private Sub txtMassError_KeyPress(KeyAscii As Integer)
+    TextBoxKeyPressHandler txtMassError, KeyAscii, True, True, True, False, True, False, False, False, False, True, True
+End Sub
+
+Private Sub txtMassError_Validate(Cancel As Boolean)
+     If IsNumeric(txtMassError) Then
+        If CDblSafe(txtMassError) < 0 Then txtMassError = "0"
+    End If
+End Sub
+
+Private Sub txtMH_Change()
+    ConvertSequenceMH True
+End Sub
+
+Private Sub txtMH_KeyPress(KeyAscii As Integer)
+    TextBoxKeyPressHandler txtMH, KeyAscii, True, True, True, False, True, False, False, False, False, True, True
+End Sub
+
+Private Sub txtMH_Validate(Cancel As Boolean)
+    If IsNumeric(txtMH) Then
+        If CDblSafe(txtMH) < 0 Then txtMH = "0"
+    End If
+End Sub
+
+Private Sub txtMHAlt_Change()
+    ConvertSequenceMH False
+End Sub
+
+Private Sub txtMHAlt_KeyPress(KeyAscii As Integer)
+    TextBoxKeyPressHandler txtMHAlt, KeyAscii, True, True, True, False, True, False, False, False, False, True, True
+End Sub
+
+Private Sub txtMHAlt_Validate(Cancel As Boolean)
+    If IsNumeric(txtMH) Then
+        If CDblSafe(txtMH) < 0 Then txtMH = "0"
+    End If
 End Sub
 
 Private Sub txtVolume_Change()

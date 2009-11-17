@@ -246,7 +246,7 @@ Begin VB.Form frmAboutBox
       Width           =   2175
    End
    Begin VB.Label lblMicrosoft 
-      Caption         =   "written using Microsoft Visual Basic v6.0 (SP5)"
+      Caption         =   "written using Microsoft Visual Basic v6.0 (SP6)"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75

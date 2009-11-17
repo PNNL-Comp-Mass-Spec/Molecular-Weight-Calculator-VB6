@@ -511,3 +511,6 @@ Revision 6.45 - July 6, 2007
 
 Revision 6.46 - October 16, 2009
 	- Added support for c and z ions on Peptide Sequence Fragmentation Modelling window
+
+Revision 6.47 - October 26, 2009
+	- Updated the Mole/Mass Converter window to include m/z conversion tools, including M+H conversion, and calculation of mass ranges for a given ppm-based tolerance

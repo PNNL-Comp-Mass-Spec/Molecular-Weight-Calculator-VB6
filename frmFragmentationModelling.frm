@@ -5,13 +5,13 @@ Begin VB.Form frmFragmentationModelling
    ClientHeight    =   8640
    ClientLeft      =   165
    ClientTop       =   855
-   ClientWidth     =   9225
+   ClientWidth     =   10020
    HelpContextID   =   3080
    Icon            =   "frmFragmentationModelling.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    ScaleHeight     =   8640
-   ScaleWidth      =   9225
+   ScaleWidth      =   10020
    StartUpPosition =   3  'Windows Default
    Tag             =   "12000"
    Begin VB.CommandButton cmdMatchIons 

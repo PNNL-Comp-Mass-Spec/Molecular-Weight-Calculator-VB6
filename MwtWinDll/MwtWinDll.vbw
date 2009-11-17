@@ -1,7 +1,7 @@
-MolecularWeightCalculator = 22, 24, 746, 516, Z
+MolecularWeightCalculator = 22, 24, 746, 516, 
 MWCompoundClass = 132, 144, 856, 636, C
 MWPeptideClass = 132, 144, 856, 636, 
-ElementAndMassRoutines = 154, 168, 891, 660, 
+ElementAndMassRoutines = 154, 168, 891, 660, Z
 modSharedVBRoutines = 0, 0, 795, 492, C
 MWCapillaryFlowClass = 154, 168, 884, 660, C
 frmProgress = 115, 115, 784, 491, C, 23, 23, 670, 391, C
