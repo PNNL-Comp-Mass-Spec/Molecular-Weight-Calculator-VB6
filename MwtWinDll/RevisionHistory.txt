@@ -1,6 +1,6 @@
 MwtWin.Dll Change Log
 
-Version 2.37, Build 74
+Version 2.37, Build 74; October 16, 2009
 	- Added support for c and z ions in function GetFragmentationMasses()
 	- Changed blnShowCharge() from type Integer to type Boolean in the GetFragmentationMasses() function
 

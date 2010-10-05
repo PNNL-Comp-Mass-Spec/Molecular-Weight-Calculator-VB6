@@ -1,4 +1,4 @@
-;       Abbreviations File for MWTWIN program (v6.45)
+;       Abbreviations File for MWTWIN program (v6.47)
 ;
 ; Comments may be added by preceding with a semicolon
 ; Two group headings must exist: [AMINO ACIDS] and [ABBREVIATIONS]
@@ -17,7 +17,7 @@
 ; Amino Acid abbreviation names may be up to 6 characters long
 [AMINO ACIDS]
 Ala     C3H5NO               0         A         ; Alanine
-Arg     C6H12N4O             0         R         ; Arginine, (unprotonated NH2)
+Arg     C6H12N4O             0         R         ; Arginine. (unprotonated NH2)
 Asn     C4H6N2O2             0         N         ; Asparagine
 Asp     C4H5NO3              0         D         ; Aspartic acid (undissociated COOH)
 Cys     C3H5NOS              0         C         ; Cysteine (no disulfide link)
@@ -50,6 +50,7 @@ Xxx     C6H12N2O             0         X         ; Unknown
 Bpy     C10H8N2              0                   ; Bipyridine
 Bu      C4H9                 1                   ; Butyl
 D       ^2.014H              1                   ; Deuterium
+Elec    ^0.000548579909H   -1          ; Electron
 En      C2H8N2               0                   ; Ethylenediamine
 Et      CH3CH2               1                   ; Ethyl
 Me      CH3                  1                   ; Methyl
@@ -59,6 +60,7 @@ Otf     OSO2CF3              -1                  ; Triflate
 Ox      C2O4                 -2                  ; Oxalate
 Ph      C6H5                 1                   ; Phenyl
 Phen    C12H8N2              0                   ; Phenanthroline
+Prot    ^1.00727649H         1                   ; Proton
 Py      C5H5N                0                   ; Pyridine
 Tpp     (C4H2N(C6H5C)C4H2N(C6H5C))2   0          ; Tetraphenylporphyrin
 Ts      CH3C6H4SOO           -1                  ; Tosyl
