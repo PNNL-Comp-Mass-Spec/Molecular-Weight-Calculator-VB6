@@ -514,3 +514,7 @@ Revision 6.46 - October 16, 2009
 
 Revision 6.47 - October 26, 2009
 	- Updated the Mole/Mass Converter window to include m/z conversion tools, including M+H conversion, and calculation of mass ranges for a given ppm-based tolerance
+
+Revision 6.48 - October 10, 2010
+	- New version of MwtWindll.dll that avoids overflow errors when computing isotopic distributions for large compounds
+		- Example: C489 H300 F27 Fe8 N72 Ni6 O27 S9

@@ -29,8 +29,8 @@ Option Explicit
 '   version 6.35
 
 ' *** Be sure to update version in Project | Properties also ***
-Public Const PROGRAM_VERSION = "6.47"
-Public Const PROGRAM_DATE = "October 26, 2009"
+Public Const PROGRAM_VERSION = "6.48"
+Public Const PROGRAM_DATE = "October 10, 2010"
 ' ***
 
 '

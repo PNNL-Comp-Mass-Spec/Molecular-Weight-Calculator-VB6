@@ -404,7 +404,7 @@ Public Function ComputeIsotopicAbundancesInternal(ByRef strFormulaIn As String, 
         Exit Function
     End If
 
-    On Error GoTo IsoAbundanceErrorHandler
+On Error GoTo IsoAbundanceErrorHandler
     
     ' Change strHeaderMassToCharge to "Neutral Mass" if intChargeState = 0 and strHeaderMassToCharge is "Mass/Charge"
     If intChargeState = 0 Then
@@ -814,10 +814,17 @@ Public Function ComputeIsotopicAbundancesInternal(ByRef strFormulaIn As String, 
     Next intElementIndex
     
     ' Examine IsoStats() to predict the number of ConvolutionIterations
+    ' Note that PredictedConvIterations could become larger than a long (32-bit integer)
+    ' We're using on error resume next to catch this
+    
+On Error Resume Next
+
     PredictedConvIterations = IsoStats(1).ResultsCount
     For intElementIndex = 2 To intElementCount
         PredictedConvIterations = PredictedConvIterations * IsoStats(2).ResultsCount
     Next intElementIndex
+        
+On Error GoTo IsoAbundanceErrorHandler
     
     If blnShowProgressForm Then
         frmProgress.InitializeForm "Finding Isotopic Abundances", 0, IsoStats(1).ResultsCount, False
@@ -1182,7 +1189,16 @@ Private Function FindIndexForNominalMass(IsoCombos() As Long, ComboIndex As Long
     FindIndexForNominalMass = (lngWorkingMass - AtomCount * Round(ThisElementsIsotopes(1).Mass, 0)) + 1
 End Function
 
-Private Sub ConvoluteMasses(ByRef ConvolutedAbundances() As udtIsoResultsOverallType, ByRef ConvolutedAbundanceStartMass As Long, ByRef WorkingRow As Long, ByRef WorkingAbundance As Single, ByRef WorkingMassTotal As Long, ByRef ElementTrack As Integer, ByRef IsoStats() As udtIsoResultsByElementType, ByRef ElementCount As Integer, ByRef Iterations As Long)
+Private Sub ConvoluteMasses(ByRef ConvolutedAbundances() As udtIsoResultsOverallType, _
+                            ByRef ConvolutedAbundanceStartMass As Long, _
+                            ByRef WorkingRow As Long, _
+                            ByRef WorkingAbundance As Single, _
+                            ByRef WorkingMassTotal As Long, _
+                            ByRef ElementTrack As Integer, _
+                            ByRef IsoStats() As udtIsoResultsByElementType, _
+                            ByRef ElementCount As Integer, _
+                            ByRef Iterations As Long)
+                            
     ' Recursive function to Convolute the Results in IsoStats() and store in ConvolutedAbundances(); 1-based array
     
     Dim IndexToStoreResult As Long, RowIndex As Long
@@ -1190,9 +1206,13 @@ Private Sub ConvoluteMasses(ByRef ConvolutedAbundances() As udtIsoResultsOverall
     
     If KeyPressAbortProcess > 1 Then Exit Sub
     
-    Iterations = Iterations + 1
-    If Iterations Mod 10000 = 0 Then
-        DoEvents
+    If Iterations < 2147483647 Then
+        Iterations = Iterations + 1
+        If Iterations Mod 10000 = 0 Then
+            DoEvents
+        End If
+    Else
+        Iterations = 0
     End If
     
     NewAbundance = WorkingAbundance * IsoStats(ElementTrack).MassAbundances(WorkingRow)
@@ -1208,6 +1228,7 @@ Private Sub ConvoluteMasses(ByRef ConvolutedAbundances() As udtIsoResultsOverall
         End With
     Else
         For RowIndex = 1 To IsoStats(ElementTrack + 1).ResultsCount
+            ' Recursively call this function
             ConvoluteMasses ConvolutedAbundances(), ConvolutedAbundanceStartMass, RowIndex, NewAbundance, NewMassTotal, ElementTrack + 1, IsoStats(), ElementCount, Iterations
         Next RowIndex
     End If
