@@ -1,6 +1,6 @@
 Type=OleDll
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\system32\stdole2.tlb#OLE Automation
-Reference=*\G{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}#1.0#0#C:\WINDOWS\SysWOW64\wshom.ocx#Windows Script Host Object Model
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}#1.0#0#C:\Windows\SysWOW64\wshom.ocx#Windows Script Host Object Model
 Class=MolecularWeightCalculator; clsMwtWin.cls
 Class=MWCompoundClass; clsCompound.cls
 Class=MWPeptideClass; clsPeptideClass.cls
@@ -21,7 +21,7 @@ CompatibleMode="0"
 CompatibleEXE32="MwtWindll.dll"
 MajorVer=2
 MinorVer=37
-RevisionVer=76
+RevisionVer=78
 AutoIncrementVer=1
 ServerSupportFiles=0
 VersionComments="Written by Matthew Monroe"

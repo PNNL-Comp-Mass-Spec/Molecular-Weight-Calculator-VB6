@@ -1,5 +1,11 @@
 MwtWin.Dll Change Log
 
+Version 2.37, Build 77; August 5, 2011
+	- Recompiled due to new computer OS
+
+Version 2.37, Build 76; October 18, 2010
+	- Recompiled due to new computer OS
+
 Version 2.37, Build 75; October 10, 2010
 	- Now checking for PredictedConvIterations in ComputeIsotopicAbundancesInternal surpassing the 32-bit integer boundary (2147483647)
 	- Now checking for the Iteration tracking variable in ConvoluteMasses surpassing the 32-bit integer boundary

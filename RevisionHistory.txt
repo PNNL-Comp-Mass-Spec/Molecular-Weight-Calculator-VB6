@@ -518,3 +518,9 @@ Revision 6.47 - October 26, 2009
 Revision 6.48 - October 10, 2010
 	- New version of MwtWindll.dll that avoids overflow errors when computing isotopic distributions for large compounds
 		- Example: C489 H300 F27 Fe8 N72 Ni6 O27 S9
+
+Revision 6.48 - October 18, 2010
+	- Recompiled due to new computer OS
+
+Revision 6.48 - August 10, 2011
+	- Recompiled due to new computer OS

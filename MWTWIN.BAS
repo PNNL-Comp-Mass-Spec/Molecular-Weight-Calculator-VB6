@@ -30,7 +30,7 @@ Option Explicit
 
 ' *** Be sure to update version in Project | Properties also ***
 Public Const PROGRAM_VERSION = "6.48"
-Public Const PROGRAM_DATE = "October 10, 2010"
+Public Const PROGRAM_DATE = "August 10, 2011"
 ' ***
 
 '
