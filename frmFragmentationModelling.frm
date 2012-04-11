@@ -1,19 +1,46 @@
 VERSION 5.00
-Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFlxGrd.ocx"
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form frmFragmentationModelling 
    Caption         =   "Peptide Sequence Fragmentation Modelling"
-   ClientHeight    =   8640
-   ClientLeft      =   165
+   ClientHeight    =   9120
+   ClientLeft      =   225
    ClientTop       =   855
    ClientWidth     =   10020
    HelpContextID   =   3080
    Icon            =   "frmFragmentationModelling.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
-   ScaleHeight     =   8640
+   ScaleHeight     =   9120
    ScaleWidth      =   10020
    StartUpPosition =   3  'Windows Default
    Tag             =   "12000"
+   Begin VB.Frame fraIonMassOptions 
+      Caption         =   "Ion Masses"
+      Height          =   650
+      Left            =   60
+      TabIndex        =   59
+      Tag             =   "12150"
+      Top             =   6000
+      Width           =   2415
+      Begin VB.ComboBox cboIonDigitsOfPrecision 
+         Height          =   315
+         Left            =   1200
+         Style           =   2  'Dropdown List
+         TabIndex        =   60
+         Tag             =   "12180"
+         Top             =   220
+         Width           =   975
+      End
+      Begin VB.Label lblIonDigitsOfPrecision 
+         Caption         =   "Digits"
+         Height          =   240
+         Left            =   120
+         TabIndex        =   61
+         Tag             =   "12160"
+         Top             =   260
+         Width           =   900
+      End
+   End
    Begin VB.CommandButton cmdMatchIons 
       Caption         =   "&Match Ions"
       Height          =   345
@@ -144,7 +171,7 @@ Begin VB.Form frmFragmentationModelling
       Left            =   3960
       TabIndex        =   47
       Tag             =   "12360"
-      Top             =   6480
+      Top             =   6840
       Width           =   3015
       Begin VB.Label lblScore 
          BorderStyle     =   1  'Fixed Single
@@ -193,7 +220,7 @@ Begin VB.Form frmFragmentationModelling
       Left            =   60
       TabIndex        =   31
       Tag             =   "12300"
-      Top             =   6480
+      Top             =   6800
       Width           =   3735
       Begin VB.TextBox txtAlignment 
          Height          =   285
@@ -316,12 +343,12 @@ Begin VB.Form frmFragmentationModelling
       End
    End
    Begin VB.Frame fraCharge 
-      Caption         =   "Charge Options"
+      Caption         =   "Charges"
       Height          =   1095
       Left            =   60
       TabIndex        =   25
       Tag             =   "12260"
-      Top             =   5280
+      Top             =   4850
       Width           =   2415
       Begin VB.ComboBox cboTripleCharge 
          Height          =   315
@@ -376,7 +403,7 @@ Begin VB.Form frmFragmentationModelling
       Left            =   60
       TabIndex        =   11
       Tag             =   "12150"
-      Top             =   1680
+      Top             =   1320
       Width           =   2415
       Begin VB.ComboBox cboCTerminus 
          Height          =   315
@@ -421,7 +448,7 @@ Begin VB.Form frmFragmentationModelling
       Left            =   60
       TabIndex        =   20
       Tag             =   "12230"
-      Top             =   4200
+      Top             =   3800
       Width           =   2415
       Begin VB.CheckBox chkPhosphateLoss 
          Caption         =   "Loss of PO4"
@@ -470,7 +497,7 @@ Begin VB.Form frmFragmentationModelling
       Left            =   60
       TabIndex        =   16
       Tag             =   "12200"
-      Top             =   3000
+      Top             =   2640
       Width           =   2415
       Begin VB.CheckBox chkIonType 
          Caption         =   "C Ions"
@@ -526,13 +553,13 @@ Begin VB.Form frmFragmentationModelling
       End
    End
    Begin MSFlexGridLib.MSFlexGrid grdFragMasses 
-      Height          =   4455
+      Height          =   4935
       Left            =   2520
       TabIndex        =   45
       Top             =   1800
       Width           =   4335
       _ExtentX        =   7646
-      _ExtentY        =   7858
+      _ExtentY        =   8705
       _Version        =   393216
       FixedCols       =   0
    End
@@ -1557,9 +1584,13 @@ Private Sub DisplayPredictedIonMasses()
     Dim lngThisRow As Long
     Dim strSymbolGeneric As String
     
+    Dim intFragMassesDigitsOfPrecision As Integer
+    
 On Error GoTo DisplayPredictedIonMassesErrorHandler
 
     UpdateFragmentationSpectrumOptions
+    
+    intFragMassesDigitsOfPrecision = cboIonDigitsOfPrecision.ListIndex
     
     ' The GetFragmentationMasses() function computes the masses, intensities, and symbols for the given sequence
     FragSpectrumIonCount = objMwtWin.Peptide.GetFragmentationMasses(FragSpectrumDetails())
@@ -1602,7 +1633,7 @@ On Error GoTo DisplayPredictedIonMassesErrorHandler
             .TextMatrix(lngThisRow, .Cols - 1) = lngResidueCount - lngResidueIndex + 1
 
             ' Add the immonium ion to the second column
-            .TextMatrix(lngThisRow, 1) = CStrIfNonZero(objMwtWin.Peptide.ComputeImmoniumMass(dblResidueMass), "", 2)
+            .TextMatrix(lngThisRow, 1) = CStrIfNonZero(objMwtWin.Peptide.ComputeImmoniumMass(dblResidueMass), "", intFragMassesDigitsOfPrecision)
 
             ' Add the residue symbol
             If blnUse3LetterSymbol Then
@@ -1639,7 +1670,7 @@ On Error GoTo DisplayPredictedIonMassesErrorHandler
                     If .SourceResidueNumber < grdFragMasses.Rows Then
                         If Not .IsShoulderIon Then
                             ' Only display if not a Shoulder Ion
-                            grdFragMasses.TextMatrix(.SourceResidueNumber, lngColIndex) = CStrIfNonZero(.Mass, "", 2)
+                            grdFragMasses.TextMatrix(.SourceResidueNumber, lngColIndex) = CStrIfNonZero(.Mass, "", intFragMassesDigitsOfPrecision)
                         End If
                         
                         ' Update FragSpectrumGridLocs() with the Row Index and Column Index
@@ -2901,6 +2932,14 @@ Private Sub PopulateComboBoxes()
         .ListIndex = 9
     End With
     
+    cboIonDigitsOfPrecision.Clear
+    With cboIonDigitsOfPrecision
+        For intIndex = 0 To 6
+            .AddItem intIndex
+        Next intIndex
+        .ListIndex = 2
+    End With
+    
     PopulateComboBox cboNTerminus, True, "H (hydrogen)|HH+ (protonated)|C2OH3 (acetyl)|C5O2NH6 (pyroglu)|CONH2 (carbamyl)|C7H6NS (PTC)|(none)", 0
     
     PopulateComboBox cboCTerminus, True, "OH (hydroxyl)|NH2 (amide)|(none)", 0
@@ -3002,10 +3041,10 @@ Private Sub PositionControls()
         
         .Width = lngPreferredWidth
         If Not blnSkipWidthAdjust Then .Left = Me.Width - .Width - 225
-        If Not blnSkipHeightAdjust Then .Height = Me.Height - .Top - 900
+        If Not blnSkipHeightAdjust Then .Height = Me.Height - .Top - 950
     End With
         
-    fraTerminii.Top = grdIonList.Top
+    fraTerminii.Top = 1300
     fraTerminii.Left = 60
     
     fraIonTypes.Top = fraTerminii.Top + fraTerminii.Height + 80
@@ -3017,9 +3056,12 @@ Private Sub PositionControls()
     fraCharge.Top = fraNeutralLosses.Top + fraNeutralLosses.Height + 80
     fraCharge.Left = fraTerminii.Left
     
+    fraIonMassOptions.Top = fraCharge.Top + fraCharge.Height + 80
+    fraIonMassOptions.Left = fraTerminii.Left
+    
     ' Preferred top for fraIonMatching
-    lngPreferredTop = Me.Height - fraIonMatching.Height - 860
-    lngMinimumTop = fraCharge.Top + fraCharge.Height + 80
+    lngPreferredTop = Me.Height - fraIonMatching.Height - 950
+    lngMinimumTop = fraIonMassOptions.Top + fraIonMassOptions.Height + 80
     If lngPreferredTop < lngMinimumTop Then lngPreferredTop = lngMinimumTop
     
     With fraIonMatching
@@ -3496,6 +3538,10 @@ Private Sub cboDoubleCharge_Click()
     UpdatePredictedFragMasses
 End Sub
 
+Private Sub cboIonDigitsOfPrecision_Click()
+    UpdatePredictedFragMasses
+End Sub
+
 Private Sub cboMHAlternate_Click()
     ConvertSequenceMH True
 End Sub
@@ -3612,7 +3658,7 @@ On Error GoTo FormLoadErrorHandler
     
     ' Note that PositionControls gets called when the form is resized with the following command
     ' Must call SetIonMatchListVisibility before calling this sub
-    SizeAndCenterWindow Me, cWindowTopLeft, 12000, 9250
+    SizeAndCenterWindow Me, cWindowTopLeft, 12000, 9800
     
     EnableDisableControls
     
@@ -3655,7 +3701,7 @@ Private Sub grdIonList_KeyDown(KeyCode As Integer, Shift As Integer)
         
 End Sub
 
-Private Sub grdIonList_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub grdIonList_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
     If Button = vbRightButton Then
         Me.PopupMenu mnuIonMatchListRightClick
     End If

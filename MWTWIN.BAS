@@ -29,8 +29,8 @@ Option Explicit
 '   version 6.35
 
 ' *** Be sure to update version in Project | Properties also ***
-Public Const PROGRAM_VERSION = "6.48"
-Public Const PROGRAM_DATE = "August 10, 2011"
+Public Const PROGRAM_VERSION = "6.49"
+Public Const PROGRAM_DATE = "April 11, 2012"
 ' ***
 
 '
@@ -276,7 +276,7 @@ Public Sub AddToIntro(strAdd As String, Optional blnUseMsgBoxInstead As Boolean 
         frmIntro.lblLoadStatus.Caption = frmIntro.lblLoadStatus.Caption & vbCrLf & strAdd
         If blnErrorMessage Then
             gBlnLoadStatusOK = False
-            frmIntro.cmdOK.Visible = True
+            frmIntro.CmdOK.Visible = True
         End If
     End If
     
@@ -1814,7 +1814,7 @@ Public Sub Main()
     
     If Not gNonSaveExitApp Then
         If Not gBlnLoadStatusOK Then
-            frmIntro.cmdOK.SetFocus
+            frmIntro.CmdOK.SetFocus
         End If
     Else
         If gCommandLineInstructionsDisplayed Then

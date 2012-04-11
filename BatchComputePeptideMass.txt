@@ -8,7 +8,7 @@ STDDEVMODE=OFF
 CAPITALIZED=ON
 
 ; Don't display the source formula
-MWSHOWSOURCEFORMULA=OFF
+MWSHOWSOURCEFORMULA=ON
 
 ; Compute the mass of peptides given in 1-letter notation
 ONELETTERPEPTIDEWEIGHTMODE=ON
