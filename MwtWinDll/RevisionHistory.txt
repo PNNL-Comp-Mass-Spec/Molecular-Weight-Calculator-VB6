@@ -1,5 +1,8 @@
 MwtWin.Dll Change Log
 
+Version 2.37, Build 78; May 15, 2012
+	- Added parameter blnAddProtonChargeCarrier to ComputeIsotopicAbundances
+
 Version 2.37, Build 77; August 5, 2011
 	- Recompiled due to new computer OS
 

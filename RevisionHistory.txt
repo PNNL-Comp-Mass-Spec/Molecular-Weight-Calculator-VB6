@@ -527,3 +527,6 @@ Revision 6.48 - August 10, 2011
 
 Revision 6.49 - April 11, 2012
 	- Added ability to change the digits of precision displayed for fragmentation masses in the Peptide Sequence and Fragmentation module
+
+Revision 6.49 - May 15, 2012
+	- Added option to disable adding a proton when computing charged isotopic distribution m/z values

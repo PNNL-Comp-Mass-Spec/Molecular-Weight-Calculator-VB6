@@ -134,3 +134,7 @@ CH2(CH2)7CH2Br
 ; Change the charge state with the following command
 ISOTOPICDISTRIBUTIONCHARGE=2
 CH2(CH2)7CH2Br
+
+; Disable adding a proton when computing m/z
+ISOTOPICDISTRIBUTIONADDPROTON=False
+CH2(CH2)7CH2Br

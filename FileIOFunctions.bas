@@ -1358,6 +1358,7 @@ On Error GoTo LoadValuesAndFormulasErrorHandler
                             frmIsotopicDistribution.txtEffectiveResolution = strSettingInFile
                         Case "IONPLOTRESOLUTIONMASS": frmIsotopicDistribution.txtEffectiveResolutionMass = strSettingInFile
                         Case "IONPLOTGAUSSIANQUALITY": frmIsotopicDistribution.txtGaussianQualityFactor = strSettingInFile
+                        Case "IONPLOTADDPROTON": frmIsotopicDistribution.chkAddProtonChargeCarrier.value = lngSettingInFile
                         Case "IONCOMPARISONPLOTCOLOR": frmIsotopicDistribution.lblComparisonListPlotColor.BackColor = lngSettingInFile
                         Case "IONCOMPARISONPLOTTYPE"
                             ValidateValueLng lngSettingInFile, 0, 2, 0          ' ipmSticksToZero
@@ -2381,6 +2382,7 @@ On Error GoTo SaveValuesErrorHandler
                 Print #OutFileNum, "IonPlotResolution=" & Trim(.txtEffectiveResolution.Text)
                 Print #OutFileNum, "IonPlotResolutionMass=" & Trim(.txtEffectiveResolutionMass.Text)
                 Print #OutFileNum, "IonPlotGaussianQuality=" & Trim(.txtGaussianQualityFactor.Text)
+                Print #OutFileNum, "IonPlotAddProton=" & CheckBoxToIntegerString(.chkAddProtonChargeCarrier)
                 Print #OutFileNum, "IonComparisonPlotColor=" & Trim(.lblComparisonListPlotColor.BackColor)
                 Print #OutFileNum, "IonComparisonPlotType=" & Trim(.cboComparisonListPlotType.ListIndex)
                 Print #OutFileNum, "IonComparisonPlotNormalize=" & CheckBoxToIntegerString(.chkComparisonListNormalize)

@@ -330,9 +330,10 @@ Public Function TestComputeIsotopicAbundances(ByRef strFormulaIn As String, ByVa
     
 End Function
 
-Public Function ComputeIsotopicAbundancesInternal(ByRef strFormulaIn As String, ByVal intChargeState As Integer, ByRef strResults As String, ByRef ConvolutedMSData2DOneBased() As Double, ByRef ConvolutedMSDataCount As Long, Optional ByVal strHeaderIsotopicAbundances As String = "Isotopic Abundances for", Optional ByVal strHeaderMassToCharge As String = "Mass/Charge", Optional ByVal strHeaderFraction As String = "Fraction", Optional ByVal strHeaderIntensity As String = "Intensity", Optional blnUseFactorials As Boolean = False) As Integer
+Public Function ComputeIsotopicAbundancesInternal(ByRef strFormulaIn As String, ByVal intChargeState As Integer, ByRef strResults As String, ByRef ConvolutedMSData2DOneBased() As Double, ByRef ConvolutedMSDataCount As Long, Optional ByVal strHeaderIsotopicAbundances As String = "Isotopic Abundances for", Optional ByVal strHeaderMassToCharge As String = "Mass/Charge", Optional ByVal strHeaderFraction As String = "Fraction", Optional ByVal strHeaderIntensity As String = "Intensity", Optional blnUseFactorials As Boolean = False, Optional blnAddProtonChargeCarrier As Boolean = True) As Integer
     ' Computes the Isotopic Distribution for a formula, returns uncharged mass vlaues if intChargeState=0,
     '  M+H values if intChargeState=1, and convoluted m/z if intChargeState is > 1
+    ' If blnAddProtonChargeCarrier is False, then still convlutes by charge, but doesn't add a proton
     ' Updates strFormulaIn to the properly formatted formula
     ' Returns the results in strResults
     ' Returns 0 if success, or -1 if an error
@@ -907,7 +908,11 @@ On Error GoTo IsoAbundanceErrorHandler
             ConvolutedMSData2DOneBased(lngMassIndex, 1) = .Abundance / dblMaxAbundance * 100
             
             If intChargeState >= 1 Then
-                ConvolutedMSData2DOneBased(lngMassIndex, 0) = ConvoluteMassInternal(ConvolutedMSData2DOneBased(lngMassIndex, 0), 0, intChargeState)
+                If blnAddProtonChargeCarrier Then
+                    ConvolutedMSData2DOneBased(lngMassIndex, 0) = ConvoluteMassInternal(ConvolutedMSData2DOneBased(lngMassIndex, 0), 0, intChargeState)
+                Else
+                    ConvolutedMSData2DOneBased(lngMassIndex, 0) = ConvolutedMSData2DOneBased(lngMassIndex, 0) / intChargeState
+                End If
             End If
         End With
     Next lngMassIndex

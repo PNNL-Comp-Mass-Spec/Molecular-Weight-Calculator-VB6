@@ -30,7 +30,7 @@ Option Explicit
 
 ' *** Be sure to update version in Project | Properties also ***
 Public Const PROGRAM_VERSION = "6.49"
-Public Const PROGRAM_DATE = "April 11, 2012"
+Public Const PROGRAM_DATE = "May 15, 2012"
 ' ***
 
 '
@@ -276,7 +276,7 @@ Public Sub AddToIntro(strAdd As String, Optional blnUseMsgBoxInstead As Boolean 
         frmIntro.lblLoadStatus.Caption = frmIntro.lblLoadStatus.Caption & vbCrLf & strAdd
         If blnErrorMessage Then
             gBlnLoadStatusOK = False
-            frmIntro.CmdOK.Visible = True
+            frmIntro.cmdOK.Visible = True
         End If
     End If
     
@@ -519,6 +519,7 @@ Public Sub BatchProcessTextFile(Optional strInputFilename As String = "", Option
     Dim strHeaderMass As String
     Dim strHeaderFraction As String
     Dim strHeaderIntensity As String
+    Dim blnAddProtonChargeCarrier As Boolean
     
     Dim InFileNum As Integer, OutFileNum As Integer
     
@@ -551,6 +552,7 @@ Public Sub BatchProcessTextFile(Optional strInputFilename As String = "", Option
     strHeaderMass = LookupLanguageCaption(15210, "Mass/Charge")
     strHeaderFraction = LookupLanguageCaption(15220, "Fraction")
     strHeaderIntensity = LookupLanguageCaption(15230, "Intensity")
+    blnAddProtonChargeCarrier = True
 
     If strInputFilename = "" Then
         ' 1510 = Text Files, 1515 = .txt
@@ -617,6 +619,7 @@ Public Sub BatchProcessTextFile(Optional strInputFilename As String = "", Option
                 strSettingsUCase = UCase(strSettings)
                 
                 Select Case Trim(strCommand)
+            
             ' Output option commands
                 Case "VERBOSEMODE"
                     Select Case strSettingsUCase
@@ -968,6 +971,19 @@ Public Sub BatchProcessTextFile(Optional strInputFilename As String = "", Option
                         intIsotopicDistributionChargeState = CInt(strSettings)
                         If blnVerboseMode Then Print #OutFileNum, COMMENT_CHAR & " Isotopic Distribution charge set to " & Trim(intIsotopicDistributionChargeState)
                     End If
+                
+                Case "ISOTOPICDISTRIBUTIONADDPROTON"
+                    ' Whether or not to add a proton whem charge is >=1 during Isotopic Distribution calculations
+                    If blnVerboseMode Then Print #OutFileNum, ""
+                    Select Case strSettingsUCase
+                    Case "TRUE", "1", "ON"
+                        If blnVerboseMode Then Print #OutFileNum, COMMENT_CHAR & " Isotopic Distribution calculations will add a proton when charge is >= 1"
+                        blnAddProtonChargeCarrier = True
+                    Case Else
+                        If blnVerboseMode Then Print #OutFileNum, COMMENT_CHAR & " Isotopic Distribution calculations will not add a proton when charge is >= 1"
+                        blnAddProtonChargeCarrier = False
+                    End Select
+                
                 Case Else
                     Print #OutFileNum, COMMENT_CHAR & " Error: Unknown Command: " & strCommand
                 End Select
@@ -1044,7 +1060,7 @@ Public Sub BatchProcessTextFile(Optional strInputFilename As String = "", Option
                             intIsotopicDistributionChargeState = 1
                         End If
                         
-                        lngErrorID = objMwtWin.ComputeIsotopicAbundances(strWork, intIsotopicDistributionChargeState, strResults, dblDummyArray, 0, strHeaderIsotopicAbundace, strHeaderMass, strHeaderFraction, strHeaderIntensity)
+                        lngErrorID = objMwtWin.ComputeIsotopicAbundances(strWork, intIsotopicDistributionChargeState, strResults, dblDummyArray, 0, strHeaderIsotopicAbundace, strHeaderMass, strHeaderFraction, strHeaderIntensity, blnAddProtonChargeCarrier)
 
                         If lngErrorID = 0 Then
                              ' Formula parsed successfuly
@@ -1814,7 +1830,7 @@ Public Sub Main()
     
     If Not gNonSaveExitApp Then
         If Not gBlnLoadStatusOK Then
-            frmIntro.CmdOK.SetFocus
+            frmIntro.cmdOK.SetFocus
         End If
     Else
         If gCommandLineInstructionsDisplayed Then
@@ -2889,6 +2905,8 @@ On Error GoTo SetDefaultValuesAndFormulasErrorHandler
         
         SetCheckBox .chkAutoLabelPeaks, False
         SetCheckBox .chkPlotResults, True
+        
+        SetCheckBox .chkAddProtonChargeCarrier, True
     End With
     
     If blnShowDebugPrompts Then MsgBox "Call objMwtWin.Peptide.SetDefaultModificationSymbols"

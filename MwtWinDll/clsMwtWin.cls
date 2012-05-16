@@ -80,11 +80,14 @@ Public Function ComputeMass(ByVal strFormula As String) As Double
 
 End Function
 
-Public Function ComputeIsotopicAbundances(ByRef strFormulaIn As String, ByVal intChargeState As Integer, ByRef strResults As String, ByRef ConvolutedMSData2DOneBased() As Double, ByRef ConvolutedMSDataCount As Long, Optional ByVal strHeaderIsotopicAbundances As String = "Isotopic Abundances for", Optional ByVal strHeaderMass As String = "Mass", Optional ByVal strHeaderFraction As String = "Fraction", Optional ByVal strHeaderIntensity As String = "Intensity") As Integer
+Public Function ComputeIsotopicAbundances(ByRef strFormulaIn As String, ByVal intChargeState As Integer, ByRef strResults As String, ByRef ConvolutedMSData2DOneBased() As Double, ByRef ConvolutedMSDataCount As Long, Optional ByVal strHeaderIsotopicAbundances As String = "Isotopic Abundances for", Optional ByVal strHeaderMass As String = "Mass", Optional ByVal strHeaderFraction As String = "Fraction", Optional ByVal strHeaderIntensity As String = "Intensity", Optional blnAddProtonChargeCarrier As Boolean = True) As Integer
     ' Computes the Isotopic Distribution for a formula
     ' Returns 0 if success, or -1 if an error
     
-    ComputeIsotopicAbundances = ComputeIsotopicAbundancesInternal(strFormulaIn, intChargeState, strResults, ConvolutedMSData2DOneBased(), ConvolutedMSDataCount, strHeaderIsotopicAbundances, strHeaderMass, strHeaderFraction, strHeaderIntensity, False)
+    Dim blnUseFactorials As Boolean
+    blnUseFactorials = False
+    
+    ComputeIsotopicAbundances = ComputeIsotopicAbundancesInternal(strFormulaIn, intChargeState, strResults, ConvolutedMSData2DOneBased(), ConvolutedMSDataCount, strHeaderIsotopicAbundances, strHeaderMass, strHeaderFraction, strHeaderIntensity, blnUseFactorials, blnAddProtonChargeCarrier)
 End Function
 
 Public Function ConvoluteMass(ByVal dblMassMZ As Double, ByVal intCurrentCharge As Integer, Optional ByVal intDesiredCharge As Integer = 1, Optional ByVal dblChargeCarrierMass As Double = 0) As Double

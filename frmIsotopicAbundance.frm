@@ -13,6 +13,16 @@ Begin VB.Form frmIsotopicDistribution
    ScaleWidth      =   10830
    StartUpPosition =   3  'Windows Default
    Tag             =   "15000"
+   Begin VB.CheckBox chkAddProtonChargeCarrier 
+      Caption         =   "Add Proton"
+      Height          =   255
+      Left            =   3840
+      TabIndex        =   32
+      Tag             =   "15100"
+      Top             =   1200
+      Value           =   1  'Checked
+      Width           =   1695
+   End
    Begin VB.TextBox txtChargeState 
       Height          =   285
       Left            =   4920
@@ -257,7 +267,6 @@ Begin VB.Form frmIsotopicDistribution
       _ExtentX        =   5318
       _ExtentY        =   873
       _Version        =   393217
-      Enabled         =   -1  'True
       MultiLine       =   0   'False
       TextRTF         =   $"frmIsotopicAbundance.frx":08CA
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -890,6 +899,8 @@ On Error GoTo PositionFormControlsErrorHandler
     txtChargeState.Left = lngPreferredValue
     lblChargeState.Left = txtChargeState.Left - lblChargeState.Width - 60
     
+    chkAddProtonChargeCarrier.Left = txtChargeState.Left - 1000
+    
     Exit Sub
 
 PositionFormControlsErrorHandler:
@@ -940,6 +951,8 @@ Public Sub StartIsotopicDistributionCalcs(blnSetFocusOnTextbox As Boolean, Optio
     Dim strFormula As String
     Dim strHeaderIsotopicAbundace As String, strHeaderMass As String
     Dim strHeaderFraction As String, strHeaderIntensity As String
+    Dim blnAddProtonChargeCarrier As Boolean
+    
     Dim lngCursorPos As Long
     
     Dim intChargeState As Integer
@@ -963,6 +976,8 @@ On Error GoTo StartIsotopicDistributionCalcsErrorHandler
         intChargeState = 1
     End If
     
+    blnAddProtonChargeCarrier = cChkBox(chkAddProtonChargeCarrier)
+    
     strHeaderIsotopicAbundace = LookupLanguageCaption(15200, "Isotopic Abundances for")
     If intChargeState = 0 Then
         strHeaderMass = LookupLanguageCaption(15215, "Neutral Mass")
@@ -977,7 +992,7 @@ On Error GoTo StartIsotopicDistributionCalcsErrorHandler
     SwitchWeightMode emIsotopicMass
     
     ' Note: strFormula is passed ByRef
-    lngErrorID = objMwtWin.ComputeIsotopicAbundances(strFormula, intChargeState, strResults, ConvolutedMSData2D(), ConvolutedMSDataCount, strHeaderIsotopicAbundace, strHeaderMass, strHeaderFraction, strHeaderIntensity)
+    lngErrorID = objMwtWin.ComputeIsotopicAbundances(strFormula, intChargeState, strResults, ConvolutedMSData2D(), ConvolutedMSDataCount, strHeaderIsotopicAbundace, strHeaderMass, strHeaderFraction, strHeaderIntensity, blnAddProtonChargeCarrier)
     
     If lngErrorID = 0 Then
         ' Update rtfFormula with the capitalized formula
@@ -1023,6 +1038,10 @@ End Sub
 
 Private Sub cboPlotType_Click()
     PlotIsotopicDistribution True
+End Sub
+
+Private Sub chkAddProtonChargeCarrier_Click()
+    StartIsotopicDistributionCalcs False, False
 End Sub
 
 Private Sub chkAutoLabelPeaks_Click()
