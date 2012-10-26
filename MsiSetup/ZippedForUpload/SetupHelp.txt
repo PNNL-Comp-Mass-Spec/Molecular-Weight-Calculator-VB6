@@ -46,7 +46,7 @@ to run the "Molecular Weight Calculator.msi" setup file.
 -------------------------------------------------------------------------------
 Written by Matthew Monroe for the Department of Energy (PNNL, Richland, WA)
 
-E-mail: matthew.monroe@pnl.gov or matt@alchemistmatt.com
+E-mail: matthew.monroe@pnnl.gov or matt@alchemistmatt.com
 Website: http://ncrr.pnl.gov/ or http://www.sysbio.org/resources/staff/ or
 http://www.alchemistmatt.com/ or http://come.to/alchemistmatt/
 -------------------------------------------------------------------------------

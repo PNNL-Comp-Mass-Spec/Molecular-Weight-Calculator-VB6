@@ -705,9 +705,16 @@ Private Sub ComputeMassRangesWork(ByRef objMH As TextBox, ByRef objMZLow As Text
         dblMassErrorMZ = dblMassError
     End If
     
+    On Error GoTo ConversionErrorHandler
+    
     objMZLow.Text = Round(objMH - dblMassErrorMZ, 6)
     objMZHigh.Text = Round(objMH + dblMassErrorMZ, 6)
 
+    Exit Sub
+    
+ConversionErrorHandler:
+    Debug.Assert False
+    
 End Sub
 
 Private Sub ComputeTargetConcentration()

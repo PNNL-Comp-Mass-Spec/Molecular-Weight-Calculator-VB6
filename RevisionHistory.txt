@@ -530,3 +530,6 @@ Revision 6.49 - April 11, 2012
 
 Revision 6.49 - May 15, 2012
 	- Added option to disable adding a proton when computing charged isotopic distribution m/z values
+
+Revision 6.49 - October 24, 2012
+	- Fixed bug in the Mole/Mass Converter window that caused a program crash if the decimal point is set to a comma rather than a period
