@@ -1,40 +1,40 @@
 ; Isotopic Weight Mode Enabled
 ; Standard deviations will not be displayed
 ; Source formula will be displayed with proper capitalization
-; Display of source formula is now Off
+; Display of source formula is now On
 
 ; One letter Amino Acid weight mode: input formulas are assumed to be peptides in one-letter notation
-89.0476762
-146.1055224
-121.0197482
-133.0375062
-147.0531554
-165.0789746
-75.032027
-155.0694734
-131.0946238
-146.1055224
-146.1055224
-131.0946238
-149.0510466
-132.0534898
-132.0898732
-115.0633254
-146.069139
-174.1116704
-105.0425912
-119.0582404
-191.0429854
-117.0789746
-204.0898732
-146.1055224
-181.0738896
-146.1055224
-2426.2566632
-2337.2327998
-2025.005437
-2154.10554
-2612.3982012
-2066.9849774
-2086.0595358
-2427.3260262
+H-Ala-OH	89.0476762
+H-Xxx-OH	146.1055224
+H-Cys-OH	121.0197482
+H-Asp-OH	133.0375062
+H-Glu-OH	147.0531554
+H-Phe-OH	165.0789746
+H-Gly-OH	75.032027
+H-His-OH	155.0694734
+H-Ile-OH	131.0946238
+H-Xxx-OH	146.1055224
+H-Lys-OH	146.1055224
+H-Leu-OH	131.0946238
+H-Met-OH	149.0510466
+H-Asn-OH	132.0534898
+H-Orn-OH	132.0898732
+H-Pro-OH	115.0633254
+H-Gln-OH	146.069139
+H-Arg-OH	174.1116704
+H-Ser-OH	105.0425912
+H-Thr-OH	119.0582404
+H-Gla-OH	191.0429854
+H-Val-OH	117.0789746
+H-Trp-OH	204.0898732
+H-Xxx-OH	146.1055224
+H-Tyr-OH	181.0738896
+H-Xxx-OH	146.1055224
+H-SerHisArgProThrGlyGlyAlaGlyValGlyAlaHisValAlaGlnValLeuTrpAspAsnAlaValLys-OH	2426.2566632
+H-HisIleTyrAlaGlnValIleAsnProGluAlaGlnValValAlaAlaAlaSerThrValGluLys-OH	2337.2327998
+H-TyrIleAlaGluThrPheLeuGluAsnValGluGlnValThrAspValArg-OH	2025.005437
+H-ValValAsnLeuGlyAspGluValGluValLeuValLeuAspIleAspGluGluArg-OH	2154.10554
+H-AlaMetLeuGlnAspValAlaIleLeuThrGlyGlyThrValIleAlaGluGluIleGlyLeuGluLeuGluLys-OH	2612.3982012
+H-GlyPheGlyPheIleGluGlnGluSerGlyProAspValPheValHisPheArg-OH	2066.9849774
+H-AspPheAsnGluAlaLeuValHisGlnValValValAlaTyrAlaAlaAsnAlaArg-OH	2086.0595358
+H-AspValAlaGlyLeuAspProValSerLeuIleAlaPheAsnThrValLeuValThrAlaAspAlaValLys-OH	2427.3260262
