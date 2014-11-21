@@ -5,10 +5,10 @@ Begin VB.Form frmCapillaryCalcs
    ClientHeight    =   6600
    ClientLeft      =   540
    ClientTop       =   1680
-   ClientWidth     =   10770
+   ClientWidth     =   10776
    BeginProperty Font 
       Name            =   "MS Sans Serif"
-      Size            =   8.25
+      Size            =   7.8
       Charset         =   0
       Weight          =   700
       Underline       =   0   'False
@@ -22,13 +22,13 @@ Begin VB.Form frmCapillaryCalcs
    MaxButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   6600
-   ScaleWidth      =   10770
+   ScaleWidth      =   10776
    Tag             =   "7000"
    Begin VB.CommandButton cmdComputeViscosity 
       Caption         =   "Compute Water/MeCN Viscosity"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -46,7 +46,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Extra Column Broadening Calculations"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -63,7 +63,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -82,7 +82,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -101,7 +101,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -120,7 +120,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -139,7 +139,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -158,7 +158,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "View Equations"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -175,7 +175,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -193,7 +193,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -216,8 +216,8 @@ Begin VB.Form frmCapillaryCalcs
          Tag             =   "7550"
          Top             =   960
          Width           =   975
-         _ExtentX        =   1720
-         _ExtentY        =   450
+         _ExtentX        =   1715
+         _ExtentY        =   445
          _Version        =   393217
          BackColor       =   -2147483633
          BorderStyle     =   0
@@ -226,7 +226,7 @@ Begin VB.Form frmCapillaryCalcs
          TextRTF         =   $"frmCapillaryCalcs.frx":08CA
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -237,7 +237,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -255,7 +255,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -273,7 +273,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -292,7 +292,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -311,7 +311,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "&Link to Above"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -333,8 +333,8 @@ Begin VB.Form frmCapillaryCalcs
          Tag             =   "7550"
          Top             =   1320
          Width           =   975
-         _ExtentX        =   1720
-         _ExtentY        =   450
+         _ExtentX        =   1715
+         _ExtentY        =   445
          _Version        =   393217
          BackColor       =   -2147483633
          BorderStyle     =   0
@@ -343,7 +343,7 @@ Begin VB.Form frmCapillaryCalcs
          TextRTF         =   $"frmCapillaryCalcs.frx":093D
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -359,8 +359,8 @@ Begin VB.Form frmCapillaryCalcs
          Tag             =   "7520"
          Top             =   960
          Width           =   1695
-         _ExtentX        =   2990
-         _ExtentY        =   450
+         _ExtentX        =   2985
+         _ExtentY        =   445
          _Version        =   393217
          BackColor       =   -2147483633
          BorderStyle     =   0
@@ -369,7 +369,7 @@ Begin VB.Form frmCapillaryCalcs
          TextRTF         =   $"frmCapillaryCalcs.frx":09B0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -381,7 +381,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Diffusion Coefficient"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -399,7 +399,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "(for 5 um particles)"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -417,7 +417,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "1"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -434,7 +434,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "cm/sec"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -452,7 +452,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Optimum Linear Velocity"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -470,7 +470,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "0%"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -487,7 +487,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Percent Increase"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -505,7 +505,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Resulting Peak Width"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -523,7 +523,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "1"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -540,7 +540,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Additional Variance"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -558,7 +558,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Initial Peak Width (at base)"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -576,7 +576,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Temporal Variance"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -594,7 +594,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "1"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -611,7 +611,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Open Tube Length"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -629,7 +629,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Open Tube I.D."
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -647,7 +647,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Linear Velocity"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -665,7 +665,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -684,7 +684,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -703,7 +703,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -722,7 +722,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -741,7 +741,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "&View Explanatory Equations"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -759,7 +759,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Show/Hide &Peak Broadening Calculations"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -776,7 +776,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -795,7 +795,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -814,7 +814,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -833,7 +833,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -852,7 +852,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -871,7 +871,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -890,7 +890,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -908,7 +908,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -926,7 +926,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -944,7 +944,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -962,7 +962,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -980,7 +980,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -998,7 +998,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.TextBox txtCapValue 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1016,7 +1016,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboComputationType 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1035,7 +1035,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Mass Rate Calculations"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1051,7 +1051,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1070,7 +1070,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1089,7 +1089,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1108,7 +1108,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1127,7 +1127,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.ComboBox cboCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1146,7 +1146,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1164,7 +1164,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1182,7 +1182,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCapValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1201,7 +1201,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "&Link to Above"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1219,7 +1219,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Moles Injected"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1237,7 +1237,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "1"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1254,7 +1254,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Mass Flow Rate"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1272,7 +1272,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "1"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1289,7 +1289,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Injection Time"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1307,7 +1307,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Volumetric Flow Rate"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1325,7 +1325,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Sample Concentration"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1343,7 +1343,7 @@ Begin VB.Form frmCapillaryCalcs
    Begin VB.ComboBox cboCapillaryType 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1364,7 +1364,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Cl&ose"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1383,7 +1383,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Weight Source"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1398,7 +1398,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtMWTValue 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1419,7 +1419,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "&Use mass of compound in current formula"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1440,7 +1440,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "&Enter custom numerical mass"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1459,7 +1459,7 @@ Begin VB.Form frmCapillaryCalcs
       Begin VB.TextBox txtCustomMass 
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1482,8 +1482,8 @@ Begin VB.Form frmCapillaryCalcs
          TabStop         =   0   'False
          Top             =   600
          Width           =   3615
-         _ExtentX        =   6376
-         _ExtentY        =   873
+         _ExtentX        =   6371
+         _ExtentY        =   868
          _Version        =   393217
          Enabled         =   0   'False
          MultiLine       =   0   'False
@@ -1494,7 +1494,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "g/mole"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1512,7 +1512,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "MW ="
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1530,7 +1530,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Current Formula is"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1548,7 +1548,7 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "Custom Mass:"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   7.8
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -1567,7 +1567,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Column Volume"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1585,7 +1585,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1602,7 +1602,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Column Dead Time"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1620,7 +1620,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1637,7 +1637,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Linear Velocity"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1655,7 +1655,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Volumetric Flow Rate"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1673,7 +1673,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Interparticle Porosity (epsilon)"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1691,7 +1691,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Particle Diameter"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1709,7 +1709,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Solvent Viscosity"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1727,7 +1727,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Column Inner Diameter"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1745,7 +1745,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Column Length"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1763,7 +1763,7 @@ Begin VB.Form frmCapillaryCalcs
       Caption         =   "Back Pressure"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1786,6 +1786,12 @@ Begin VB.Form frmCapillaryCalcs
          Caption         =   "&Save Values"
       End
       Begin VB.Menu mnuSep1 
+         Caption         =   "-"
+      End
+      Begin VB.Menu mnuResetToDefaults 
+         Caption         =   "Reset to &Defaults"
+      End
+      Begin VB.Menu mnuSep2 
          Caption         =   "-"
       End
       Begin VB.Menu mnuClose 
@@ -2134,6 +2140,11 @@ On Error GoTo LoadCapFormValuesErrorHandler
             txtCapValue(intIndex).Text = Trim(CStr(PackedCapVals.TextValues(intIndex)))
         Next intIndex
         
+        If CDblSafe(txtCapValue(cctPorosity).Text) <= 0 Then
+            txtCapValue(cctPorosity).Text = "0.4"
+            PackedCapVals.TextValues(cctPorosity) = "0.4"
+        End If
+        
         For intIndex = 0 To CapComboBoxMaxIndex
             If PackedCapVals.ComboValues(intIndex) < cboCapValue(intIndex).ListCount Then
                 cboCapValue(intIndex).ListIndex = PackedCapVals.ComboValues(intIndex)
@@ -2264,8 +2275,8 @@ Private Sub PositionFormControls()
     cmdViewEquations.Top = cmdViewEquations.Top
     cmdViewEquations.Left = 7440
     
-    cmdOK.Top = 240
-    cmdOK.Left = 9360
+    CmdOK.Top = 240
+    CmdOK.Left = 9360
     
     lblPressure.Top = 1080
     lblPressure.Left = cboCapillaryType.Left
@@ -2489,6 +2500,11 @@ Private Sub ResizeCapillaryCalcsForm(boolResizeToDefaultHeight As Boolean)
         End If
     End If
     
+End Sub
+
+Private Sub ResetToDefaults()
+    SetDefaultCapillaryFlowValues
+    LoadCapFormValues
 End Sub
 
 ' Purpose: Saved changed combo values to OpenCapValues or PackedCapValues
@@ -2851,9 +2867,12 @@ Private Sub mnuLoadCapValues_Click()
 
 End Sub
 
+Private Sub mnuResetToDefaults_Click()
+    ResetToDefaults
+End Sub
+
 Private Sub mnuSaveCapValues_Click()
     SaveCapillaryFlowInfo
-
 End Sub
 
 Private Sub optWeightSource_Click(Index As Integer)

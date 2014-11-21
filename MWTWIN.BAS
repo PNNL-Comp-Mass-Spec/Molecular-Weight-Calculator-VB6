@@ -30,7 +30,7 @@ Option Explicit
 
 ' *** Be sure to update version in Project | Properties also ***
 Public Const PROGRAM_VERSION = "6.49"
-Public Const PROGRAM_DATE = "February 19, 2014"
+Public Const PROGRAM_DATE = "November 21, 2014"
 ' ***
 
 '
@@ -276,7 +276,7 @@ Public Sub AddToIntro(strAdd As String, Optional blnUseMsgBoxInstead As Boolean 
         frmIntro.lblLoadStatus.Caption = frmIntro.lblLoadStatus.Caption & vbCrLf & strAdd
         If blnErrorMessage Then
             gBlnLoadStatusOK = False
-            frmIntro.cmdOK.Visible = True
+            frmIntro.CmdOK.Visible = True
         End If
     End If
     
@@ -1830,7 +1830,7 @@ Public Sub Main()
     
     If Not gNonSaveExitApp Then
         If Not gBlnLoadStatusOK Then
-            frmIntro.cmdOK.SetFocus
+            frmIntro.CmdOK.SetFocus
         End If
     Else
         If gCommandLineInstructionsDisplayed Then
@@ -1924,6 +1924,7 @@ Private Sub MemoryLoadMenuCaptions()
         ' frmCapillaryFlow
         FlexGridAddItems .grdMenuInfo, "7900", "mnuLoadCapValues", "&Load Values"
         FlexGridAddItems .grdMenuInfo, "7910", "mnuSaveCapValues", "&Save Values"
+        FlexGridAddItems .grdMenuInfo, "7920", "mnuResetToDefaults", "Reset to &Defaults"
         FlexGridAddItems .grdMenuInfo, "7950", "mnuCapillaryFlowHelp", "&Capillary Flow Calculations"
 
         ' frmFragmentationModelling
@@ -2620,7 +2621,7 @@ SetDefaultsErrorHandler:
     
 End Sub
 
-Private Sub SetDefaultCapillaryFlowValues()
+Public Sub SetDefaultCapillaryFlowValues()
 
     gCapFlowComputationTypeSave = 3                     ' cptVolFlowRate = 3
     gCapFlowLinkMassRateFlowRateSave = 1                ' Link Flow Rate
