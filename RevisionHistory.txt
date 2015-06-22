@@ -537,6 +537,6 @@ Revision 6.49 - October 24, 2012
 Revision 6.49 - November 5, 2013
 	- Recompiled due to new computer OS
 
-Revision 6.49 - November 21, 2014
+Revision 6.50 - November 21, 2014
 	- Added menu item "Reset to Defaults" to the Capillary Flower Calculator window
 	- Now auto-changing the interparticle porosity value to 0.4 if it is 0 when the Capillary Flower Calculator window loads
