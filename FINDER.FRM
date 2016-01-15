@@ -2,13 +2,13 @@ VERSION 5.00
 Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "richtx32.ocx"
 Begin VB.Form frmFinder 
    Caption         =   "Formula Finder"
-   ClientHeight    =   6345
+   ClientHeight    =   6348
    ClientLeft      =   240
-   ClientTop       =   1575
-   ClientWidth     =   9825
+   ClientTop       =   1572
+   ClientWidth     =   9828
    BeginProperty Font 
       Name            =   "MS Sans Serif"
-      Size            =   8.25
+      Size            =   7.8
       Charset         =   0
       Weight          =   700
       Underline       =   0   'False
@@ -21,14 +21,14 @@ Begin VB.Form frmFinder
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   6345
-   ScaleWidth      =   9825
+   ScaleHeight     =   6348
+   ScaleWidth      =   9828
    Tag             =   "10000"
    Begin VB.CheckBox chkShowDeltaMass 
       Caption         =   "Show Delta Mass"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -49,7 +49,7 @@ Begin VB.Form frmFinder
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -68,7 +68,7 @@ Begin VB.Form frmFinder
       Caption         =   "Abort"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -86,7 +86,7 @@ Begin VB.Form frmFinder
       Caption         =   "&Display Iso Abundance"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -103,7 +103,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -122,7 +122,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -142,7 +142,7 @@ Begin VB.Form frmFinder
       Caption         =   "Formul&a Finder Options"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -161,7 +161,7 @@ Begin VB.Form frmFinder
       Caption         =   "Copy as RT&F"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -182,8 +182,8 @@ Begin VB.Form frmFinder
       TabStop         =   0   'False
       Top             =   1560
       Width           =   3975
-      _ExtentX        =   7011
-      _ExtentY        =   4260
+      _ExtentX        =   7006
+      _ExtentY        =   4255
       _Version        =   393217
       Enabled         =   -1  'True
       ReadOnly        =   -1  'True
@@ -192,7 +192,7 @@ Begin VB.Form frmFinder
       TextRTF         =   $"FINDER.frx":08CA
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -203,7 +203,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercentMaxWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -222,7 +222,7 @@ Begin VB.Form frmFinder
       Caption         =   "Ppm Mode"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -240,7 +240,7 @@ Begin VB.Form frmFinder
       Caption         =   "Cop&y"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -257,7 +257,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtHits 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -276,7 +276,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeightTolerance 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -295,7 +295,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercentTolerance 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -314,7 +314,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMWT 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -332,7 +332,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -350,7 +350,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -368,7 +368,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -386,7 +386,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -404,7 +404,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -422,7 +422,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -440,7 +440,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -458,7 +458,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -476,7 +476,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -494,7 +494,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMin 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -512,7 +512,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -530,7 +530,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -548,7 +548,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -566,7 +566,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -584,7 +584,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -602,7 +602,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -620,7 +620,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -638,7 +638,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -656,7 +656,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -674,7 +674,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtMax 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -693,7 +693,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -711,7 +711,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -729,7 +729,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -747,7 +747,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -765,7 +765,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -783,7 +783,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -801,7 +801,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -819,7 +819,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -837,7 +837,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -855,7 +855,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element 1"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -872,7 +872,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -891,7 +891,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -910,7 +910,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -929,7 +929,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -948,7 +948,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -967,7 +967,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -986,7 +986,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1005,7 +1005,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1024,7 +1024,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1043,7 +1043,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtPercent 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1062,7 +1062,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1081,7 +1081,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1100,7 +1100,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1119,7 +1119,7 @@ Begin VB.Form frmFinder
    Begin VB.TextBox txtWeight 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1139,7 +1139,7 @@ Begin VB.Form frmFinder
       Caption         =   "Match &Molecular Weight"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1159,7 +1159,7 @@ Begin VB.Form frmFinder
       Caption         =   "Match &Percent Compositions"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1178,7 +1178,7 @@ Begin VB.Form frmFinder
       Caption         =   "Prin&t ..."
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1196,7 +1196,7 @@ Begin VB.Form frmFinder
       Caption         =   "Cl&ose"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1213,14 +1213,14 @@ Begin VB.Form frmFinder
    Begin VB.ListBox lstResults 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2790
+      Height          =   2736
       Left            =   120
       TabIndex        =   62
       Top             =   1200
@@ -1230,7 +1230,7 @@ Begin VB.Form frmFinder
       Caption         =   "Min"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1248,7 +1248,7 @@ Begin VB.Form frmFinder
       Caption         =   "Atomic Wt."
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1266,7 +1266,7 @@ Begin VB.Form frmFinder
       Caption         =   "Maximum Weight of Formula:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1284,7 +1284,7 @@ Begin VB.Form frmFinder
       Caption         =   "(using average atomic weights)"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1302,7 +1302,7 @@ Begin VB.Form frmFinder
       Caption         =   "Percent Completed"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1321,7 +1321,7 @@ Begin VB.Form frmFinder
       Caption         =   "Max Hits"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1340,7 +1340,7 @@ Begin VB.Form frmFinder
       Caption         =   "Percent"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1358,7 +1358,7 @@ Begin VB.Form frmFinder
       Caption         =   "Element"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1376,7 +1376,7 @@ Begin VB.Form frmFinder
       Caption         =   "Weight Tolerance:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1394,7 +1394,7 @@ Begin VB.Form frmFinder
       Caption         =   "Percent Tolerance:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1412,7 +1412,7 @@ Begin VB.Form frmFinder
       Caption         =   $"FINDER.frx":094E
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1430,7 +1430,7 @@ Begin VB.Form frmFinder
       Caption         =   "Molecular Weight of Target:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1448,7 +1448,7 @@ Begin VB.Form frmFinder
       Caption         =   "Max"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   7.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -1707,7 +1707,7 @@ Private Function ConstructAndVerifyCompound(ByRef strConstruct As String, count1
     '
     ' strConstruct is passed by reference and is modified in this subroutine
     
-    Dim x As Integer, y As Integer
+    Dim X As Integer, Y As Integer
     Dim swapVal As Integer, blnHOK As Boolean, blnChargeOK As Boolean
     Dim strSwap As String
     Dim strFormulaElem(10) As String
@@ -1743,10 +1743,10 @@ On Error GoTo ConstructAndVerifyCompoundErrorHandler
         If count10 <> 0 Then strConstruct = strConstruct & elem10$
         If count10 > 1 Then strConstruct = strConstruct & LTrim(Str(count10))
     Else
-        For x = 0 To 9
-            EmpResultSymbols(x) = ""
-            EmpResultCount(x) = 0
-        Next x
+        For X = 0 To 9
+            EmpResultSymbols(X) = ""
+            EmpResultCount(X) = 0
+        Next X
         ' Convert to empirical formula and sort
         If count1 <> 0 Then EmpResultSymbols(0) = elem1$
         If count1 > 1 Then EmpResultCount(0) = count1
@@ -1769,51 +1769,51 @@ On Error GoTo ConstructAndVerifyCompoundErrorHandler
         If count10 <> 0 Then EmpResultSymbols(9) = elem10$
         If count10 > 1 Then EmpResultCount(9) = count10
         ' First find C
-        For x = 0 To 9
-            If EmpResultSymbols(x) = "C" Then
-                strConstruct = strConstruct & EmpResultSymbols(x)       ' i.e. C
-                If EmpResultCount(x) > 1 Then strConstruct = strConstruct & _
-                                                         LTrim(Str(EmpResultCount(x)))
+        For X = 0 To 9
+            If EmpResultSymbols(X) = "C" Then
+                strConstruct = strConstruct & EmpResultSymbols(X)       ' i.e. C
+                If EmpResultCount(X) > 1 Then strConstruct = strConstruct & _
+                                                         LTrim(Str(EmpResultCount(X)))
                 ' blank this EmpResultSymbols so it doesn't get repeated
-                EmpResultSymbols(x) = ""
+                EmpResultSymbols(X) = ""
                 Exit For
             End If
-        Next x
-        For x = 0 To 9
-            If EmpResultSymbols(x) = "H" Then
-                strConstruct = strConstruct & EmpResultSymbols(x)       ' i.e. H
-                If EmpResultCount(x) > 1 Then strConstruct = strConstruct & _
-                                                         LTrim(Str(EmpResultCount(x)))
+        Next X
+        For X = 0 To 9
+            If EmpResultSymbols(X) = "H" Then
+                strConstruct = strConstruct & EmpResultSymbols(X)       ' i.e. H
+                If EmpResultCount(X) > 1 Then strConstruct = strConstruct & _
+                                                         LTrim(Str(EmpResultCount(X)))
                 ' blank this EmpResultSymbols so it doesn't get repeated
-                EmpResultSymbols(x) = ""
+                EmpResultSymbols(X) = ""
                 Exit For
             End If
-        Next x
+        Next X
         
         ' Alphabatize the remaining elements/abbreviations via a simple bubble sort
-        For y = 9 To 1 Step -1       ' Sort from end to start
-            For x = 0 To y - 1
-                If EmpResultSymbols(x) > EmpResultSymbols(x + 1) Then
+        For Y = 9 To 1 Step -1       ' Sort from end to start
+            For X = 0 To Y - 1
+                If EmpResultSymbols(X) > EmpResultSymbols(X + 1) Then
                     ' Swap the elements/abbreviations
-                    strSwap = EmpResultSymbols(x)
-                    EmpResultSymbols(x) = EmpResultSymbols(x + 1)
-                    EmpResultSymbols(x + 1) = strSwap
+                    strSwap = EmpResultSymbols(X)
+                    EmpResultSymbols(X) = EmpResultSymbols(X + 1)
+                    EmpResultSymbols(X + 1) = strSwap
                     ' and their EmpResultCount values
-                    swapVal = EmpResultCount(x)
-                    EmpResultCount(x) = EmpResultCount(x + 1)
-                    EmpResultCount(x + 1) = swapVal
+                    swapVal = EmpResultCount(X)
+                    EmpResultCount(X) = EmpResultCount(X + 1)
+                    EmpResultCount(X + 1) = swapVal
                 End If
-            Next x
-        Next y
+            Next X
+        Next Y
         
         ' Now insert the alphabatized elements into the string
-        For x = 0 To 9
-            If EmpResultSymbols(x) <> "" Then
-                strConstruct = strConstruct & EmpResultSymbols(x)
-                If EmpResultCount(x) > 1 Then strConstruct = strConstruct & _
-                                                         LTrim(Str(EmpResultCount(x)))
+        For X = 0 To 9
+            If EmpResultSymbols(X) <> "" Then
+                strConstruct = strConstruct & EmpResultSymbols(X)
+                If EmpResultCount(X) > 1 Then strConstruct = strConstruct & _
+                                                         LTrim(Str(EmpResultCount(X)))
             End If
-        Next x
+        Next X
 
     End If
     
@@ -1842,22 +1842,22 @@ On Error GoTo ConstructAndVerifyCompoundErrorHandler
         strFormulaElem(10) = elem10$
         
         ' Determine number of C, Si, N, P, O, S, Cl, I, F, Br and H atoms
-        For x = 1 To 10
-            Select Case strFormulaElem(x)
-            Case "C": udtElementNum.C = udtElementNum.C + intFormulaCount(x)
-            Case "Si": udtElementNum.Si = udtElementNum.Si + intFormulaCount(x)
-            Case "N": udtElementNum.N = udtElementNum.N + intFormulaCount(x)
-            Case "P": udtElementNum.P = udtElementNum.P + intFormulaCount(x)
-            Case "O": udtElementNum.O = udtElementNum.O + intFormulaCount(x)
-            Case "S": udtElementNum.S = udtElementNum.S + intFormulaCount(x)
-            Case "Cl": udtElementNum.Cl = udtElementNum.Cl + intFormulaCount(x)
-            Case "I": udtElementNum.I = udtElementNum.I + intFormulaCount(x)
-            Case "F": udtElementNum.F = udtElementNum.F + intFormulaCount(x)
-            Case "Br": udtElementNum.Br = udtElementNum.Br + intFormulaCount(x)
-            Case "H": udtElementNum.H = udtElementNum.H + intFormulaCount(x)
-            Case Else: udtElementNum.Other = udtElementNum.Other + intFormulaCount(x)
+        For X = 1 To 10
+            Select Case strFormulaElem(X)
+            Case "C": udtElementNum.C = udtElementNum.C + intFormulaCount(X)
+            Case "Si": udtElementNum.Si = udtElementNum.Si + intFormulaCount(X)
+            Case "N": udtElementNum.N = udtElementNum.N + intFormulaCount(X)
+            Case "P": udtElementNum.P = udtElementNum.P + intFormulaCount(X)
+            Case "O": udtElementNum.O = udtElementNum.O + intFormulaCount(X)
+            Case "S": udtElementNum.S = udtElementNum.S + intFormulaCount(X)
+            Case "Cl": udtElementNum.Cl = udtElementNum.Cl + intFormulaCount(X)
+            Case "I": udtElementNum.I = udtElementNum.I + intFormulaCount(X)
+            Case "F": udtElementNum.F = udtElementNum.F + intFormulaCount(X)
+            Case "Br": udtElementNum.Br = udtElementNum.Br + intFormulaCount(X)
+            Case "H": udtElementNum.H = udtElementNum.H + intFormulaCount(X)
+            Case Else: udtElementNum.Other = udtElementNum.Other + intFormulaCount(X)
             End Select
-        Next x
+        Next X
         
         ' Compute maximum number of hydrogens
         If udtElementNum.Si = 0 And udtElementNum.C = 0 And udtElementNum.N = 0 And _
@@ -1996,7 +1996,7 @@ ConstructResultsLineErrorHandler:
 End Sub
 
 Private Sub ConvertListToRTF()
-    Dim x As Integer, y As Integer, strWorkLine As String, strRTF As String, strRTFAdd As String
+    Dim X As Integer, Y As Integer, strWorkLine As String, strRTF As String, strRTFAdd As String
     
 On Error GoTo ConvertListToRTFErrorHandler
 
@@ -2004,26 +2004,26 @@ On Error GoTo ConvertListToRTFErrorHandler
     
     strRTF = "{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}{\f1\froman\fcharset2 Symbol;}{\f2\froman " & objMwtWin.RtfFontName & ";}{\f3\froman Times New Roman;}{\f4\fswiss\fprq2 System;}}{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red255\green255\blue255;}\deflang1033\pard\plain\f2\fs" & Trim(Str(CIntSafeDbl(objMwtWin.RtfFontSize * 2.25))) & " "
     
-    For x = 0 To lstResults.ListCount - 1
-        strWorkLine = lstResults.List(x)
+    For X = 0 To lstResults.ListCount - 1
+        strWorkLine = lstResults.List(X)
         If optType(1).value = True And InStr(strWorkLine, LookupLanguageCaption(10535, "has")) > 0 Then
             ' Matching percent compositions and on a has ... line, just add to strRTF
             strRTF = strRTF & strWorkLine & "\par "
         Else
             ' Search for a Tab
-            y = InStr(strWorkLine, vbTab)
-            If y > 0 Then
+            Y = InStr(strWorkLine, vbTab)
+            If Y > 0 Then
                 ' Found a tab, convert part before tab to formatted RTF
-                strRTFAdd = ResultsToRtf(Left(strWorkLine, y - 1)) & Mid(strWorkLine, y)
+                strRTFAdd = ResultsToRtf(Left(strWorkLine, Y - 1)) & Mid(strWorkLine, Y)
             Else
                 strRTFAdd = strWorkLine
             End If
             strRTF = strRTF & strRTFAdd & "\par "
         End If
-        If x Mod 50 = 0 Then
+        If X Mod 50 = 0 Then
             If lstResults.ListCount > 1 Then
                 lblPercentCompleted.Caption = LookupLanguageCaption(10150, "Formatting") & " " & _
-                                              Str(CIntSafeDbl(x / (lstResults.ListCount - 1) * 100)) & _
+                                              Str(CIntSafeDbl(X / (lstResults.ListCount - 1) * 100)) & _
                                               LookupLanguageCaption(10110, "% Completed")
             End If
             DoEvents
@@ -2037,7 +2037,7 @@ On Error GoTo ConvertListToRTFErrorHandler
                 Exit For
             End If
         End If
-    Next x
+    Next X
     
     rtfResults.TextRTF = strRTF & "}"
     
@@ -2073,6 +2073,11 @@ Private Function CorrectChargeEmpirical(sngTotalCharge As Single, udtElementNum 
 
     Dim intNumHalogens As Integer, intIndex As Integer
     
+    ' Uncomment to debug
+    'If udtElementNum.C = 4 And udtElementNum.H = 4 And udtElementNum.N = 6 Then
+    '    Debug.Print ("Debug: Check this")
+    'End If
+    
     ' Correct charge using rules for an empirical formula
     If udtElementNum.C + udtElementNum.Si >= 1 Then
         If udtElementNum.H > 0 And objMwtWin.GetElementStat(1, esCharge) = 1 Then
@@ -2092,18 +2097,17 @@ Private Function CorrectChargeEmpirical(sngTotalCharge As Single, udtElementNum 
         ' Determine # of H taken up by all the carbons in a compound without N or P, then add back 1 H for each N and P
         intNumHalogens = udtElementNum.H + udtElementNum.F + udtElementNum.Cl + udtElementNum.Br + udtElementNum.I
         intNumHalogens = intNumHalogens - (udtElementNum.C * 2 + 2) + udtElementNum.N + udtElementNum.P
-        If intNumHalogens < 0 Then
-            intNumHalogens = 0
-        Else
+        
+        If intNumHalogens >= 0 Then
             For intIndex = 1 To udtElementNum.N + udtElementNum.P
                 sngTotalCharge = sngTotalCharge + 2
                 intNumHalogens = intNumHalogens - 1
-                If intNumHalogens = 0 Then
+                If intNumHalogens <= 0 Then
                     Exit For
                 Else
                     sngTotalCharge = sngTotalCharge + 2
                     intNumHalogens = intNumHalogens - 1
-                    If intNumHalogens = 0 Then Exit For
+                    If intNumHalogens <= 0 Then Exit For
                 End If
             Next intIndex
         End If
@@ -2331,7 +2335,7 @@ End Function
 Public Function FormulaFinderCalculate(Optional blnQuietMode As Boolean = False) As String
     
     Dim intNumPotentialElementCount As Integer, blnCalculationsAborted As Boolean
-    Dim x As Integer, y As Integer, intMaxHits As Integer, eResponse As VbMsgBoxResult
+    Dim X As Integer, Y As Integer, intMaxHits As Integer, eResponse As VbMsgBoxResult
     Dim blnBad As Boolean, lngCount As Long
     Dim intMultipleSearchMin As Integer, intMultipleSearchMax As Integer
     Dim tolerance As Double, dblTargetWeight As Double, percentcompsum As Double
@@ -2362,11 +2366,11 @@ On Error GoTo FinderErrorHandler
     
     ' Check for Checked elements
     strMessage = ""
-    For x = 0 To MAX_MATCHINGELEMENTS
-        If cChkBox(chkElements(x)) Then Exit For
-    Next x
+    For X = 0 To MAX_MATCHINGELEMENTS
+        If cChkBox(chkElements(X)) Then Exit For
+    Next X
            
-    If x = MAX_MATCHINGELEMENTS + 1 Then
+    If X = MAX_MATCHINGELEMENTS + 1 Then
         strMessage = strMessage & LookupMessage(700) & vbCrLf
     Else
         ' Check for valid information in text boxes
@@ -2379,26 +2383,26 @@ On Error GoTo FinderErrorHandler
         End If
         
         ' Check for reasonable numbers in Min/Max boxes
-        For x = 0 To 9
-            If cChkBox(chkElements(x)) And Val(txtMin(x).Text) < 0 Then
+        For X = 0 To 9
+            If cChkBox(chkElements(X)) And Val(txtMin(X).Text) < 0 Then
                 strMessage = strMessage & LookupMessage(715) & vbCrLf
-            ElseIf cChkBox(chkElements(x)) And Val(txtMin(x).Text) > Val(txtMax(x).Text) Then
+            ElseIf cChkBox(chkElements(X)) And Val(txtMin(X).Text) > Val(txtMax(X).Text) Then
                 strMessage = strMessage & LookupMessage(720) & vbCrLf
-            ElseIf cChkBox(chkElements(x)) And Val(txtMax(x).Text) > 65025 Then
+            ElseIf cChkBox(chkElements(X)) And Val(txtMax(X).Text) > 65025 Then
                 strMessage = strMessage & LookupMessage(725) & vbCrLf
             End If
-        Next x
+        Next X
                 
         ' Initialize custom elements
-        For x = 4 To MAX_MATCHINGELEMENTS - 1
-            If cChkBox(chkElements(x)) Then
-                If Not IsNumeric(txtWeight(x).Text) Then
-                    If txtWeight(x).Text = LookupLanguageCaption(10270, "# or Element or Abbrev.") Then strMessage = strMessage & LookupMessage(730) & vbCrLf
+        For X = 4 To MAX_MATCHINGELEMENTS - 1
+            If cChkBox(chkElements(X)) Then
+                If Not IsNumeric(txtWeight(X).Text) Then
+                    If txtWeight(X).Text = LookupLanguageCaption(10270, "# or Element or Abbrev.") Then strMessage = strMessage & LookupMessage(730) & vbCrLf
                 Else
-                    If Val(txtWeight(x).Text) <= 0 Then strMessage = strMessage & LookupMessage(735) & vbCrLf
+                    If Val(txtWeight(X).Text) <= 0 Then strMessage = strMessage & LookupMessage(735) & vbCrLf
                 End If
             End If
-        Next x
+        Next X
         
         If optType(0).value = True Then
             ' Matching Molecular Weights
@@ -2419,17 +2423,17 @@ On Error GoTo FinderErrorHandler
             End If
             MaxFormulaWeight = CDblSafe(txtPercentMaxWeight.Text)
             
-            For x = 0 To 9
-                If cChkBox(chkElements(x)) Then
-                    If Not IsNumeric(txtPercent(x).Text) Then
-                        FinderMatchStats x, strMatchSymbol
+            For X = 0 To 9
+                If cChkBox(chkElements(X)) Then
+                    If Not IsNumeric(txtPercent(X).Text) Then
+                        FinderMatchStats X, strMatchSymbol
                         strMessage = strMessage & LookupMessage(765, ": " & strMatchSymbol) & vbCrLf
                     Else
-                        If Val(txtPercent(x).Text) <= 0 Then strMessage = strMessage & LookupMessage(770) & vbCrLf
-                        percentcompsum = percentcompsum + CDblSafe(txtPercent(x).Text)
+                        If Val(txtPercent(X).Text) <= 0 Then strMessage = strMessage & LookupMessage(770) & vbCrLf
+                        percentcompsum = percentcompsum + CDblSafe(txtPercent(X).Text)
                     End If
                 End If
-            Next x
+            Next X
             If strMessage = "" Then
                 If percentcompsum > 100 + CDblSafe(txtPercentTolerance.Text) Or _
                    percentcompsum < 100 - CDblSafe(txtPercentTolerance.Text) Then
@@ -2475,23 +2479,23 @@ On Error GoTo FinderErrorHandler
     
     ' Determine which elements are checked and add to potentialelement list
     intNumPotentialElementCount = 0
-    For x = 0 To 9
-        If cChkBox(chkElements(x)) Then
-            intRange(intNumPotentialElementCount, 0) = CIntSafe(txtMin(x).Text)
-            intRange(intNumPotentialElementCount, 1) = CIntSafe(txtMax(x).Text)
-            If x >= 4 Then
+    For X = 0 To 9
+        If cChkBox(chkElements(X)) Then
+            intRange(intNumPotentialElementCount, 0) = CIntSafe(txtMin(X).Text)
+            intRange(intNumPotentialElementCount, 1) = CIntSafe(txtMax(X).Text)
+            If X >= 4 Then
                 ' Working with custom elements
-                If Not IsNumeric(txtWeight(x).Text) Then
+                If Not IsNumeric(txtWeight(X).Text) Then
                     ' A single element or abbreviation was entered
                     blnBad = False
                     ' Convert input to default format of first letter capitalized and rest lowercase
-                    txtWeight(x).Text = UCase(Left(txtWeight(x).Text, 1)) + _
-                                        Mid(txtWeight(x).Text, 2)
-                    strWork = txtWeight(x).Text
-                    For y = 1 To Len(strWork)
-                        If (Asc(UCase(Mid(strWork, y, 1))) < 65 Or Asc(UCase(Mid(strWork, y, 1))) > 90) And _
-                           Asc(UCase(Mid(strWork, y, 1))) <> 43 And _
-                           Asc(UCase(Mid(strWork, y, 1))) <> 95 Then
+                    txtWeight(X).Text = UCase(Left(txtWeight(X).Text, 1)) + _
+                                        Mid(txtWeight(X).Text, 2)
+                    strWork = txtWeight(X).Text
+                    For Y = 1 To Len(strWork)
+                        If (Asc(UCase(Mid(strWork, Y, 1))) < 65 Or Asc(UCase(Mid(strWork, Y, 1))) > 90) And _
+                           Asc(UCase(Mid(strWork, Y, 1))) <> 43 And _
+                           Asc(UCase(Mid(strWork, Y, 1))) <> 95 Then
                             blnBad = True
                             If Not blnQuietMode Then
                                 MsgBox LookupMessage(775), vbOKOnly + vbExclamation, LookupMessage(350)
@@ -2501,9 +2505,9 @@ On Error GoTo FinderErrorHandler
                             
                             Exit Function
                         End If
-                    Next y
+                    Next Y
 
-                    If Len(txtWeight(x).Text) = 0 Then
+                    If Len(txtWeight(X).Text) = 0 Then
                         ' Too short
                         blnBad = True
                         If Not blnQuietMode Then
@@ -2514,7 +2518,7 @@ On Error GoTo FinderErrorHandler
                         
                     Else
                         Charge = 0
-                        dblPotentialElementStats(intNumPotentialElementCount, 0) = FinderMatchStats(x, strMatchSymbol, Charge)     ' Returns weight of element/abbreviation, but also charge
+                        dblPotentialElementStats(intNumPotentialElementCount, 0) = FinderMatchStats(X, strMatchSymbol, Charge)     ' Returns weight of element/abbreviation, but also charge
                         dblPotentialElementStats(intNumPotentialElementCount, 1) = Charge
                         
                         If dblPotentialElementStats(intNumPotentialElementCount, 0) = -1 Then
@@ -2532,21 +2536,21 @@ On Error GoTo FinderErrorHandler
                     End If
                 Else
                     ' Custom element, only weight given so charge is 0
-                    dblPotentialElementStats(intNumPotentialElementCount, 0) = CDblSafe(txtWeight(x))
+                    dblPotentialElementStats(intNumPotentialElementCount, 0) = CDblSafe(txtWeight(X))
                     dblPotentialElementStats(intNumPotentialElementCount, 1) = 0
-                    strPotentialElements(intNumPotentialElementCount) = Left(LookupLanguageCaption(10420, "Custom"), 1) & Trim(Str(x - 3)) & "_"
+                    strPotentialElements(intNumPotentialElementCount) = Left(LookupLanguageCaption(10420, "Custom"), 1) & Trim(Str(X - 3)) & "_"
                 End If
             Else
-                dblPotentialElementStats(intNumPotentialElementCount, 0) = FinderMatchStats(x, strMatchSymbol, Charge)
+                dblPotentialElementStats(intNumPotentialElementCount, 0) = FinderMatchStats(X, strMatchSymbol, Charge)
                 dblPotentialElementStats(intNumPotentialElementCount, 1) = Charge
                 strPotentialElements(intNumPotentialElementCount) = strMatchSymbol
             End If
-            dblTargetPercents(intNumPotentialElementCount, 0) = CDblSafe(txtPercent(x).Text) - tolerance  ' Lower bound of target percentage
-            dblTargetPercents(intNumPotentialElementCount, 1) = CDblSafe(txtPercent(x).Text) + tolerance  ' Upper bound of target percentage
+            dblTargetPercents(intNumPotentialElementCount, 0) = CDblSafe(txtPercent(X).Text) - tolerance  ' Lower bound of target percentage
+            dblTargetPercents(intNumPotentialElementCount, 1) = CDblSafe(txtPercent(X).Text) + tolerance  ' Upper bound of target percentage
             intNumPotentialElementCount = intNumPotentialElementCount + 1
         End If
         If blnBad Then Exit Function
-    Next x
+    Next X
     
     ' Change mouse pointer to hourglass with arrow, so user can still multitask
     MousePointer = vbArrowHourglass
@@ -2569,36 +2573,36 @@ On Error GoTo FinderErrorHandler
         ' Reorder dblPotentialElementStats pointer array in order from heaviest to lightest element
         ' Greatly speeds up the recursive routine
         ' Bubble sort
-        For y = intNumPotentialElementCount - 1 To 1 Step -1       ' Sort from end to start
-            For x = 0 To y - 1
-                If dblPotentialElementStats(x, 0) < dblPotentialElementStats(x + 1, 0) Then
+        For Y = intNumPotentialElementCount - 1 To 1 Step -1       ' Sort from end to start
+            For X = 0 To Y - 1
+                If dblPotentialElementStats(X, 0) < dblPotentialElementStats(X + 1, 0) Then
                     ' Swap the element symbols
-                    strSwap = strPotentialElements(x)
-                    strPotentialElements(x) = strPotentialElements(x + 1)
-                    strPotentialElements(x + 1) = strSwap
+                    strSwap = strPotentialElements(X)
+                    strPotentialElements(X) = strPotentialElements(X + 1)
+                    strPotentialElements(X + 1) = strSwap
                     ' and their weights
-                    dblSwapVal = dblPotentialElementStats(x, 0)
-                    dblPotentialElementStats(x, 0) = dblPotentialElementStats(x + 1, 0)
-                    dblPotentialElementStats(x + 1, 0) = dblSwapVal
+                    dblSwapVal = dblPotentialElementStats(X, 0)
+                    dblPotentialElementStats(X, 0) = dblPotentialElementStats(X + 1, 0)
+                    dblPotentialElementStats(X + 1, 0) = dblSwapVal
                     ' and their charge
-                    dblSwapVal = dblPotentialElementStats(x, 1)
-                    dblPotentialElementStats(x, 1) = dblPotentialElementStats(x + 1, 1)
-                    dblPotentialElementStats(x + 1, 1) = dblSwapVal
+                    dblSwapVal = dblPotentialElementStats(X, 1)
+                    dblPotentialElementStats(X, 1) = dblPotentialElementStats(X + 1, 1)
+                    dblPotentialElementStats(X + 1, 1) = dblSwapVal
                     
                     If optType(1).value = True Then
                         ' and the dblTargetPercents array
-                        dblSwapVal = dblTargetPercents(x, 0)
-                        dblTargetPercents(x, 0) = dblTargetPercents(x + 1, 0)
-                        dblTargetPercents(x + 1, 0) = dblSwapVal
+                        dblSwapVal = dblTargetPercents(X, 0)
+                        dblTargetPercents(X, 0) = dblTargetPercents(X + 1, 0)
+                        dblTargetPercents(X + 1, 0) = dblSwapVal
                         
-                        dblSwapVal = dblTargetPercents(x, 1)
-                        dblTargetPercents(x, 1) = dblTargetPercents(x + 1, 1)
-                        dblTargetPercents(x + 1, 1) = dblSwapVal
+                        dblSwapVal = dblTargetPercents(X, 1)
+                        dblTargetPercents(X, 1) = dblTargetPercents(X + 1, 1)
+                        dblTargetPercents(X + 1, 1) = dblSwapVal
                         
                     End If
                 End If
-            Next x
-        Next y
+            Next X
+        Next Y
         
         ' Initialize the status box
         UpdateStatus intNumPotentialElementCount, 3, True, 0
@@ -2608,10 +2612,10 @@ On Error GoTo FinderErrorHandler
                 ' Searching for target m/z rather than target mass
                 MultipleSearchMath intNumPotentialElementCount, intMultipleSearchMin, intMultipleSearchMax
                 
-                For x = intMultipleSearchMin To intMultipleSearchMax
+                For X = intMultipleSearchMin To intMultipleSearchMax
                     ' Call the RecursiveMWfinder repeatedly, sending dblTargetWeight * x each time to search for target, target*2, target*3, etc.
-                    RecursiveMWFinder strPotentialElements(), dblPotentialElementStats(), 0, intNumPotentialElementCount, intPotentialElementPointers(), 0, 0, dblTargetWeight * x, tolerance, 0, x
-                Next x
+                    RecursiveMWFinder strPotentialElements(), dblPotentialElementStats(), 0, intNumPotentialElementCount, intPotentialElementPointers(), 0, 0, dblTargetWeight * X, tolerance, 0, X
+                Next X
             Else
                 RecursiveMWFinder strPotentialElements(), dblPotentialElementStats(), 0, intNumPotentialElementCount, intPotentialElementPointers(), 0, 0, dblTargetWeight, tolerance, 0, 0
             End If
@@ -2683,15 +2687,15 @@ On Error GoTo FinderErrorHandler
         ReDim strCompoundList(lstResults.ListCount)            ' Temporary storage for the results box
         
         ' First, copy all of the results to a temporary array (I know it eats up memory, but I have no choice)
-        For x = 0 To lstResults.ListCount - 1
-            strCompoundList(x) = lstResults.List(x)
-        Next x
+        For X = 0 To lstResults.ListCount - 1
+            strCompoundList(X) = lstResults.List(X)
+        Next X
         
         ' Now, put them back into the lstResults.ListCount box in the correct order
         ' Use intPointerArray() for this
-        For x = 0 To lstResults.ListCount - 1
-            lstResults.List(x) = strCompoundList(intPointerArray(x))
-        Next x
+        For X = 0 To lstResults.ListCount - 1
+            lstResults.List(X) = strCompoundList(intPointerArray(X))
+        Next X
         
         If gKeyPressAbortFormulaFinder < 2 Then
             lblPercentCompleted.Caption = "100% " & LookupLanguageCaption(10130, "Completed")
@@ -2716,15 +2720,15 @@ On Error GoTo FinderErrorHandler
             lstResults.ListIndex = 0
             lstResults.ListIndex = -1
         End If
-        x = 0
-        Do While x <= lstResults.ListCount - 1
-            y = InStr(lstResults.List(x), " " & LookupLanguageCaption(10535, "has"))
-            If y > 0 Then
-                lstResults.AddItem Mid(lstResults.List(x), y), x + 1
-                lstResults.List(x) = Left(lstResults.List(x), y - 1)
-                x = x + 1
+        X = 0
+        Do While X <= lstResults.ListCount - 1
+            Y = InStr(lstResults.List(X), " " & LookupLanguageCaption(10535, "has"))
+            If Y > 0 Then
+                lstResults.AddItem Mid(lstResults.List(X), Y), X + 1
+                lstResults.List(X) = Left(lstResults.List(X), Y - 1)
+                X = X + 1
             End If
-            x = x + 1
+            X = X + 1
         Loop
     End If
         
@@ -3294,7 +3298,7 @@ Private Sub RecursiveConstructAndVerifyCompound(strResults As String, strPotenti
     ' strResults is blank for molecular weight matching, but has the % compositions for %comp matching
     ' if intMultipleMtoZCharge is 0 then searching for target weights, otherwise searching for target m/z's
     
-    Dim intIndex As Integer, maxH%, y%, swapVal%
+    Dim intIndex As Integer, maxH%, Y%, swapVal%
     Dim blnHyrdrogenOK As Boolean, blnChargeOK As Boolean
     
     Dim intElementCount() As Integer
@@ -3354,8 +3358,8 @@ On Error GoTo RecursiveConstructAndVerifyCompoundErrorHandler
         Next intIndex
         
         ' Alphabatize the remaining elements/abbreviations via a simple bubble sort
-        For y = intNumPotentialElementCount - 1 To 1 Step -1       ' Sort from end to start
-            For intIndex = 0 To y - 1
+        For Y = intNumPotentialElementCount - 1 To 1 Step -1       ' Sort from end to start
+            For intIndex = 0 To Y - 1
                 If strEmpiricalResult(intIndex) > strEmpiricalResult(intIndex + 1) Then
                     ' strSwap the elements/abbreviations
                     strSwap = strEmpiricalResult(intIndex)
@@ -3367,7 +3371,7 @@ On Error GoTo RecursiveConstructAndVerifyCompoundErrorHandler
                     intEmpiricalResultElementCount(intIndex + 1) = swapVal
                 End If
             Next intIndex
-        Next y
+        Next Y
         
         ' Now insert the alphabatized elements into the string
         For intIndex = 0 To intNumPotentialElementCount - 1
@@ -3486,7 +3490,7 @@ RecursiveConstructAndVerifyCompoundErrorHandler:
 End Sub
 
 Public Sub ResizeForm(Optional blnEnlargeToMinimums As Boolean = False)
-    Dim x%, lngPreferredWidth%
+    Dim X%, lngPreferredWidth%
     Dim lngMinHeight As Long
     Dim lngTopPosAdjust As Long
 
@@ -3615,26 +3619,26 @@ On Error GoTo ResizeFormErrorHandler
         lblWeight.Left = lblPercentCompleted.Left + 120
         lblWeight.Width = 855
     
-        For x = 0 To 9
-           txtMin(x).Top = x * 360 + lstResults.Top
-           txtMin(x).Left = lblMin.Left
-           txtMax(x).Top = x * 360 + lstResults.Top
-           txtMax(x).Left = lblMax.Left
-           chkElements(x).Top = x * 360 + lstResults.Top
-           chkElements(x).Left = lngEffectiveFormWidth - 3800
-           chkElements(x).Width = 1700
-           txtPercent(x).Top = x * 360 + lstResults.Top
-           txtPercent(x).Left = lblPercent.Left
-           txtPercent(x).Width = 735
-        Next x
+        For X = 0 To 9
+           txtMin(X).Top = X * 360 + lstResults.Top
+           txtMin(X).Left = lblMin.Left
+           txtMax(X).Top = X * 360 + lstResults.Top
+           txtMax(X).Left = lblMax.Left
+           chkElements(X).Top = X * 360 + lstResults.Top
+           chkElements(X).Left = lngEffectiveFormWidth - 3800
+           chkElements(X).Width = 1700
+           txtPercent(X).Top = X * 360 + lstResults.Top
+           txtPercent(X).Left = lblPercent.Left
+           txtPercent(X).Width = 735
+        Next X
     
         chkElements(0).Caption = LookupLanguageCaption(10400, "Carbon")
         chkElements(1).Caption = LookupLanguageCaption(10405, "Hydrogen")
         chkElements(2).Caption = LookupLanguageCaption(10410, "Nitrogen")
         chkElements(3).Caption = LookupLanguageCaption(10415, "Oxygen")
-        For x = 4 To 9
-            chkElements(x).Caption = LookupLanguageCaption(10420, "Custom") & Trim(Str(x - 3)) & "_"
-        Next x
+        For X = 4 To 9
+            chkElements(X).Caption = LookupLanguageCaption(10420, "Custom") & Trim(Str(X - 3)) & "_"
+        Next X
         
         txtHits.Top = txtPercent(0).Top
         txtHits.Left = lblPercentCompleted.Left
@@ -3644,10 +3648,10 @@ On Error GoTo ResizeFormErrorHandler
         cmdFinderOptions.Top = 50
         cmdFinderOptions.Left = lngEffectiveFormWidth - 1600
         
-        For x = 4 To 9
-            txtWeight(x).Top = x * 360 + lstResults.Top
-            txtWeight(x).Left = lblPercentCompleted.Left
-        Next x
+        For X = 4 To 9
+            txtWeight(X).Top = X * 360 + lstResults.Top
+            txtWeight(X).Left = lblPercentCompleted.Left
+        Next X
     
     End If
     
@@ -3661,7 +3665,7 @@ End Sub
 
 Private Function ResultsToRtf(strWorkText As String) As String
     Dim strWorkChar As String, strRTF As String
-    Dim x As Integer, y As Integer
+    Dim X As Integer, Y As Integer
     Dim strChargeString As String
     
     ' Converts plain text to formatted rtf text.
@@ -3670,38 +3674,38 @@ Private Function ResultsToRtf(strWorkText As String) As String
     
     strRTF = ""
     
-    For x = 1 To Len(strWorkText)
-        strWorkChar = Mid(strWorkText, x, 1)
+    For X = 1 To Len(strWorkText)
+        strWorkChar = Mid(strWorkText, X, 1)
         If IsNumeric(strWorkChar) Or strWorkChar = glbDecimalSeparator Then
             ' Number or period, so subscript it if it's not followed by an underscore (underscore is used for custom elements: C1_, C2_, etc.)
-            If Mid(strWorkText, x + 1, 1) = "_" Then
+            If Mid(strWorkText, X + 1, 1) = "_" Then
                 strRTF = strRTF & strWorkChar & "_"
-                x = x + 1
+                X = X + 1
             Else
-                If x = 1 Then
+                If X = 1 Then
                     ' at beginning of line, so leave it alone. Probably out of place
                     strRTF = strRTF & strWorkChar
                 Else
                     ' find entire number
-                    y = 1
-                    Do While IsNumeric(Mid(strWorkText, x + y, 1))
-                        y = y + 1
+                    Y = 1
+                    Do While IsNumeric(Mid(strWorkText, X + Y, 1))
+                        Y = Y + 1
                     Loop
-                    strRTF = strRTF & "{\sub " & Mid(strWorkText, x, y) & "}"
-                    x = x + y - 1
+                    strRTF = strRTF & "{\sub " & Mid(strWorkText, X, Y) & "}"
+                    X = X + Y - 1
                 End If
             End If
         ElseIf strWorkChar = "^" Then
             ' Found a caret, ignore it and superscript the number after it
             ' Find entire number
-            y = 1
-            Do While IsNumeric(Mid(strWorkText, x + y, 1)) Or Mid(strWorkText, x + y, 1) = "-"
-                y = y + 1
+            Y = 1
+            Do While IsNumeric(Mid(strWorkText, X + Y, 1)) Or Mid(strWorkText, X + Y, 1) = "-"
+                Y = Y + 1
             Loop
-            strChargeString = ChargeValueToString(CDblSafe(Mid(strWorkText, x + 1, y - 1)))
+            strChargeString = ChargeValueToString(CDblSafe(Mid(strWorkText, X + 1, Y - 1)))
             
             strRTF = strRTF & "{\super " & strChargeString & "}"
-            x = x + y
+            X = X + Y
         ElseIf strWorkChar = "+" Then
             ' Found a plus sign, superscript it
             strRTF = strRTF & "{\super +}"
@@ -3711,7 +3715,7 @@ Private Function ResultsToRtf(strWorkText As String) As String
         Else
             strRTF = strRTF & strWorkChar
         End If
-    Next x
+    Next X
 
     ResultsToRtf = strRTF
 
@@ -4077,7 +4081,7 @@ Private Sub cmdCalculate_KeyDown(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub cmdCopy_Click()
-    Dim x%, copytext$
+    Dim X%, copytext$
     
     If lstResults.ListCount = 0 Then
         MsgBox LookupLanguageCaption(10550, "The results box is empty."), vbOKOnly, _
@@ -4085,10 +4089,10 @@ Private Sub cmdCopy_Click()
     Else
         Clipboard.Clear
         copytext$ = ""
-        For x = 0 To lstResults.ListCount - 1
+        For X = 0 To lstResults.ListCount - 1
             ' MW not found, copy line to clipboard without any tabs
-            copytext$ = copytext$ & vbCrLf & lstResults.List(x)
-        Next x
+            copytext$ = copytext$ & vbCrLf & lstResults.List(X)
+        Next X
         Clipboard.SetText copytext$, vbCFText
     End If
     
@@ -4121,7 +4125,7 @@ Private Sub cmdOK_Click()
 End Sub
 
 Private Sub cmdPrint_Click()
-    Dim x%, eResponse As VbMsgBoxResult
+    Dim X%, eResponse As VbMsgBoxResult
 
     If gKeyPressAbortFormulaFinder = 1 Then
         gKeyPressAbortFormulaFinder = 3
@@ -4135,9 +4139,9 @@ Private Sub cmdPrint_Click()
         ' Print the results
         eResponse = YesNoBox(LookupLanguageCaption(10565, "Are you sure you want to print the current result(s)?"), LookupLanguageCaption(10570, "Printing"))
         If eResponse = vbYes Then
-            For x = 0 To lstResults.ListCount - 1
-                Printer.Print lstResults.List(x)
-            Next x
+            For X = 0 To lstResults.ListCount - 1
+                Printer.Print lstResults.List(X)
+            Next X
             Printer.EndDoc
         End If
     End If
@@ -4304,7 +4308,7 @@ Private Sub rtfResults_KeyDown(KeyCode As Integer, Shift As Integer)
     
 End Sub
 
-Private Sub rtfResults_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub rtfResults_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
     If Button = vbRightButton Then
         ShowPopupRightClickMenu Me, rtfResults, False, False
     End If
