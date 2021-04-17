@@ -23,10 +23,9 @@ not move the MSFLXGRD.OCX, COMDLG32.OCX, RICHTX32.OCX, or RICHED32.DLL
 files to your \Windows\System or \Winnt\System32 directory since 
 Windows will give an error message saying they are not registered correctly.
 
-Send E-Mail to AlchemistMatt@Yahoo.Com or Matt@Alchemistmatt.Com
-WWW is at http://www.alchemistmatt.com/
-and http://www.geocities.com/tandm_wy/
-and http://come.to/alchemistmatt/
+Send E-mail to matthew.monroe@pnnl.gov or proteomics@pnnl.gov
+Website: http://panomics.pnnl.gov/ or http://omics.pnl.gov or 
+         http://www.alchemistmatt.com/ or https://github.com/PNNL-Comp-Mass-Spec/Molecular-Weight-Calculator
 
 
 
