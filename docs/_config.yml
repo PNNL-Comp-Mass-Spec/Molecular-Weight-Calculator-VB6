@@ -2,3 +2,6 @@
 name: Molecular-Weight-Calculator-VB6
 description: Calculates the molecular weight and percent composition of chemical formulas and amino acids.
 url: https://pnnl-comp-mass-spec.github.io/Molecular-Weight-Calculator-VB6/
+
+# Google Analytics
+google_analytics: G-LXXKP1N66C
